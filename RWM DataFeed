@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>RWM DataFeed - Real-Time ETF Market Data & TAA Signals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0b1020;
+            color: #f5f5f5;
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            max-width: 720px;
+            padding: 24px;
+            text-align: center;
+            background: rgba(10, 14, 30, 0.9);
+            border-radius: 16px;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+            border: 1px solid rgba(120, 180, 255, 0.25);
+        }
+        h1 {
+            font-size: 1.9rem;
+            margin-bottom: 0.4rem;
+        }
+        h2 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #a9b4d8;
+            margin-top: 0;
+            margin-bottom: 1.4rem;
+        }
+        p {
+            line-height: 1.5;
+            color: #c4c9e6;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 1.8rem;
+            padding: 0.9rem 1.8rem;
+            border-radius: 999px;
+            border: none;
+            background: linear-gradient(135deg, #3b82f6, #06b6d4);
+            color: #ffffff;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.98rem;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.45);
+            transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+        }
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 14px 32px rgba(37, 99, 235, 0.6);
+            filter: brightness(1.05);
+        }
+        .note {
+            margin-top: 1.2rem;
+            font-size: 0.8rem;
+            color: #8b93b8;
+        }
+        .tag {
+            display: inline-block;
+            margin-top: 0.6rem;
+            padding: 0.25rem 0.7rem;
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 255, 0.4);
+            font-size: 0.75rem;
+            color: #a5b4fc;
+            background: rgba(15, 23, 42, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <h1>RWM DataFeed</h1>
+        <h2>Real-Time ETF Market Data &amp; TAA Signals</h2>
+
+        <p>
+            Dashboard interattiva per l’analisi di ETF, segnali TAA e dati di mercato in tempo (quasi) reale.
+            Questa pagina GitHub funge da punto di accesso pubblico alla versione ospitata su Claude.
+        </p>
+
+        <span class="tag">Public preview • Read-only</span>
+
+        <a class="btn" href="https://claude.ai/public/artifacts/e53ad981-5b74-4540-b79a-bf1489ab4455" target="_blank" rel="noopener noreferrer">
+            Apri la dashboard su Claude
+        </a>
+
+        <p class="note">
+            Il contenuto è generato dagli utenti e non verificato.  
+            Per l’uso operativo, confronta sempre i dati con le fonti ufficiali.
+        </p>
+    </main>
+</body>
+</html>
