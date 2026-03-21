@@ -1,80 +1,671 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>RAPTOR WEALTH MERIDIAN v2 – Dashboard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <title>RAPTOR WEALTH MERIDIAN v2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
+    :root {
+      --bg: #050816;
+      --bg-alt: #0b1020;
+      --card: #111827;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.12);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --danger: #f97373;
+      --success: #4ade80;
+      --warning: #facc15;
+      --border: #1f2937;
+      --radius-lg: 14px;
+      --radius-md: 10px;
+      --radius-pill: 999px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+    }
+
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #0b1020;
-      color: #f5f5f5;
+      background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .app-shell {
+      max-width: 1320px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 20px;
+    }
+
+    /* SIDEBAR */
+
+    .sidebar {
+      background: linear-gradient(145deg, #020617, #020617, #020617);
+      border-radius: 24px;
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      padding: 18px 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      box-shadow:
+        0 18px 45px rgba(15, 23, 42, 0.9),
+        0 0 0 1px rgba(15, 23, 42, 0.9);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 10px 4px;
+      border-radius: 16px;
+      background: radial-gradient(circle at top left, #0f172a, #020617);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+    }
+
+    .brand-logo {
+      width: 32px;
+      height: 32px;
+      border-radius: 12px;
+      background: radial-gradient(circle at 30% 0, #38bdf8, #0f172a 55%, #020617);
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      margin: 0;
+      font-weight: 700;
+      font-size: 16px;
+      color: #e5f4ff;
+      box-shadow:
+        0 0 0 1px rgba(56, 189, 248, 0.4),
+        0 0 24px rgba(56, 189, 248, 0.55);
     }
-    .card {
-      background: #151a2c;
-      border-radius: 16px;
-      padding: 32px 40px;
-      box-shadow: 0 18px 45px rgba(0,0,0,0.55);
-      text-align: center;
-      max-width: 520px;
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
     }
-    h1 {
-      font-size: 1.6rem;
-      margin: 0 0 10px;
-    }
-    p {
-      margin: 0 0 24px;
-      color: #c3c7e0;
-      font-size: 0.98rem;
-      line-height: 1.5;
-    }
-    a.button {
-      display: inline-block;
-      padding: 12px 26px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #4f46e5, #06b6d4);
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
-      box-shadow: 0 10px 25px rgba(15,118,210,0.45);
-    }
-    a.button:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 14px 32px rgba(15,118,210,0.6);
-      opacity: 0.96;
-    }
-    .tagline {
-      font-size: 0.8rem;
+
+    .brand-title {
+      font-size: 13px;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: #7dd3fc;
-      margin-bottom: 8px;
+      color: #e5e7eb;
+    }
+
+    .brand-subtitle {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .nav-section-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #6b7280;
+      margin: 4px 4px 2px;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .nav-item {
+      font-size: 13px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #9ca3af;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.16s ease-out;
+    }
+
+    .nav-item span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-item.active {
+      background: radial-gradient(circle at top left, #0f172a, #020617);
+      border-color: rgba(56, 189, 248, 0.55);
+      color: #e5e7eb;
+      box-shadow:
+        0 0 0 1px rgba(15, 23, 42, 0.9),
+        0 0 24px rgba(56, 189, 248, 0.35);
+    }
+
+    .nav-item:hover:not(.active) {
+      background: rgba(15, 23, 42, 0.9);
+      border-color: rgba(148, 163, 184, 0.35);
+      color: #e5e7eb;
+    }
+
+    .nav-pill {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: #9ca3af;
+    }
+
+    .sidebar-footer {
+      margin-top: auto;
+      padding-top: 10px;
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(31, 41, 55, 0.9);
+    }
+
+    .profile-avatar {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 0, #38bdf8, #0f172a 60%, #020617);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: #e5f4ff;
+    }
+
+    .profile-text {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .profile-name {
+      font-size: 12px;
+      color: #e5e7eb;
+    }
+
+    .profile-role {
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    /* MAIN */
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .top-left {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .page-title {
+      font-size: 18px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #e5e7eb;
+    }
+
+    .page-subtitle {
+      font-size: 12px;
+      color: #9ca3af;
+    }
+
+    .top-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pill {
+      font-size: 11px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.9);
+      color: #9ca3af;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pill.accent {
+      border-color: rgba(56, 189, 248, 0.7);
+      color: #e5e7eb;
+      background: radial-gradient(circle at top left, #0f172a, #020617);
+      box-shadow:
+        0 0 0 1px rgba(15, 23, 42, 0.9),
+        0 0 24px rgba(56, 189, 248, 0.35);
+    }
+
+    /* GRID */
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 14px;
+    }
+
+    .card {
+      background: radial-gradient(circle at top left, #020617, #020617 55%, #000 100%);
+      border-radius: 20px;
+      border: 1px solid rgba(31, 41, 55, 0.95);
+      padding: 14px 14px 12px;
+      box-shadow:
+        0 18px 45px rgba(15, 23, 42, 0.9),
+        0 0 0 1px rgba(15, 23, 42, 0.9);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #9ca3af;
+    }
+
+    .card-subtitle {
+      font-size: 11px;
+      color: #6b7280;
+    }
+
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .kpi {
+      background: radial-gradient(circle at top left, #020617, #020617 60%, #000);
+      border-radius: 16px;
+      border: 1px solid rgba(31, 41, 55, 0.95);
+      padding: 8px 9px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .kpi-label {
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    .kpi-value {
+      font-size: 15px;
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    .kpi-meta {
+      font-size: 11px;
+      color: #6b7280;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .kpi-chip {
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.9);
+      color: #9ca3af;
+    }
+
+    .kpi-chip.positive {
+      border-color: rgba(74, 222, 128, 0.7);
+      color: #bbf7d0;
+      background: rgba(22, 163, 74, 0.18);
+    }
+
+    .kpi-chip.negative {
+      border-color: rgba(248, 113, 113, 0.7);
+      color: #fecaca;
+      background: rgba(185, 28, 28, 0.18);
+    }
+
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 4px;
+      font-size: 11px;
+    }
+
+    .table th,
+    .table td {
+      padding: 6px 6px;
+      text-align: left;
+      border-bottom: 1px solid rgba(31, 41, 55, 0.9);
+    }
+
+    .table th {
+      color: #9ca3af;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 10px;
+    }
+
+    .table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .badge {
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.9);
+      color: #9ca3af;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .badge.success {
+      border-color: rgba(74, 222, 128, 0.7);
+      color: #bbf7d0;
+      background: rgba(22, 163, 74, 0.18);
+    }
+
+    .badge.warning {
+      border-color: rgba(250, 204, 21, 0.7);
+      color: #fef9c3;
+      background: rgba(202, 138, 4, 0.18);
+    }
+
+    .badge.danger {
+      border-color: rgba(248, 113, 113, 0.7);
+      color: #fecaca;
+      background: rgba(185, 28, 28, 0.18);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1024px) {
+      .app-shell {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        order: 2;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      body {
+        padding: 16px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .kpi-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="tagline">Raptor Wealth Meridian v2</div>
-    <h1>Wealth Management Dashboard</h1>
-    <p>
-      Accesso diretto alla dashboard pubblica per l’analisi, il monitoraggio e la
-      visualizzazione del modello RAPTOR WEALTH MERIDIAN v2.
-    </p>
-    <a
-      class="button"
-      href="https://claude.ai/public/artifacts/5d03772d-85fb-49c3-9462-4d442aca4aa8"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Apri la Dashboard
-    </a>
+  <div class="app-shell">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo">R</div>
+        <div class="brand-text">
+          <div class="brand-title">RAPTOR WEALTH MERIDIAN</div>
+          <div class="brand-subtitle">Tactical Wealth Management Console</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="nav-section-title">Overview</div>
+        <ul class="nav-list">
+          <li class="nav-item active">
+            <span>Global Dashboard</span>
+            <span class="nav-pill">LIVE</span>
+          </li>
+          <li class="nav-item">
+            <span>Signals & Regimes</span>
+          </li>
+          <li class="nav-item">
+            <span>Allocations</span>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="nav-section-title">Analytics</div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <span>Drawdown Map</span>
+          </li>
+          <li class="nav-item">
+            <span>Turnover & Friction</span>
+          </li>
+          <li class="nav-item">
+            <span>Scenario Lab</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="profile">
+          <div class="profile-avatar">G</div>
+          <div class="profile-text">
+            <div class="profile-name">Giorgio</div>
+            <div class="profile-role">Model Architect</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <header class="top-bar">
+        <div class="top-left">
+          <div class="page-title">Global wealth posture</div>
+          <div class="page-subtitle">
+            Snapshot combinato di rischio, allocazione e regime per il modello RAPTOR WEALTH MERIDIAN v2.
+          </div>
+        </div>
+        <div class="top-right">
+          <div class="pill">Last refresh: T-1 close</div>
+          <div class="pill accent">Model status: ACTIVE</div>
+        </div>
+      </header>
+
+      <section class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Portfolio state</div>
+            <div class="card-subtitle">KPI sintetici su rischio, esposizione e resilienza</div>
+          </div>
+        </div>
+
+        <div class="kpi-row">
+          <div class="kpi">
+            <div class="kpi-label">Net exposure</div>
+            <div class="kpi-value">62%</div>
+            <div class="kpi-meta">
+              <span>Target band: 40–80%</span>
+              <span class="kpi-chip positive">Within band</span>
+            </div>
+          </div>
+
+          <div class="kpi">
+            <div class="kpi-label">Max drawdown (YTD)</div>
+            <div class="kpi-value">-4.8%</div>
+            <div class="kpi-meta">
+              <span>vs. benchmark: -9.3%</span>
+              <span class="kpi-chip positive">Protected</span>
+            </div>
+          </div>
+
+          <div class="kpi">
+            <div class="kpi-label">Turnover (3M)</div>
+            <div class="kpi-value">18%</div>
+            <div class="kpi-meta">
+              <span>Friction budget: 25%</span>
+              <span class="kpi-chip">Neutral</span>
+            </div>
+          </div>
+
+          <div class="kpi">
+            <div class="kpi-label">Stress score</div>
+            <div class="kpi-value">0.34</div>
+            <div class="kpi-meta">
+              <span>0 = calmo · 1 = stress</span>
+              <span class="kpi-chip warning">Elevated</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Signal stack</div>
+              <div class="card-subtitle">Trend, momentum e volatilità per cluster di asset</div>
+            </div>
+          </div>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Cluster</th>
+                <th>Trend</th>
+                <th>Momentum</th>
+                <th>Volatility</th>
+                <th>Regime</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Global Equities</td>
+                <td><span class="badge success">Bullish</span></td>
+                <td>+0.42 (6M)</td>
+                <td>0.78</td>
+                <td><span class="badge success">Risk-on</span></td>
+              </tr>
+              <tr>
+                <td>Rates & Duration</td>
+                <td><span class="badge warning">Mixed</span></td>
+                <td>-0.12 (6M)</td>
+                <td>0.64</td>
+                <td><span class="badge warning">Transition</span></td>
+              </tr>
+              <tr>
+                <td>Commodities</td>
+                <td><span class="badge success">Positive</span></td>
+                <td>+0.31 (6M)</td>
+                <td>1.12</td>
+                <td><span class="badge warning">Tactical</span></td>
+              </tr>
+              <tr>
+                <td>Cash & Hedges</td>
+                <td><span class="badge danger">Defensive</span></td>
+                <td>+0.05 (6M)</td>
+                <td>0.22</td>
+                <td><span class="badge danger">Buffer</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Allocation bands</div>
+              <div class="card-subtitle">Posizionamento corrente vs. corridoi strategici</div>
+            </div>
+          </div>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Bucket</th>
+                <th>Current</th>
+                <th>Min</th>
+                <th>Max</th>
+                <th>Flag</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Equity risk</td>
+                <td>46%</td>
+                <td>30%</td>
+                <td>60%</td>
+                <td><span class="badge success">Inside</span></td>
+              </tr>
+              <tr>
+                <td>Defensive / Duration</td>
+                <td>28%</td>
+                <td>20%</td>
+                <td>45%</td>
+                <td><span class="badge success">Inside</span></td>
+              </tr>
+              <tr>
+                <td>Alternatives</td>
+                <td>14%</td>
+                <td>0%</td>
+                <td>20%</td>
+                <td><span class="badge warning">High</span></td>
+              </tr>
+              <tr>
+                <td>Cash buffer</td>
+                <td>12%</td>
+                <td>5%</td>
+                <td>25%</td>
+                <td><span class="badge">Neutral</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
   </div>
 </body>
 </html>
