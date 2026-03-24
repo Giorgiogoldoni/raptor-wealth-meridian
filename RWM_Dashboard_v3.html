@@ -350,8 +350,23 @@ hr.div{border:none;border-top:1px solid var(--g2);margin:14px 0;}
             <option value="soglie">Entrata per soglie di prezzo</option>
           </select>
         </div>
-        <div class="fg"><label class="fl">Contesto di mercato attuale</label>
-          <select class="fs" id="cMarket" onchange="liveUpdate()">
+        <div class="fg"><label class="fl">Override profilo manuale (opzionale)</label>
+          <select class="fs" id="cOverride" onchange="liveUpdate()">
+            <option value="">— Calcolato automaticamente —</option>
+            <option value="0">Monetario</option>
+            <option value="1">Conservativo</option>
+            <option value="2">Moderato</option>
+            <option value="3">Bilanciato</option>
+            <option value="4">Crescita</option>
+            <option value="5">Aggressivo</option>
+            <option value="6">Full Equity</option>
+            <option value="7">⚡ ULTRA</option>
+          </select>
+        </div>
+        <div id="ultraWarning" style="display:none;background:#1a0a2a;border-radius:var(--r2);padding:10px 14px;margin-top:-6px;margin-bottom:8px">
+          <div style="font-size:10px;color:#f0d070;font-weight:500">⚡ PROFILO ULTRA SELEZIONATO</div>
+          <div style="font-size:9px;color:#c8a0c8;margin-top:3px;line-height:1.6">Orizzonte minimo 15 anni · DD tollerato –55% · Solo clienti con esperienza professionale · Documentare motivazione nel Decision Log MiFID II</div>
+        </div>
             <option value="postcalo">Post calo significativo (> –15%)</option>
             <option value="neutro">Mercato neutro / laterale</option>
             <option value="massimi">Mercato su massimi storici</option>
@@ -1164,6 +1179,13 @@ function fillProfileForm(p){
   document.getElementById('cMarket').value=p.market||'neutro';
   if(p.incTarget)document.getElementById('cIncomeTarget').value=p.incTarget;
   document.getElementById('incomeTarget').style.display=p.type==='income'?'block':'none';
+  if(p.overridden){
+    document.getElementById('cOverride').value=String(p.pidx);
+    document.getElementById('ultraWarning').style.display=p.pidx===7?'block':'none';
+  } else {
+    document.getElementById('cOverride').value='';
+    document.getElementById('ultraWarning').style.display='none';
+  }
 }
 
 function saveCurrentClient(){
@@ -1242,6 +1264,8 @@ function slRt(){
 function liveUpdate(){
   document.getElementById('incomeTarget').style.display=
     document.getElementById('cType')?.value==='income'?'block':'none';
+  const ov=document.getElementById('cOverride')?.value;
+  document.getElementById('ultraWarning').style.display=ov==='7'?'block':'none';
 }
 
 function calcProfile(){
@@ -1287,6 +1311,16 @@ function calcProfile(){
 
   G.profile={name,age,birth,horizon:effHor,capital,income,wealth,debt,dep,
     pidx,cap,tol,type,entry,market,incTarget};
+
+  // Override manuale profilo (es. ULTRA)
+  const ov=document.getElementById('cOverride')?.value;
+  if(ov!==''&&ov!==null&&ov!==undefined){
+    const ovIdx=parseInt(ov);
+    if(!isNaN(ovIdx)&&ovIdx>=0&&ovIdx<=7){
+      G.profile.pidx=ovIdx;
+      G.profile.overridden=true;
+    }
+  }
   G.saa=buildSAA(pidx);
 
   document.getElementById('profiloResult').style.display='block';
