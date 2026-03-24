@@ -799,6 +799,7 @@ hr.div{border:none;border-top:1px solid var(--g2);margin:14px 0;}
         <tr><td>Crescita</td><td class="num">75%</td><td class="num">28%</td><td class="num">5%</td><td class="num">5.2%</td><td class="num">–10%</td><td class="num">–20%</td><td class="num">–28%</td></tr>
         <tr><td>Aggressivo</td><td class="num">90%</td><td class="num">5%</td><td class="num">5%</td><td class="num">5.6%</td><td class="num">–13%</td><td class="num">–25%</td><td class="num">–35%</td></tr>
         <tr class="hl"><td>Full Equity</td><td class="num">100%</td><td class="num">0%</td><td class="num">0%</td><td class="num">5.5%</td><td class="num">–15%</td><td class="num">–30%</td><td class="num">–45%</td></tr>
+        <tr style="background:#1a0a2a;color:#f0d070"><td>⚡ ULTRA</td><td class="num">60%+20%EM+10%SC+10%T</td><td class="num">0%</td><td class="num">0%</td><td class="num" style="color:#f0d070">7.5%</td><td class="num">–18%</td><td class="num">–35%</td><td class="num">–55%</td></tr>
       </tbody>
     </table></div>
   </div>
@@ -897,6 +898,7 @@ const PROFILES=[
   {name:'Crescita',     eq:.75,  bond:.20,il:0,  em:.08, cash:.05,dd1:10,dd2:20,dd3:28, net:5.2,vol:16},
   {name:'Aggressivo',   eq:.90,  bond:.05,il:0,  em:0,   cash:.05,dd1:13,dd2:25,dd3:35, net:5.6,vol:20},
   {name:'Full Equity',  eq:1.0,  bond:0,  il:0,  em:0,   cash:0,  dd1:15,dd2:30,dd3:45, net:5.5,vol:24},
+  {name:'⚡ ULTRA',     eq:.60,  bond:0,  il:0,  em:.20, cash:0,  dd1:18,dd2:35,dd3:55, net:7.5,vol:30, small:.10,tema:.10, minHor:15,minScore:24},
 ];
 const REND=[
   {name:'Monetario',   gross:2.9,tr:.14,net:2.5},
@@ -906,6 +908,7 @@ const REND=[
   {name:'Crescita',    gross:6.5,tr:.20,net:5.2},
   {name:'Aggressivo',  gross:7.1,tr:.21,net:5.6},
   {name:'Full Equity', gross:7.4,tr:.26,net:5.5},
+  {name:'⚡ ULTRA',    gross:9.8,tr:.26,net:7.5},
 ];
 const ETF=[
   {t:'SWDA', n:'iShares Core MSCI World',          cl:'eq',    r:'core',     ter:.0020,tax:26,  dist:false,yieldD:0,   minS:0},
@@ -1276,10 +1279,11 @@ function calcProfile(){
   const effHor=Math.min(horizon,maxHor);
   const minScore=Math.min(cap,tol);
 
-  let pidx=minScore<=5?0:minScore<=8?1:minScore<=12?2:minScore<=16?3:minScore<=20?4:minScore<=23?5:6;
+  let pidx=minScore<=5?0:minScore<=8?1:minScore<=12?2:minScore<=16?3:minScore<=20?4:minScore<=23?5:minScore<=24?6:7;
   if(effHor<2&&pidx>0)pidx=0;
   if(effHor<5&&pidx>2)pidx=2;
   if(effHor<10&&pidx>4)pidx=4;
+  if(effHor<15&&pidx>6)pidx=6; // ULTRA richiede orizzonte minimo 15 anni
 
   G.profile={name,age,birth,horizon:effHor,capital,income,wealth,debt,dep,
     pidx,cap,tol,type,entry,market,incTarget};
@@ -1309,6 +1313,9 @@ function renderProfileResult(){
 
 function buildSAA(pidx){
   const p=PROFILES[pidx];
+  if(pidx===7){ // ULTRA
+    return{pidx,eq:p.eq,eqem:p.em,bond:0,em:0,il:0,cash:0,small:p.small||.10,tema:p.tema||.10};
+  }
   return{pidx,eq:p.eq*.75,eqem:p.eq*.25,bond:p.bond,em:p.em,il:p.il,cash:p.cash};
 }
 
@@ -2108,6 +2115,29 @@ function buildAllocPortfolio(pidx,saa,taaScores){
   const capital=G.profile?.capital||200000;
   const portfolio=[];
 
+  // ── PROFILO ULTRA ──────────────────────────────
+  if(pidx===7){
+    const sc=taaScores[0]??2;
+    [
+      {cl:'eq',   t:'SWDA', n:'iShares Core MSCI World',        peso:.30, ruolo:'Core DM'},
+      {cl:'eq',   t:'IWMO', n:'iShares MSCI World Momentum',    peso:.15, ruolo:'Momentum DM'},
+      {cl:'eq',   t:'QDVE', n:'iShares S&P 500 IT Sector',      peso:.15, ruolo:'Tech USA'},
+      {cl:'eqem', t:'IEMA', n:'iShares Core MSCI EM IMI',       peso:.12, ruolo:'Core EM'},
+      {cl:'eqem', t:'CEBL', n:'iShares MSCI EM Asia',           peso:.08, ruolo:'EM Asia'},
+      {cl:'small',t:'IUSN', n:'iShares MSCI World Small Cap',   peso:.06, ruolo:'Small Cap Global'},
+      {cl:'small',t:'ZPRV', n:'SPDR MSCI USA Small Cap Value',  peso:.04, ruolo:'Small Cap Value'},
+      {cl:'tema', t:'HLTH', n:'iShares MSCI World Health Care', peso:.04, ruolo:'Healthcare'},
+      {cl:'tema', t:'AERO', n:'iShares Aerospace & Defence',    peso:.03, ruolo:'Aerospace'},
+      {cl:'tema', t:'BTEC', n:'iShares NASDAQ US Biotech',      peso:.03, ruolo:'Biotech'},
+    ].forEach(s=>{
+      const etf=ETF.find(e=>e.t===s.t)||{ter:.0025,tax:26,dist:false,yieldD:0};
+      portfolio.push({...s,ter:etf.ter,tax:etf.tax,dist:etf.dist,yieldD:etf.yieldD,amt:capital*s.peso});
+    });
+    const tot=portfolio.reduce((s,p)=>s+p.peso,0);
+    portfolio.forEach(p=>{p.peso=p.peso/tot;p.amt=capital*p.peso;});
+    return portfolio;
+  }
+
   if(isIncome){
     const eqTot=p.eq;
     [
@@ -2650,6 +2680,7 @@ function downloadManualePDF(){
       ['Crescita','75%','28%','5%','5.2%','–10%','–20%','–28%'],
       ['Aggressivo','90%','5%','5%','5.6%','–13%','–25%','–35%'],
       ['Full Equity','100%','0%','0%','5.5%','–15%','–30%','–45%'],
+      ['⚡ ULTRA','60%+EM+SC+T','0%','0%','7.5%','–18%','–35%','–55%'],
     ],
   });
   y=doc.lastAutoTable.finalY+8;
