@@ -1,101 +1,784 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <title>RWM DataFeed - Real-Time ETF Market Data & TAA Signals</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #0b1020;
-            color: #f5f5f5;
-            display: flex;
-            min-height: 100vh;
-            align-items: center;
-            justify-content: center;
-        }
-        .container {
-            max-width: 720px;
-            padding: 24px;
-            text-align: center;
-            background: rgba(10, 14, 30, 0.9);
-            border-radius: 16px;
-            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
-            border: 1px solid rgba(120, 180, 255, 0.25);
-        }
-        h1 {
-            font-size: 1.9rem;
-            margin-bottom: 0.4rem;
-        }
-        h2 {
-            font-size: 1.1rem;
-            font-weight: 500;
-            color: #a9b4d8;
-            margin-top: 0;
-            margin-bottom: 1.4rem;
-        }
-        p {
-            line-height: 1.5;
-            color: #c4c9e6;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 1.8rem;
-            padding: 0.9rem 1.8rem;
-            border-radius: 999px;
-            border: none;
-            background: linear-gradient(135deg, #3b82f6, #06b6d4);
-            color: #ffffff;
-            font-weight: 600;
-            text-decoration: none;
-            font-size: 0.98rem;
-            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.45);
-            transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
-        }
-        .btn:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 14px 32px rgba(37, 99, 235, 0.6);
-            filter: brightness(1.05);
-        }
-        .note {
-            margin-top: 1.2rem;
-            font-size: 0.8rem;
-            color: #8b93b8;
-        }
-        .tag {
-            display: inline-block;
-            margin-top: 0.6rem;
-            padding: 0.25rem 0.7rem;
-            border-radius: 999px;
-            border: 1px solid rgba(148, 163, 255, 0.4);
-            font-size: 0.75rem;
-            color: #a5b4fc;
-            background: rgba(15, 23, 42, 0.8);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="RWM Data">
+<meta name="theme-color" content="#0f1e38">
+<title>RWM DataFeed · Chiusure Europa</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:#0f1e38; --navy2:#1a3057;
+  --gold:#b8922a; --gold2:#d4aa48; --gold3:#f0d070;
+  --g1:#f4f2ed; --g2:#e8e4db; --g3:#c8c0b0; --g4:#8a8070; --g5:#4a4438;
+  --white:#ffffff; --cream:#faf8f3;
+  --green:#2a6e3a; --green2:#e8f4ec;
+  --red:#b02020; --red2:#fceaea;
+  --amber:#c87010; --amber2:#fef3e2;
+  --blue:#1a4a8a; --blue2:#e8eef8;
+  --r:10px; --r2:6px;
+  --shadow:0 2px 12px rgba(15,30,56,.10);
+  --shadow2:0 4px 24px rgba(15,30,56,.16);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'DM Mono',monospace;background:var(--g1);color:var(--g5);min-height:100vh;font-size:12px;}
+
+/* HEADER */
+.hdr{background:var(--navy);height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(0,0,0,.3);}
+.hdr-left{display:flex;align-items:center;gap:10px;}
+.hdr-title{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#fff;letter-spacing:.04em;}
+.hdr-title span{color:var(--gold2);}
+.hdr-sub{font-size:9px;color:var(--g3);letter-spacing:.1em;text-transform:uppercase;margin-top:2px;}
+.hdr-right{display:flex;align-items:center;gap:10px;}
+.clock{font-size:13px;color:var(--gold2);font-weight:500;letter-spacing:.06em;}
+.market-status{padding:3px 10px;border-radius:20px;font-size:9px;letter-spacing:.08em;text-transform:uppercase;}
+.ms-open{background:rgba(42,110,58,.3);color:#6ef09a;}
+.ms-closed{background:rgba(176,32,32,.3);color:#f09a9a;}
+.ms-loading{background:rgba(200,120,16,.3);color:#f0c07a;}
+
+/* CONTROLS */
+.controls{background:#fff;border-bottom:1px solid var(--g2);padding:12px 18px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;position:sticky;top:58px;z-index:99;}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:var(--r2);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.07em;text-transform:uppercase;cursor:pointer;transition:all .2s;border:none;}
+.btn-primary{background:var(--navy);color:#fff;}.btn-primary:hover{background:var(--navy2);}
+.btn-primary:disabled{background:var(--g3);cursor:not-allowed;}
+.btn-gold{background:var(--gold);color:#fff;}.btn-gold:hover{background:var(--gold2);}
+.btn-outline{background:transparent;border:1px solid var(--g2);color:var(--g5);}.btn-outline:hover{border-color:var(--navy);color:var(--navy);}
+.btn-sm{padding:5px 12px;font-size:9px;}
+.progress-wrap{flex:1;min-width:140px;max-width:280px;}
+.progress-bar{height:4px;background:var(--g2);border-radius:2px;overflow:hidden;margin-top:3px;}
+.progress-fill{height:100%;background:var(--gold);border-radius:2px;transition:width .3s;width:0%;}
+.progress-label{font-size:9px;color:var(--g4);}
+.last-update{font-size:10px;color:var(--g4);margin-left:auto;}
+
+/* STATS BAR */
+.statsbar{background:var(--navy2);padding:10px 18px;display:flex;gap:20px;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,.08);}
+.sbi{text-align:center;}
+.sbi-label{font-size:8px;text-transform:uppercase;letter-spacing:.1em;color:var(--g3);margin-bottom:2px;}
+.sbi-val{font-size:14px;font-weight:500;color:#fff;}
+.sbi-val.green{color:#6ef09a;}.sbi-val.red{color:#f09a9a;}.sbi-val.amber{color:var(--gold3);}
+
+/* FILTER TABS */
+.filters{padding:10px 18px;background:#fff;border-bottom:1px solid var(--g2);display:flex;gap:6px;flex-wrap:wrap;}
+.ftab{padding:5px 12px;border-radius:20px;font-size:9px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;border:1px solid var(--g2);background:#fff;color:var(--g4);transition:all .15s;user-select:none;}
+.ftab.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+.ftab:hover:not(.active){border-color:var(--navy);color:var(--navy);}
+
+/* MAIN TABLE */
+.main{padding:14px 14px 80px;}
+.table-wrap{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);border:1px solid var(--g2);overflow-x:auto;overflow-y:visible;}
+.rt{width:100%;border-collapse:collapse;font-size:11px;}
+.rt thead{background:var(--navy);position:sticky;top:114px;z-index:50;}
+.rt th{text-align:left;padding:9px 10px;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--g3);font-weight:400;white-space:nowrap;}
+.rt th.num{text-align:right;}
+.rt th.sortable{cursor:pointer;user-select:none;}
+.rt th.sortable:hover{color:#fff;}
+.rt td{padding:9px 10px;border-bottom:1px solid var(--g1);color:var(--g5);white-space:nowrap;}
+.rt tr:last-child td{border-bottom:none;}
+.rt tr:hover td{background:var(--g1);}
+.rt .num{text-align:right;font-variant-numeric:tabular-nums;}
+.rt .loading-cell{color:var(--g3);font-style:italic;}
+
+/* SIGNAL BADGES */
+.sig{display:inline-block;padding:2px 8px;border-radius:20px;font-size:9px;letter-spacing:.05em;font-weight:500;}
+.sig-sl{background:var(--navy);color:#fff;}
+.sig-l{background:var(--green2);color:var(--green);}
+.sig-n{background:var(--blue2);color:var(--blue);}
+.sig-c{background:var(--amber2);color:var(--amber);}
+.sig-f{background:var(--red2);color:var(--red);}
+.sig-load{background:var(--g2);color:var(--g4);}
+
+/* FABER DOT */
+.faber{width:8px;height:8px;border-radius:50%;display:inline-block;}
+.fab-up{background:var(--green);}
+.fab-dn{background:var(--red);}
+.fab-na{background:var(--g3);}
+
+/* CLASS COLOR DOT */
+.cdot{width:8px;height:8px;border-radius:2px;display:inline-block;margin-right:4px;vertical-align:middle;flex-shrink:0;}
+
+/* JSON EXPORT */
+.json-panel{background:var(--navy);border-radius:var(--r);padding:16px;margin-top:14px;}
+.json-title{font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:var(--gold2);margin-bottom:10px;}
+.json-box{background:rgba(0,0,0,.3);border-radius:var(--r2);padding:12px;font-size:10px;color:#a0c8a0;line-height:1.6;max-height:200px;overflow-y:auto;white-space:pre-wrap;word-break:break-all;}
+.json-actions{display:flex;gap:8px;margin-top:10px;}
+
+/* TAA SUMMARY */
+.taa-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-top:14px;}
+.taa-card{background:#fff;border:1px solid var(--g2);border-radius:var(--r2);padding:12px;box-shadow:var(--shadow);}
+.taa-asset{font-size:10px;font-weight:500;color:var(--navy);margin-bottom:6px;}
+.taa-faber{font-size:9px;color:var(--g4);margin-bottom:4px;}
+.taa-score{font-size:18px;font-weight:600;color:var(--navy);}
+.taa-label{font-size:9px;margin-top:3px;}
+
+/* MOBILE */
+@media(max-width:600px){
+  .hdr{padding:0 12px;}
+  .controls{padding:10px 12px;}
+  .main{padding:10px 10px 80px;}
+  .statsbar{gap:12px;}
+  .sbi-val{font-size:12px;}
+}
+</style>
 </head>
 <body>
-    <main class="container">
-        <h1>RWM DataFeed</h1>
-        <h2>Real-Time ETF Market Data &amp; TAA Signals</h2>
 
-        <p>
-            Dashboard interattiva per l’analisi di ETF, segnali TAA e dati di mercato in tempo (quasi) reale.
-            Questa pagina GitHub funge da punto di accesso pubblico alla versione ospitata su Claude.
-        </p>
+<!-- HEADER -->
+<header class="hdr">
+  <div class="hdr-left">
+    <svg width="28" height="28" viewBox="0 0 60 60">
+      <polygon points="30,4 18,4 10,12 10,30 30,48 50,30 50,12 42,4" fill="#1a3888" stroke="#c8a040" stroke-width="1.5"/>
+      <g fill="#f8e050" opacity=".9">
+        <polygon points="30,10 31.8,15.5 37.6,15.5 33,18.9 34.8,24.4 30,21 25.2,24.4 27,18.9 22.4,15.5 28.2,15.5"/>
+      </g>
+      <polygon points="10,30 2,18 16,24" fill="#2a7a3a" opacity=".88"/>
+      <polygon points="50,30 58,18 44,24" fill="#b02020" opacity=".88"/>
+    </svg>
+    <div>
+      <div class="hdr-title">RWM <span>DataFeed</span></div>
+      <div class="hdr-sub">Chiusure Europa · 41 ETF · v1.0</div>
+    </div>
+  </div>
+  <div class="hdr-right">
+    <div class="clock" id="clock">--:--:--</div>
+    <div class="market-status ms-loading" id="marketStatus">verifica...</div>
+  </div>
+</header>
 
-        <span class="tag">Public preview • Read-only</span>
+<!-- CONTROLS -->
+<div class="controls">
+  <button class="btn btn-primary" id="btnFetch" onclick="fetchAll()">
+    ▶ Aggiorna Dati
+  </button>
+  <button class="btn btn-outline btn-sm" onclick="fetchAll(true)">↻ Force refresh</button>
+  <div class="progress-wrap">
+    <div class="progress-label" id="progressLabel">Pronto</div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+  </div>
+  <div class="last-update" id="lastUpdate">—</div>
+</div>
 
-        <a class="btn" href="https://claude.ai/public/artifacts/e53ad981-5b74-4540-b79a-bf1489ab4455" target="_blank" rel="noopener noreferrer">
-            Apri la dashboard su Claude
-        </a>
+<!-- STATS BAR -->
+<div class="statsbar">
+  <div class="sbi"><div class="sbi-label">ETF Caricati</div><div class="sbi-val" id="stLoaded">0/41</div></div>
+  <div class="sbi"><div class="sbi-label">Faber LONG</div><div class="sbi-val green" id="stFaberUp">—</div></div>
+  <div class="sbi"><div class="sbi-label">Faber FLAT</div><div class="sbi-val red" id="stFaberDn">—</div></div>
+  <div class="sbi"><div class="sbi-label">Vol Alta (>20%)</div><div class="sbi-val amber" id="stVolHigh">—</div></div>
+  <div class="sbi"><div class="sbi-label">Segnale Medio</div><div class="sbi-val" id="stAvgSig">—</div></div>
+  <div class="sbi"><div class="sbi-label">Mercato</div><div class="sbi-val" id="stMarket">Europa</div></div>
+</div>
 
-        <p class="note">
-            Il contenuto è generato dagli utenti e non verificato.  
-            Per l’uso operativo, confronta sempre i dati con le fonti ufficiali.
-        </p>
-    </main>
+<!-- FILTERS -->
+<div class="filters">
+  <div class="ftab active" onclick="setFilter('all')">Tutti (41)</div>
+  <div class="ftab" onclick="setFilter('eq')">Equity DM</div>
+  <div class="ftab" onclick="setFilter('eqem')">Equity EM</div>
+  <div class="ftab" onclick="setFilter('income')">Income</div>
+  <div class="ftab" onclick="setFilter('small')">Small Cap</div>
+  <div class="ftab" onclick="setFilter('tema')">Tematici</div>
+  <div class="ftab" onclick="setFilter('re')">Real Estate</div>
+  <div class="ftab" onclick="setFilter('com')">Commodity</div>
+  <div class="ftab" onclick="setFilter('gov')">Gov Bond</div>
+  <div class="ftab" onclick="setFilter('corp')">Corporate</div>
+  <div class="ftab" onclick="setFilter('em')">EM Bond</div>
+  <div class="ftab" onclick="setFilter('il')">IL</div>
+  <div class="ftab" onclick="setFilter('mon')">Monetario</div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+  <div class="table-wrap">
+    <table class="rt" id="mainTable">
+      <thead>
+        <tr>
+          <th>Ticker RWM</th>
+          <th>Yahoo Ticker</th>
+          <th>Nome</th>
+          <th>Classe</th>
+          <th class="num sortable" onclick="sortBy('price')">Prezzo</th>
+          <th class="num sortable" onclick="sortBy('sma200')">SMA200</th>
+          <th class="num">Faber</th>
+          <th class="num sortable" onclick="sortBy('perf1m')">1M %</th>
+          <th class="num sortable" onclick="sortBy('perf3m')">3M %</th>
+          <th class="num sortable" onclick="sortBy('perf1y')">1Y %</th>
+          <th class="num sortable" onclick="sortBy('vol20')">Vol20</th>
+          <th class="num sortable" onclick="sortBy('maxdd')">Max DD</th>
+          <th class="num">Segnale TAA</th>
+          <th class="num">Aggiornato</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+
+  <!-- TAA SUMMARY -->
+  <div style="margin-top:20px">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--navy);margin-bottom:12px">Segnali TAA — Riepilogo Classi</div>
+    <div class="taa-grid" id="taaGrid"></div>
+  </div>
+
+  <!-- JSON EXPORT -->
+  <div class="json-panel" style="margin-top:20px">
+    <div class="json-title">⬇ Export JSON — Importa nella RWM Dashboard</div>
+    <div class="json-box" id="jsonBox">{ "status": "In attesa di aggiornamento dati..." }</div>
+    <div class="json-actions">
+      <button class="btn btn-gold btn-sm" onclick="copyJSON()">⎘ Copia JSON</button>
+      <button class="btn btn-outline btn-sm" onclick="downloadJSON()">↓ Scarica JSON</button>
+      <div style="font-size:9px;color:var(--g3);margin-left:8px;align-self:center">Usa questo JSON per aggiornare i segnali TAA nella dashboard RWM</div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════
+// DATABASE ETF — 41 strumenti RWM
+// Yahoo Finance tickers: .DE = XETRA, .MI = XMIL
+// ═══════════════════════════════════════════════════════
+const ETF_DB = [
+  // EQUITY DM CORE
+  {rwm:'SWDA',  yf:'SWDA.DE', n:'iShares Core MSCI World',          cl:'eq',    r:'core',     tax:26,  ter:.0020, dist:false},
+  {rwm:'VWCE',  yf:'VWCE.DE', n:'Vanguard FTSE All-World',           cl:'eq',    r:'core',     tax:26,  ter:.0022, dist:false},
+  // EQUITY DM SATELLITE
+  {rwm:'IQQH',  yf:'IQQH.DE', n:'iShares MSCI World Quality',        cl:'eq',    r:'satellite',tax:26,  ter:.0025, dist:false},
+  {rwm:'IWMO',  yf:'IWMO.DE', n:'iShares MSCI World Momentum',       cl:'eq',    r:'satellite',tax:26,  ter:.0025, dist:false},
+  {rwm:'ZPRV',  yf:'ZPRV.DE', n:'SPDR MSCI USA Small Cap Value',     cl:'eq',    r:'satellite',tax:26,  ter:.0035, dist:false},
+  {rwm:'QDVE',  yf:'QDVE.DE', n:'iShares S&P 500 IT Sector',         cl:'eq',    r:'satellite',tax:26,  ter:.0015, dist:false},
+  // SMALL CAP
+  {rwm:'IUSN',  yf:'IUSN.DE', n:'iShares MSCI World Small Cap',      cl:'small', r:'core',     tax:26,  ter:.0035, dist:false},
+  {rwm:'IESE',  yf:'IESE.DE', n:'iShares MSCI Europe Small Cap',     cl:'small', r:'satellite',tax:26,  ter:.0040, dist:false},
+  // EQUITY EM CORE
+  {rwm:'IEMA',  yf:'IEMA.DE', n:'iShares Core MSCI EM IMI',          cl:'eqem',  r:'core',     tax:26,  ter:.0018, dist:false},
+  {rwm:'VFEM',  yf:'VFEM.DE', n:'Vanguard FTSE Emerging Markets',    cl:'eqem',  r:'core',     tax:26,  ter:.0022, dist:false},
+  // EQUITY EM SATELLITE
+  {rwm:'CEBL',  yf:'CEBL.DE', n:'iShares MSCI EM Asia',              cl:'eqem',  r:'satellite',tax:26,  ter:.0028, dist:false},
+  {rwm:'EXCS',  yf:'EXCS.DE', n:'iShares MSCI EM ex-China',          cl:'eqem',  r:'satellite',tax:26,  ter:.0018, dist:false},
+  // INCOME GEOGRAFICO DIST
+  {rwm:'ISEU',  yf:'EXX5.DE', n:'iShares STOXX EU Select Div 30',    cl:'income',r:'core',     tax:26,  ter:.0040, dist:true,  isin:'DE0002635299'},
+  {rwm:'ISUS',  yf:'EXX2.DE', n:'iShares DJ US Select Dividend',     cl:'income',r:'core',     tax:26,  ter:.0034, dist:true,  isin:'DE000A0D8Q49'},
+  {rwm:'ISAP',  yf:'EXX3.DE', n:'iShares DJ Asia Pac Select Div 50', cl:'income',r:'core',     tax:26,  ter:.0035, dist:true,  isin:'DE000A0H0744'},
+  {rwm:'VHYL',  yf:'VHYL.DE', n:'Vanguard FTSE All-World High Div',  cl:'income',r:'core',     tax:26,  ter:.0029, dist:true},
+  // TEMATICI
+  {rwm:'AERO',  yf:'DFEN.MI', n:'iShares Global Aerospace & Defence',cl:'tema',  r:'tematico', tax:26,  ter:.0040, dist:false},
+  {rwm:'HLTH',  yf:'WHEA.MI', n:'iShares MSCI World Health Care',    cl:'tema',  r:'tematico', tax:26,  ter:.0020, dist:true},
+  {rwm:'BTEC',  yf:'BTEC.MI', n:'iShares NASDAQ US Biotech',         cl:'tema',  r:'tematico', tax:26,  ter:.0037, dist:false},
+  {rwm:'BNKS',  yf:'EXV1.DE', n:'iShares STOXX EU 600 Banks',        cl:'tema',  r:'tematico', tax:26,  ter:.0049, dist:true,  isin:'DE000A0F5UJ7'},
+  {rwm:'XUCS',  yf:'XS2D.DE', n:'Xtrackers USA Consumer Disc.',      cl:'tema',  r:'tematico', tax:26,  ter:.0012, dist:false},
+  {rwm:'JAPN',  yf:'MXJP.MI', n:'Amundi Core MSCI Japan EUR Hdg',    cl:'tema',  r:'tematico', tax:26,  ter:.0021, dist:true},
+  // REAL ESTATE
+  {rwm:'IWDP',  yf:'IWDP.DE', n:'iShares Dev. Markets Property',     cl:'re',    r:'core',     tax:26,  ter:.0059, dist:true},
+  {rwm:'IPRP',  yf:'IPRP.DE', n:'iShares European Property Yield',   cl:'re',    r:'satellite',tax:26,  ter:.0040, dist:true},
+  // COMMODITY
+  {rwm:'IGLN',  yf:'IGLN.DE', n:'iShares Physical Gold ETC',         cl:'com',   r:'core',     tax:26,  ter:.0012, dist:false},
+  {rwm:'ICOM',  yf:'ICOM.DE', n:'iShares Diversified Commodity Swap', cl:'com',  r:'satellite',tax:26,  ter:.0019, dist:false},
+  // GOV BOND EU
+  {rwm:'IEGE',  yf:'IEGE.DE', n:'iShares € Govt Bond 1-3yr',         cl:'gov',   r:'core',     tax:12.5,ter:.0020, dist:true},
+  {rwm:'IBGM',  yf:'IBGM.DE', n:'iShares € Govt Bond 3-7yr',         cl:'gov',   r:'core',     tax:12.5,ter:.0020, dist:true},
+  {rwm:'IBGL',  yf:'IBGL.DE', n:'iShares € Govt Bond 7-10yr',        cl:'gov',   r:'satellite',tax:12.5,ter:.0020, dist:true},
+  {rwm:'IDTL',  yf:'IDTL.DE', n:'iShares € Govt Bond 20yr+',         cl:'gov',   r:'satellite',tax:12.5,ter:.0020, dist:true},
+  {rwm:'VGEA',  yf:'VGEA.DE', n:'Vanguard Eurozone Govt Bond',        cl:'gov',  r:'core',     tax:12.5,ter:.0007, dist:true},
+  // CORPORATE BOND
+  {rwm:'IEAC',  yf:'IEAC.DE', n:'iShares Core € Corp Bond',          cl:'corp',  r:'core',     tax:26,  ter:.0020, dist:true},
+  {rwm:'VECP',  yf:'VECP.DE', n:'Vanguard EUR Corporate Bond',        cl:'corp',  r:'core',     tax:26,  ter:.0009, dist:true},
+  {rwm:'IHYG',  yf:'IHYG.DE', n:'iShares € High Yield Corp Bond',    cl:'corp',  r:'satellite',tax:26,  ter:.0050, dist:true},
+  {rwm:'LQDE',  yf:'LQDE.DE', n:'iShares USD Corp Bond EUR Hdg',      cl:'corp', r:'satellite',tax:26,  ter:.0020, dist:true},
+  {rwm:'SE15',  yf:'SE15.DE', n:'iShares € Corp Bond 0-3yr',          cl:'corp', r:'satellite',tax:26,  ter:.0020, dist:true},
+  // EM BOND
+  {rwm:'EMBE',  yf:'EMBE.DE', n:'iShares J.P. Morgan EM Bond EUR Hdg',cl:'em',  r:'core',     tax:26,  ter:.0050, dist:true},
+  {rwm:'EMDV',  yf:'EMDV.DE', n:'iShares J.P. Morgan EM Local Bond',  cl:'em',  r:'satellite',tax:26,  ter:.0050, dist:true},
+  // INFLATION-LINKED
+  {rwm:'IBCI',  yf:'IBCI.DE', n:'iShares € Inflation Linked Govt Bond',cl:'il', r:'core',     tax:12.5,ter:.0009, dist:true},
+  // MONETARIO
+  {rwm:'XEON',  yf:'XEON.DE', n:'Xtrackers EUR Overnight Rate Swap',  cl:'mon',  r:'core',     tax:26,  ter:.0010, dist:false},
+  {rwm:'SMART', yf:'IS3S.DE', n:'iShares € Govt Bond 0-1yr',          cl:'mon',  r:'core',     tax:12.5,ter:.0007, dist:false},
+];
+
+// CLASSI
+const CL_COLORS={eq:'#1a4a8a',eqem:'#2a6e8a',income:'#1a6a3a',small:'#3a4a8a',tema:'#8a4a1a',re:'#6a2a6a',com:'#8a8a1a',gov:'#2a6e3a',corp:'#5a3a8a',em:'#8a6e2a',il:'#6a4a8a',mon:'#4a6a6a'};
+const CL_LABELS={eq:'Equity DM',eqem:'Equity EM',income:'Income',small:'Small Cap',tema:'Tematico',re:'Real Estate',com:'Commodity',gov:'Gov Bond',corp:'Corporate',em:'EM Bond',il:'Inflation-Linked',mon:'Monetario'};
+
+// TAA ASSET CLASSES per segnale
+const TAA_CLASSES=['eq','eqem','gov','em','il','income'];
+
+// STATO
+let DATA = {}; // {ticker: {price, sma200, closes, ...}}
+let currentFilter = 'all';
+let sortKey = null;
+let sortDir = 1;
+let fetching = false;
+
+// PROXY
+const PROXY = 'https://corsproxy.io/?';
+
+// ═══════════════════════════════════════════════════════
+// CLOCK E STATO MERCATO
+// ═══════════════════════════════════════════════════════
+function updateClock(){
+  const now=new Date();
+  document.getElementById('clock').textContent=now.toLocaleTimeString('it-IT');
+  updateMarketStatus(now);
+}
+
+function updateMarketStatus(now){
+  const h=now.getHours(), m=now.getMinutes();
+  const totalMin=h*60+m;
+  const day=now.getDay();
+  const el=document.getElementById('marketStatus');
+  if(day===0||day===6){
+    el.className='market-status ms-closed';el.textContent='Chiuso (weekend)';return;
+  }
+  // Europa: 9:00-17:30 CET
+  if(totalMin>=540&&totalMin<1050){
+    el.className='market-status ms-open';el.textContent='Aperto';
+  } else if(totalMin>=1050&&totalMin<1080){
+    el.className='market-status ms-closed';el.textContent='Pre-chiusura';
+  } else {
+    el.className='market-status ms-closed';
+    el.textContent=totalMin<540?'Pre-apertura':'Chiuso';
+  }
+}
+
+// ═══════════════════════════════════════════════════════
+// FETCH DA YAHOO FINANCE
+// ═══════════════════════════════════════════════════════
+async function fetchETF(etf, forceRefresh=false){
+  // Cache check — 30 minuti
+  const cached=DATA[etf.rwm];
+  if(!forceRefresh&&cached&&cached.ts&&(Date.now()-cached.ts)<30*60*1000){
+    return cached;
+  }
+
+  try {
+    // Yahoo Finance chart API — 1 anno di dati giornalieri
+    const url=`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(etf.yf)}?interval=1d&range=1y`;
+    const res=await fetch(PROXY+encodeURIComponent(url),{
+      headers:{'Accept':'application/json'}
+    });
+    if(!res.ok)throw new Error(`HTTP ${res.status}`);
+    const json=await res.json();
+    const result=json?.chart?.result?.[0];
+    if(!result)throw new Error('No data');
+
+    const closes=result.indicators?.quote?.[0]?.close||[];
+    const timestamps=result.timestamp||[];
+    const validCloses=closes.filter(c=>c!==null&&c!==undefined);
+
+    if(validCloses.length<2)throw new Error('Insufficient data');
+
+    const price=validCloses[validCloses.length-1];
+    const price1mAgo=validCloses[Math.max(0,validCloses.length-22)];
+    const price3mAgo=validCloses[Math.max(0,validCloses.length-66)];
+    const price1yAgo=validCloses[0];
+
+    // SMA200
+    const sma200closes=validCloses.slice(-200);
+    const sma200=sma200closes.reduce((s,v)=>s+v,0)/sma200closes.length;
+
+    // Volatilità 20 giorni annualizzata
+    const last21=validCloses.slice(-21);
+    const returns=[];
+    for(let i=1;i<last21.length;i++)returns.push(Math.log(last21[i]/last21[i-1]));
+    const meanR=returns.reduce((s,v)=>s+v,0)/returns.length;
+    const variance=returns.reduce((s,v)=>s+(v-meanR)**2,0)/returns.length;
+    const vol20=Math.sqrt(variance*252)*100;
+
+    // Max Drawdown (periodo disponibile)
+    let maxDD=0,peak=validCloses[0];
+    validCloses.forEach(c=>{
+      if(c>peak)peak=c;
+      const dd=(peak-c)/peak;
+      if(dd>maxDD)maxDD=dd;
+    });
+
+    const data={
+      rwm:etf.rwm, yf:etf.yf, n:etf.n, cl:etf.cl, r:etf.r, tax:etf.tax, ter:etf.ter, dist:etf.dist,
+      price, sma200,
+      perf1m:((price-price1mAgo)/price1mAgo)*100,
+      perf3m:((price-price3mAgo)/price3mAgo)*100,
+      perf1y:((price-price1yAgo)/price1yAgo)*100,
+      vol20, maxdd:maxDD*100,
+      faber:price>sma200,
+      closes:validCloses,
+      ts:Date.now(),
+      ok:true,
+    };
+    DATA[etf.rwm]=data;
+    saveCache();
+    return data;
+  } catch(e){
+    const err={...etf, ok:false, error:e.message, ts:Date.now()};
+    DATA[etf.rwm]=err;
+    return err;
+  }
+}
+
+// ═══════════════════════════════════════════════════════
+// FETCH ALL — con rate limiting
+// ═══════════════════════════════════════════════════════
+async function fetchAll(force=false){
+  if(fetching)return;
+  fetching=true;
+  const btn=document.getElementById('btnFetch');
+  btn.disabled=true;btn.textContent='⏳ Scaricando...';
+
+  const total=ETF_DB.length;
+  let done=0,ok=0,err=0;
+
+  // Batch da 3 per non stressare il proxy
+  for(let i=0;i<ETF_DB.length;i+=3){
+    const batch=ETF_DB.slice(i,i+3);
+    await Promise.all(batch.map(async etf=>{
+      setProgress(done,total,`${etf.rwm}...`);
+      const d=await fetchETF(etf,force);
+      done++;
+      if(d.ok)ok++;else err++;
+      setProgress(done,total,`${etf.rwm} ${d.ok?'✓':'✗'}`);
+      renderTable();
+      updateStats();
+    }));
+    // Pausa tra i batch
+    if(i+3<ETF_DB.length)await sleep(400);
+  }
+
+  fetching=false;
+  btn.disabled=false;btn.textContent='▶ Aggiorna Dati';
+  setProgress(total,total,`Completato: ${ok} OK, ${err} errori`);
+  document.getElementById('lastUpdate').textContent=
+    'Aggiornato: '+new Date().toLocaleTimeString('it-IT');
+  renderTable();
+  updateStats();
+  renderTAASummary();
+  exportJSON();
+}
+
+function sleep(ms){return new Promise(r=>setTimeout(r,ms));}
+
+function setProgress(done,total,label){
+  const pct=total>0?(done/total*100):0;
+  document.getElementById('progressFill').style.width=pct+'%';
+  document.getElementById('progressLabel').textContent=label||`${done}/${total}`;
+}
+
+// ═══════════════════════════════════════════════════════
+// RENDER TABLE
+// ═══════════════════════════════════════════════════════
+function renderTable(){
+  const tbody=document.getElementById('tableBody');
+  let rows=ETF_DB.filter(e=>currentFilter==='all'||e.cl===currentFilter);
+  if(sortKey){
+    rows=[...rows].sort((a,b)=>{
+      const da=DATA[a.rwm],db=DATA[b.rwm];
+      if(!da||!da.ok)return 1;if(!db||!db.ok)return-1;
+      return(da[sortKey]-db[sortKey])*sortDir;
+    });
+  }
+
+  tbody.innerHTML=rows.map(etf=>{
+    const d=DATA[etf.rwm];
+    const cl=etf.cl;
+    const cdot=`<span class="cdot" style="background:${CL_COLORS[cl]||'#666'}"></span>`;
+
+    if(!d){
+      return`<tr>
+        <td><b>${etf.rwm}</b></td>
+        <td style="color:var(--g4);font-size:10px">${etf.yf}</td>
+        <td style="color:var(--g4);font-size:10px">${etf.n}</td>
+        <td>${cdot}<span style="font-size:10px">${CL_LABELS[cl]||cl}</span></td>
+        <td class="num loading-cell" colspan="9">— in attesa —</td>
+        <td class="num"><span class="sig sig-load">N/D</span></td>
+        <td class="num loading-cell">—</td>
+      </tr>`;
+    }
+    if(!d.ok){
+      return`<tr style="opacity:.6">
+        <td><b>${etf.rwm}</b></td>
+        <td style="color:var(--g4);font-size:10px">${etf.yf}</td>
+        <td style="color:var(--g4);font-size:10px">${etf.n}</td>
+        <td>${cdot}<span style="font-size:10px">${CL_LABELS[cl]||cl}</span></td>
+        <td class="num" colspan="9" style="color:var(--red);font-size:10px">Errore: ${d.error}</td>
+        <td class="num"><span class="sig sig-f">ERRORE</span></td>
+        <td class="num" style="color:var(--g3)">—</td>
+      </tr>`;
+    }
+
+    const fp=d.price,fs=d.sma200;
+    const faberUp=d.faber;
+    const faberDot=`<span class="faber ${faberUp?'fab-up':'fab-dn'}"></span>`;
+    const faberPct=fs?((fp-fs)/fs*100).toFixed(1):'—';
+    const faberStr=fs?`${faberDot} ${faberPct}%`:faberDot;
+
+    const p1=d.perf1m,p3=d.perf3m,py=d.perf1y;
+    const pc=v=>v===null||v===undefined?'—':`<span style="color:${v>=0?'var(--green)':'var(--red)'}">${v>=0?'+':''}${v.toFixed(1)}%</span>`;
+
+    const vol=d.vol20,maxdd=d.maxdd;
+    const volC=vol>25?'color:var(--red)':vol>15?'color:var(--amber)':'color:var(--green)';
+
+    // Segnale TAA semplificato
+    const sig=calcSignal(d);
+    const sigBadge=sig>=4?`<span class="sig sig-sl">STRONG LONG</span>`:
+                   sig===3?`<span class="sig sig-l">LONG</span>`:
+                   sig===2?`<span class="sig sig-n">NEUTRO</span>`:
+                   sig===1?`<span class="sig sig-c">CAUTION</span>`:
+                            `<span class="sig sig-f">FLAT</span>`;
+
+    const ts=d.ts?new Date(d.ts).toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'}):'—';
+
+    return`<tr>
+      <td><b style="color:var(--navy)">${etf.rwm}</b></td>
+      <td style="font-size:10px;color:var(--g4)">${etf.yf}</td>
+      <td style="font-size:10px;max-width:160px;overflow:hidden;text-overflow:ellipsis">${etf.n}</td>
+      <td>${cdot}<span style="font-size:10px">${CL_LABELS[cl]||cl}</span></td>
+      <td class="num"><b>${fp.toFixed(2)}</b></td>
+      <td class="num" style="color:var(--g4)">${fs?fs.toFixed(2):'—'}</td>
+      <td class="num">${faberStr}</td>
+      <td class="num">${pc(p1)}</td>
+      <td class="num">${pc(p3)}</td>
+      <td class="num">${pc(py)}</td>
+      <td class="num" style="${volC}">${vol.toFixed(1)}%</td>
+      <td class="num" style="color:var(--red)">–${maxdd.toFixed(1)}%</td>
+      <td class="num">${sigBadge}</td>
+      <td class="num" style="color:var(--g4);font-size:10px">${ts}</td>
+    </tr>`;
+  }).join('');
+}
+
+// ═══════════════════════════════════════════════════════
+// CALCOLO SEGNALE TAA DA DATI REALI
+// ═══════════════════════════════════════════════════════
+function calcSignal(d){
+  if(!d||!d.ok)return 0;
+  let score=0;
+
+  // 1. Faber
+  if(d.faber)score++;
+
+  // 2. Momentum 3m (proxy 12-1m)
+  if(d.perf3m!==null&&d.perf3m>0)score++;
+
+  // 3. RSI proxy — solo da Vol (bassa vol = mercato sano)
+  // RSI reale richiederebbe calcolo separato
+  if(d.vol20<20)score++;
+
+  // 4. Vol regime
+  if(d.vol20<15)score++;
+
+  return Math.min(4,score);
+}
+
+// ═══════════════════════════════════════════════════════
+// STATS BAR
+// ═══════════════════════════════════════════════════════
+function updateStats(){
+  const loaded=Object.values(DATA).filter(d=>d&&d.ok).length;
+  document.getElementById('stLoaded').textContent=`${loaded}/41`;
+
+  const ok=Object.values(DATA).filter(d=>d&&d.ok);
+  if(ok.length===0)return;
+
+  const faberUp=ok.filter(d=>d.faber).length;
+  const faberDn=ok.filter(d=>!d.faber).length;
+  const volHigh=ok.filter(d=>d.vol20>20).length;
+  const avgSig=(ok.reduce((s,d)=>s+calcSignal(d),0)/ok.length).toFixed(1);
+
+  document.getElementById('stFaberUp').textContent=faberUp;
+  document.getElementById('stFaberDn').textContent=faberDn;
+  document.getElementById('stVolHigh').textContent=volHigh;
+  document.getElementById('stAvgSig').textContent=avgSig+'/4';
+  document.getElementById('stAvgSig').className=
+    'sbi-val '+(avgSig>=3?'green':avgSig>=2?'':'red');
+}
+
+// ═══════════════════════════════════════════════════════
+// TAA SUMMARY CARDS
+// ═══════════════════════════════════════════════════════
+function renderTAASummary(){
+  const grid=document.getElementById('taaGrid');
+  const clNames={eq:'Azionario DM',eqem:'Azionario EM',gov:'Gov Bond EU',em:'EM Bond',il:'Inflation-Linked',income:'Income Geo.'};
+  const sigLabels=['FLAT','CAUTION','NEUTRO','LONG','STRONG LONG'];
+  const sigColors=['var(--red)','var(--amber)','var(--blue)','var(--green)','var(--navy)'];
+
+  grid.innerHTML=TAA_CLASSES.map(cl=>{
+    const etfs=ETF_DB.filter(e=>e.cl===cl);
+    const loaded=etfs.map(e=>DATA[e.rwm]).filter(d=>d&&d.ok);
+    if(loaded.length===0){
+      return`<div class="taa-card">
+        <div class="taa-asset">${clNames[cl]||cl}</div>
+        <div class="taa-faber">In attesa di dati...</div>
+        <div class="taa-score">—</div>
+      </div>`;
+    }
+    // Media dei segnali per la classe
+    const avgScore=loaded.reduce((s,d)=>s+calcSignal(d),0)/loaded.length;
+    const score=Math.round(avgScore);
+    const faberUp=loaded.filter(d=>d.faber).length;
+    const avgVol=(loaded.reduce((s,d)=>s+d.vol20,0)/loaded.length).toFixed(1);
+    const avgPerf3m=(loaded.reduce((s,d)=>s+(d.perf3m||0),0)/loaded.length).toFixed(1);
+    const lbl=sigLabels[score]||'—';
+    const col=sigColors[score]||'var(--g4)';
+
+    return`<div class="taa-card">
+      <div class="taa-asset" style="color:${CL_COLORS[cl]||'var(--navy)'}">${clNames[cl]||cl}</div>
+      <div class="taa-faber">Faber: ${faberUp}/${loaded.length} LONG · Vol: ${avgVol}% · 3M: ${avgPerf3m>0?'+':''}${avgPerf3m}%</div>
+      <div class="taa-score" style="color:${col}">${score}/4</div>
+      <div class="taa-label"><span class="sig ${score>=4?'sig-sl':score===3?'sig-l':score===2?'sig-n':score===1?'sig-c':'sig-f'}">${lbl}</span></div>
+    </div>`;
+  }).join('');
+}
+
+// ═══════════════════════════════════════════════════════
+// JSON EXPORT
+// ═══════════════════════════════════════════════════════
+function exportJSON(){
+  const out={
+    generato:new Date().toISOString(),
+    fonte:'Yahoo Finance via corsproxy.io',
+    etf:{},
+    taa_signals:{},
+    summary:{
+      loaded:Object.values(DATA).filter(d=>d&&d.ok).length,
+      faber_long:Object.values(DATA).filter(d=>d&&d.ok&&d.faber).length,
+      avg_vol:(Object.values(DATA).filter(d=>d&&d.ok).reduce((s,d)=>s+d.vol20,0)/Math.max(1,Object.values(DATA).filter(d=>d&&d.ok).length)).toFixed(1),
+    }
+  };
+
+  ETF_DB.forEach(etf=>{
+    const d=DATA[etf.rwm];
+    if(d&&d.ok){
+      out.etf[etf.rwm]={
+        price:d.price?.toFixed(2),
+        sma200:d.sma200?.toFixed(2),
+        faber:d.faber,
+        perf1m:d.perf1m?.toFixed(2),
+        perf3m:d.perf3m?.toFixed(2),
+        perf1y:d.perf1y?.toFixed(2),
+        vol20:d.vol20?.toFixed(1),
+        maxdd:d.maxdd?.toFixed(1),
+        signal:calcSignal(d),
+        ts:d.ts,
+      };
+    }
+  });
+
+  // TAA signals per classe
+  TAA_CLASSES.forEach(cl=>{
+    const etfs=ETF_DB.filter(e=>e.cl===cl);
+    const loaded=etfs.map(e=>DATA[e.rwm]).filter(d=>d&&d.ok);
+    if(loaded.length>0){
+      out.taa_signals[cl]=Math.round(loaded.reduce((s,d)=>s+calcSignal(d),0)/loaded.length);
+    }
+  });
+
+  document.getElementById('jsonBox').textContent=JSON.stringify(out,null,2);
+}
+
+function copyJSON(){
+  const txt=document.getElementById('jsonBox').textContent;
+  navigator.clipboard?.writeText(txt).then(()=>{
+    const btn=event.target;btn.textContent='✓ Copiato!';
+    setTimeout(()=>btn.textContent='⎘ Copia JSON',2000);
+  }).catch(()=>{
+    const box=document.getElementById('jsonBox');
+    box.select&&box.select();
+    document.execCommand('copy');
+  });
+}
+
+function downloadJSON(){
+  const txt=document.getElementById('jsonBox').textContent;
+  const blob=new Blob([txt],{type:'application/json'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download=`RWM_DataFeed_${new Date().toISOString().slice(0,10)}.json`;
+  a.click();
+}
+
+// ═══════════════════════════════════════════════════════
+// FILTRI E SORT
+// ═══════════════════════════════════════════════════════
+function setFilter(f){
+  currentFilter=f;
+  document.querySelectorAll('.ftab').forEach(t=>t.classList.remove('active'));
+  event.target.classList.add('active');
+  renderTable();
+}
+
+function sortBy(key){
+  if(sortKey===key)sortDir*=-1;
+  else{sortKey=key;sortDir=-1;}
+  renderTable();
+}
+
+// ═══════════════════════════════════════════════════════
+// CACHE LOCALE
+// ═══════════════════════════════════════════════════════
+function saveCache(){
+  try{
+    const toSave={};
+    Object.entries(DATA).forEach(([k,v])=>{
+      // Non salva i closes (troppo pesanti)
+      const{closes,...rest}=v;
+      toSave[k]=rest;
+    });
+    localStorage.setItem('rwm_datafeed_cache',JSON.stringify(toSave));
+  }catch(e){}
+}
+
+function loadCache(){
+  try{
+    const raw=localStorage.getItem('rwm_datafeed_cache');
+    if(!raw)return;
+    const cached=JSON.parse(raw);
+    // Carica solo se recente (< 8 ore)
+    Object.entries(cached).forEach(([k,v])=>{
+      if(v.ts&&(Date.now()-v.ts)<8*60*60*1000)DATA[k]=v;
+    });
+    if(Object.keys(DATA).length>0){
+      renderTable();
+      updateStats();
+      renderTAASummary();
+      exportJSON();
+      const ts=Math.max(...Object.values(DATA).filter(d=>d.ts).map(d=>d.ts));
+      document.getElementById('lastUpdate').textContent=
+        'Cache: '+new Date(ts).toLocaleString('it-IT');
+    }
+  }catch(e){}
+}
+
+// ═══════════════════════════════════════════════════════
+// AUTO-FETCH ALLE 12:00
+// ═══════════════════════════════════════════════════════
+function checkAutoFetch(){
+  const now=new Date();
+  const h=now.getHours(),m=now.getMinutes(),s=now.getSeconds();
+  // Alle 12:00:00 (±30 secondi) nei giorni feriali
+  if(h===12&&m===0&&s<=30&&now.getDay()>=1&&now.getDay()<=5){
+    const lastAuto=localStorage.getItem('rwm_last_auto_fetch');
+    const today=now.toDateString();
+    if(lastAuto!==today){
+      localStorage.setItem('rwm_last_auto_fetch',today);
+      console.log('Auto-fetch ore 12:00');
+      fetchAll(true);
+    }
+  }
+}
+
+// ═══════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════
+// Render tabella vuota all'avvio
+renderTable();
+
+// Carica cache
+loadCache();
+
+// Clock
+setInterval(updateClock,1000);
+updateClock();
+
+// Check auto-fetch ogni 30 secondi
+setInterval(checkAutoFetch,30000);
+checkAutoFetch();
+</script>
 </body>
 </html>
