@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="RWM ULTRA">
+<meta name="theme-color" content="#0a0a1a">
+<title>RWM ULTRA — Portafogli Aggressivi</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+<style>
+:root{
+  --bg:#0a0a1a; --bg2:#0f0f2a; --bg3:#141430;
+  --red:#e03030; --red2:#ff4444; --red3:#ff6666;
+  --gold:#c8a020; --gold2:#f0c040; --gold3:#fff080;
+  --purple:#6030a0; --purple2:#8050c0; --purple3:#a070e0;
+  --rocket:#1a6a1a; --rocket2:#2a9a2a; --rocket3:#40c040;
+  --extreme:#8a2020; --extreme2:#c03030; --extreme3:#ff4040;
+  --turbo:#4a1a8a; --turbo2:#7030c0; --turbo3:#a050ff;
+  --white:#fff; --gray:#8080a0; --gray2:#404060; --gray3:#202040;
+  --r:10px; --r2:6px;
+  --shadow:0 4px 20px rgba(0,0,0,.5);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'DM Mono',monospace,sans-serif;background:var(--bg);color:#c0c0e0;min-height:100vh;font-size:12px;}
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Cormorant+Garamond:wght@400;600;700&display=swap');
+
+/* HEADER */
+.hdr{background:linear-gradient(135deg,#0a0a20 0%,#1a0a30 100%);height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;position:sticky;top:0;z-index:200;border-bottom:1px solid rgba(160,80,255,.2);box-shadow:0 2px 30px rgba(0,0,0,.6);}
+.hdr-brand{display:flex;align-items:center;gap:12px;}
+.hdr-title{font-size:18px;font-weight:700;color:#fff;letter-spacing:.04em;}
+.hdr-title span{color:var(--gold2);}
+.hdr-sub{font-size:9px;color:var(--purple3);letter-spacing:.14em;text-transform:uppercase;margin-top:1px;}
+.hdr-right{font-size:10px;color:var(--gray);display:flex;gap:14px;align-items:center;}
+.hdr-regime{padding:3px 12px;border-radius:20px;font-size:9px;font-weight:600;letter-spacing:.08em;}
+.regime-bull{background:rgba(40,160,40,.2);color:#40c040;border:1px solid rgba(40,160,40,.3);}
+.regime-bear{background:rgba(200,40,40,.2);color:#ff6060;border:1px solid rgba(200,40,40,.3);}
+.regime-neutro{background:rgba(160,120,0,.2);color:#f0c040;border:1px solid rgba(160,120,0,.3);}
+
+/* NAV */
+.nav{background:var(--bg2);border-bottom:1px solid var(--gray3);display:flex;overflow-x:auto;scrollbar-width:none;position:sticky;top:62px;z-index:199;}
+.nav::-webkit-scrollbar{display:none;}
+.ntab{padding:12px 18px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s;}
+.ntab:hover{color:#fff;}
+.ntab.active{color:var(--gold2);border-bottom-color:var(--gold);}
+
+/* MAIN */
+.main{max-width:1300px;margin:0 auto;padding:20px 14px 80px;}
+.sec{display:none;}.sec.active{display:block;}
+
+/* PROFILE CARDS */
+.profile-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-bottom:20px;}
+.profile-card{border-radius:var(--r);padding:20px;cursor:pointer;transition:all .25s;position:relative;overflow:hidden;}
+.profile-card::before{content:'';position:absolute;inset:0;opacity:.06;background:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%);background-size:8px 8px;}
+.profile-card.rocket{background:linear-gradient(135deg,#0a1a0a 0%,#0f2a0f 100%);border:1px solid rgba(40,180,40,.3);}
+.profile-card.extreme{background:linear-gradient(135deg,#1a0a0a 0%,#2a0f0f 100%);border:1px solid rgba(200,40,40,.3);}
+.profile-card.turbo{background:linear-gradient(135deg,#0f0a1a 0%,#1a0f2a 100%);border:1px solid rgba(120,60,200,.3);}
+.profile-card:hover{transform:translateY(-2px);box-shadow:0 8px 40px rgba(0,0,0,.6);}
+.profile-card.active-profile.rocket{border-color:var(--rocket2);border-width:2px;box-shadow:0 0 20px rgba(40,180,40,.2);}
+.profile-card.active-profile.extreme{border-color:var(--extreme2);border-width:2px;box-shadow:0 0 20px rgba(200,40,40,.2);}
+.profile-card.active-profile.turbo{border-color:var(--turbo2);border-width:2px;box-shadow:0 0 20px rgba(120,60,200,.2);}
+.profile-badge{display:inline-block;padding:3px 12px;border-radius:20px;font-size:10px;font-weight:600;letter-spacing:.08em;margin-bottom:10px;}
+.badge-rocket{background:rgba(40,160,40,.15);color:var(--rocket3);border:1px solid rgba(40,160,40,.3);}
+.badge-extreme{background:rgba(200,40,40,.15);color:var(--extreme3);border:1px solid rgba(200,40,40,.3);}
+.badge-turbo{background:rgba(120,60,200,.15);color:var(--turbo3);border:1px solid rgba(120,60,200,.3);}
+.profile-name{font-size:22px;font-weight:700;color:#fff;margin-bottom:4px;}
+.profile-desc{font-size:10px;color:var(--gray);line-height:1.6;margin-bottom:12px;}
+.profile-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.pstat{background:rgba(0,0,0,.3);border-radius:var(--r2);padding:8px 10px;}
+.pstat-label{font-size:8px;text-transform:uppercase;letter-spacing:.1em;color:var(--gray);margin-bottom:2px;}
+.pstat-value{font-size:14px;font-weight:600;color:#fff;}
+
+/* CARD */
+.card{background:var(--bg2);border:1px solid var(--gray3);border-radius:var(--r);padding:18px;margin-bottom:14px;box-shadow:var(--shadow);}
+.card-title{font-size:13px;font-weight:600;color:#fff;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--gray3);display:flex;align-items:center;gap:8px;}
+.card-title .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;}
+
+/* GRID */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+@media(max-width:900px){.g2,.g3{grid-template-columns:1fr;}.g4{grid-template-columns:1fr 1fr;}}
+
+/* FORMS */
+.fl{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.09em;color:var(--gray);margin-bottom:4px;}
+.fi,.fs{width:100%;padding:8px 11px;border:1px solid var(--gray3);border-radius:var(--r2);font-family:'DM Mono',monospace;font-size:12px;color:#c0c0e0;background:#0f0f25;transition:border-color .2s;}
+.fi:focus,.fs:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,160,32,.1);}
+.fs{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7'%3E%3Cpath d='M0 0l5 7 5-7z' fill='%238080a0'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;padding-right:28px;-webkit-appearance:none;}
+.fg{margin-bottom:12px;}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:6px;padding:9px 20px;border-radius:var(--r2);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.07em;text-transform:uppercase;cursor:pointer;transition:all .2s;border:none;}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;font-weight:600;}
+.btn-gold:hover{opacity:.88;}
+.btn-rocket{background:linear-gradient(135deg,#1a4a1a,#2a6a2a);color:#40c040;border:1px solid rgba(40,160,40,.3);}
+.btn-extreme{background:linear-gradient(135deg,#4a1a1a,#6a2a2a);color:#ff6060;border:1px solid rgba(200,40,40,.3);}
+.btn-turbo{background:linear-gradient(135deg,#2a1a4a,#3a2a6a);color:#a060ff;border:1px solid rgba(120,60,200,.3);}
+.btn-outline{background:transparent;border:1px solid var(--gray3);color:var(--gray);}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold2);}
+.btn-sm{padding:5px 12px;font-size:9px;}
+
+/* STAT */
+.stat{background:var(--bg3);border:1px solid var(--gray3);border-radius:var(--r);padding:14px;}
+.stat-label{font-size:9px;text-transform:uppercase;letter-spacing:.11em;color:var(--gray);margin-bottom:5px;}
+.stat-value{font-size:24px;font-weight:600;color:#fff;line-height:1;}
+.stat-sub{font-size:9px;color:var(--gray);margin-top:4px;}
+
+/* ALERT BANNER */
+.alert{border-radius:var(--r);padding:14px 18px;margin-bottom:14px;display:flex;align-items:center;gap:12px;}
+.alert-red{background:rgba(200,40,40,.1);border:1px solid rgba(200,40,40,.3);}
+.alert-amber{background:rgba(200,160,0,.1);border:1px solid rgba(200,160,0,.3);}
+.alert-green{background:rgba(40,160,40,.1);border:1px solid rgba(40,160,40,.3);}
+.alert-icon{font-size:20px;flex-shrink:0;}
+.alert-text{font-size:11px;line-height:1.6;color:#c0c0e0;}
+.alert-title{font-weight:600;color:#fff;margin-bottom:2px;}
+
+/* SIGNAL BARS */
+.sig-wrap{display:flex;gap:3px;margin-top:6px;}
+.sig-bar{height:16px;border-radius:2px;flex:1;background:var(--gray3);}
+.sig-bar.on-rocket{background:var(--rocket2);}
+.sig-bar.on-extreme{background:var(--extreme2);}
+.sig-bar.on-turbo{background:var(--turbo2);}
+
+/* STRESS TEST */
+.stress-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;}
+.stress-card{background:var(--bg3);border:1px solid var(--gray3);border-radius:var(--r2);padding:12px;text-align:center;}
+.stress-scenario{font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--gray);margin-bottom:6px;}
+.stress-loss{font-size:22px;font-weight:700;color:var(--red2);}
+.stress-recovery{font-size:9px;color:var(--gray);margin-top:3px;}
+
+/* TABLE */
+.rt{width:100%;border-collapse:collapse;font-size:11px;}
+.rt th{text-align:left;padding:8px 10px;font-size:9px;text-transform:uppercase;letter-spacing:.09em;color:var(--gray);border-bottom:1px solid var(--gray3);font-weight:400;}
+.rt td{padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.04);color:#c0c0e0;}
+.rt tr:last-child td{border-bottom:none;}
+.rt tr:hover td{background:rgba(255,255,255,.03);}
+.rt .num{text-align:right;font-variant-numeric:tabular-nums;}
+
+/* BADGE */
+.badge{display:inline-block;padding:2px 7px;border-radius:20px;font-size:9px;}
+.bg-green{background:rgba(40,160,40,.15);color:#40c040;}
+.bg-red{background:rgba(200,40,40,.15);color:#ff6060;}
+.bg-amber{background:rgba(200,160,0,.15);color:#f0c040;}
+.bg-purple{background:rgba(120,60,200,.15);color:#a060ff;}
+.bg-gray{background:rgba(128,128,128,.15);color:#a0a0c0;}
+
+/* DISCLAIMER */
+.disclaimer{background:rgba(200,40,40,.05);border:1px solid rgba(200,40,40,.2);border-radius:var(--r);padding:14px 18px;margin-bottom:16px;}
+.disclaimer-title{font-size:10px;font-weight:600;color:var(--red3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px;}
+.disclaimer-text{font-size:10px;color:var(--gray);line-height:1.7;}
+
+/* MONITOR TABLE */
+.monitor-row-ok td{color:#c0c0e0;}
+.monitor-row-warn td{color:#f0c040!important;}
+.monitor-row-stop td{color:#ff6060!important;}
+.monitor-row-stop td b{color:#ff4040;}
+
+/* TOAST */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#1a0a30;color:var(--gold2);padding:10px 22px;border-radius:24px;font-size:11px;z-index:2000;opacity:0;transition:opacity .3s;pointer-events:none;border:1px solid var(--purple2);}
+.toast.show{opacity:1;}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr-brand">
+    <div>
+      <div class="hdr-title">RWM <span>ULTRA</span></div>
+      <div class="hdr-sub">Portafogli Aggressivi · Rischio Elevato</div>
+    </div>
+  </div>
+  <div class="hdr-right">
+    <div id="hdrRegime" class="hdr-regime regime-neutro">CARICAMENTO...</div>
+    <div id="hdrDate" style="font-size:10px;color:var(--gray)"></div>
+    <a href="RWM_Dashboard_v3.html" class="btn btn-outline btn-sm">← RWM Classic</a>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="ntab active" onclick="show('dashboard')">⚡ Dashboard</div>
+  <div class="ntab" onclick="show('profilo')">① Profilo</div>
+  <div class="ntab" onclick="show('monitor')">② Monitor</div>
+  <div class="ntab" onclick="show('allocazione')">③ Allocazione</div>
+  <div class="ntab" onclick="show('stress')">④ Stress Test</div>
+  <div class="ntab" onclick="show('etf')">⑤ ETF Ultra</div>
+  <div class="ntab" onclick="show('ips')">⑥ IPS</div>
+</nav>
+
+<main class="main">
+
+<!-- ⚡ DASHBOARD -->
+<section class="sec active" id="sec-dashboard">
+  <div style="margin-bottom:20px">
+    <div style="font-size:28px;font-weight:700;color:#fff;font-family:'Cormorant Garamond',serif">RWM Ultra</div>
+    <div style="font-size:11px;color:var(--gray);margin-top:2px">Sistema portafogli ad alto rischio · Controllo settimanale · Solo clienti esperti</div>
+  </div>
+
+  <div class="disclaimer">
+    <div class="disclaimer-title">⚠ Avviso Rischio Elevato — MiFID II</div>
+    <div class="disclaimer-text">I portafogli RWM Ultra comportano un rischio di perdita parziale o totale del capitale investito. Strumenti a leva amplificano sia i guadagni che le perdite. Prodotti crypto non sono regolamentati UCITS. Adatti esclusivamente a investitori con esperienza professionale, orizzonte minimo 10 anni e piena consapevolezza del rischio. Documentare adeguatezza nel Decision Log MiFID II prima di ogni operazione.</div>
+  </div>
+
+  <div id="marketAlert" style="display:none"></div>
+
+  <div class="profile-grid">
+    <div class="profile-card rocket" onclick="selectProfile(0)" id="card0">
+      <div class="profile-badge badge-rocket">🚀 ROCKET</div>
+      <div class="profile-name">Rocket</div>
+      <div class="profile-desc">Equity concentrato su momentum, tech e small cap. Nessuna leva. Alta volatilità ma strumenti regolamentati UCITS.</div>
+      <div class="profile-stats">
+        <div class="pstat"><div class="pstat-label">Rend. atteso</div><div class="pstat-value" style="color:var(--rocket3)">8.0%</div></div>
+        <div class="pstat"><div class="pstat-label">DD Max</div><div class="pstat-value" style="color:#ff9060">–40%</div></div>
+        <div class="pstat"><div class="pstat-label">Volatilità</div><div class="pstat-value">28%</div></div>
+        <div class="pstat"><div class="pstat-label">Orizzonte min.</div><div class="pstat-value">10 anni</div></div>
+      </div>
+    </div>
+    <div class="profile-card extreme" onclick="selectProfile(1)" id="card1">
+      <div class="profile-badge badge-extreme">💥 EXTREME</div>
+      <div class="profile-name">Extreme</div>
+      <div class="profile-desc">Equity + ETC leva 2x su indici principali. Potenziale di rendimento elevato con rischio di perdita significativa in breve tempo.</div>
+      <div class="profile-stats">
+        <div class="pstat"><div class="pstat-label">Rend. atteso</div><div class="pstat-value" style="color:var(--extreme3)">10.0%</div></div>
+        <div class="pstat"><div class="pstat-label">DD Max</div><div class="pstat-value" style="color:#ff6060">–60%</div></div>
+        <div class="pstat"><div class="pstat-label">Volatilità</div><div class="pstat-value">40%</div></div>
+        <div class="pstat"><div class="pstat-label">Orizzonte min.</div><div class="pstat-value">12 anni</div></div>
+      </div>
+    </div>
+    <div class="profile-card turbo" onclick="selectProfile(2)" id="card2">
+      <div class="profile-badge badge-turbo">⚡ TURBO</div>
+      <div class="profile-name">Turbo</div>
+      <div class="profile-desc">Equity concentrato + leva 3x + crypto ETP (HODL + BTCE). Massimo rischio. Perdita totale del capitale possibile.</div>
+      <div class="profile-stats">
+        <div class="pstat"><div class="pstat-label">Rend. atteso</div><div class="pstat-value" style="color:var(--turbo3)">12%+</div></div>
+        <div class="pstat"><div class="pstat-label">DD Max</div><div class="pstat-value" style="color:#ff4040">–80%</div></div>
+        <div class="pstat"><div class="pstat-label">Volatilità</div><div class="pstat-value">55%+</div></div>
+        <div class="pstat"><div class="pstat-label">Orizzonte min.</div><div class="pstat-value">15 anni</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="g4" id="dashStats" style="margin-bottom:16px"></div>
+
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>Segnali Settimanali Ultra TAA — Faber SMA50 + Momentum 1m</div>
+    <div id="ultraSignals" style="overflow-x:auto">
+      <table class="rt">
+        <thead><tr>
+          <th>ETF</th><th>Nome</th><th class="num">Prezzo</th>
+          <th class="num">SMA50</th><th class="num">Faber50</th>
+          <th class="num">Mom 1m</th><th class="num">Vol20</th>
+          <th class="num">Score</th><th>Segnale</th>
+        </tr></thead>
+        <tbody id="signalBody"></tbody>
+      </table>
+    </div>
+    <div style="font-size:9px;color:var(--gray);margin-top:8px" id="dataAge"></div>
+  </div>
+</section>
+
+<!-- ① PROFILO -->
+<section class="sec" id="sec-profilo">
+  <div style="margin-bottom:16px">
+    <div style="font-size:22px;font-weight:700;color:#fff;font-family:'Cormorant Garamond',serif">Profilo Cliente Ultra</div>
+    <div style="font-size:10px;color:var(--gray)">Solo clienti con esperienza professionale e piena consapevolezza del rischio</div>
+  </div>
+
+  <div class="g2">
+    <div class="card">
+      <div class="card-title"><span class="dot"></span>Dati Cliente</div>
+      <div class="fg"><label class="fl">Nome e Cognome</label><input class="fi" id="uName" placeholder="es. Marco Rossi"></div>
+      <div class="g2">
+        <div class="fg"><label class="fl">Anno nascita</label><input class="fi" id="uBirth" type="number" placeholder="1980"></div>
+        <div class="fg"><label class="fl">Orizzonte (anni)</label><input class="fi" id="uHorizon" type="number" placeholder="15"></div>
+      </div>
+      <div class="fg"><label class="fl">Capitale Ultra (€)</label><input class="fi" id="uCapital" type="number" placeholder="50000"></div>
+      <div class="fg"><label class="fl">% del patrimonio totale destinata a Ultra</label>
+        <select class="fs" id="uPct">
+          <option value="5">5% — satellite prudente</option>
+          <option value="10" selected>10% — satellite standard</option>
+          <option value="20">20% — satellite aggressivo</option>
+          <option value="30">30% — solo esperti</option>
+          <option value="50">50% — solo professionisti</option>
+        </select>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="dot"></span>Profilo Selezionato</div>
+      <div style="margin-bottom:14px">
+        <div style="font-size:10px;color:var(--gray);margin-bottom:8px">Seleziona dalla Dashboard o clicca qui:</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <button class="btn btn-rocket" onclick="selectProfile(0)">🚀 Rocket</button>
+          <button class="btn btn-extreme" onclick="selectProfile(1)">💥 Extreme</button>
+          <button class="btn btn-turbo" onclick="selectProfile(2)">⚡ Turbo</button>
+        </div>
+      </div>
+      <div id="selectedProfileInfo" style="background:var(--bg3);border-radius:var(--r2);padding:14px;font-size:11px;color:var(--gray)">
+        Nessun profilo selezionato
+      </div>
+      <div class="fg" style="margin-top:12px"><label class="fl">Note cliente / motivazione MiFID II</label>
+        <textarea class="fi" id="uNote" rows="3" placeholder="es. Cliente imprenditore 45 anni, patrimonio €2M, quota Ultra 10%. Piena consapevolezza rischio documentata." style="resize:vertical"></textarea>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <button class="btn btn-gold" onclick="saveUltraClient()">💾 Salva Cliente Ultra</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="disclaimer" style="margin-top:4px">
+    <div class="disclaimer-title">Check-list MiFID II obbligatoria</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px;margin-top:8px">
+      ${['Cliente classificato come Professionale o con deroga documentata',
+         'Esperienza con strumenti complessi verificata e documentata',
+         'Perdita massima simulata comunicata e accettata per iscritto',
+         'Orizzonte temporale minimo rispettato',
+         '% patrimonio destinata a Ultra non supera soglia concordata',
+         'Decision Log aggiornato con motivazione specifica',
+         'Prodotti crypto: rischi aggiuntivi comunicati separatamente',
+         'Stop loss e piano di uscita concordati con il cliente',
+      ].map(t=>`<label style="display:flex;align-items:flex-start;gap:8px;font-size:10px;color:var(--gray);cursor:pointer">
+        <input type="checkbox" style="margin-top:2px;flex-shrink:0"> <span>${t}</span>
+      </label>`).join('')}
+    </div>
+  </div>
+</section>
+
+<!-- ② MONITOR -->
+<section class="sec" id="sec-monitor">
+  <div style="margin-bottom:16px">
+    <div style="font-size:22px;font-weight:700;color:#fff;font-family:'Cormorant Garamond',serif">Monitor Settimanale</div>
+    <div style="font-size:10px;color:var(--gray)">Controlla ogni lunedì mattina · Alert automatici su stop loss e segnali TAA</div>
+  </div>
+  <div id="monitorAlerts" style="margin-bottom:14px"></div>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>Posizione Corrente</div>
+    <div style="display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap">
+      <button class="btn btn-outline btn-sm" onclick="addMonitorPosition()">+ Aggiungi posizione</button>
+      <button class="btn btn-outline btn-sm" onclick="clearMonitor()">Svuota</button>
+    </div>
+    <div id="monitorInputArea" style="display:none;background:var(--bg3);border-radius:var(--r2);padding:14px;margin-bottom:12px">
+      <div class="g2" style="gap:10px">
+        <div class="fg"><label class="fl">ETF/ETC</label>
+          <select class="fs" id="monETF"></select>
+        </div>
+        <div class="fg"><label class="fl">PMC (€)</label><input class="fi" id="monPMC" type="number" placeholder="50.00" step="0.01"></div>
+        <div class="fg"><label class="fl">Quote</label><input class="fi" id="monQty" type="number" placeholder="100"></div>
+        <div class="fg"><label class="fl">Stop Loss (%)</label><input class="fi" id="monSL" type="number" placeholder="15" value="15"></div>
+      </div>
+      <button class="btn btn-gold btn-sm" onclick="confirmAddPosition()">Aggiungi →</button>
+    </div>
+    <div style="overflow-x:auto">
+      <table class="rt">
+        <thead><tr>
+          <th>ETF</th><th>Nome</th><th class="num">PMC</th><th class="num">Prezzo att.</th>
+          <th class="num">P/L %</th><th class="num">Stop Loss</th><th class="num">Distanza SL</th>
+          <th class="num">Faber50</th><th class="num">Mom1m</th><th class="num">Score</th><th>Stato</th>
+        </tr></thead>
+        <tbody id="monitorBody"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ③ ALLOCAZIONE -->
+<section class="sec" id="sec-allocazione">
+  <div style="margin-bottom:16px">
+    <div style="font-size:22px;font-weight:700;color:#fff;font-family:'Cormorant Garamond',serif">Allocazione Ultra</div>
+  </div>
+  <div id="allocEmpty" class="card" style="text-align:center;padding:32px;color:var(--gray)">← Seleziona un profilo dalla Dashboard</div>
+  <div id="allocContent" style="display:none">
+    <div class="g4" id="allocStats" style="margin-bottom:14px"></div>
+    <div class="card">
+      <div class="card-title"><span class="dot"></span>Portafoglio Target</div>
+      <div style="overflow-x:auto">
+        <table class="rt">
+          <thead><tr><th>ETF/ETC</th><th>Nome</th><th>Classe</th><th class="num">Peso</th><th class="num">Importo €</th><th class="num">TER</th><th>Leva</th><th>Note TAA</th></tr></thead>
+          <tbody id="allocBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="dot"></span>Regole di Uscita</div>
+      <div id="exitRules" style="font-size:11px;line-height:2;color:#c0c0e0"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ④ STRESS TEST -->
+<section class="sec" id="sec-stress">
+  <div style="margin-bottom:16px">
+    <div style="font-size:22px;font-weight:700;color:#fff;font-family:'Cormorant Garamond',serif">Stress Test Storico</div>
+    <div style="font-size:10px;color:var(--gray)">Simulazione perdite su scenari storici reali</div>
+  </div>
+  <div id="stressEmpty" class="card" style="text-align:center;padding:32px;color:var(--gray)">← Seleziona un profilo dalla Dashboard</div>
+  <div id="stressContent" style="display:none">
+    <div class="fg" style="max-width:300px;margin-bottom:16px">
+      <label class="fl">Capitale simulato (€)</label>
+      <input class="fi" id="stressCap" type="number" placeholder="50000" value="50000" oninput="renderStress()">
+    </div>
+    <div class="stress-grid" id="stressGrid"></div>
+    <div class="card" style="margin-top:14px">
+      <div class="card-title"><span class="dot"></span>Recovery Time stimato</div>
+      <div id="recoveryTable" style="overflow-x:auto"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑤ ETF ULTRA -->
+<section class="sec" id="sec-etf">
+  <div style="margin-bottom:16px">
+    <div style="font-size:22px;font-weight:700;color:#fff;font-family:'Cormorant Garamond',serif">Universo ETF Ultra</div>
+  </div>
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>Strumenti disponibili per profili Ultra</div>
+    <div style="overflow-x:auto">
+      <table class="rt">
+        <thead><tr>
+          <th>Ticker</th><th>Nome</th><th>Classe</th><th>Profilo</th>
+          <th class="num">TER</th><th class="num">Leva</th>
+          <th class="num">Prezzo</th><th class="num">Mom1m</th><th class="num">Faber50</th><th class="num">Score</th>
+        </tr></thead>
+        <tbody id="etfUltraBody"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ⑥ IPS -->
+<section class="sec" id="sec-ips">
+  <div style="margin-bottom:16px">
+    <div style="font-size:22px;font-weight:700;color:#fff;font-family:'Cormorant Garamond',serif">IPS Ultra</div>
+    <div style="font-size:10px;color:var(--gray)">Investment Policy Statement con disclaimer rischio elevato</div>
+  </div>
+  <div id="ipsEmpty" class="card" style="text-align:center;padding:32px;color:var(--gray)">← Compila prima il Profilo</div>
+  <div id="ipsContent" style="display:none">
+    <div id="ipsBanner" style="background:linear-gradient(135deg,#0f0f25,#1a0a30);border:1px solid rgba(160,80,255,.3);border-radius:var(--r);padding:18px 22px;margin-bottom:14px">
+      <div style="font-size:20px;font-weight:700;color:#fff" id="ipsName">—</div>
+      <div style="font-size:10px;color:var(--gray);margin-top:3px">IPS Ultra · RWM v3.0</div>
+    </div>
+    <div id="ipsBlocks"></div>
+    <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap">
+      <button class="btn btn-gold" onclick="downloadUltraPDF()">⎙ Scarica IPS PDF</button>
+    </div>
+  </div>
+</section>
+
+</main>
+<div class="toast" id="toast"></div>
+
+<script>
+// ══════════════════════════════════════
+// DATI PROFILI ULTRA
+// ══════════════════════════════════════
+const ULTRA_PROFILES=[
+  {
+    id:'rocket', name:'Rocket', emoji:'🚀',
+    rend:8.0, vol:28, dd1:15, dd2:28, dd3:40,
+    minHor:10, minPct:5, maxPct:30,
+    desc:'Equity concentrato momentum + tech + EM. No leva. UCITS compliant.',
+    color:'var(--rocket2)', colorLight:'var(--rocket3)',
+    portfolio:[
+      {t:'IWMO',  peso:.25, n:'iShares MSCI World Momentum',   cl:'eq',    leva:1, note:'Core — score TAA ≥ 2/2'},
+      {t:'EQQQ',  peso:.20, n:'Invesco NASDAQ-100',             cl:'eq',    leva:1, note:'Tech puro — riduci se score 0/2'},
+      {t:'QDVE',  peso:.15, n:'iShares S&P 500 IT Sector',      cl:'eq',    leva:1, note:'Satellite tech'},
+      {t:'CEBL',  peso:.15, n:'iShares MSCI EM Asia',           cl:'eqem',  leva:1, note:'EM Asia — solo se score ≥ 1/2'},
+      {t:'ZPRV',  peso:.10, n:'SPDR MSCI USA Small Cap Value',  cl:'small', leva:1, note:'Value factor'},
+      {t:'CINDA', peso:.10, n:'iShares MSCI India',             cl:'eqem',  leva:1, note:'India structural'},
+      {t:'IGLN',  peso:.05, n:'iShares Physical Gold',          cl:'com',   leva:1, note:'Hedge tail risk'},
+    ],
+    exitRules:[
+      'Faber SMA50 sotto → riduci posizione del 30%',
+      'Mom1m negativo su 3+ posizioni → passa a XEON 50%',
+      'DD dal massimo > –20% → stop e revisione completa',
+      'VIX > 35 → pausa nuovi ingressi 2 settimane',
+    ],
+    stress:{
+      '2008 GFC':      {loss:38, recovery:36},
+      '2020 COVID':    {loss:28, recovery:6},
+      '2022 Tassi':    {loss:32, recovery:24},
+      'Dot-com 2000':  {loss:55, recovery:72},
+      'Flash Crash':   {loss:15, recovery:3},
+    }
+  },
+  {
+    id:'extreme', name:'Extreme', emoji:'💥',
+    rend:10.0, vol:40, dd1:20, dd2:40, dd3:60,
+    minHor:12, minPct:5, maxPct:20,
+    desc:'Equity + ETC leva 2x S&P500 e NASDAQ. Perdite potenzialmente doppie rispetto al mercato.',
+    color:'var(--extreme2)', colorLight:'var(--extreme3)',
+    portfolio:[
+      {t:'SWDA',  peso:.20, n:'iShares Core MSCI World',        cl:'eq',    leva:1, note:'Base difensiva'},
+      {t:'IWMO',  peso:.15, n:'iShares MSCI World Momentum',    cl:'eq',    leva:1, note:'Momentum core'},
+      {t:'EQQQ',  peso:.15, n:'Invesco NASDAQ-100',             cl:'eq',    leva:1, note:'Tech base'},
+      {t:'LQQ',   peso:.20, n:'Amundi Leva 2x NASDAQ-100',      cl:'leva2', leva:2, note:'⚠ Leva — solo score 2/2'},
+      {t:'L2US',  peso:.15, n:'Amundi Leva 2x S&P500',          cl:'leva2', leva:2, note:'⚠ Leva — solo score 2/2'},
+      {t:'CEBL',  peso:.10, n:'iShares MSCI EM Asia',            cl:'eqem',  leva:1, note:'EM satellite'},
+      {t:'BTEC',  peso:.05, n:'iShares NASDAQ Biotech',          cl:'tema',  leva:1, note:'High beta'},
+    ],
+    exitRules:[
+      'Su strumenti leva 2x: stop loss fisso –15% dal PMC',
+      'Faber SMA50 sotto su strumento leva → esci immediatamente',
+      'Mom1m negativo → riduci leva al 50% della posizione',
+      'DD totale portafoglio > –30% → esci tutta la leva',
+      'VIX > 30 → sospendi nuovi ingressi su leva',
+    ],
+    stress:{
+      '2008 GFC':      {loss:65, recovery:60},
+      '2020 COVID':    {loss:50, recovery:9},
+      '2022 Tassi':    {loss:58, recovery:36},
+      'Dot-com 2000':  {loss:80, recovery:120},
+      'Flash Crash':   {loss:25, recovery:4},
+    }
+  },
+  {
+    id:'turbo', name:'Turbo', emoji:'⚡',
+    rend:12.0, vol:55, dd1:25, dd2:55, dd3:80,
+    minHor:15, minPct:3, maxPct:10,
+    desc:'Equity concentrato + leva 3x + crypto ETP. Perdita totale del capitale possibile. Solo investitori professionali.',
+    color:'var(--turbo2)', colorLight:'var(--turbo3)',
+    portfolio:[
+      {t:'EQQQ',  peso:.20, n:'Invesco NASDAQ-100',             cl:'eq',    leva:1, note:'Base equity'},
+      {t:'IWMO',  peso:.15, n:'iShares MSCI World Momentum',    cl:'eq',    leva:1, note:'Momentum'},
+      {t:'LQQ',   peso:.20, n:'Amundi Leva 2x NASDAQ-100',      cl:'leva2', leva:2, note:'⚠ Leva 2x'},
+      {t:'L2US',  peso:.10, n:'Amundi Leva 2x S&P500',          cl:'leva2', leva:2, note:'⚠ Leva 2x'},
+      {t:'HODL',  peso:.15, n:'21Shares Crypto Basket 10',      cl:'crypto',leva:1, note:'⚠ Crypto — no UCITS'},
+      {t:'BTCE',  peso:.10, n:'ETC Group Bitcoin ETP',           cl:'crypto',leva:1, note:'⚠ Bitcoin puro'},
+      {t:'BCHN',  peso:.10, n:'Invesco Global Blockchain',       cl:'tema',  leva:1, note:'Blockchain equity'},
+    ],
+    exitRules:[
+      'Crypto: stop loss fisso –25% dal PMC — TASSATIVO',
+      'Leva 2x: stop loss fisso –15% dal PMC — TASSATIVO',
+      'Faber SMA50 sotto su qualsiasi posizione → revisione immediata',
+      'DD totale > –40% → esci TUTTO e torna a RWM Classic',
+      'Bitcoin –50% dal massimo → esci tutta la componente crypto',
+      'VIX > 40 → pausa totale 1 mese',
+    ],
+    stress:{
+      '2008 GFC':      {loss:75, recovery:84},
+      '2020 COVID':    {loss:60, recovery:12},
+      '2022 Tassi':    {loss:70, recovery:48},
+      'Crypto Bear 22':{loss:85, recovery:36},
+      'Flash Crash':   {loss:35, recovery:5},
+    }
+  },
+];
+
+const ULTRA_ETF=[
+  {t:'IWMO', n:'iShares MSCI World Momentum',   cl:'eq',     ter:.0025, leva:1, profili:['rocket','extreme','turbo']},
+  {t:'EQQQ', n:'Invesco NASDAQ-100',             cl:'eq',     ter:.0020, leva:1, profili:['rocket','extreme','turbo']},
+  {t:'QDVE', n:'iShares S&P 500 IT Sector',      cl:'eq',     ter:.0015, leva:1, profili:['rocket']},
+  {t:'CEBL', n:'iShares MSCI EM Asia',           cl:'eqem',   ter:.0028, leva:1, profili:['rocket','extreme']},
+  {t:'ZPRV', n:'SPDR MSCI USA Small Cap Value',  cl:'small',  ter:.0035, leva:1, profili:['rocket']},
+  {t:'CINDA',n:'iShares MSCI India',             cl:'eqem',   ter:.0065, leva:1, profili:['rocket']},
+  {t:'SWDA', n:'iShares Core MSCI World',        cl:'eq',     ter:.0020, leva:1, profili:['extreme']},
+  {t:'BTEC', n:'iShares NASDAQ Biotech',         cl:'tema',   ter:.0037, leva:1, profili:['extreme','turbo']},
+  {t:'LQQ',  n:'Amundi Leva 2x NASDAQ-100',      cl:'leva2',  ter:.0060, leva:2, profili:['extreme','turbo']},
+  {t:'L2US', n:'Amundi Leva 2x S&P500',          cl:'leva2',  ter:.0035, leva:2, profili:['extreme','turbo']},
+  {t:'HODL', n:'21Shares Crypto Basket 10',      cl:'crypto', ter:.0250, leva:1, profili:['turbo']},
+  {t:'BTCE', n:'ETC Group Bitcoin ETP',          cl:'crypto', ter:.0200, leva:1, profili:['turbo']},
+  {t:'BCHN', n:'Invesco Global Blockchain ETF',  cl:'tema',   ter:.0065, leva:1, profili:['turbo']},
+  {t:'IGLN', n:'iShares Physical Gold',          cl:'com',    ter:.0012, leva:1, profili:['rocket']},
+];
+
+// ══════════════════════════════════════
+// STATO
+// ══════════════════════════════════════
+let G={
+  profile:null, profileIdx:null,
+  marketData:null, positions:[], client:null,
+};
+
+// ══════════════════════════════════════
+// INIT
+// ══════════════════════════════════════
+function init(){
+  document.getElementById('hdrDate').textContent=
+    new Date().toLocaleDateString('it-IT',{weekday:'short',day:'2-digit',month:'short',year:'numeric'});
+  loadMarketData();
+  populateMonitorSelect();
+  renderETFUltra();
+}
+
+// ══════════════════════════════════════
+// MARKET DATA — legge da GitHub Pages
+// ══════════════════════════════════════
+async function loadMarketData(){
+  try{
+    const res=await fetch('data/market_data.json?t='+Date.now());
+    if(!res.ok) throw new Error('File non trovato');
+    G.marketData=await res.json();
+    updateRegimeBadge();
+    renderDashStats();
+    renderSignalTable();
+    renderMonitorTable();
+    renderETFUltra();
+    const age=G.marketData?.meta?.updated_it||'—';
+    document.getElementById('dataAge').textContent=`Dati aggiornati: ${age} · Aggiornamento automatico 09:00 e 16:00`;
+  } catch(e){
+    document.getElementById('hdrRegime').textContent='OFFLINE';
+    document.getElementById('hdrRegime').className='hdr-regime regime-bear';
+    document.getElementById('dataAge').textContent='⚠ Dati non disponibili — verifica connessione o attendi prossimo aggiornamento GitHub Action';
+  }
+}
+
+function updateRegimeBadge(){
+  const regime=G.marketData?.meta?.regime||'NEUTRO';
+  const el=document.getElementById('hdrRegime');
+  el.textContent=regime;
+  el.className='hdr-regime '+(regime==='BULL'?'regime-bull':regime==='BEAR'?'regime-bear':'regime-neutro');
+}
+
+function getD(ticker){
+  return G.marketData?.data?.[ticker]||null;
+}
+
+function fmt(n){return new Intl.NumberFormat('it-IT').format(Math.round(n));}
+function pc(v,dec=1){if(v===null||v===undefined)return'—';return(v>=0?'+':'')+v.toFixed(dec)+'%';}
+function toast(msg,dur=2500){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),dur);
+}
+
+// ══════════════════════════════════════
+// NAVIGAZIONE
+// ══════════════════════════════════════
+function show(id){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.ntab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('sec-'+id).classList.add('active');
+  const map={dashboard:0,profilo:1,monitor:2,allocazione:3,stress:4,etf:5,ips:6};
+  const tabs=document.querySelectorAll('.ntab');
+  if(map[id]!==undefined)tabs[map[id]].classList.add('active');
+  if(id==='allocazione')renderAlloc();
+  if(id==='stress')renderStress();
+  if(id==='ips')renderIPS();
+}
+
+// ══════════════════════════════════════
+// SELEZIONE PROFILO
+// ══════════════════════════════════════
+function selectProfile(idx){
+  G.profileIdx=idx;
+  G.profile=ULTRA_PROFILES[idx];
+  document.querySelectorAll('.profile-card').forEach((c,i)=>{
+    c.classList.toggle('active-profile',i===idx);
+  });
+  renderDashStats();
+  renderSignalTable();
+  updateSelectedProfileInfo();
+  toast(`Profilo ${G.profile.name} selezionato`);
+}
+
+function updateSelectedProfileInfo(){
+  if(!G.profile)return;
+  const p=G.profile;
+  document.getElementById('selectedProfileInfo').innerHTML=`
+    <div style="font-size:14px;font-weight:600;color:#fff;margin-bottom:8px">${p.emoji} ${p.name}</div>
+    <div style="font-size:10px;color:var(--gray);line-height:1.8">
+      Rendimento atteso: <b style="color:${p.colorLight}">${p.rend}%</b><br>
+      DD Max: <b style="color:#ff6060">–${p.dd3}%</b><br>
+      Orizzonte minimo: <b style="color:#fff">${p.minHor} anni</b><br>
+      % max patrimonio: <b style="color:#fff">${p.maxPct}%</b>
+    </div>`;
+}
+
+// ══════════════════════════════════════
+// DASHBOARD STATS
+// ══════════════════════════════════════
+function renderDashStats(){
+  const p=G.profile;
+  const meta=G.marketData?.meta;
+  const ss=document.getElementById('dashStats');
+  if(!ss)return;
+  ss.innerHTML=`
+    <div class="stat"><div class="stat-label">Profilo attivo</div><div class="stat-value" style="font-size:18px;color:var(--gold2)">${p?p.emoji+' '+p.name:'—'}</div></div>
+    <div class="stat"><div class="stat-label">Score medio mercato</div><div class="stat-value" style="color:${meta?.avg_score>=1.5?'#40c040':'#ff6060'}">${meta?.avg_score??'—'}<span style="font-size:12px;color:var(--gray)">/2</span></div></div>
+    <div class="stat"><div class="stat-label">LONG Ultra</div><div class="stat-value" style="color:#40c040">${meta?.long??'—'}</div><div class="stat-sub">score 2/2</div></div>
+    <div class="stat"><div class="stat-label">FLAT Ultra</div><div class="stat-value" style="color:#ff6060">${meta?.flat??'—'}</div><div class="stat-sub">score 0/2</div></div>`;
+}
+
+// ══════════════════════════════════════
+// SIGNAL TABLE
+// ══════════════════════════════════════
+function renderSignalTable(){
+  const tbody=document.getElementById('signalBody');
+  if(!tbody)return;
+  const etfs=G.profile?ULTRA_ETF.filter(e=>e.profili.includes(G.profile.id)):ULTRA_ETF;
+
+  tbody.innerHTML=etfs.map(etf=>{
+    const d=getD(etf.t);
+    if(!d||!d.ok){
+      return`<tr><td><b style="color:var(--gold2)">${etf.t}</b></td><td style="font-size:10px">${etf.n}</td>
+        <td colspan="7" class="num" style="color:var(--gray)">— in attesa dati —</td></tr>`;
+    }
+    const us=d.ultra_score??0;
+    const sig=us===2?`<span class="badge bg-green">LONG</span>`:
+               us===1?`<span class="badge bg-amber">WATCH</span>`:
+                      `<span class="badge bg-red">FLAT</span>`;
+    const lbg=etf.leva>1?`<span class="badge bg-red" style="font-size:8px">x${etf.leva}</span> `:'';
+    const f50=d.faber50?'<span style="color:#40c040">▲ SMA50</span>':'<span style="color:#ff6060">▼ SMA50</span>';
+    return`<tr>
+      <td><b style="color:var(--gold2)">${etf.t}</b> ${lbg}</td>
+      <td style="font-size:10px">${etf.n}</td>
+      <td class="num"><b>${d.price?.toFixed(2)??'—'}</b></td>
+      <td class="num" style="color:var(--gray)">${d.sma50?.toFixed(2)??'—'}</td>
+      <td class="num">${f50}</td>
+      <td class="num" style="color:${(d.mom1m??0)>=0?'#40c040':'#ff6060'}">${pc(d.mom1m)}</td>
+      <td class="num" style="color:${(d.vol20??0)>25?'#ff6060':(d.vol20??0)>15?'#f0c040':'#40c040'}">${d.vol20?.toFixed(1)??'—'}%</td>
+      <td class="num">
+        <div class="sig-wrap">${[0,1].map(i=>`<div class="sig-bar ${i<us?'on-'+G.profile?.id:''}"></div>`).join('')}</div>
+        <div style="font-size:9px;text-align:center;color:var(--gray)">${us}/2</div>
+      </td>
+      <td>${sig}</td>
+    </tr>`;
+  }).join('');
+}
+
+// ══════════════════════════════════════
+// MONITOR
+// ══════════════════════════════════════
+function populateMonitorSelect(){
+  const sel=document.getElementById('monETF');
+  if(!sel)return;
+  sel.innerHTML='<option value="">— Seleziona —</option>'+
+    ULTRA_ETF.map(e=>`<option value="${e.t}">${e.t} — ${e.n}</option>`).join('');
+}
+
+function addMonitorPosition(){
+  document.getElementById('monitorInputArea').style.display='block';
+}
+
+function confirmAddPosition(){
+  const etf=document.getElementById('monETF').value;
+  const pmc=parseFloat(document.getElementById('monPMC').value);
+  const qty=parseFloat(document.getElementById('monQty').value);
+  const sl=parseFloat(document.getElementById('monSL').value)||15;
+  if(!etf||!pmc||!qty){toast('Compila tutti i campi');return;}
+  G.positions.push({etf,pmc,qty,sl});
+  document.getElementById('monitorInputArea').style.display='none';
+  renderMonitorTable();
+  toast(`${etf} aggiunto al monitor`);
+}
+
+function clearMonitor(){
+  G.positions=[];renderMonitorTable();
+}
+
+function renderMonitorTable(){
+  const tbody=document.getElementById('monitorBody');
+  const alerts=document.getElementById('monitorAlerts');
+  if(!tbody)return;
+  if(!G.positions.length){
+    tbody.innerHTML=`<tr><td colspan="11" style="text-align:center;color:var(--gray);padding:24px">Nessuna posizione — aggiungi dalla dashboard</td></tr>`;
+    if(alerts)alerts.innerHTML='';
+    return;
+  }
+
+  let alertHTML='';
+  tbody.innerHTML=G.positions.map(pos=>{
+    const d=getD(pos.etf);
+    const etfInfo=ULTRA_ETF.find(e=>e.t===pos.etf)||{n:pos.etf,leva:1};
+    const price=d?.price??null;
+    const plPct=price?((price-pos.pmc)/pos.pmc*100):null;
+    const slLevel=pos.pmc*(1-pos.sl/100);
+    const distSL=price?((price-slLevel)/slLevel*100):null;
+    const us=d?.ultra_score??null;
+    const f50=d?.faber50??null;
+
+    let stato='OK', rowClass='monitor-row-ok';
+    if(price&&price<=slLevel){stato='🔴 STOP LOSS';rowClass='monitor-row-stop';}
+    else if(us===0){stato='⚠ FLAT';rowClass='monitor-row-warn';}
+    else if(distSL!==null&&distSL<5){stato='⚠ VICINO SL';rowClass='monitor-row-warn';}
+
+    if(rowClass!=='monitor-row-ok'){
+      alertHTML+=`<div class="alert ${rowClass==='monitor-row-stop'?'alert-red':'alert-amber'}">
+        <div class="alert-icon">${rowClass==='monitor-row-stop'?'🔴':'⚠️'}</div>
+        <div class="alert-text"><div class="alert-title">${pos.etf} — ${stato}</div>
+        Prezzo: ${price?.toFixed(2)??'—'} · PMC: ${pos.pmc.toFixed(2)} · Stop: ${slLevel.toFixed(2)}</div>
+      </div>`;
+    }
+
+    const lbg=etfInfo.leva>1?`<span class="badge bg-red" style="font-size:8px">x${etfInfo.leva}</span> `:'';
+    return`<tr class="${rowClass}">
+      <td><b style="color:var(--gold2)">${pos.etf}</b> ${lbg}</td>
+      <td style="font-size:10px">${etfInfo.n}</td>
+      <td class="num">€ ${pos.pmc.toFixed(2)}</td>
+      <td class="num"><b>${price?.toFixed(2)??'—'}</b></td>
+      <td class="num" style="color:${(plPct??0)>=0?'#40c040':'#ff6060'}">${pc(plPct)}</td>
+      <td class="num" style="color:#ff9060">€ ${slLevel.toFixed(2)}</td>
+      <td class="num" style="color:${(distSL??99)<5?'#ff6060':(distSL??99)<10?'#f0c040':'#40c040'}">${distSL?.toFixed(1)??'—'}%</td>
+      <td class="num">${f50===null?'—':f50?'<span style="color:#40c040">▲</span>':'<span style="color:#ff6060">▼</span>'}</td>
+      <td class="num" style="color:${(d?.mom1m??0)>=0?'#40c040':'#ff6060'}">${pc(d?.mom1m??null)}</td>
+      <td class="num">${us??'—'}/2</td>
+      <td><b>${stato}</b></td>
+    </tr>`;
+  }).join('');
+
+  if(alerts)alerts.innerHTML=alertHTML;
+}
+
+// ══════════════════════════════════════
+// ALLOCAZIONE
+// ══════════════════════════════════════
+function renderAlloc(){
+  const p=G.profile;
+  document.getElementById('allocEmpty').style.display=p?'none':'block';
+  document.getElementById('allocContent').style.display=p?'block':'none';
+  if(!p)return;
+
+  const cap=parseFloat(document.getElementById('uCapital')?.value||50000);
+  const totalTER=p.portfolio.reduce((s,pos)=>{
+    const e=ULTRA_ETF.find(e=>e.t===pos.t);return s+pos.peso*(e?.ter||.002);
+  },0);
+
+  document.getElementById('allocStats').innerHTML=`
+    <div class="stat"><div class="stat-label">Profilo</div><div class="stat-value" style="font-size:16px;color:var(--gold2)">${p.emoji} ${p.name}</div></div>
+    <div class="stat"><div class="stat-label">Capitale Ultra</div><div class="stat-value" style="font-size:16px">€ ${fmt(cap)}</div></div>
+    <div class="stat"><div class="stat-label">TER medio</div><div class="stat-value" style="font-size:16px">${(totalTER*100).toFixed(2)}%</div></div>
+    <div class="stat"><div class="stat-label">Rend. atteso</div><div class="stat-value" style="color:${p.colorLight}">${p.rend}%</div></div>`;
+
+  document.getElementById('allocBody').innerHTML=p.portfolio.map(pos=>{
+    const e=ULTRA_ETF.find(e=>e.t===pos.t)||{ter:.002};
+    const lbg=pos.leva>1?`<span class="badge bg-red" style="font-size:8px">x${pos.leva}</span>`:'<span class="badge bg-gray" style="font-size:8px">1x</span>';
+    const clColor={eq:'#1a4a8a',eqem:'#2a6e8a',small:'#3a4a8a',tema:'#8a4a1a',leva2:'#8a2020',crypto:'#4a1a8a',com:'#8a8a1a'}[pos.cl]||'#666';
+    return`<tr>
+      <td><b style="color:var(--gold2)">${pos.t}</b></td>
+      <td style="font-size:10px">${pos.n}</td>
+      <td><span style="display:inline-block;width:7px;height:7px;border-radius:2px;background:${clColor};margin-right:4px;vertical-align:middle"></span><span style="font-size:9px">${pos.cl}</span></td>
+      <td class="num"><b>${Math.round(pos.peso*100)}%</b></td>
+      <td class="num"><b>€ ${fmt(cap*pos.peso)}</b></td>
+      <td class="num">${(e.ter*100).toFixed(2)}%</td>
+      <td>${lbg}</td>
+      <td style="font-size:9px;color:var(--gray)">${pos.note}</td>
+    </tr>`;
+  }).join('');
+
+  document.getElementById('exitRules').innerHTML=p.exitRules.map(r=>
+    `<div style="padding:6px 0;border-bottom:1px solid var(--gray3)">
+      <span style="color:${r.includes('TASSATIVO')?'#ff4040':r.includes('⚠')?'#f0c040':'var(--gray)'}">→</span> ${r}
+    </div>`
+  ).join('');
+}
+
+// ══════════════════════════════════════
+// STRESS TEST
+// ══════════════════════════════════════
+function renderStress(){
+  const p=G.profile;
+  document.getElementById('stressEmpty').style.display=p?'none':'block';
+  document.getElementById('stressContent').style.display=p?'block':'none';
+  if(!p)return;
+
+  const cap=parseFloat(document.getElementById('stressCap')?.value||50000);
+  const grid=document.getElementById('stressGrid');
+
+  grid.innerHTML=Object.entries(p.stress).map(([scenario,data])=>{
+    const loss=cap*data.loss/100;
+    const residual=cap-loss;
+    return`<div class="stress-card">
+      <div class="stress-scenario">${scenario}</div>
+      <div class="stress-loss">–${data.loss}%</div>
+      <div style="font-size:11px;color:#ff9060;margin-top:4px">–€ ${fmt(loss)}</div>
+      <div style="font-size:10px;color:var(--gray);margin-top:2px">Residuo: € ${fmt(residual)}</div>
+      <div class="stress-recovery">Recovery: ~${data.recovery} mesi</div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('recoveryTable').innerHTML=`
+    <table class="rt">
+      <thead><tr><th>Scenario</th><th class="num">Perdita %</th><th class="num">Perdita €</th><th class="num">Recovery stimato</th><th>Note</th></tr></thead>
+      <tbody>${Object.entries(p.stress).map(([s,d])=>`<tr>
+        <td>${s}</td>
+        <td class="num" style="color:#ff6060">–${d.loss}%</td>
+        <td class="num" style="color:#ff6060">–€ ${fmt(cap*d.loss/100)}</td>
+        <td class="num" style="color:#f0c040">${d.recovery} mesi</td>
+        <td style="font-size:9px;color:var(--gray)">${d.recovery>24?'Lungo recupero — verificare orizzonte':'Recupero gestibile'}</td>
+      </tr>`).join('')}</tbody>
+    </table>`;
+}
+
+// ══════════════════════════════════════
+// ETF ULTRA TABLE
+// ══════════════════════════════════════
+function renderETFUltra(){
+  const tbody=document.getElementById('etfUltraBody');
+  if(!tbody)return;
+  tbody.innerHTML=ULTRA_ETF.map(etf=>{
+    const d=getD(etf.t);
+    const lbg=etf.leva>1?`<span class="badge bg-red">x${etf.leva}</span>`:'';
+    const clColor={eq:'#1a4a8a',eqem:'#2a6e8a',small:'#3a4a8a',tema:'#8a4a1a',leva2:'#8a2020',crypto:'#4a1a8a',com:'#8a8a1a'}[etf.cl]||'#666';
+    const profiliBadges=etf.profili.map(pr=>{
+      const colors={rocket:'#2a9a2a',extreme:'#c03030',turbo:'#7030c0'};
+      return`<span style="font-size:8px;padding:1px 5px;border-radius:10px;background:${colors[pr]}22;color:${colors[pr]};border:1px solid ${colors[pr]}44">${pr}</span>`;
+    }).join(' ');
+    return`<tr>
+      <td><b style="color:var(--gold2)">${etf.t}</b> ${lbg}</td>
+      <td style="font-size:10px">${etf.n}</td>
+      <td><span style="display:inline-block;width:7px;height:7px;border-radius:2px;background:${clColor};margin-right:4px;vertical-align:middle"></span><span style="font-size:9px">${etf.cl}</span></td>
+      <td>${profiliBadges}</td>
+      <td class="num">${(etf.ter*100).toFixed(2)}%</td>
+      <td class="num">${etf.leva>1?`<b style="color:#ff6060">x${etf.leva}</b>`:'1x'}</td>
+      <td class="num">${d?.ok?`<b>${d.price?.toFixed(2)}</b>`:'—'}</td>
+      <td class="num" style="color:${(d?.mom1m??0)>=0?'#40c040':'#ff6060'}">${d?.ok?pc(d.mom1m):'—'}</td>
+      <td class="num">${d?.ok?(d.faber50?'<span style="color:#40c040">▲</span>':'<span style="color:#ff6060">▼</span>'):'—'}</td>
+      <td class="num">${d?.ok?`${d.ultra_score}/2`:'—'}</td>
+    </tr>`;
+  }).join('');
+}
+
+// ══════════════════════════════════════
+// SALVA CLIENTE
+// ══════════════════════════════════════
+function saveUltraClient(){
+  const name=document.getElementById('uName')?.value;
+  if(!name){toast('Inserisci il nome cliente');return;}
+  if(!G.profile){toast('Seleziona prima un profilo');return;}
+  G.client={
+    name, profile:G.profile.id,
+    capital:parseFloat(document.getElementById('uCapital')?.value||0),
+    horizon:parseInt(document.getElementById('uHorizon')?.value||15),
+    pct:parseInt(document.getElementById('uPct')?.value||10),
+    note:document.getElementById('uNote')?.value||'',
+    savedAt:new Date().toISOString(),
+  };
+  // Salva in localStorage con chiave ultra
+  try{
+    const existing=JSON.parse(localStorage.getItem('rwm_ultra_clients')||'[]');
+    const idx=existing.findIndex(c=>c.name===name);
+    if(idx>=0)existing[idx]=G.client;else existing.push(G.client);
+    localStorage.setItem('rwm_ultra_clients',JSON.stringify(existing));
+  }catch(e){}
+  toast(`✓ ${name} salvato`);
+  renderIPS();
+}
+
+// ══════════════════════════════════════
+// IPS
+// ══════════════════════════════════════
+function renderIPS(){
+  const hasClient=G.client&&G.profile;
+  document.getElementById('ipsEmpty').style.display=hasClient?'none':'block';
+  document.getElementById('ipsContent').style.display=hasClient?'block':'none';
+  if(!hasClient)return;
+
+  const c=G.client,p=G.profile;
+  document.getElementById('ipsName').textContent=`${c.name} — ${p.emoji} ${p.name}`;
+  document.getElementById('ipsBlocks').innerHTML=`
+    <div class="g2">
+      <div class="card">
+        <div style="font-size:9px;text-transform:uppercase;letter-spacing:.09em;color:var(--gray);margin-bottom:4px">Profilo Ultra</div>
+        <div style="font-size:18px;font-weight:600;color:${p.colorLight}">${p.emoji} ${p.name}</div>
+        <div style="font-size:10px;color:var(--gray);margin-top:6px;line-height:1.8">
+          Capitale: € ${fmt(c.capital)}<br>
+          % patrimonio: ${c.pct}%<br>
+          Orizzonte: ${c.horizon} anni<br>
+          DD Max tollerato: –${p.dd3}%<br>
+          Rendimento atteso: ${p.rend}%
+        </div>
+      </div>
+      <div class="card">
+        <div style="font-size:9px;text-transform:uppercase;letter-spacing:.09em;color:var(--gray);margin-bottom:4px">Regole operative</div>
+        ${p.exitRules.slice(0,4).map(r=>`<div style="font-size:10px;color:#c0c0e0;padding:4px 0;border-bottom:1px solid var(--gray3)">→ ${r}</div>`).join('')}
+      </div>
+    </div>`;
+}
+
+// ══════════════════════════════════════
+// PDF IPS ULTRA
+// ══════════════════════════════════════
+function downloadUltraPDF(){
+  if(!G.client||!G.profile){toast('Compila prima il profilo');return;}
+  if(typeof window.jspdf==='undefined'){toast('jsPDF in caricamento');return;}
+  const {jsPDF}=window.jspdf;
+  const c=G.client,p=G.profile;
+  const doc=new jsPDF({orientation:'portrait',unit:'mm',format:'a4'});
+  const W=210,M=18;
+  let y=20;
+
+  // Header scuro
+  doc.setFillColor(10,10,26);doc.rect(0,0,210,26,'F');
+  doc.setFontSize(18);doc.setFont('helvetica','bold');doc.setTextColor(255,255,255);
+  doc.text('RWM ULTRA — Investment Policy Statement',M,13);
+  doc.setFontSize(9);doc.setTextColor(200,160,32);
+  doc.text(`${p.emoji} Profilo ${p.name} · v3.0 · ${new Date().toLocaleDateString('it-IT')}`,M,21);
+  y=34;
+
+  // Disclaimer
+  doc.setFillColor(50,10,10);doc.rect(M-2,y-4,W-2*M+4,26,'F');
+  doc.setFontSize(9);doc.setFont('helvetica','bold');doc.setTextColor(255,100,100);
+  doc.text('⚠ AVVISO RISCHIO ELEVATO',M,y+2);
+  doc.setFont('helvetica','normal');doc.setTextColor(200,150,150);doc.setFontSize(8);
+  const disc=doc.splitTextToSize('Questo portafoglio comporta un rischio di perdita parziale o totale del capitale. Strumenti a leva e crypto ETP sono soggetti a volatilità estrema. Adatto esclusivamente a investitori con esperienza professionale.',W-2*M-4);
+  disc.forEach((l,i)=>{doc.text(l,M,y+10+i*5);});
+  y+=32;
+
+  // Dati cliente
+  doc.setFillColor(15,15,35);doc.rect(M-2,y-4,W-2*M+4,18,'F');
+  doc.setFontSize(14);doc.setFont('helvetica','bold');doc.setTextColor(255,255,255);
+  doc.text(c.name,M,y+4);
+  doc.setFontSize(9);doc.setFont('helvetica','normal');doc.setTextColor(160,160,200);
+  doc.text(`${p.emoji} ${p.name} · € ${fmt(c.capital)} · ${c.pct}% patrimonio · ${c.horizon} anni`,M,y+10);
+  y+=24;
+
+  // SAA
+  doc.autoTable({startY:y,margin:{left:M,right:M},
+    styles:{font:'helvetica',fontSize:8,cellPadding:2,fillColor:[15,15,35],textColor:[192,192,224]},
+    headStyles:{fillColor:[10,10,26],textColor:[200,160,32],fontStyle:'bold'},
+    alternateRowStyles:{fillColor:[20,20,48]},
+    head:[['ETF/ETC','Nome','Peso','Importo €','Leva','Note TAA']],
+    body:p.portfolio.map(pos=>[pos.t,pos.n,Math.round(pos.peso*100)+'%','€ '+fmt(c.capital*pos.peso),pos.leva>1?`x${pos.leva}`:'1x',pos.note]),
+  });
+  y=doc.lastAutoTable.finalY+8;
+
+  // Stress test
+  if(y>220)doc.addPage(),y=20;
+  doc.setFontSize(11);doc.setFont('helvetica','bold');doc.setTextColor(200,160,32);
+  doc.text('STRESS TEST — Scenari storici',M,y);y+=8;
+  doc.autoTable({startY:y,margin:{left:M,right:M},
+    styles:{font:'helvetica',fontSize:8,cellPadding:2,fillColor:[15,15,35],textColor:[192,192,224]},
+    headStyles:{fillColor:[10,10,26],textColor:[200,160,32],fontStyle:'bold'},
+    alternateRowStyles:{fillColor:[20,20,48]},
+    head:[['Scenario','Perdita %','Perdita €','Recovery stimato']],
+    body:Object.entries(p.stress).map(([s,d])=>[s,`–${d.loss}%`,`–€ ${fmt(c.capital*d.loss/100)}`,`${d.recovery} mesi`]),
+  });
+  y=doc.lastAutoTable.finalY+8;
+
+  // Exit rules
+  if(y>220)doc.addPage(),y=20;
+  doc.setFontSize(11);doc.setFont('helvetica','bold');doc.setTextColor(255,100,100);
+  doc.text('REGOLE DI USCITA — OBBLIGATORIE',M,y);y+=8;
+  doc.setFontSize(9);doc.setFont('helvetica','normal');doc.setTextColor(192,192,224);
+  p.exitRules.forEach(r=>{
+    const lines=doc.splitTextToSize(`→ ${r}`,W-2*M);
+    lines.forEach(l=>{if(y>275)doc.addPage(),y=20;doc.text(l,M,y);y+=5;});
+    y+=2;
+  });
+
+  // Firme
+  if(y>240)doc.addPage(),y=20;
+  y+=10;
+  doc.setDrawColor(200,160,32);doc.setLineWidth(0.4);
+  doc.line(M,y,M+70,y);doc.line(M+90,y,M+160,y);y+=5;
+  doc.setFontSize(8);doc.setTextColor(128,128,160);
+  doc.text(`Cliente: ${c.name}`,M,y);doc.text('CFA Autonomo',M+90,y);y+=5;
+  doc.text('Firma: ___________________ Data: _______',M,y);
+  doc.text('Firma: ___________________ OCF: _______',M+90,y);
+
+  // Footer
+  const n=doc.internal.getNumberOfPages();
+  for(let i=1;i<=n;i++){
+    doc.setPage(i);
+    doc.setFillColor(10,10,26);doc.rect(0,287,210,10,'F');
+    doc.setFontSize(7);doc.setTextColor(100,100,130);
+    doc.text('RWM ULTRA · Documento riservato · Solo uso interno CFA · Alto rischio',M,293);
+    doc.text(`${i}/${n}`,W-M,293,{align:'right'});
+  }
+
+  doc.save(`IPS_Ultra_${p.name}_${c.name.replace(/ /g,'_')}_${new Date().toISOString().slice(0,10)}.pdf`);
+  toast('✓ IPS Ultra PDF scaricato');
+}
+
+// START
+init();
+</script>
+</body>
+</html>
