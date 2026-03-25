@@ -252,7 +252,6 @@ hr.div{border:none;border-top:1px solid var(--g2);margin:14px 0;}
   <div class="ntab" onclick="show('revisioni')">⑩ Revisioni</div>
   <div class="ntab" onclick="show('alloc')">⑪ Allocazione</div>
   <div class="ntab" onclick="show('ips')">⑫ IPS</div>
-  <div class="ntab" onclick="show('manuale')">📖 Manuale</div>
 </nav>
 
 <main class="main">
@@ -363,6 +362,7 @@ hr.div{border:none;border-top:1px solid var(--g2);margin:14px 0;}
     <div style="display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap">
       <button class="btn btn-primary" onclick="calcProfile()">Calcola Profilo →</button>
       <button class="btn btn-green" onclick="saveCurrentClient()" id="btnSave" style="display:none">💾 Salva Cliente</button>
+      <button class="btn" onclick="assegnaULTRA()" style="background:#1a0a2a;color:#f0d070;border:1px solid #6a3a8a">⚡ Assegna ULTRA</button>
     </div>
   </div>
   <div id="profiloResult" style="display:none">
@@ -771,102 +771,6 @@ hr.div{border:none;border-top:1px solid var(--g2);margin:14px 0;}
   </div>
 </section>
 
-<!-- MANUALE -->
-<section class="sec" id="sec-manuale">
-  <div class="sh"><div class="sh-title">Manuale Operativo RWM</div><div class="sh-desc">Guida completa al sistema · v3.0</div></div>
-  <div style="display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap">
-    <button class="btn btn-primary" onclick="downloadManualePDF()">⎙ Scarica Manuale PDF</button>
-  </div>
-  <div class="card">
-    <div class="card-title"><span class="dot"></span>1. Introduzione al Sistema RWM</div>
-    <div style="font-size:12px;line-height:1.9;color:var(--g5)">
-      <p>RAPTOR WEALTH MERIDIAN (RWM) è un sistema di gestione patrimoniale strutturato per Consulenti Finanziari Autonomi (CFA) iscritti OCF. Il sistema integra analisi quantitativa, allocazione tattica e reporting MiFID II in un'unica piattaforma web operativa da iPhone e PC.</p>
-      <br>
-      <p><b style="color:var(--navy)">Architettura:</b> Tre livelli operativi — SAA (pesi strategici di lungo periodo), TAA (aggiustamenti tattici mensili su 5 segnali), Operativo (esecuzione, monitoraggio, reportistica).</p>
-      <br>
-      <p><b style="color:var(--navy)">Filosofia:</b> Evidence-based su tre pilastri: diversificazione tramite ETF a basso costo, drawdown control su tre livelli, ottimizzazione fiscale con strumenti al 12.5%.</p>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-title"><span class="dot"></span>2. I 7 Profili di Rischio</div>
-    <div style="overflow-x:auto"><table class="rt">
-      <thead><tr><th>Profilo</th><th class="num">Equity</th><th class="num">Bond</th><th class="num">Cash</th><th class="num">Rend. netto</th><th class="num">DD L1</th><th class="num">DD L2</th><th class="num">DD L3</th></tr></thead>
-      <tbody>
-        <tr><td>Monetario</td><td class="num">0%</td><td class="num">30%</td><td class="num">80%</td><td class="num">2.5%</td><td class="num">–2%</td><td class="num">–4%</td><td class="num">–6%</td></tr>
-        <tr><td>Conservativo</td><td class="num">20%</td><td class="num">80%</td><td class="num">20%</td><td class="num">3.4%</td><td class="num">–4%</td><td class="num">–8%</td><td class="num">–12%</td></tr>
-        <tr><td>Moderato</td><td class="num">40%</td><td class="num">65%</td><td class="num">15%</td><td class="num">4.1%</td><td class="num">–6%</td><td class="num">–12%</td><td class="num">–18%</td></tr>
-        <tr><td>Bilanciato</td><td class="num">60%</td><td class="num">45%</td><td class="num">10%</td><td class="num">4.7%</td><td class="num">–8%</td><td class="num">–15%</td><td class="num">–22%</td></tr>
-        <tr><td>Crescita</td><td class="num">75%</td><td class="num">28%</td><td class="num">5%</td><td class="num">5.2%</td><td class="num">–10%</td><td class="num">–20%</td><td class="num">–28%</td></tr>
-        <tr><td>Aggressivo</td><td class="num">90%</td><td class="num">5%</td><td class="num">5%</td><td class="num">5.6%</td><td class="num">–13%</td><td class="num">–25%</td><td class="num">–35%</td></tr>
-        <tr class="hl"><td>Full Equity</td><td class="num">100%</td><td class="num">0%</td><td class="num">0%</td><td class="num">5.5%</td><td class="num">–15%</td><td class="num">–30%</td><td class="num">–45%</td></tr>
-      </tbody>
-    </table></div>
-  </div>
-  <div class="card">
-    <div class="card-title"><span class="dot"></span>3. TAA — Sistema a 4 Segnali</div>
-    <div style="background:var(--navy);border-radius:var(--r2);padding:14px;color:#fff;font-size:11px;line-height:2;margin-bottom:10px">
-      <b style="color:var(--gold3)">Score 4/4</b> → STRONG LONG → SAA + banda max &nbsp;|&nbsp;
-      <b style="color:var(--gold3)">Score 3/4</b> → LONG → SAA + metà banda<br>
-      <b style="color:var(--gold3)">Score 2/4</b> → NEUTRO → SAA invariata &nbsp;|&nbsp;
-      <b style="color:var(--gold3)">Score 1/4</b> → CAUTION → SAA − metà banda<br>
-      <b style="color:var(--gold3)">Score 0/4</b> → FLAT → 0% su quella classe → tutto XEON
-    </div>
-    <table class="rt"><thead><tr><th>Segnale</th><th>Descrizione</th><th>Fonte</th></tr></thead>
-    <tbody>
-      <tr><td><b>Faber SMA200</b></td><td>Prezzo &gt; SMA200 = Bullish. Riduce drawdown 30-40%.</td><td>DataFeed</td></tr>
-      <tr><td><b>Momentum 3m</b></td><td>Rendimento 3 mesi &gt; 0% = positivo.</td><td>DataFeed</td></tr>
-      <tr><td><b>RSI 14</b></td><td>RSI 40–70 = zona sana. Estremi = attenzione.</td><td>DataFeed</td></tr>
-      <tr><td><b>Vol Regime</b></td><td>Vol20 &lt;15% = calmo. &gt;20% = stress.</td><td>DataFeed</td></tr>
-    </tbody></table>
-  </div>
-  <div class="card">
-    <div class="card-title"><span class="dot"></span>4. PAC Dinamico</div>
-    <table class="rt"><thead><tr><th>Drawdown</th><th class="num">Moltiplicatore</th><th>Logica</th></tr></thead>
-    <tbody>
-      <tr><td>0% / –3%</td><td class="num">0.5x</td><td>Mercato caro — risparmia</td></tr>
-      <tr><td>–3% / –7%</td><td class="num">1.0x</td><td>Rata standard</td></tr>
-      <tr><td>–7% / –12%</td><td class="num">1.5x</td><td>Inizio correzione</td></tr>
-      <tr><td>–12% / –18%</td><td class="num">2.0x</td><td>Correzione significativa</td></tr>
-      <tr><td>–18% / –25%</td><td class="num">2.5x</td><td>Bear market</td></tr>
-      <tr class="hl"><td>Oltre –25%</td><td class="num">3.0x</td><td>Evento straordinario</td></tr>
-    </tbody></table>
-  </div>
-  <div class="card">
-    <div class="card-title"><span class="dot"></span>5. Revisioni — Calendario Operativo</div>
-    <table class="rt"><thead><tr><th>Livello</th><th>Frequenza</th><th>Attività</th><th>Output</th></tr></thead>
-    <tbody>
-      <tr><td><b>L1</b></td><td>Settimanale</td><td>Drawdown check, VIX, soglie</td><td>—</td></tr>
-      <tr><td><b>L2</b></td><td>Mensile</td><td>TAA, pesi, ribilanciamento</td><td>Revisione in RWM tab ⑩</td></tr>
-      <tr><td><b>L3</b></td><td>Trimestrale</td><td>Performance, profilo, zainetto</td><td>Report cliente</td></tr>
-      <tr class="hl"><td><b>L4</b></td><td>Annuale</td><td>SAA, universo ETF, IPS</td><td>Nuovo IPS firmato</td></tr>
-    </tbody></table>
-  </div>
-  <div class="card">
-    <div class="card-title"><span class="dot"></span>6. Universo ETF — 41 Strumenti</div>
-    <table class="rt"><thead><tr><th>Classe</th><th>Core</th><th>Satellite</th><th>Tax</th></tr></thead>
-    <tbody>
-      <tr><td>Equity DM</td><td>SWDA, VWCE</td><td>IQQH, IWMO, QDVE</td><td>26%</td></tr>
-      <tr><td>Equity EM</td><td>IEMA, VFEM</td><td>CEBL, EXCS</td><td>26%</td></tr>
-      <tr><td>Income DIST</td><td>ISEU, ISUS, ISAP, VHYL</td><td>—</td><td>26%</td></tr>
-      <tr><td>Small Cap</td><td>IUSN</td><td>IESE</td><td>26%</td></tr>
-      <tr><td>Tematici</td><td>HLTH</td><td>AERO, BTEC, BNKS, XUCS, JAPN</td><td>26%</td></tr>
-      <tr><td>Real Estate</td><td>IWDP</td><td>IPRP</td><td>26%</td></tr>
-      <tr><td>Commodity</td><td>IGLN</td><td>ICOM</td><td>26%</td></tr>
-      <tr><td>Gov Bond EU</td><td>IEGE, IBGM</td><td>IBGL, IDTL</td><td style="color:var(--green)">12.5%</td></tr>
-      <tr><td>Corporate</td><td>IEAC, VECP</td><td>IHYG, LQDE, SE15</td><td>26%</td></tr>
-      <tr><td>EM Bond</td><td>EMBE</td><td>EMDV</td><td>26%</td></tr>
-      <tr><td>IL</td><td>IBCI</td><td>—</td><td style="color:var(--green)">12.5%</td></tr>
-      <tr><td>Monetario</td><td>XEON, SMART</td><td>—</td><td>26%/12.5%</td></tr>
-    </tbody></table>
-  </div>
-  <div class="card">
-    <div class="card-title"><span class="dot"></span>7. Glossario</div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px">
-      ${[['SAA','Strategic Asset Allocation — pesi target lungo periodo'],['TAA','Tactical Asset Allocation — aggiustamenti mensili'],['TER','Total Expense Ratio — costo annuo ETF'],['VaR','Value at Risk — perdita max probabile 95%'],['CVaR','Perdita media nel tail oltre VaR'],['Faber','Filtro SMA200 trend following'],['PAC','Piano di Accumulo del Capitale'],['PMC','Prezzo Medio di Carico'],['IPS','Investment Policy Statement'],['CFA','Consulente Finanziario Autonomo OCF'],['DIST','ETF a distribuzione dividendi'],['ACC','ETF ad accumulazione'],['DD','Drawdown — calo dal massimo'],['MiFID II','Markets in Financial Instruments Directive II']].map(([k,v])=>`<div style="padding:8px 12px;background:var(--g1);border-radius:var(--r2);font-size:11px;border-left:3px solid var(--navy)"><b style="color:var(--navy)">${k}:</b> ${v}</div>`).join('')}
-    </div>
-  </div>
-</section>
-
 </main>
 
 <!-- MODAL NUOVO CLIENTE -->
@@ -1020,7 +924,7 @@ function show(id){
   document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
   document.querySelectorAll('.ntab').forEach(t=>t.classList.remove('active'));
   document.getElementById('sec-'+id).classList.add('active');
-  const map={clienti:0,profilo:1,saa:2,taa:3,rendimento:4,rischio:5,pac:6,income:7,etf:8,posizione:9,revisioni:10,alloc:11,ips:12,manuale:13};
+  const map={clienti:0,profilo:1,saa:2,taa:3,rendimento:4,rischio:5,pac:6,income:7,etf:8,posizione:9,revisioni:10,alloc:11,ips:12};
   const tabs=document.querySelectorAll('.ntab');
   if(map[id]!==undefined)tabs[map[id]].classList.add('active');
   const renders={
@@ -2600,136 +2504,73 @@ ${sep}`;
 }
 
 // ════════════════════════════════════════════
-// INIT
+// ⚡ PROFILO ULTRA
 // ════════════════════════════════════════════
+const ULTRA_PROFILE={
+  name:'⚡ ULTRA',eq:.60,bond:0,il:0,em:.20,cash:0,
+  dd1:18,dd2:35,dd3:55,net:7.5,vol:30,
+  small:.10,tema:.10,minHor:15
+};
+const ULTRA_REND={name:'⚡ ULTRA',gross:9.8,tr:.26,net:7.5};
 
-function downloadManualePDF(){
-  if(typeof window.jspdf==='undefined'){toast('jsPDF in caricamento, riprova');return;}
-  const {jsPDF}=window.jspdf;
-  const doc=new jsPDF({orientation:'portrait',unit:'mm',format:'a4'});
-  const NAVY=[15,30,56],GOLD=[184,146,42],GRAY=[100,100,100];
-  const W=210,M=18;
-  let y=20;
-
-  // Header
-  doc.setFillColor(...NAVY);doc.rect(0,0,210,24,'F');
-  doc.setFontSize(18);doc.setFont('helvetica','bold');doc.setTextColor(255,255,255);
-  doc.text('RAPTOR WEALTH MERIDIAN v3.0',M,13);
-  doc.setFontSize(9);doc.setFont('helvetica','normal');doc.setTextColor(184,146,42);
-  doc.text('Manuale Operativo — Sistema Gestione Patrimoniale CFA',M,20);
-  y=34;
-
-  const section=(title)=>{
-    if(y>260){doc.addPage();y=20;}
-    doc.setDrawColor(...GOLD);doc.setLineWidth(0.6);doc.line(M,y,W-M,y);y+=6;
-    doc.setFontSize(12);doc.setFont('helvetica','bold');doc.setTextColor(...NAVY);
-    doc.text(title,M,y);y+=8;
-    doc.setFontSize(9);doc.setFont('helvetica','normal');doc.setTextColor(70,70,70);
-  };
-  const para=(txt)=>{
-    const lines=doc.splitTextToSize(txt,W-2*M);
-    lines.forEach(l=>{if(y>275){doc.addPage();y=20;}doc.text(l,M,y);y+=5;});
-    y+=2;
-  };
-
-  section('1. INTRODUZIONE AL SISTEMA RWM');
-  para('RAPTOR WEALTH MERIDIAN (RWM) è un sistema di gestione patrimoniale per Consulenti Finanziari Autonomi (CFA) iscritti OCF. Integra analisi quantitativa, allocazione tattica e reporting MiFID II in un\'unica piattaforma web operativa da iPhone e PC.');
-  para('Architettura: tre livelli — SAA (pesi strategici), TAA (aggiustamenti mensili su 4 segnali), Operativo (esecuzione e reportistica). Filosofia evidence-based: diversificazione ETF, drawdown control su 3 livelli, ottimizzazione fiscale 12.5%.');
-
-  section('2. I 7 PROFILI DI RISCHIO');
-  doc.autoTable({startY:y,margin:{left:M,right:M},
-    styles:{font:'helvetica',fontSize:8,cellPadding:2},
-    headStyles:{fillColor:NAVY,textColor:[255,255,255],fontStyle:'bold'},
-    alternateRowStyles:{fillColor:[244,242,237]},
-    head:[['Profilo','Equity','Bond','Cash','Rend. netto','DD L1','DD L2','DD L3']],
-    body:[
-      ['Monetario','0%','30%','80%','2.5%','–2%','–4%','–6%'],
-      ['Conservativo','20%','80%','20%','3.4%','–4%','–8%','–12%'],
-      ['Moderato','40%','65%','15%','4.1%','–6%','–12%','–18%'],
-      ['Bilanciato','60%','45%','10%','4.7%','–8%','–15%','–22%'],
-      ['Crescita','75%','28%','5%','5.2%','–10%','–20%','–28%'],
-      ['Aggressivo','90%','5%','5%','5.6%','–13%','–25%','–35%'],
-      ['Full Equity','100%','0%','0%','5.5%','–15%','–30%','–45%'],
-    ],
-  });
-  y=doc.lastAutoTable.finalY+8;
-
-  section('3. TAA — SISTEMA A 4 SEGNALI');
-  doc.autoTable({startY:y,margin:{left:M,right:M},
-    styles:{font:'helvetica',fontSize:8,cellPadding:2},
-    headStyles:{fillColor:NAVY,textColor:[255,255,255],fontStyle:'bold'},
-    alternateRowStyles:{fillColor:[244,242,237]},
-    head:[['Score','Segnale','Posizionamento']],
-    body:[['4/4','STRONG LONG','SAA + banda massima'],['3/4','LONG','SAA + metà banda'],['2/4','NEUTRO','SAA invariata'],['1/4','CAUTION','SAA − metà banda'],['0/4','FLAT','0% → tutto XEON']],
-  });
-  y=doc.lastAutoTable.finalY+4;
-  para('Segnali: Faber SMA200, Momentum 3m, RSI 14 (zona 40-70), Vol Regime (<15% calmo, >20% stress). Fonte: RWM DataFeed da Yahoo Finance.');
-
-  section('4. PAC DINAMICO — MOLTIPLICATORI');
-  doc.autoTable({startY:y,margin:{left:M,right:M},
-    styles:{font:'helvetica',fontSize:8,cellPadding:2},
-    headStyles:{fillColor:NAVY,textColor:[255,255,255],fontStyle:'bold'},
-    alternateRowStyles:{fillColor:[244,242,237]},
-    head:[['Drawdown','Moltiplicatore','Logica']],
-    body:[['0% / –3%','0.5x','Mercato caro'],['–3% / –7%','1.0x','Rata standard'],['–7% / –12%','1.5x','Inizio correzione'],['–12% / –18%','2.0x','Correzione significativa'],['–18% / –25%','2.5x','Bear market'],['Oltre –25%','3.0x','Evento straordinario']],
-  });
-  y=doc.lastAutoTable.finalY+4;
-  para('Riserva tattica: 30% del capitale in XEON. VIX > 40 → pausa 1 mese. Rimbalzo > +20% → investi tutto residuo riserva.');
-
-  section('5. CALENDARIO REVISIONI');
-  doc.autoTable({startY:y,margin:{left:M,right:M},
-    styles:{font:'helvetica',fontSize:8,cellPadding:2},
-    headStyles:{fillColor:NAVY,textColor:[255,255,255],fontStyle:'bold'},
-    alternateRowStyles:{fillColor:[244,242,237]},
-    head:[['Livello','Frequenza','Attività','Output']],
-    body:[['L1','Settimanale','Drawdown, VIX, soglie','—'],['L2','Mensile','TAA, pesi, ribilanciamento','Revisione RWM tab ⑩'],['L3','Trimestrale','Performance, profilo, zainetto','Report cliente'],['L4','Annuale','SAA, universo ETF, IPS','IPS firmato']],
-  });
-  y=doc.lastAutoTable.finalY+8;
-
-  section('6. UNIVERSO ETF — 41 STRUMENTI');
-  doc.autoTable({startY:y,margin:{left:M,right:M},
-    styles:{font:'helvetica',fontSize:8,cellPadding:2},
-    headStyles:{fillColor:NAVY,textColor:[255,255,255],fontStyle:'bold'},
-    alternateRowStyles:{fillColor:[244,242,237]},
-    head:[['Classe','Core','Satellite','Tax']],
-    body:[
-      ['Equity DM','SWDA, VWCE','IQQH, IWMO, QDVE','26%'],
-      ['Equity EM','IEMA, VFEM','CEBL, EXCS','26%'],
-      ['Income DIST','ISEU, ISUS, ISAP, VHYL','—','26%'],
-      ['Gov Bond EU','IEGE, IBGM','IBGL, IDTL','12.5%'],
-      ['Corporate','IEAC, VECP','IHYG, LQDE, SE15','26%'],
-      ['EM Bond','EMBE','EMDV','26%'],
-      ['IL','IBCI','—','12.5%'],
-      ['Commodity','IGLN','ICOM','26%'],
-      ['Real Estate','IWDP','IPRP','26%'],
-      ['Monetario','XEON, SMART','—','26%/12.5%'],
-    ],
-  });
-  y=doc.lastAutoTable.finalY+8;
-
-  section('7. GLOSSARIO');
-  doc.autoTable({startY:y,margin:{left:M,right:M},
-    styles:{font:'helvetica',fontSize:8,cellPadding:2},
-    headStyles:{fillColor:NAVY,textColor:[255,255,255],fontStyle:'bold'},
-    alternateRowStyles:{fillColor:[244,242,237]},
-    head:[['Termine','Definizione']],
-    body:[['SAA','Strategic Asset Allocation — pesi target lungo periodo'],['TAA','Tactical Asset Allocation — aggiustamenti mensili'],['TER','Total Expense Ratio — costo annuo ETF'],['VaR','Value at Risk — perdita max probabile 95%'],['PAC','Piano di Accumulo del Capitale'],['PMC','Prezzo Medio di Carico'],['IPS','Investment Policy Statement'],['CFA','Consulente Finanziario Autonomo OCF'],['DIST','ETF a distribuzione dividendi'],['DD','Drawdown — calo dal massimo'],['MiFID II','Markets in Financial Instruments Directive II']],
-  });
-
-  // Footer su ogni pagina
-  const n=doc.internal.getNumberOfPages();
-  for(let i=1;i<=n;i++){
-    doc.setPage(i);
-    doc.setFillColor(...NAVY);doc.rect(0,287,210,10,'F');
-    doc.setFontSize(7);doc.setFont('helvetica','normal');doc.setTextColor(150,140,130);
-    doc.text('RAPTOR WEALTH MERIDIAN v3.0 · Manuale Operativo · Uso riservato CFA',M,293);
-    doc.text(`Pag. ${i}/${n}`,W-M,293,{align:'right'});
+function assegnaULTRA(){
+  if(!G.profile){
+    // Compila profilo minimo se non esiste
+    const name=document.getElementById('cName').value||'Cliente ULTRA';
+    const capital=parseFloat(document.getElementById('cCapital').value)||0;
+    const horizon=parseInt(document.getElementById('cHorizon').value)||15;
+    const birth=parseInt(document.getElementById('cBirth').value)||1985;
+    const age=new Date().getFullYear()-birth;
+    if(!capital){toast('Inserisci almeno il capitale');return;}
+    G.profile={name,age,birth,horizon,capital,income:0,wealth:capital,
+      debt:0,dep:0,pidx:99,cap:25,tol:25,type:'acc',entry:'pacd',
+      market:'neutro',incTarget:0,isULTRA:true};
   }
 
-  doc.save(`RWM_Manuale_Operativo_v3_${new Date().toISOString().slice(0,10)}.pdf`);
-  toast('✓ Manuale PDF scaricato');
+  // Override forzato ULTRA
+  G.profile.pidx=99;
+  G.profile.isULTRA=true;
+  G.saa={pidx:99,eq:.60,eqem:.20,bond:0,em:0,il:0,cash:0,small:.10,tema:.10};
+
+  // Patch PROFILES e REND per includere ULTRA all'indice 99
+  // Usiamo un oggetto separato per non rompere i 7 profili originali
+  G.ultraMode=true;
+
+  // Aggiorna banner
+  document.getElementById('profiloResult').style.display='block';
+  document.getElementById('btnSave').style.display='inline-flex';
+  const nm=document.getElementById('cName').value||'Cliente';
+  document.getElementById('pName').textContent=nm;
+  document.getElementById('pMeta').textContent=
+    `Profilo ultra-aggressivo · Orizzonte min. 15 anni · € ${fmt(G.profile.capital)}`;
+  document.getElementById('pTag').textContent='⚡ ULTRA';
+  document.getElementById('pTypeTag').textContent='Full Equity + EM + Small Cap + Tematici';
+  document.getElementById('sCap').textContent=25;
+  document.getElementById('sTol').textContent=25;
+  document.getElementById('sCap2').textContent='€ '+fmt(G.profile.capital);
+  document.getElementById('sHor').textContent=G.profile.horizon||15;
+  document.getElementById('hdrClient').textContent=nm;
+
+  // Warning box
+  toast('⚡ Profilo ULTRA assegnato — documenta motivazione nel Decision Log');
+
+  // Auto-salva
+  if(G.clientId)saveCurrentClient();
 }
 
+// Patch renderProfileResult per gestire ULTRA
+const _origRPR=renderProfileResult;
+function renderProfileResult(){
+  if(G.ultraMode&&G.profile?.isULTRA){
+    // Già gestito da assegnaULTRA
+    return;
+  }
+  _origRPR();
+}
+
+// ════════════════════════════════════════════
+// INIT
+// ════════════════════════════════════════════
 initHeader();
 renderClients();
 renderTAA();
