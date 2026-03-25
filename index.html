@@ -9,24 +9,27 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:#0f1e38;font-family:'Helvetica Neue',sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;}
-.card{background:linear-gradient(135deg,#1a3057 0%,#0f1e38 100%);border:1px solid rgba(184,146,42,.3);border-radius:16px;padding:40px 36px;max-width:420px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,.4);}
+.wrap{max-width:460px;width:90%;text-align:center;}
 .logo{font-size:13px;letter-spacing:.18em;color:#b8922a;text-transform:uppercase;margin-bottom:8px;}
-h1{font-size:28px;font-weight:700;color:#fff;margin-bottom:6px;letter-spacing:.02em;}
+h1{font-size:30px;font-weight:700;color:#fff;margin-bottom:6px;}
 h1 span{color:#d4aa48;}
-.sub{font-size:11px;color:#8a9ab0;letter-spacing:.12em;text-transform:uppercase;margin-bottom:28px;}
-.btn{display:inline-block;background:linear-gradient(135deg,#b8922a,#d4aa48);color:#fff;text-decoration:none;padding:14px 36px;border-radius:30px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;transition:opacity .2s;margin-bottom:14px;width:100%;}
-.btn:hover{opacity:.88;}
-.btn-sec{display:inline-block;background:transparent;border:1px solid rgba(184,146,42,.4);color:#b8922a;text-decoration:none;padding:10px 28px;border-radius:30px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;width:100%;margin-bottom:10px;}
+.sub{font-size:11px;color:#8a9ab0;letter-spacing:.12em;text-transform:uppercase;margin-bottom:32px;}
+.btn{display:block;text-decoration:none;padding:14px 28px;border-radius:30px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;transition:all .2s;margin-bottom:12px;width:100%;}
+.btn-gold{background:linear-gradient(135deg,#b8922a,#d4aa48);color:#fff;}
+.btn-ultra{background:linear-gradient(135deg,#1a0a30,#2a1050);color:#a060ff;border:1px solid rgba(120,60,200,.4);}
+.btn-data{background:transparent;border:1px solid rgba(184,146,42,.3);color:#b8922a;}
+.btn:hover{opacity:.88;transform:translateY(-1px);}
 .ver{font-size:9px;color:#4a5a6a;margin-top:20px;letter-spacing:.1em;}
 </style>
 </head>
 <body>
-<div class="card">
+<div class="wrap">
   <div class="logo">RAPTOR SUITE</div>
   <h1>WEALTH <span>MERIDIAN</span></h1>
   <div class="sub">v3.0 · Sistema Gestione Patrimoniale</div>
-  <a class="btn" href="RWM_Dashboard_v3.html">⊙ Apri Dashboard v3</a>
-  <a class="btn-sec" href="RWM_DataFeed.html">↗ DataFeed Yahoo Finance</a>
+  <a class="btn btn-gold" href="RWM_Dashboard_v3.html">⊙ Dashboard v3 — Classic</a>
+  <a class="btn btn-ultra" href="RWM_Ultra.html">⚡ RWM Ultra — Portafogli Aggressivi</a>
+  <a class="btn btn-data" href="RWM_DataFeed.html">↗ DataFeed Yahoo Finance</a>
   <div class="ver">RAPTOR WEALTH MERIDIAN · Giorgiogoldoni · 2026</div>
 </div>
 </body>
