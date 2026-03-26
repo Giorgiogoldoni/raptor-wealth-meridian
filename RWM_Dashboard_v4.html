@@ -1267,6 +1267,8 @@ function duplicateClient(id){
   toast(`Duplicato: ${copy.name}`);
   renderClients();
 }
+
+function exportAllClients(){
   const clients=loadClients();
   if(clients.length===0){toast('Nessun cliente da esportare');return;}
   const json=JSON.stringify({exportDate:new Date().toISOString(),version:'3.0',clients},null,2);
