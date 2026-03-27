@@ -288,6 +288,7 @@ hr.div{border:none;border-top:1px solid var(--g2);margin:14px 0;}
   <div class="ntab" onclick="show('income')">⑦ Cedolare</div>
   <div class="ntab" onclick="show('etf')">⑧ ETF</div>
   <div class="ntab" onclick="show('posizione')">⑨ Posizione</div>
+  <div class="ntab" onclick="show('carico')">⑨b Carico</div>
   <div class="ntab" onclick="show('revisioni')">⑩ Revisioni</div>
   <div class="ntab" onclick="show('alloc')">⑪ Allocazione</div>
   <div class="ntab" onclick="show('ips')">⑫ IPS</div>
@@ -364,7 +365,7 @@ hr.div{border:none;border-top:1px solid var(--g2);margin:14px 0;}
     </div>
     <div class="card">
       <div class="card-title"><span class="dot"></span>Situazione Patrimoniale</div>
-      <div class="fg"><label class="fl">Capitale investibile (€)</label><input class="fi" id="cCapital" type="number" placeholder="200000" oninput="liveUpdate()"></div>
+      <div class="fg"><label class="fl">Capitale investibile (€)</label><input class="fi" id="cCapital" type="number" placeholder="200000" oninput="liveUpdate();debounce(calcProfile,600)()"></div>
       <div class="fg"><label class="fl">Patrimonio totale netto (€)</label><input class="fi" id="cWealth" type="number" placeholder="600000" oninput="liveUpdate()"></div>
       <div class="fg"><label class="fl">Passività totali (€)</label><input class="fi" id="cDebt" type="number" placeholder="0" oninput="liveUpdate()"></div>
       <div class="fg"><label class="fl">Dipendenti finanziari</label>
@@ -430,7 +431,6 @@ hr.div{border:none;border-top:1px solid var(--g2);margin:14px 0;}
     <div style="display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap">
       <button class="btn btn-primary" onclick="calcProfile()">Calcola Profilo →</button>
       <button class="btn btn-green" onclick="saveCurrentClient()" id="btnSave" style="display:none">💾 Salva Cliente</button>
-      <button class="btn" onclick="assegnaULTRA()" style="background:#1a0a2a;color:#f0d070;border:1px solid #6a3a8a">⚡ Assegna ULTRA</button>
     </div>
   </div>
   <div id="profiloResult" style="display:none">
@@ -519,6 +519,47 @@ hr.div{border:none;border-top:1px solid var(--g2);margin:14px 0;}
 <!-- ③ TAA -->
 <section class="sec" id="sec-taa">
   <div class="sh"><div class="sh-title">Segnali TAA</div><div class="sh-desc">Sistema a 5 segnali · aggiornamento mensile</div></div>
+
+  <!-- SPIEGAZIONE TAA -->
+  <div class="card" style="border-left:3px solid var(--gold);margin-bottom:14px">
+    <div class="card-title"><span class="dot"></span>Come funziona la TAA — Tactical Asset Allocation</div>
+    <div style="font-size:11px;color:var(--g5);line-height:1.8;margin-bottom:12px">
+      La TAA <b>non sostituisce la SAA</b> — la <b>modula temporaneamente</b> in base alle condizioni di mercato. Ogni mese inserisci 4 segnali per ciascuna classe asset. Il sistema calcola uno score 0–4 e sposta i pesi della SAA entro bande prestabilite.
+    </div>
+    <div style="overflow-x:auto">
+      <table class="rt" style="font-size:10px">
+        <thead><tr>
+          <th>Score</th><th>Segnale</th><th>Effetto sul peso SAA</th><th>Esempio: Azionario DM (SAA 38%)</th>
+        </tr></thead>
+        <tbody>
+          <tr><td><span class="badge bg-navy">4/4</span></td><td style="color:var(--green);font-weight:600">STRONG LONG</td><td>SAA + banda piena (+10%)</td><td style="color:var(--green)">38% → <b>48%</b> — sovrappeso massimo</td></tr>
+          <tr><td><span class="badge bg-green">3/4</span></td><td style="color:var(--green)">LONG</td><td>SAA + metà banda (+5%)</td><td style="color:var(--green)">38% → <b>43%</b> — sovrappeso parziale</td></tr>
+          <tr><td><span class="badge bg-blue">2/4</span></td><td>NEUTRO</td><td>SAA invariata</td><td>38% → <b>38%</b> — nessuna modifica</td></tr>
+          <tr><td><span class="badge bg-amber">1/4</span></td><td style="color:var(--amber)">CAUTION</td><td>SAA − metà banda (−5%)</td><td style="color:var(--amber)">38% → <b>33%</b> — sottopeso parziale</td></tr>
+          <tr><td><span class="badge bg-red">0/4</span></td><td style="color:var(--red)">FLAT</td><td>Peso → 0%, tutto su Cash</td><td style="color:var(--red)">38% → <b>0%</b> — uscita totale dalla classe</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:10px">
+      <div style="background:var(--g1);border-radius:6px;padding:10px">
+        <div style="font-weight:600;color:var(--navy);margin-bottom:6px">I 4 segnali da inserire mensilmente</div>
+        <div style="color:var(--g5);line-height:1.8">
+          <b>Faber SMA200</b> — Il prezzo è sopra la media mobile a 200 giorni?<br>
+          <b>Momentum 3m</b> — La performance degli ultimi 3 mesi è positiva?<br>
+          <b>RSI 14</b> — L'RSI è nella zona neutrale (40–70)?<br>
+          <b>Vol Regime</b> — La volatilità implicita è sotto il 15%?
+        </div>
+      </div>
+      <div style="background:var(--g1);border-radius:6px;padding:10px">
+        <div style="font-weight:600;color:var(--navy);margin-bottom:6px">Come leggere il risultato</div>
+        <div style="color:var(--g5);line-height:1.8">
+          Nella tabella sotto vedi <b>SAA</b> (target strutturale) e <b>TAA</b> (peso tattico risultante).<br>
+          La colonna <b>Dev.</b> mostra quanto ti stai discostando.<br>
+          Il portafoglio in sezione ⑪ Allocazione usa automaticamente i pesi TAA correnti.
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="card">
     <div class="card-title"><span class="dot"></span>Inserimento Segnali Mensili</div>
     <div id="taaInputs" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px"></div>
@@ -786,6 +827,91 @@ hr.div{border:none;border-top:1px solid var(--g2);margin:14px 0;}
       <div class="g2" id="zainettoStats"></div>
       <div style="margin-top:12px;font-size:11px;color:var(--g4)" id="zainettoNote"></div>
     </div>
+  </div>
+</section>
+
+<!-- ⑨b CARICO CLIENTE -->
+<section class="sec" id="sec-carico">
+  <div class="sh"><div class="sh-title">Carico Effettivo Cliente</div><div class="sh-desc">Posizioni reali · Prezzo medio di carico · Confronto con target SAA</div></div>
+  <div id="caricoEmpty" class="card" style="text-align:center;padding:32px;color:var(--g4)">← Seleziona prima un cliente</div>
+  <div id="caricoContent" style="display:none">
+
+    <!-- ALERT BANNER -->
+    <div id="caricoAlerts" style="margin-bottom:12px"></div>
+
+    <!-- FORM INSERIMENTO -->
+    <div class="card">
+      <div class="card-title"><span class="dot"></span>Inserisci / Aggiorna Posizione</div>
+      <div class="g3">
+        <div class="fg">
+          <label class="fl">ETF</label>
+          <select class="fs" id="crETF">
+            <option value="">— Seleziona ETF —</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label class="fl">Quantità (quote)</label>
+          <input class="fi" id="crQty" type="number" step="0.001" placeholder="es. 150.000">
+        </div>
+        <div class="fg">
+          <label class="fl">Prezzo medio carico (€)</label>
+          <input class="fi" id="crPmc" type="number" step="0.01" placeholder="es. 98.50">
+        </div>
+        <div class="fg">
+          <label class="fl">Prezzo attuale (€)</label>
+          <input class="fi" id="crPrice" type="number" step="0.01" placeholder="es. 104.20">
+        </div>
+        <div class="fg">
+          <label class="fl">Data acquisto</label>
+          <input class="fi" id="crDate" type="date">
+        </div>
+        <div class="fg">
+          <label class="fl">Note</label>
+          <input class="fi" id="crNote" placeholder="es. Prima tranche PAC">
+        </div>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:4px">
+        <button class="btn btn-gold" onclick="addCarico()">+ Aggiungi Posizione</button>
+        <button class="btn btn-outline btn-sm" onclick="clearCarico()">🗑 Svuota tutto</button>
+      </div>
+    </div>
+
+    <!-- RIEPILOGO KPI -->
+    <div class="g4" id="caricoKpi" style="margin-bottom:14px"></div>
+
+    <!-- TABELLA POSIZIONI -->
+    <div class="card">
+      <div class="card-title"><span class="dot"></span>Posizioni in Portafoglio</div>
+      <div style="overflow-x:auto">
+        <table class="rt">
+          <thead>
+            <tr>
+              <th>ETF</th><th>Nome</th><th>Classe</th>
+              <th class="num">Quote</th>
+              <th class="num">PMC (€)</th>
+              <th class="num">Prezzo att. (€)</th>
+              <th class="num">Costo base</th>
+              <th class="num">Controvalore</th>
+              <th class="num">P&amp;L €</th>
+              <th class="num">P&amp;L %</th>
+              <th class="num">Peso reale</th>
+              <th class="num">Peso target</th>
+              <th class="num">Δ</th>
+              <th>Azione</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="caricoBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- CONFRONTO SAA vs REALE -->
+    <div class="card">
+      <div class="card-title"><span class="dot"></span>Confronto Allocazione: Target SAA vs Reale</div>
+      <div id="caricoSaaVsReal"></div>
+    </div>
+
   </div>
 </section>
 
@@ -1072,12 +1198,13 @@ function show(id){
   document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
   document.querySelectorAll('.ntab').forEach(t=>t.classList.remove('active'));
   document.getElementById('sec-'+id).classList.add('active');
-  const map={clienti:0,overview:1,profilo:2,saa:3,taa:4,rendimento:5,rischio:6,pac:7,income:8,etf:9,posizione:10,revisioni:11,alloc:12,ips:13};
+  const map={clienti:0,overview:1,profilo:2,saa:3,taa:4,rendimento:5,rischio:6,pac:7,income:8,etf:9,posizione:10,carico:11,revisioni:12,alloc:13,ips:14};
   const tabs=document.querySelectorAll('.ntab');
   if(map[id]!==undefined)tabs[map[id]].classList.add('active');
   const renders={
     overview:renderOverview, saa:renderSAA, taa:renderTAA, rendimento:calcRend,
     rischio:renderRischio, income:renderIncome, etf:renderETF, posizione:renderPosizione,
+    carico:renderCarico,
     revisioni:renderRevisioni, alloc:renderAlloc, ips:renderIPS,
     clienti:renderClients
   };
@@ -1190,6 +1317,7 @@ function loadClient(id){
   if(!c){toast('Cliente non trovato');return;}
   G.clientId=id;
   G.positions=c.positions||[];
+  G.carico=c.carico||[];
 
   // Carica profilo se presente
   if(c.profile){
@@ -1376,6 +1504,22 @@ function calcProfile(){
 
   // Auto-salva se cliente attivo
   if(G.clientId)saveCurrentClient();
+
+  // Ri-renderizza le sezioni dipendenti dal capitale se già visibili
+  const active=document.querySelector('.sec.active');
+  if(active){
+    const id=active.id.replace('sec-','');
+    if(['saa','income','alloc','ips','posizione','carico','overview'].includes(id)){
+      const renders={saa:renderSAA,income:renderIncome,alloc:renderAlloc,
+        ips:renderIPS,posizione:renderPosizione,carico:renderCarico,overview:renderOverview};
+      if(renders[id])renders[id]();
+    }
+  }
+  // Aggiorna sempre SAA e cedolare in background (aggiornano G.saa)
+  if(G.saa){
+    // forza refresh silenzioso SAA (per PDF e allocazione)
+    G.saa=buildSAA(pidx);
+  }
 }
 
 function renderProfileResult(){
@@ -2465,198 +2609,528 @@ function downloadPDF(){
 }
 function _doPDF(){
   if(typeof window.jspdf==='undefined'){toast('jsPDF non ancora caricato');return;}
-
   const {jsPDF}=window.jspdf;
-  const p=G.profile,pr=PROFILES[p.pidx],rp=REND[p.pidx],saa=G.saa;
+  const p=G.profile, pr=PROFILES[p.pidx], rp=REND[p.pidx], saa=G.saa;
   const isIncome=p.type==='income';
   const today=new Date().toLocaleDateString('it-IT');
   const doc=new jsPDF({orientation:'portrait',unit:'mm',format:'a4'});
 
-  const NAVY=[15,30,56],GOLD=[184,146,42],GREEN=[42,110,58],RED=[176,32,32],GRAY=[138,128,112];
-  const W=210,M=18;
+  // ── COSTANTI COLORE ──
+  const NAVY=[15,30,56], GOLD=[184,146,42], GREEN=[42,110,58],
+        RED=[176,32,32], GRAY=[100,96,90], LGRAY=[220,216,210],
+        W=210, M=16;
 
-  // Helper functions
-  function setFont(size,style='normal',color=null){
-    doc.setFontSize(size);doc.setFont('helvetica',style);
-    if(color)doc.setTextColor(...color);else doc.setTextColor(50,50,50);
-  }
-  function line(x1,y1,x2,y2,color=GOLD,w=0.5){
-    doc.setDrawColor(...color);doc.setLineWidth(w);doc.line(x1,y1,x2,y2);
-  }
-  function rect(x,y,w,h,fillColor){
-    doc.setFillColor(...fillColor);doc.rect(x,y,w,h,'F');
-  }
+  // ── HELPERS ──
+  const sf=(sz,st='normal',col=null)=>{
+    doc.setFontSize(sz); doc.setFont('helvetica',st);
+    col ? doc.setTextColor(...col) : doc.setTextColor(50,50,50);
+  };
+  const ln=(x1,y1,x2,y2,col=GOLD,w=0.4)=>{
+    doc.setDrawColor(...col); doc.setLineWidth(w); doc.line(x1,y1,x2,y2);
+  };
+  const rc=(x,y,w,h,fill)=>{ doc.setFillColor(...fill); doc.rect(x,y,w,h,'F'); };
+  const np=(need=40)=>{ if(y>297-need){doc.addPage();y=22;} };
+  const secTitle=(num,title)=>{
+    np(50); ln(M,y,W-M,y,GOLD,0.6); y+=5;
+    sf(10,'bold',NAVY); doc.text(`${num}. ${title}`,M,y); y+=7;
+  };
 
-  let y=20;
+  let y=22;
 
-  // HEADER
-  rect(0,0,210,28,NAVY);
-  setFont(20,'bold',[255,255,255]);
-  doc.text('RAPTOR WEALTH MERIDIAN',M,12);
-  setFont(10,'normal',[200,160,60]);
-  doc.text('Investment Policy Statement · v3.0',M,19);
-  setFont(9,'normal',[150,140,130]);
-  doc.text(`Data: ${today}`,W-M,12,{align:'right'});
-  doc.text(`N. RWM-${new Date().getFullYear()}-${Math.floor(Math.random()*9000+1000)}`,W-M,19,{align:'right'});
-  y=38;
+  // ══════════════════════════════════════════
+  // PAG 1 — COPERTINA
+  // ══════════════════════════════════════════
+  rc(0,0,210,40,NAVY);
+  sf(22,'bold',[255,255,255]);
+  doc.text('RAPTOR WEALTH MERIDIAN',M,16);
+  sf(9,'normal',[200,160,60]);
+  doc.text('Investment Policy Statement · v4.0',M,23);
+  sf(8,'normal',[150,140,130]);
+  doc.text(`Data: ${today}`,W-M,16,{align:'right'});
+  doc.text(`N. RWM-${new Date().getFullYear()}-${Math.floor(Math.random()*9000+1000)}`,W-M,23,{align:'right'});
+  y=50;
 
-  // CLIENTE BAND
-  rect(M-2,y-6,W-2*M+4,16,NAVY);
-  setFont(16,'bold',[255,255,255]);
-  doc.text(p.name,M+2,y+3);
-  setFont(10,'normal',[200,200,200]);
-  doc.text(`${p.age} anni · € ${fmt(p.capital)} · ${p.horizon} anni`,M+2,y+8);
-  doc.setFillColor(...GOLD);doc.roundedRect(W-M-32,y-3,30,12,2,2,'F');
-  setFont(9,'bold',[255,255,255]);
-  doc.text(pr.name,W-M-17,y+5,{align:'center'});
-  y+=22;
+  // Cliente band
+  rc(M-2,y-5,W-2*M+4,18,NAVY);
+  sf(15,'bold',[255,255,255]); doc.text(p.name,M+2,y+4);
+  sf(9,'normal',[200,200,200]);
+  doc.text(`${p.age} anni · € ${fmt(p.capital)} · Orizzonte ${p.horizon} anni`,M+2,y+10);
+  doc.setFillColor(...GOLD); doc.roundedRect(W-M-34,y-2,32,14,2,2,'F');
+  sf(9,'bold',[255,255,255]); doc.text(pr.name,W-M-18,y+6,{align:'center'});
+  y+=26;
 
   // SEZIONE 1 — Profilo
-  line(M,y,W-M,y,GOLD,0.8);y+=6;
-  setFont(11,'bold',NAVY);doc.text('1. PROFILO E OBIETTIVI',M,y);y+=8;
-
-  const col1=M,col2=M+45,col3=M+95,col4=M+140;
+  secTitle(1,'PROFILO E OBIETTIVI');
+  const entryLabel={lump:'Lump Sum',pac:'PAC Standard',pacd:'PAC Dinamico',mixed:'Misto 50%+PAC',soglie:'Per soglie'};
   const rows1=[
-    ['Profilo',pr.name],['Tipo',isIncome?'Income DIST':'Accumulazione ACC'],
-    ['Capitale',`€ ${fmt(p.capital)}`],['Orizzonte',`${p.horizon} anni`],
-    ['Rendimento target',`${rp.net.toFixed(1)}% netto annuo`],
-    ['Strategia entrata',{lump:'Lump Sum',pac:'PAC Standard',pacd:'PAC Dinamico',mixed:'Misto 50%+PAC',soglie:'Per soglie'}[p.entry]||'—'],
+    ['Profilo',pr.name],['Tipo portafoglio',isIncome?'Income DIST':'Accumulazione ACC'],
+    ['Capitale investibile','€ '+fmt(p.capital)],['Orizzonte',p.horizon+' anni'],
+    ['Rendimento netto atteso',rp.net.toFixed(1)+'% annuo'],
+    ['Strategia entrata',entryLabel[p.entry]||'PAC Dinamico'],
+    ['Capacità rischio',p.cap+'/25'],['Tolleranza rischio',p.tol+'/25'],
   ];
+  const c1=M,c2=M+52,c3=M+100,c4=M+152;
   rows1.forEach((r,i)=>{
-    setFont(8,'bold',GRAY);doc.text(r[0],i%2===0?col1:col3,y);
-    setFont(9,'normal',NAVY);doc.text(r[1],i%2===0?col2:col4,y);
+    sf(7,'bold',GRAY); doc.text(r[0],(i%2===0?c1:c3),y);
+    sf(8,'normal',NAVY); doc.text(r[1],(i%2===0?c2:c4),y);
     if(i%2===1)y+=6;
   });
-  y+=4;
+  y+=8;
 
   // SEZIONE 2 — Drawdown
-  line(M,y,W-M,y,GOLD,0.8);y+=6;
-  setFont(11,'bold',NAVY);doc.text('2. DRAWDOWN CONTROL E VaR',M,y);y+=8;
-
   const weights={};
-  const isInc=p.type==='income';
-  if(isInc){
-    weights.income=saa.eq;weights.gov=saa.bond;weights.corp=saa.em*.5;
-    weights.em=saa.em*.5;weights.il=saa.il;weights.re=.05;weights.mon=saa.cash;
-  } else {
-    weights.eq=saa.eq;weights.eqem=saa.eqem;weights.gov=saa.bond;
-    weights.em=saa.em;weights.il=saa.il;weights.mon=saa.cash;
-  }
+  if(isIncome){weights.income=saa.eq;weights.gov=saa.bond;weights.corp=saa.em*.5;weights.em=saa.em*.5;weights.il=saa.il;weights.re=.05;weights.mon=saa.cash;}
+  else{weights.eq=saa.eq;weights.eqem=saa.eqem;weights.gov=saa.bond;weights.em=saa.em;weights.il=saa.il;weights.mon=saa.cash;}
   const vol=calcPortfolioVol(weights);
-  const var95=(calcVaR(vol,.95)*100).toFixed(1);
-  const cvar95=(calcCVaR(vol,.95)*100).toFixed(1);
+  const v95=(calcVaR(vol,.95)*100).toFixed(1), cv95=(calcCVaR(vol,.95)*100).toFixed(1);
 
+  secTitle(2,'DRAWDOWN CONTROL E VAR');
   doc.autoTable({
-    startY:y,
-    margin:{left:M,right:M},
-    styles:{font:'helvetica',fontSize:8,cellPadding:2},
+    startY:y,margin:{left:M,right:M},
+    styles:{font:'helvetica',fontSize:7.5,cellPadding:2},
     headStyles:{fillColor:NAVY,textColor:[255,255,255],fontStyle:'bold'},
     alternateRowStyles:{fillColor:[244,242,237]},
-    head:[['Soglia','Valore','Azione da intraprendere']],
+    head:[['Soglia','Perdita trigger','Azione operativa']],
     body:[
-      ['Livello 1 — Attenzione',`–${pr.dd1}%`,'Revisione TAA. Nessuna operazione automatica.'],
-      ['Livello 2 — Riduzione', `–${pr.dd2}%`,'Riduci equity 30%. Cash al doppio SAA.'],
-      ['Livello 3 — Difensivo', `–${pr.dd3}%`,'Equity al minimo. Max Gov Bond e Cash.'],
-      ['VaR 95% stimato',       `–${var95}%`, `CVaR 95%: –${cvar95}% · 1 anno su 20`],
+      ['L1 — Attenzione',`–${pr.dd1}%`,'Revisione TAA immediata, no operazioni automatiche'],
+      ['L2 — Riduzione',`–${pr.dd2}%`,'Riduci equity 30%, porta cash al doppio della SAA'],
+      ['L3 — Difensivo',`–${pr.dd3}%`,'Switch totale difensivo: max Gov Bond e Cash'],
+      ['VaR 95% stimato',`–${v95}%`,`CVaR 95%: –${cv95}% · si verifica 1 anno su 20`],
     ],
   });
-  y=doc.lastAutoTable.finalY+8;
+  y=doc.lastAutoTable.finalY+10;
 
-  // SEZIONE 3 — SAA
-  line(M,y,W-M,y,GOLD,0.8);y+=6;
-  setFont(11,'bold',NAVY);doc.text('3. STRATEGIC ASSET ALLOCATION',M,y);y+=8;
+  // ══════════════════════════════════════════
+  // PAG 2 — SAA: TORTA + BARRE
+  // ══════════════════════════════════════════
+  np(160);
+  secTitle(3,'STRATEGIC ASSET ALLOCATION — ALLOCAZIONE VISIVA');
 
-  const saaRows=isIncome?[
-    ['Income EU (DIST)',`${Math.round(saa.eq*.35*100)}%`,'ISEU','3.3%','26%'],
-    ['Income USA (DIST)',`${Math.round(saa.eq*.25*100)}%`,'ISUS','2.4%','26%'],
-    ['Income Asia (DIST)',`${Math.round(saa.eq*.25*100)}%`,'ISAP','3.6%','26%'],
-    ['Income Global',`${Math.round(saa.eq*.15*100)}%`,'VHYL','2.6%','26%'],
-    ['Gov Bond EU',`${Math.round(saa.bond*100)}%`,'IBGM','2.9%','12.5%'],
-    ['Corporate Bond',`${Math.round(saa.em*.5*100)}%`,'IEAC','2.6%','26%'],
-    ['EM Bond',`${Math.round(saa.em*.5*100)}%`,'EMBE','4.3%','26%'],
-    ['Inflation-Linked',`${Math.round(saa.il*100)}%`,'IBCI','2.5%','12.5%'],
-    ['Real Estate',`5%`,'IWDP','2.8%','26%'],
-    ['Monetario',`${Math.round(Math.max(0,saa.cash-.05)*100)}%`,'SMART','2.5%','12.5%'],
+  // ── Definizione classi SAA ──
+  const saaClasses=isIncome?[
+    {l:'Income EU',    v:saa.eq*.35, rgb:[26,106,58],   hex:'#1a6a3a'},
+    {l:'Income USA',   v:saa.eq*.25, rgb:[42,138,74],   hex:'#2a8a4a'},
+    {l:'Income Asia',  v:saa.eq*.25, rgb:[58,170,90],   hex:'#3aaa5a'},
+    {l:'Income Global',v:saa.eq*.15, rgb:[74,202,106],  hex:'#4aca6a'},
+    {l:'Gov Bond',     v:saa.bond,   rgb:[42,110,58],   hex:'#2a6e3a'},
+    {l:'Corp Bond',    v:saa.em*.5,  rgb:[90,58,138],   hex:'#5a3a8a'},
+    {l:'EM Bond',      v:saa.em*.5,  rgb:[138,110,42],  hex:'#8a6e2a'},
+    {l:'IL Bond',      v:saa.il,     rgb:[106,74,138],  hex:'#6a4a8a'},
+    {l:'Real Estate',  v:.05,         rgb:[106,42,106],  hex:'#6a2a6a'},
+    {l:'Monetario',    v:Math.max(0,saa.cash-.05), rgb:[74,106,106], hex:'#4a6a6a'},
   ]:[
-    ['Azionario Sviluppato',`${Math.round(saa.eq*100)}%`,'SWDA','5.2%','26%'],
-    ['Azionario Emergente',`${Math.round(saa.eqem*100)}%`,'IEMA','5.9%','26%'],
-    ['Gov Bond EU',`${Math.round(saa.bond*100)}%`,'IBGM','2.9%','12.5%'],
-    ['EM Bond',`${Math.round(saa.em*100)}%`,'EMBE','4.3%','26%'],
-    ['Inflation-Linked',`${Math.round(saa.il*100)}%`,'IBCI','2.5%','12.5%'],
-    ['Monetario',`${Math.round(saa.cash*100)}%`,'XEON','2.2%','26%'],
-  ].filter(r=>parseInt(r[1])>0);
+    {l:'Azionario DM', v:saa.eq,   rgb:[26,74,138],   hex:'#1a4a8a'},
+    {l:'Azionario EM', v:saa.eqem, rgb:[42,110,138],  hex:'#2a6e8a'},
+    {l:'Gov Bond',     v:saa.bond,  rgb:[42,110,58],   hex:'#2a6e3a'},
+    {l:'EM Bond',      v:saa.em,    rgb:[138,110,42],  hex:'#8a6e2a'},
+    {l:'IL Bond',      v:saa.il,    rgb:[106,74,138],  hex:'#6a4a8a'},
+    {l:'Monetario',    v:saa.cash,  rgb:[74,106,106],  hex:'#4a6a6a'},
+  ].filter(c=>c.v>0.005);
+  const tot=saaClasses.reduce((s,c)=>s+c.v,0);
 
+  // ── TORTA (sx) ──
+  const cx=M+32, cy=y+34, R=28;
+  let angle=-Math.PI/2;
+  saaClasses.filter(c=>c.v>0.005).forEach(cl=>{
+    const sweep=(cl.v/tot)*Math.PI*2;
+    const ea=angle+sweep;
+    // Disegna slice con doc.setFillColor + path manuale via triangoli (approx)
+    doc.setFillColor(...cl.rgb);
+    doc.setDrawColor(255,255,255);
+    doc.setLineWidth(0.4);
+    // Approssimazione torta: disegna come triangolo fan
+    const steps=Math.max(2,Math.round(sweep*8));
+    for(let s=0;s<steps;s++){
+      const a1=angle+sweep*s/steps, a2=angle+sweep*(s+1)/steps;
+      const x1=cx+R*Math.cos(a1), y1=cy+R*Math.sin(a1);
+      const x2=cx+R*Math.cos(a2), y2=cy+R*Math.sin(a2);
+      doc.triangle(cx,cy,x1,y1,x2,y2,'FD');
+    }
+    angle=ea;
+  });
+  // Centro bianco
+  doc.setFillColor(255,255,255); doc.circle(cx,cy,10,'F');
+  sf(6,'bold',NAVY); doc.text('SAA',cx,cy-1.5,{align:'center'}); doc.text(pr.name,cx,cy+2.5,{align:'center'});
+
+  // ── BARRE orizzontali (dx) ──
+  const bx=M+70, bw=W-M-bx-2, bh=5, bGap=8.5;
+  let by=y;
+  sf(7,'bold',NAVY); doc.text('Classe',bx,by); doc.text('Peso',W-M-2,by,{align:'right'}); by+=4;
+  saaClasses.filter(c=>c.v>0.005).forEach(cl=>{
+    const fillW=bw*(cl.v/tot);
+    rc(bx,by,bw,bh,LGRAY);
+    rc(bx,by,fillW,bh,cl.rgb);
+    sf(6.5,'normal',[50,50,50]); doc.text(cl.l,bx+1,by+3.5);
+    sf(7,'bold',NAVY); doc.text(Math.round(cl.v/tot*100)+'%',W-M-2,by+3.5,{align:'right'});
+    by+=bGap;
+  });
+
+  // Legenda TER + rendimento sotto la torta
+  y=Math.max(by,cy+R+8)+4;
+  sf(7,'normal',GRAY);
+  const totalTER2=buildAllocPortfolio(p.pidx,saa,G.taaScores).reduce((s,pos)=>s+pos.peso*pos.ter,0);
+  doc.text(`TER medio portafoglio: ${(totalTER2*100).toFixed(2)}%   ·   Rendimento netto atteso: ${rp.net.toFixed(1)}%   ·   Volatilità stimata: ${(vol*100).toFixed(1)}%`,M,y);
+  y+=10;
+
+  // ══════════════════════════════════════════
+  // SEZ 4 — PORTAFOGLIO OPERATIVO COMPLETO
+  // ══════════════════════════════════════════
+  np(80);
+  secTitle(4,'PORTAFOGLIO OPERATIVO — ALLOCAZIONE COMPLETA');
+  const portfolio=buildAllocPortfolio(p.pidx,saa,G.taaScores);
+  const totalTER=portfolio.reduce((s,pos)=>s+pos.peso*pos.ter,0);
+  const totalYield=portfolio.reduce((s,pos)=>s+pos.peso*(pos.yieldD||0),0);
   doc.autoTable({
     startY:y,margin:{left:M,right:M},
-    styles:{font:'helvetica',fontSize:8,cellPadding:2},
+    styles:{font:'helvetica',fontSize:7,cellPadding:1.8},
     headStyles:{fillColor:NAVY,textColor:[255,255,255],fontStyle:'bold'},
     alternateRowStyles:{fillColor:[244,242,237]},
-    head:[['Classe','Peso SAA','Strumento','Rend. netto','Tax IT']],
-    body:[...saaRows,['TOTALE','100%',`€ ${fmt(p.capital)}`,`${rp.net.toFixed(1)}%`,'—']],
+    head:[['Ruolo','Ticker','ETF','Peso %','Importo €','TER','Tax','Yield']],
+    body:[
+      ...portfolio.map(pos=>[
+        pos.ruolo, pos.t,
+        pos.n.length>28?pos.n.substring(0,28)+'…':pos.n,
+        (pos.peso*100).toFixed(1)+'%',
+        '€ '+fmt(pos.amt),
+        (pos.ter*100).toFixed(2)+'%',
+        pos.tax+'%',
+        pos.dist?(pos.yieldD||0).toFixed(1)+'%':'—',
+      ]),
+      ['TOTALE','','',
+       '100%','€ '+fmt(p.capital),
+       (totalTER*100).toFixed(2)+'%','—',totalYield.toFixed(1)+'%'],
+    ],
     footStyles:{fillColor:[232,228,219],fontStyle:'bold'},
+    columnStyles:{0:{cellWidth:30},1:{cellWidth:14},2:{cellWidth:42},3:{cellWidth:13},4:{cellWidth:22}},
+    didParseCell:d=>{if(d.row.index===portfolio.length&&d.section==='body')d.cell.styles.fontStyle='bold';},
+  });
+  y=doc.lastAutoTable.finalY+10;
+
+  // ══════════════════════════════════════════
+  // PAG 3 — RENDIMENTO + GRAFICO CRESCITA + CAMPANA
+  // ══════════════════════════════════════════
+  np(160);
+  secTitle(5,'SIMULATORE RENDIMENTO E PROIEZIONE CAPITALE');
+
+  // Tabella rendimenti per profilo
+  doc.autoTable({
+    startY:y,margin:{left:M,right:M},
+    styles:{font:'helvetica',fontSize:7.5,cellPadding:2},
+    headStyles:{fillColor:NAVY,textColor:[255,255,255],fontStyle:'bold'},
+    alternateRowStyles:{fillColor:[244,242,237]},
+    head:[['Profilo','Lordo','Netto','Reale (–2.2% infl.)','Adatto per']],
+    body:PROFILES.map((pr2,i)=>{
+      const rd=REND[i];
+      const real=(rd.net-2.2).toFixed(1);
+      const active=i===p.pidx;
+      return[
+        (active?'▶ ':'')+pr2.name,
+        rd.gross.toFixed(1)+'%',
+        rd.net.toFixed(1)+'%',
+        (real>0?'+':'')+real+'%',
+        pr2.eq>=0.7?'Crescita capitale LP':pr2.eq>=0.4?'Bilanciato MP':'Reddito/conservativo',
+      ];
+    }),
+    didParseCell:d=>{
+      if(d.section==='body'&&d.row.index===p.pidx){
+        d.cell.styles.fillColor=[200,215,240];
+        d.cell.styles.fontStyle='bold';
+      }
+    },
   });
   y=doc.lastAutoTable.finalY+8;
 
-  // SEZIONE 4 — TAA
-  if(y>240)doc.addPage(),y=20;
-  line(M,y,W-M,y,GOLD,0.8);y+=6;
-  setFont(11,'bold',NAVY);doc.text('4. SEGNALI TAA — REGOLE OPERATIVE',M,y);y+=8;
+  // ── GRAFICO CRESCITA CAPITALE ──
+  np(70);
+  sf(8,'bold',NAVY); doc.text('Crescita Capitale — Scenario Base ('+p.horizon+' anni)',M,y); y+=4;
+  const gW=W-2*M, gH=48, gX=M, gY=y;
+  const mu=rp.net/100, sigma=vol, years=p.horizon, cap=p.capital;
+  // 3 linee: base, ottimista (+1σ), pessimista (–1σ)
+  const pts=Array.from({length:years+1},(_,t)=>({
+    base: cap*Math.pow(1+mu,t),
+    opt:  cap*Math.pow(1+mu+sigma*0.5,t),
+    pess: cap*Math.pow(1+Math.max(0.001,mu-sigma*0.5),t),
+  }));
+  const maxV=pts[pts.length-1].opt, minV=pts[0].pess;
+  const xS=t=>gX+(t/years)*gW;
+  const yS=v=>gY+gH-(Math.max(0,(v-minV)/(maxV-minV)))*gH;
+  // Griglia
+  doc.setDrawColor(...LGRAY); doc.setLineWidth(0.2);
+  [0,.25,.5,.75,1].forEach(t=>{
+    const gy=gY+gH*(1-t);
+    doc.line(gX,gy,gX+gW,gy);
+    sf(5.5,'normal',GRAY); doc.text('€'+fmtK(minV+(maxV-minV)*t),gX-1,gy+1,{align:'right'});
+  });
+  [0,Math.floor(years/4),Math.floor(years/2),Math.floor(years*3/4),years].forEach(t=>{
+    sf(5.5,'normal',GRAY); doc.text(t+'a',xS(t),gY+gH+4,{align:'center'});
+  });
+  // Banda opt-pess
+  doc.setFillColor(26,74,138,0.08);
+  // Riga per riga come rettangoli verticali
+  for(let t=0;t<years;t++){
+    const x1=xS(t),x2=xS(t+1);
+    const y_top=Math.min(yS(pts[t].opt),yS(pts[t+1].opt));
+    const y_bot=Math.max(yS(pts[t].pess),yS(pts[t+1].pess));
+    rc(x1,y_top,x2-x1,y_bot-y_top,[220,230,245]);
+  }
+  // Linee
+  const drawLine=(key,col,dash)=>{
+    doc.setDrawColor(...col); doc.setLineWidth(dash?0.5:1);
+    for(let t=0;t<years;t++){
+      if(dash&&t%2===0)continue;
+      doc.line(xS(t),yS(pts[t][key]),xS(t+1),yS(pts[t+1][key]));
+    }
+  };
+  drawLine('pess',[200,80,80],true);
+  drawLine('base',NAVY,false);
+  drawLine('opt',[42,130,58],true);
+  // Valori finali
+  sf(6,'bold',[42,130,58]); doc.text('€'+fmtK(pts[years].opt),xS(years)+1,yS(pts[years].opt));
+  sf(6,'bold',NAVY);         doc.text('€'+fmtK(pts[years].base),xS(years)+1,yS(pts[years].base)+3);
+  sf(6,'bold',[200,80,80]);  doc.text('€'+fmtK(pts[years].pess),xS(years)+1,yS(pts[years].pess)+5);
+  // Legenda
+  y=gY+gH+10;
+  sf(6,'normal',GRAY);
+  doc.text('━━ Scenario base  ╌╌ Ottimista (+½σ)  ╌╌ Pessimista (–½σ)  · Banda colorata = range probabile',M,y);
+  y+=10;
 
+  // ── DISTRIBUZIONE RENDIMENTI (CAMPANA) ──
+  np(55);
+  sf(8,'bold',NAVY); doc.text('Distribuzione Rendimenti Annui — VaR e CVaR',M,y); y+=4;
+  const bW=gW, bH=38, bX=M, bY=y;
+  const muR=mu, sigR=sigma;
+  const xMin=muR-3.8*sigR, xMax=muR+3.8*sigR;
+  const pdf=x=>Math.exp(-0.5*((x-muR)/sigR)**2)/(sigR*Math.sqrt(2*Math.PI));
+  const nPts=80;
+  const pts2=Array.from({length:nPts+1},(_,i)=>{const x=xMin+i*(xMax-xMin)/nPts;return{x,y:pdf(x)};});
+  const maxPDF=Math.max(...pts2.map(p=>p.y));
+  const xSb=x=>bX+(x-xMin)/(xMax-xMin)*bW;
+  const ySb=v=>bY+bH-(v/maxPDF)*bH;
+  const var95x=muR-1.645*sigR;
+  // Area rossa VaR
+  doc.setFillColor(220,80,80);
+  pts2.filter((_,i)=>pts2[i].x<=var95x).forEach((pt,i,arr)=>{
+    if(i===0)return;
+    const prev=arr[i-1];
+    const xPts=[xSb(prev.x),xSb(pt.x),xSb(pt.x),xSb(prev.x)];
+    const yPts=[ySb(0),ySb(0),ySb(pt.y),ySb(prev.y)];
+    doc.setFillColor(220,100,100);
+    doc.triangle(xSb(prev.x),ySb(0),xSb(pt.x),ySb(0),xSb(pt.x),ySb(pt.y),'F');
+    doc.triangle(xSb(prev.x),ySb(0),xSb(pt.x),ySb(pt.y),xSb(prev.x),ySb(prev.y),'F');
+  });
+  // Curva principale
+  doc.setDrawColor(...NAVY); doc.setLineWidth(0.8);
+  for(let i=1;i<=nPts;i++){
+    doc.line(xSb(pts2[i-1].x),ySb(pts2[i-1].y),xSb(pts2[i].x),ySb(pts2[i].y));
+  }
+  // Linee verticali
+  doc.setLineWidth(0.5);
+  doc.setDrawColor(...RED);   doc.line(xSb(var95x),bY,xSb(var95x),bY+bH);
+  doc.setDrawColor(...GREEN); doc.line(xSb(muR),bY,xSb(muR),bY+bH);
+  // Etichette asse X
+  [-3,-2,-1,0,1,2].forEach(z=>{
+    const xv=muR+z*sigR;
+    if(xv<xMin||xv>xMax)return;
+    sf(5,'normal',GRAY); doc.text((xv*100).toFixed(0)+'%',xSb(xv),bY+bH+4,{align:'center'});
+  });
+  sf(6,'bold',RED);   doc.text(`VaR 95%: –${v95}%`,xSb(var95x)+1,bY+6);
+  sf(6,'bold',GREEN); doc.text(`E[r]: +${(muR*100).toFixed(1)}%`,xSb(muR)+1,bY+12);
+  sf(5,'normal',GRAY); doc.text('Area rossa = perdite peggiori del 5% degli anni',M,bY+bH+8);
+  y=bY+bH+14;
+
+  // ══════════════════════════════════════════
+  // PAG 4 — PAC DINAMICO
+  // ══════════════════════════════════════════
+  np(160);
+  secTitle(6,'PIANO DI ACCUMULAZIONE — PAC DINAMICO');
+
+  const pacC=p.capital, pacN=12;
+  const rataStd=pacC/pacN;
+  const moltMap={'postcalo':2.0,'neutro':1.0,'massimi':0.5};
+  const ctx=p.market==='rialzo'?'massimi':p.market==='ribasso'?'postcalo':'neutro';
+  const ddSim=p.market==='ribasso'?20:p.market==='rialzo'?2:10;
+  const mult=ddSim>25?3:ddSim>18?2.5:ddSim>12?2:ddSim>7?1.5:ddSim>3?1:0.5;
+  const rataConsigliata=rataStd*mult;
+
+  // KPI PAC
+  const kpiData=[
+    ['Capitale totale','€ '+fmt(pacC)],['N. rate standard',pacN+' rate'],
+    ['Rata standard','€ '+fmt(rataStd)],['Contesto mercato',p.market||'Neutro'],
+    ['Moltiplicatore RWM',mult.toFixed(1)+'x'],['Rata consigliata','€ '+fmt(rataConsigliata)],
+    ['Riserva XEON','€ '+fmt(pacC-rataConsigliata)],['Strategia',entryLabel[p.entry]||'PAC Dinamico'],
+  ];
+  const ky=y;
+  kpiData.forEach((row,i)=>{
+    const col=i%2===0?M:M+97, cy2=ky+Math.floor(i/2)*7;
+    sf(7,'bold',GRAY); doc.text(row[0],col,cy2);
+    sf(8,'bold',NAVY); doc.text(row[1],col+52,cy2);
+  });
+  y=ky+Math.ceil(kpiData.length/2)*7+8;
+
+  // ── GRAFICO PAC DIN vs STD ──
+  np(60);
+  sf(8,'bold',NAVY); doc.text('Confronto: PAC Dinamico vs Standard vs Lump Sum',M,y); y+=4;
+  const pgW=gW, pgH=44, pgX=M, pgY=y;
+  const n=pacN;
+  let pacS=[0], pacD=[0];
+  for(let i=1;i<=n;i++){
+    pacS.push(Math.min(pacC,pacS[i-1]+rataStd));
+    const ddI=Math.max(0,20-i*2);
+    const mI=ddI>18?2.5:ddI>12?2:ddI>7?1.5:ddI>3?1:0.5;
+    pacD.push(Math.min(pacC,pacD[i-1]+rataStd*mI));
+  }
+  const xSp=i=>pgX+(i/n)*pgW;
+  const ySp=v=>pgY+pgH-(v/pacC)*pgH;
+  // Griglia
+  [0,.25,.5,.75,1].forEach(t=>{
+    const gy=pgY+pgH*(1-t);
+    doc.setDrawColor(...LGRAY); doc.setLineWidth(0.2); doc.line(pgX,gy,pgX+pgW,gy);
+    sf(5.5,'normal',GRAY); doc.text('€'+fmtK(pacC*t),pgX-1,gy+1,{align:'right'});
+  });
+  // Lump Sum
+  doc.setDrawColor(26,74,138); doc.setLineWidth(0.6);
+  for(let i=0;i<n;i++) doc.setLineDashPattern&&doc.setLineDashPattern([1.5,1.5],0);
+  doc.line(pgX,ySp(pacC),pgX+pgW,ySp(pacC));
+  // PAC Standard
+  doc.setDrawColor(100,100,110); doc.setLineWidth(0.8);
+  if(doc.setLineDashPattern)doc.setLineDashPattern([],0);
+  for(let i=0;i<n;i++) doc.line(xSp(i),ySp(pacS[i]),xSp(i+1),ySp(pacS[i+1]));
+  // PAC Dinamico
+  doc.setDrawColor(...GREEN); doc.setLineWidth(1.2);
+  for(let i=0;i<n;i++) doc.line(xSp(i),ySp(pacD[i]),xSp(i+1),ySp(pacD[i+1]));
+  // Etichette mesi
+  [0,3,6,9,12].forEach(t=>{ sf(5.5,'normal',GRAY); doc.text('M'+t,xSp(t),pgY+pgH+4,{align:'center'}); });
+  // Legenda
+  y=pgY+pgH+10;
+  sf(6,'normal',GRAY);
+  doc.text('━━ PAC Dinamico RWM  ━━ PAC Standard  ╌╌ Lump Sum target',M,y); y+=8;
+
+  // ── TABELLA MENSILE PRIME N RATE ──
+  np(70);
+  sf(8,'bold',NAVY); doc.text('Piano Mensile — Prime '+n+' Rate',M,y); y+=4;
+  const tableRates=[];
+  let invested=0;
+  for(let i=1;i<=n;i++){
+    const ddI=Math.max(0,22-i*2);
+    const mI=ddI>25?3:ddI>18?2.5:ddI>12?2:ddI>7?1.5:ddI>3?1:0.5;
+    const rata=Math.min(pacC-invested,rataStd*mI);
+    const risMese=pacC-invested-rata;
+    invested+=rata;
+    tableRates.push([
+      'M'+i,
+      mI.toFixed(1)+'x',
+      '€ '+fmt(rataStd),
+      '€ '+fmt(rata),
+      '€ '+fmt(invested),
+      '€ '+fmt(Math.max(0,risMese)),
+      ddI.toFixed(0)+'%',
+    ]);
+    if(invested>=pacC)break;
+  }
+  doc.autoTable({
+    startY:y, margin:{left:M,right:M},
+    styles:{font:'helvetica',fontSize:7,cellPadding:1.8},
+    headStyles:{fillColor:NAVY,textColor:[255,255,255],fontStyle:'bold'},
+    alternateRowStyles:{fillColor:[244,242,237]},
+    head:[['Mese','Molt.','Rata std','Rata RWM','Investito','Riserva XEON','DD sim.']],
+    body:tableRates,
+  });
+  y=doc.lastAutoTable.finalY+10;
+
+  // ══════════════════════════════════════════
+  // PAG 5 — CARICO EFFETTIVO (se presente)
+  // ══════════════════════════════════════════
+  const carico=G.carico||[];
+  if(carico.length>0){
+    np(80);
+    secTitle(7,'CARICO EFFETTIVO CLIENTE');
+    const totCv=carico.reduce((s,pos)=>s+pos.qty*pos.price,0);
+    const totCb=carico.reduce((s,pos)=>s+pos.qty*pos.pmc,0);
+    const totPL=totCv-totCb;
+    doc.autoTable({
+      startY:y,margin:{left:M,right:M},
+      styles:{font:'helvetica',fontSize:7,cellPadding:1.8},
+      headStyles:{fillColor:NAVY,textColor:[255,255,255],fontStyle:'bold'},
+      alternateRowStyles:{fillColor:[244,242,237]},
+      head:[['ETF','Quote','PMC €','Prezzo att.','Costo base','Controvalore','P&L €','P&L %']],
+      body:[
+        ...carico.map(pos=>{
+          const cv=pos.qty*pos.price, cb=pos.qty*pos.pmc, pl=cv-cb;
+          return[
+            pos.etf, pos.qty.toFixed(3), pos.pmc.toFixed(2), pos.price.toFixed(2),
+            '€ '+fmt(cb), '€ '+fmt(cv),
+            (pl>=0?'+':'')+'€ '+fmt(pl),
+            (pl/cb*100>=0?'+':'')+((pl/cb*100)||0).toFixed(1)+'%',
+          ];
+        }),
+        ['TOTALE','','','','€ '+fmt(totCb),'€ '+fmt(totCv),
+         (totPL>=0?'+':'')+'€ '+fmt(totPL),
+         (totPL/totCb*100>=0?'+':'')+((totPL/totCb*100)||0).toFixed(1)+'%'],
+      ],
+      footStyles:{fillColor:[232,228,219],fontStyle:'bold'},
+    });
+    y=doc.lastAutoTable.finalY+10;
+  }
+
+  // ══════════════════════════════════════════
+  // SEZ — TAA + REVISIONI + FIRME
+  // ══════════════════════════════════════════
+  const secN=carico.length?8:7;
+  np(60);
+  secTitle(secN,'SEGNALI TAA — REGOLE OPERATIVE');
   doc.autoTable({
     startY:y,margin:{left:M,right:M},
-    styles:{font:'helvetica',fontSize:8,cellPadding:2},
+    styles:{font:'helvetica',fontSize:7.5,cellPadding:2},
     headStyles:{fillColor:NAVY,textColor:[255,255,255],fontStyle:'bold'},
     alternateRowStyles:{fillColor:[244,242,237]},
     head:[['Score','Segnale','Posizionamento TAA']],
     body:[
-      ['4/4','STRONG LONG','SAA + banda massima'],
-      ['3/4','LONG','SAA + metà banda'],
+      ['4/4','STRONG LONG','SAA + banda massima (+10%)'],
+      ['3/4','LONG','SAA + metà banda (+5%)'],
       ['2/4','NEUTRO','SAA invariata'],
-      ['1/4','CAUTION','SAA − metà banda'],
-      ['0/4','FLAT','0% → tutto Cash (XEON)'],
+      ['1/4','CAUTION','SAA − metà banda (−5%)'],
+      ['0/4','FLAT','0% tutto su Cash (XEON)'],
     ],
   });
   y=doc.lastAutoTable.finalY+8;
 
-  // SEZIONE 5 — Revisioni
   if(G.clientId){
-    const c=getClient(G.clientId);
-    if(c?.revisioni?.length>0){
-      if(y>230)doc.addPage(),y=20;
-      line(M,y,W-M,y,GOLD,0.8);y+=6;
-      setFont(11,'bold',NAVY);doc.text('5. STORICO REVISIONI',M,y);y+=8;
+    const cl=getClient(G.clientId);
+    if(cl?.revisioni?.length>0){
+      np(50);
+      sf(9,'bold',NAVY); doc.text('Storico Revisioni',M,y); y+=5;
       doc.autoTable({
         startY:y,margin:{left:M,right:M},
-        styles:{font:'helvetica',fontSize:8,cellPadding:2},
+        styles:{font:'helvetica',fontSize:7.5,cellPadding:2},
         headStyles:{fillColor:NAVY,textColor:[255,255,255],fontStyle:'bold'},
         alternateRowStyles:{fillColor:[244,242,237]},
         head:[['Data','Tipo','Note operative']],
-        body:c.revisioni.slice(-5).map(r=>[fmtDate(r.date),r.type,r.note||'—']),
+        body:cl.revisioni.slice(-5).map(r=>[fmtDate(r.date),r.type,r.note||'—']),
       });
       y=doc.lastAutoTable.finalY+8;
     }
   }
 
-  // FIRME
-  if(y>230)doc.addPage(),y=20;
-  line(M,y,W-M,y,GOLD,0.8);y+=10;
-  line(M,y,M+70,y,[80,80,80],.3);line(M+90,y,M+160,y,[80,80,80],.3);y+=5;
-  setFont(8,'normal',GRAY);
-  doc.text(`Cliente: ${p.name}`,M,y);doc.text('Consulente Finanziario Autonomo',M+90,y);y+=5;
-  doc.text('Firma e data: _______________',M,y);doc.text('Firma e Codice OCF: _______________',M+90,y);
+  // ── FIRME ──
+  np(28);
+  ln(M,y,W-M,y,GOLD,0.6); y+=8;
+  ln(M,y,M+72,y,[90,90,90],0.3); ln(M+90,y,M+162,y,[90,90,90],0.3); y+=5;
+  sf(8,'normal',GRAY);
+  doc.text('Cliente: '+p.name,M,y); doc.text('Consulente Finanziario Autonomo',M+90,y); y+=5;
+  doc.text('Firma e data: _______________',M,y); doc.text('Firma e Codice OCF: _______________',M+90,y);
 
-  // FOOTER su ogni pagina
+  // ── FOOTER su ogni pagina ──
   const totalPages=doc.internal.getNumberOfPages();
   for(let i=1;i<=totalPages;i++){
     doc.setPage(i);
-    rect(0,287,210,10,NAVY);
-    setFont(7,'normal',[150,140,130]);
-    doc.text('RAPTOR WEALTH MERIDIAN v3.0 · Documento riservato · Solo uso interno CFA',M,293);
+    rc(0,287,210,10,NAVY);
+    sf(6.5,'normal',[150,140,130]);
+    doc.text('RAPTOR WEALTH MERIDIAN v4.0 · Documento riservato · Solo uso interno CFA',M,293);
     doc.text(`Pag. ${i}/${totalPages}`,W-M,293,{align:'right'});
   }
 
   doc.save(`IPS_${p.name.replace(/ /g,'_')}_${new Date().toISOString().slice(0,10)}.pdf`);
-  toast('✓ PDF scaricato');
+  toast('✓ PDF scaricato — '+totalPages+' pagine');
 }
 
 // ════════════════════════════════════════════
@@ -2704,71 +3178,6 @@ ${sep}`;
   document.body.appendChild(a);a.click();document.body.removeChild(a);
   setTimeout(()=>URL.revokeObjectURL(a.href),1000);
   toast('✓ TXT scaricato');
-}
-
-// ════════════════════════════════════════════
-// ⚡ PROFILO ULTRA
-// ════════════════════════════════════════════
-const ULTRA_PROFILE={
-  name:'⚡ ULTRA',eq:.60,bond:0,il:0,em:.20,cash:0,
-  dd1:18,dd2:35,dd3:55,net:7.5,vol:30,
-  small:.10,tema:.10,minHor:15
-};
-const ULTRA_REND={name:'⚡ ULTRA',gross:9.8,tr:.26,net:7.5};
-
-function assegnaULTRA(){
-  if(!G.profile){
-    // Compila profilo minimo se non esiste
-    const name=document.getElementById('cName').value||'Cliente ULTRA';
-    const capital=parseFloat(document.getElementById('cCapital').value)||0;
-    const horizon=parseInt(document.getElementById('cHorizon').value)||15;
-    const birth=parseInt(document.getElementById('cBirth').value)||1985;
-    const age=new Date().getFullYear()-birth;
-    if(!capital){toast('Inserisci almeno il capitale');return;}
-    G.profile={name,age,birth,horizon,capital,income:0,wealth:capital,
-      debt:0,dep:0,pidx:99,cap:25,tol:25,type:'acc',entry:'pacd',
-      market:'neutro',incTarget:0,isULTRA:true};
-  }
-
-  // Override forzato ULTRA
-  G.profile.pidx=99;
-  G.profile.isULTRA=true;
-  G.saa={pidx:99,eq:.60,eqem:.20,bond:0,em:0,il:0,cash:0,small:.10,tema:.10};
-
-  // Patch PROFILES e REND per includere ULTRA all'indice 99
-  // Usiamo un oggetto separato per non rompere i 7 profili originali
-  G.ultraMode=true;
-
-  // Aggiorna banner
-  document.getElementById('profiloResult').style.display='block';
-  document.getElementById('btnSave').style.display='inline-flex';
-  const nm=document.getElementById('cName').value||'Cliente';
-  document.getElementById('pName').textContent=nm;
-  document.getElementById('pMeta').textContent=
-    `Profilo ultra-aggressivo · Orizzonte min. 15 anni · € ${fmt(G.profile.capital)}`;
-  document.getElementById('pTag').textContent='⚡ ULTRA';
-  document.getElementById('pTypeTag').textContent='Full Equity + EM + Small Cap + Tematici';
-  document.getElementById('sCap').textContent=25;
-  document.getElementById('sTol').textContent=25;
-  document.getElementById('sCap2').textContent='€ '+fmt(G.profile.capital);
-  document.getElementById('sHor').textContent=G.profile.horizon||15;
-  document.getElementById('hdrClient').textContent=nm;
-
-  // Warning box
-  toast('⚡ Profilo ULTRA assegnato — documenta motivazione nel Decision Log');
-
-  // Auto-salva
-  if(G.clientId)saveCurrentClient();
-}
-
-// Patch renderProfileResult per gestire ULTRA
-const _origRPR=renderProfileResult;
-function renderProfileResult(){
-  if(G.ultraMode&&G.profile?.isULTRA){
-    // Già gestito da assegnaULTRA
-    return;
-  }
-  _origRPR();
 }
 
 // ════════════════════════════════════════════
@@ -2905,8 +3314,221 @@ function renderOverview(){
 }
 
 // ════════════════════════════════════════════
-// MONTE CARLO
+// ⑨b CARICO CLIENTE
 // ════════════════════════════════════════════
+function renderCarico(){
+  const ok=!!G.clientId;
+  document.getElementById('caricoEmpty').style.display=ok?'none':'block';
+  document.getElementById('caricoContent').style.display=ok?'block':'none';
+  if(!ok)return;
+
+  // Popola select ETF
+  const sel=document.getElementById('crETF');
+  if(sel.options.length<=1){
+    ETF.forEach(e=>{
+      const o=document.createElement('option');
+      o.value=e.t; o.textContent=`${e.t} — ${e.n}`;
+      sel.appendChild(o);
+    });
+  }
+  if(!document.getElementById('crDate').value)
+    document.getElementById('crDate').value=new Date().toISOString().slice(0,10);
+
+  renderCaricoTable();
+  renderCaricoAlerts();
+}
+
+function addCarico(){
+  const etf=document.getElementById('crETF').value;
+  const qty=parseFloat(document.getElementById('crQty').value);
+  const pmc=parseFloat(document.getElementById('crPmc').value);
+  const price=parseFloat(document.getElementById('crPrice').value);
+  const date=document.getElementById('crDate').value;
+  const note=document.getElementById('crNote').value;
+  if(!etf||!qty||!pmc||!price){toast('Compila ETF, quantità, PMC e prezzo attuale');return;}
+
+  if(!G.carico)G.carico=[];
+  const idx=G.carico.findIndex(p=>p.etf===etf);
+  if(idx>=0){
+    const old=G.carico[idx];
+    const newQty=old.qty+qty;
+    const newPmc=(old.qty*old.pmc+qty*pmc)/newQty;
+    G.carico[idx]={etf,qty:newQty,pmc:newPmc,price,date,note};
+  } else {
+    G.carico.push({etf,qty,pmc,price,date,note});
+  }
+  _saveCarico();
+  document.getElementById('crQty').value='';
+  document.getElementById('crPmc').value='';
+  document.getElementById('crPrice').value='';
+  document.getElementById('crNote').value='';
+  toast(`${etf} aggiunto`);
+  renderCaricoTable();
+  renderCaricoAlerts();
+}
+
+function removeCarico(etf){
+  G.carico=(G.carico||[]).filter(p=>p.etf!==etf);
+  _saveCarico();
+  renderCaricoTable();
+  renderCaricoAlerts();
+}
+
+function clearCarico(){
+  if(!confirm('Svuotare tutto il carico?'))return;
+  G.carico=[];
+  _saveCarico();
+  renderCaricoTable();
+}
+
+function _saveCarico(){
+  if(!G.clientId)return;
+  const c=getClient(G.clientId);
+  if(!c)return;
+  c.carico=G.carico||[];
+  c.updatedAt=new Date().toISOString();
+  updateClient(c);
+}
+
+function renderCaricoTable(){
+  const positions=G.carico||[];
+  const kpiEl=document.getElementById('caricoKpi');
+  const bodyEl=document.getElementById('caricoBody');
+  const saaEl=document.getElementById('caricoSaaVsReal');
+
+  if(!positions.length){
+    kpiEl.innerHTML='';
+    bodyEl.innerHTML='<tr><td colspan="15" style="text-align:center;color:var(--g4);padding:24px">Nessuna posizione inserita</td></tr>';
+    saaEl.innerHTML='<div style="color:var(--g4);font-size:11px;padding:12px">Inserisci posizioni per vedere il confronto SAA vs reale</div>';
+    return;
+  }
+
+  const totalConto=positions.reduce((s,p)=>s+p.qty*p.price,0);
+  const totalCosto=positions.reduce((s,p)=>s+p.qty*p.pmc,0);
+  const totalPL=totalConto-totalCosto;
+  const plPct=totalCosto>0?(totalPL/totalCosto*100):0;
+
+  // Target weights dalla SAA
+  const targetW={};
+  if(G.profile&&G.saa){
+    const port=buildAllocPortfolio(G.profile.pidx,G.saa,G.taaScores);
+    port.forEach(pos=>targetW[pos.t]=(targetW[pos.t]||0)+pos.peso);
+  }
+
+  // Raggruppa per classe per confronto SAA
+  const realByCl={};
+
+  let tb='';
+  positions.forEach(pos=>{
+    const info=ETF.find(e=>e.t===pos.etf)||{n:pos.etf,cl:'—'};
+    const cv=pos.qty*pos.price;
+    const cb=pos.qty*pos.pmc;
+    const pl=cv-cb;
+    const plP=cb>0?(pl/cb*100):0;
+    const wReal=totalConto>0?cv/totalConto:0;
+    const wTarget=targetW[pos.etf]||0;
+    const delta=wReal-wTarget;
+    const azione=Math.abs(delta)<.02?'✓ OK':delta>0.02?'▼ Riduci':'▲ Aumenta';
+    const azCol=Math.abs(delta)<.02?'var(--green)':delta>0.02?'var(--amber)':'var(--blue)';
+    realByCl[info.cl]=(realByCl[info.cl]||0)+wReal;
+    tb+=`<tr>
+      <td><code style="background:var(--blue2);color:var(--blue);padding:1px 5px;border-radius:3px;font-size:10px;font-weight:600">${pos.etf}</code></td>
+      <td style="font-size:10px;max-width:120px">${info.n}</td>
+      <td style="font-size:9px"><span style="display:inline-block;width:6px;height:6px;border-radius:2px;background:${CL_COLORS[info.cl]||'#888'};margin-right:3px;vertical-align:middle"></span>${CL_LABELS[info.cl]||info.cl}</td>
+      <td class="num">${pos.qty.toFixed(3)}</td>
+      <td class="num">€ ${pos.pmc.toFixed(2)}</td>
+      <td class="num">€ ${pos.price.toFixed(2)}</td>
+      <td class="num">€ ${fmt(cb)}</td>
+      <td class="num"><b>€ ${fmt(cv)}</b></td>
+      <td class="num" style="color:${pl>=0?'var(--green)':'var(--red)'};font-weight:500">${pl>=0?'+':''}€ ${fmt(pl)}</td>
+      <td class="num" style="color:${plP>=0?'var(--green)':'var(--red)'}">${plP>=0?'+':''}${plP.toFixed(1)}%</td>
+      <td class="num">${(wReal*100).toFixed(1)}%</td>
+      <td class="num" style="color:var(--g4)">${wTarget?(wTarget*100).toFixed(1)+'%':'—'}</td>
+      <td class="num" style="color:${Math.abs(delta)<.02?'var(--green)':delta>0?'var(--amber)':'var(--blue)'}">${(delta>=0?'+':'')}${(delta*100).toFixed(1)}%</td>
+      <td style="font-size:9px;font-weight:600;color:${azCol}">${azione}</td>
+      <td><button class="btn btn-danger btn-sm" onclick="removeCarico('${pos.etf}')">✕</button></td>
+    </tr>`;
+  });
+  // Totale
+  tb+=`<tr style="background:var(--g1);font-weight:500">
+    <td colspan="6">TOTALE</td>
+    <td class="num">€ ${fmt(totalCosto)}</td>
+    <td class="num">€ ${fmt(totalConto)}</td>
+    <td class="num" style="color:${totalPL>=0?'var(--green)':'var(--red)'}"><b>${totalPL>=0?'+':''}€ ${fmt(totalPL)}</b></td>
+    <td class="num" style="color:${plPct>=0?'var(--green)':'var(--red)'}"><b>${plPct>=0?'+':''}${plPct.toFixed(1)}%</b></td>
+    <td colspan="5"></td>
+  </tr>`;
+  bodyEl.innerHTML=tb;
+
+  // KPI
+  kpiEl.innerHTML=[
+    {l:'Controvalore totale',v:'€ '+fmt(totalConto),c:'var(--navy)'},
+    {l:'Costo base totale',v:'€ '+fmt(totalCosto),c:'var(--g4)'},
+    {l:'P&L aperto',v:(totalPL>=0?'+':'')+'€ '+fmt(totalPL),c:totalPL>=0?'var(--green)':'var(--red)'},
+    {l:'Rendimento %',v:(plPct>=0?'+':'')+plPct.toFixed(1)+'%',c:plPct>=0?'var(--green)':'var(--red)'},
+    {l:'N. posizioni',v:String(positions.length),c:'var(--navy)'},
+  ].map(k=>`<div class="stat"><div class="stat-label">${k.l}</div>
+    <div class="stat-value" style="font-size:20px;color:${k.c}">${k.v}</div></div>`).join('');
+
+  // Confronto SAA vs Reale per classe
+  const saaW={};
+  if(G.saa){
+    saaW.eq=G.saa.eq||0; saaW.eqem=G.saa.eqem||0;
+    saaW.bond=(G.saa.bond||0); saaW.em=G.saa.em||0;
+    saaW.il=G.saa.il||0; saaW.mon=saaW.cash=G.saa.cash||0;
+  }
+  const classes=['eq','eqem','bond','em','il','mon'];
+  saaEl.innerHTML='<div style="display:grid;gap:10px">'+classes.filter(cl=>(saaW[cl]||0)+(realByCl[cl]||0)>0.005).map(cl=>{
+    const t=saaW[cl]||0, r=realByCl[cl]||0, d=r-t;
+    const semaph=Math.abs(d)<.02?'dev-ok':Math.abs(d)<.05?'dev-warn':'dev-alert';
+    return`<div style="display:flex;align-items:center;gap:10px">
+      <span style="width:120px;font-size:10px;color:var(--g5)">${CL_LABELS[cl]||cl}</span>
+      <div style="flex:1;position:relative;height:20px;background:var(--g1);border-radius:4px;overflow:visible">
+        <div style="position:absolute;height:100%;width:${(t*100).toFixed(1)}%;background:var(--navy);opacity:.25;border-radius:4px"></div>
+        <div style="position:absolute;height:100%;width:${(r*100).toFixed(1)}%;background:${CL_COLORS[cl]||'#888'};opacity:.7;border-radius:4px"></div>
+        <span style="position:absolute;right:-36px;top:2px;font-size:9px;color:var(--g4)">T:${Math.round(t*100)}%</span>
+      </div>
+      <span style="width:44px;font-size:10px;font-weight:600;color:${CL_COLORS[cl]||'#888'}">${Math.round(r*100)}%</span>
+      <span class="saa-dev ${semaph}">${(d>=0?'+':'')+Math.round(d*100)}%</span>
+    </div>`;
+  }).join('')+'</div><div style="margin-top:8px;font-size:9px;color:var(--g4)">Barra chiara = target SAA · Barra colorata = peso reale · Verde OK · Giallo ±5% · Rosso oltre ±5%</div>';
+}
+
+// ════════════════════════════════════════════
+// ALERT BANNER GLOBALI
+// ════════════════════════════════════════════
+function renderCaricoAlerts(){
+  const el=document.getElementById('caricoAlerts');
+  if(!el||!G.profile)return;
+  const pr=PROFILES[G.profile.pidx];
+  const alerts=[];
+
+  // Revisione scaduta
+  const c=getClient(G.clientId);
+  const revs=c?.revisioni||[];
+  const days=revs.length?(Date.now()-new Date(revs[revs.length-1].date))/86400000:999;
+  if(days>35) alerts.push(`⚠ Revisione mensile scaduta — ultima ${Math.round(days)} giorni fa`);
+
+  // Scostamento SAA
+  const positions=G.carico||[];
+  if(positions.length&&G.saa){
+    const tot=positions.reduce((s,p)=>s+p.qty*p.price,0);
+    const realByCl={};
+    positions.forEach(pos=>{
+      const info=ETF.find(e=>e.t===pos.etf);
+      if(info)realByCl[info.cl]=(realByCl[info.cl]||0)+(pos.qty*pos.price/tot);
+    });
+    const saaMap={eq:G.saa.eq,eqem:G.saa.eqem,bond:G.saa.bond,em:G.saa.em,il:G.saa.il,mon:G.saa.cash};
+    Object.entries(saaMap).forEach(([cl,t])=>{
+      const r=realByCl[cl]||0;
+      if(Math.abs(r-t)>0.05) alerts.push(`⚠ ${CL_LABELS[cl]}: reale ${Math.round(r*100)}% vs target ${Math.round(t*100)}% — ribilanciare`);
+    });
+  }
+
+  el.innerHTML=alerts.map(a=>`<div class="ov-alert" style="margin-bottom:6px">${a}</div>`).join('');
+}
+
+
 function runMonteCarlo(){
   const pidx=parseInt(document.getElementById('mcProfile')?.value??3);
   const years=parseInt(document.getElementById('mcYears')?.value??20);
