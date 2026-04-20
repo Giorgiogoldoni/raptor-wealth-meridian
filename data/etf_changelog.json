@@ -1,1 +1,17 @@
-
+{
+  "last_updated": "20/04/2026 13:55",
+  "total_entries": 1,
+  "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
+  "entries": [
+    {
+      "data": "20/04/2026 13:55",
+      "regime": null,
+      "n_layer2": 0,
+      "n_entrati": 0,
+      "n_usciti": 0,
+      "entrati": [],
+      "usciti": [],
+      "note": "Inizializzazione sistema"
+    }
+  ]
+}
