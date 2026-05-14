@@ -4,6 +4,85 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "14/05/2026 21:01",
+      "regime": "NEUTRO",
+      "n_entrati": 3,
+      "n_usciti": 19,
+      "entrati": [
+        {
+          "ticker": "STKX.MI",
+          "source": "settoriali/europa"
+        },
+        {
+          "ticker": "WCBR.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "WEB3.MI",
+          "source": "tematici/crypto"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "BOTZ.MI"
+        },
+        {
+          "ticker": "CIT.MI"
+        },
+        {
+          "ticker": "CITE.MI"
+        },
+        {
+          "ticker": "DMAT.MI"
+        },
+        {
+          "ticker": "FAMTEL.MI"
+        },
+        {
+          "ticker": "KWBE.MI"
+        },
+        {
+          "ticker": "MCHT.MI"
+        },
+        {
+          "ticker": "METL.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "SMH.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XCTE.MI"
+        },
+        {
+          "ticker": "XNNV.MI"
+        }
+      ]
+    },
+    {
       "data": "14/05/2026 07:53",
       "regime": "NEUTRO",
       "n_entrati": 0,
