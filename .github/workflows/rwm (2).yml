@@ -1,0 +1,47 @@
+name: 📊 RWM ETF Universe Update
+
+on:
+  schedule:
+    - cron: "0 20 * * 1-5"   # ogni sera 21:00 CET dopo chiusura EU
+  workflow_dispatch:
+
+concurrency:
+  group: rwm-update
+  cancel-in-progress: false
+
+jobs:
+  fetch-etf:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install yfinance numpy requests openpyxl
+
+      - name: Run fetch_rwm.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python fetch_rwm.py
+
+      - name: Summary
+        run: |
+          echo "## ✅ RWM ETF Universe aggiornato" >> $GITHUB_STEP_SUMMARY
+          echo "Eseguito il $(date '+%d/%m/%Y %H:%M CET')" >> $GITHUB_STEP_SUMMARY
+          if [ -f data/etf_universe_rwm.json ]; then
+            N=$(python3 -c "import json; d=json.load(open('data/etf_universe_rwm.json')); print(d['meta']['n_etf_ok'])" 2>/dev/null || echo "?")
+            R=$(python3 -c "import json; d=json.load(open('data/etf_universe_rwm.json')); print(d['regime']['globale']['signal'])" 2>/dev/null || echo "?")
+            echo "- ETF ok: **$N**" >> $GITHUB_STEP_SUMMARY
+            echo "- Regime: **$R**" >> $GITHUB_STEP_SUMMARY
+          fi
