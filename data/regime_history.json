@@ -10,7 +10,7 @@
       "usa": {
         "signal": "NEUTRO",
         "score": 50.0,
-        "vix": 17.85,
+        "vix": 17.79,
         "momentum_sp500_20d": 6.0,
         "curve_us_2y10y": 0.881
       },
@@ -19,14 +19,14 @@
         "score": 50.0,
         "vol_stoxx50_20d": 19.23,
         "momentum_stoxx50_20d": -1.33,
-        "spread_btp_bund_proxy": null
+        "spread_btp_bund_proxy": 0.743
       },
       "asia": {
         "signal": "NEUTRO",
         "score": 50.0,
         "vol_nikkei_20d": 25.15,
         "momentum_nikkei_20d": 10.07,
-        "momentum_hsi_20d": 1.84
+        "momentum_hsi_20d": 1.78
       },
       "em": {
         "signal": "NEUTRO",
@@ -37,11 +37,11 @@
       "bond": {
         "curve_us_2y10y": 0.881,
         "curve_us_signal": "normale",
-        "spread_hy": 0.967,
+        "spread_hy": 0.992,
         "spread_hy_signal": "stabile",
-        "spread_em": -0.301,
+        "spread_em": 0.064,
         "spread_em_signal": "neutro",
-        "usd_momentum": 0.8,
+        "usd_momentum": 0.78,
         "usd_signal": "stabile",
         "raccomandazione": {
           "duration": "media",
@@ -61,43 +61,55 @@
   ],
   "value_histories": {
     "vix_h": [
-      17.85
+      17.85,
+      17.79
     ],
     "sp_mom_h": [
+      5.9989,
       5.9989
     ],
     "crv_h": [
+      0.881,
       0.881
     ],
     "eu_vol_h": [
+      19.2324,
       19.2324
     ],
     "eu_mom_h": [
+      -1.3344,
       -1.3344
     ],
     "as_vol_h": [
+      25.1511,
       25.1511
     ],
     "as_momn_h": [
+      10.0659,
       10.0659
     ],
     "em_mom_h": [
+      8.0547,
       8.0547
     ],
     "em_vol_h": [
+      26.6425,
       26.6425
     ],
     "hy_spr_h": [
-      0.9672
+      0.9672,
+      0.9919
     ],
     "em_spr_h": [
-      -0.3006
+      -0.3006,
+      0.0636
     ],
     "usd_mom_h": [
-      0.803
+      0.803,
+      0.7794
     ]
   },
   "current_regime": "NEUTRO",
   "days_in_current_regime": 1,
-  "updated": "2026-05-14T07:31:04.917904+00:00"
+  "updated": "2026-05-14T07:53:13.308184+00:00"
 }
