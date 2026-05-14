@@ -4,6 +4,451 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "14/05/2026 07:31",
+      "regime": "NEUTRO",
+      "n_entrati": 109,
+      "n_usciti": 0,
+      "entrati": [
+        {
+          "ticker": "AINF.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "AIQE.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "ALAT.MI",
+          "source": "geografia/new_area"
+        },
+        {
+          "ticker": "AUHEUA.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "BOTZ.MI",
+          "source": "tematici/acqua"
+        },
+        {
+          "ticker": "BUG.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "C40.PA",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "CAHEUA.MI",
+          "source": "geografia/new_area"
+        },
+        {
+          "ticker": "CHIP.MI",
+          "source": "tematici/semiconduttori"
+        },
+        {
+          "ticker": "CIT.MI",
+          "source": "tematici/infrastrutture"
+        },
+        {
+          "ticker": "CITE.MI",
+          "source": "tematici/infrastrutture"
+        },
+        {
+          "ticker": "CN1.PA",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "COPM.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "COPR.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "COPX.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "CSCA.MI",
+          "source": "geografia/new_area"
+        },
+        {
+          "ticker": "CSEMAS.MI",
+          "source": "geografia/new_area"
+        },
+        {
+          "ticker": "CSMIB.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "CSNDX.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "CSPXJ.MI",
+          "source": "geografia/new_area"
+        },
+        {
+          "ticker": "D5BI.DE",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "DJE.PA",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "DMAT.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "ECAR.MI",
+          "source": "tematici/mobilita"
+        },
+        {
+          "ticker": "ELCR.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "EST.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "EXS1.DE",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "FAMMAI.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "FAMMWS.MI",
+          "source": "tematici/semiconduttori"
+        },
+        {
+          "ticker": "FAMTEL.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "FLXI.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "FLXT.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "FLXU.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "FMI.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "HNSC.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "HSTE.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "IAEX.AS",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "IAPD.MI",
+          "source": "geografia/new_area"
+        },
+        {
+          "ticker": "IBZL.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "ICBR.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "IJPE.MI",
+          "source": "geografia/new_area"
+        },
+        {
+          "ticker": "IMIB.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "INDO.PA",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "IQQ9.DE",
+          "source": "geografia/new_area"
+        },
+        {
+          "ticker": "IQQF.DE",
+          "source": "geografia/new_area"
+        },
+        {
+          "ticker": "IS3U.DE",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "ISAC.MI",
+          "source": "geografia/new_area"
+        },
+        {
+          "ticker": "ISPY.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "ITBL.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "IUSE.MI",
+          "source": "geografia/new_area"
+        },
+        {
+          "ticker": "IVAI.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "IWDE.MI",
+          "source": "geografia/new_area"
+        },
+        {
+          "ticker": "JEDI.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "JRGE.MI",
+          "source": "geografia/new_area"
+        },
+        {
+          "ticker": "KWBE.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "LAFRI.MI",
+          "source": "geografia/new_area"
+        },
+        {
+          "ticker": "LCCN.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "LEER.DE",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "LGUS.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "LTAM.MI",
+          "source": "geografia/new_area"
+        },
+        {
+          "ticker": "MCHN.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "MCHT.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "METE.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "METL.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "MEUD.PA",
+          "source": "geografia/new_area"
+        },
+        {
+          "ticker": "MTVS.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "NQSE.DE",
+          "source": "geografia/new_area"
+        },
+        {
+          "ticker": "NTSZ.DE",
+          "source": "geografia/new_area"
+        },
+        {
+          "ticker": "QTOP.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "ROBO.MI",
+          "source": "tematici/acqua"
+        },
+        {
+          "ticker": "SAUDI.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "SAUS.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "SEMA.MI",
+          "source": "geografia/new_area"
+        },
+        {
+          "ticker": "SEME.MI",
+          "source": "tematici/semiconduttori"
+        },
+        {
+          "ticker": "SJPA.MI",
+          "source": "geografia/new_area"
+        },
+        {
+          "ticker": "SNSR.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "SOLR.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "SP1E.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "SPXE.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "SPXJ.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "SPY5.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "SRSA.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "STPX.MI",
+          "source": "settoriali/europa"
+        },
+        {
+          "ticker": "SVE.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "SXLK.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "SXRU.DE",
+          "source": "geografia/new_area"
+        },
+        {
+          "ticker": "TUR.PA",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "UKE.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "VEGI.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "VJPE.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "WMIB.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "WNAS.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "WRD.PA",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "WRNW.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "WSLV.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "WTEC.MI",
+          "source": "settoriali/mondo"
+        },
+        {
+          "ticker": "XBAS.DE",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "XCHA.DE",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "XCS3.DE",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "XCS4.DE",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "XCTE.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "XDEE.DE",
+          "source": "geografia/new_area"
+        },
+        {
+          "ticker": "XESD.DE",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "XFVT.DE",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "XG12.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "XMOV.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "XNNV.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "XPQP.DE",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "XSMI.MI",
+          "source": "geografia/paesi"
+        }
+      ],
+      "usciti": []
+    },
+    {
       "data": "20/04/2026 13:55",
       "regime": null,
       "n_layer2": 0,
