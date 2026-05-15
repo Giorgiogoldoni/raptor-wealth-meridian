@@ -4,6 +4,141 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "15/05/2026 20:46",
+      "regime": "NEUTRO",
+      "n_entrati": 5,
+      "n_usciti": 35,
+      "entrati": [
+        {
+          "ticker": "100H.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "GOAI.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "RENW.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "WNDY.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "XSFR.DE",
+          "source": "geografia/paesi"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "AINF.MI"
+        },
+        {
+          "ticker": "AIQE.MI"
+        },
+        {
+          "ticker": "ALAT.MI"
+        },
+        {
+          "ticker": "CHIP.MI"
+        },
+        {
+          "ticker": "COPM.MI"
+        },
+        {
+          "ticker": "COPR.MI"
+        },
+        {
+          "ticker": "COPX.MI"
+        },
+        {
+          "ticker": "CSNDX.MI"
+        },
+        {
+          "ticker": "ECAR.MI"
+        },
+        {
+          "ticker": "ELCR.MI"
+        },
+        {
+          "ticker": "FAMMWS.MI"
+        },
+        {
+          "ticker": "HNSC.MI"
+        },
+        {
+          "ticker": "IVAI.MI"
+        },
+        {
+          "ticker": "LEER.DE"
+        },
+        {
+          "ticker": "METE.MI"
+        },
+        {
+          "ticker": "MTVS.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "ROBO.MI"
+        },
+        {
+          "ticker": "SEME.MI"
+        },
+        {
+          "ticker": "SMH.MI"
+        },
+        {
+          "ticker": "SNSR.MI"
+        },
+        {
+          "ticker": "STKX.MI"
+        },
+        {
+          "ticker": "VEGI.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WEB3.MI"
+        },
+        {
+          "ticker": "WRNW.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSLV.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XG12.MI"
+        },
+        {
+          "ticker": "XMOV.MI"
+        }
+      ]
+    },
+    {
       "data": "14/05/2026 21:01",
       "regime": "NEUTRO",
       "n_entrati": 3,
