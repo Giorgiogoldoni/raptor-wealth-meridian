@@ -4,6 +4,76 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "18/05/2026 20:59",
+      "regime": "NEUTRO",
+      "n_entrati": 3,
+      "n_usciti": 16,
+      "entrati": [
+        {
+          "ticker": "ALAT.MI",
+          "source": "geografia/new_area"
+        },
+        {
+          "ticker": "CSNDX.MI",
+          "source": "geografia/paesi"
+        },
+        {
+          "ticker": "LEER.DE",
+          "source": "geografia/paesi"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "100H.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "RENW.MI"
+        },
+        {
+          "ticker": "SOLR.MI"
+        },
+        {
+          "ticker": "STPX.MI"
+        },
+        {
+          "ticker": "SXLK.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WNDY.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WTEC.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XSFR.DE"
+        }
+      ]
+    },
+    {
       "data": "15/05/2026 20:46",
       "regime": "NEUTRO",
       "n_entrati": 5,
