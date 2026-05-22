@@ -4,6 +4,91 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "22/05/2026 21:02",
+      "regime": "NEUTRO",
+      "n_entrati": 9,
+      "n_usciti": 13,
+      "entrati": [
+        {
+          "ticker": "AIAA.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "AIAI.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "CYBO.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "DGTL.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "DOCT.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "ESPY.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "ROE.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "STTX.MI",
+          "source": "settoriali/europa"
+        },
+        {
+          "ticker": "XDG3.MI",
+          "source": "tematici/digitale"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "MLPS.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "OIH.MI"
+        },
+        {
+          "ticker": "STNX.MI"
+        },
+        {
+          "ticker": "SXLE.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WNRG.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        }
+      ]
+    },
+    {
       "data": "21/05/2026 21:20",
       "regime": "NEUTRO",
       "n_entrati": 5,
