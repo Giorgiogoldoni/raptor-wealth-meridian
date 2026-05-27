@@ -4,6 +4,176 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "27/05/2026 21:31",
+      "regime": "NEUTRO",
+      "n_entrati": 4,
+      "n_usciti": 48,
+      "entrati": [
+        {
+          "ticker": "DPAY.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "ICLN",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "MILL.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "XS8R.MI",
+          "source": "tematici/media"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "AIAI.MI"
+        },
+        {
+          "ticker": "AINF.MI"
+        },
+        {
+          "ticker": "AIQE.MI"
+        },
+        {
+          "ticker": "BTC.MI"
+        },
+        {
+          "ticker": "BUG.MI"
+        },
+        {
+          "ticker": "CITY.MI"
+        },
+        {
+          "ticker": "DFND.MI"
+        },
+        {
+          "ticker": "DFNS.MI"
+        },
+        {
+          "ticker": "DOCT.MI"
+        },
+        {
+          "ticker": "ECOM.MI"
+        },
+        {
+          "ticker": "FAMTEL.MI"
+        },
+        {
+          "ticker": "FCHP.DE"
+        },
+        {
+          "ticker": "GCLE.MI"
+        },
+        {
+          "ticker": "HNSC.MI"
+        },
+        {
+          "ticker": "HTWO.MI"
+        },
+        {
+          "ticker": "HYDE.MI"
+        },
+        {
+          "ticker": "HYGN.MI"
+        },
+        {
+          "ticker": "ICBR.MI"
+        },
+        {
+          "ticker": "ISPY.MI"
+        },
+        {
+          "ticker": "IVAI.MI"
+        },
+        {
+          "ticker": "METE.MI"
+        },
+        {
+          "ticker": "MTVS.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "QNTM.MI"
+        },
+        {
+          "ticker": "RENW.MI"
+        },
+        {
+          "ticker": "ROBO.MI"
+        },
+        {
+          "ticker": "ROE.MI"
+        },
+        {
+          "ticker": "SCITY.MI"
+        },
+        {
+          "ticker": "SDG9.MI"
+        },
+        {
+          "ticker": "SEME.MI"
+        },
+        {
+          "ticker": "SMH.MI"
+        },
+        {
+          "ticker": "SNSR.MI"
+        },
+        {
+          "ticker": "STKX.MI"
+        },
+        {
+          "ticker": "SXLK.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WCBR.MI"
+        },
+        {
+          "ticker": "WRNW.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WTAI.MI"
+        },
+        {
+          "ticker": "WTEC.MI"
+        },
+        {
+          "ticker": "WTRE.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XDG7.MI"
+        },
+        {
+          "ticker": "XNGI.MI"
+        }
+      ]
+    },
+    {
       "data": "26/05/2026 21:24",
       "regime": "NEUTRO",
       "n_entrati": 35,
