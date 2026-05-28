@@ -4,6 +4,89 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "28/05/2026 21:47",
+      "regime": "ESPANSIONE",
+      "n_entrati": 7,
+      "n_usciti": 15,
+      "entrati": [
+        {
+          "ticker": "ARMR.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "BTECH.MI",
+          "source": "tematici/crypto"
+        },
+        {
+          "ticker": "DFSV.DE",
+          "source": "settoriali/europa"
+        },
+        {
+          "ticker": "DOCT.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "ISPY.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "SNSR.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "STTX.MI",
+          "source": "settoriali/europa"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "DGTL.MI"
+        },
+        {
+          "ticker": "DPAY.MI"
+        },
+        {
+          "ticker": "ECAR.MI"
+        },
+        {
+          "ticker": "ESPY.MI"
+        },
+        {
+          "ticker": "HDRO.MI"
+        },
+        {
+          "ticker": "ICLN"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "QUAD.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        }
+      ]
+    },
+    {
       "data": "27/05/2026 21:31",
       "regime": "NEUTRO",
       "n_entrati": 4,
