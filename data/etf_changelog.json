@@ -4,6 +4,166 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "29/05/2026 21:30",
+      "regime": "NEUTRO",
+      "n_entrati": 27,
+      "n_usciti": 14,
+      "entrati": [
+        {
+          "ticker": "AIAI.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "AINF.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "AIQE.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "ARMI.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "DFND.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "DGTL.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "ECAR.MI",
+          "source": "tematici/mobilita"
+        },
+        {
+          "ticker": "EMOVJ.MI",
+          "source": "tematici/mobilita"
+        },
+        {
+          "ticker": "ESPY.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "FINX.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "GLUX.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "GNOM.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "IVAI.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "METE.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "MTVS.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "RNRG.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "SCITY.MI",
+          "source": "tematici/infrastrutture"
+        },
+        {
+          "ticker": "STKX.MI",
+          "source": "settoriali/europa"
+        },
+        {
+          "ticker": "SXLK.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "VPN.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "WDEF.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "WTAI.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "WTEC.MI",
+          "source": "settoriali/mondo"
+        },
+        {
+          "ticker": "XFNT.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "XG11.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "XGEN.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "XNGI.MI",
+          "source": "tematici/energia"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "CTEK.MI"
+        },
+        {
+          "ticker": "GENDEE.MI"
+        },
+        {
+          "ticker": "ISPY.MI"
+        },
+        {
+          "ticker": "JEDI.MI"
+        },
+        {
+          "ticker": "MILL.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "SNSR.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        }
+      ]
+    },
+    {
       "data": "28/05/2026 21:47",
       "regime": "ESPANSIONE",
       "n_entrati": 7,
