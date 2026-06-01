@@ -4,6 +4,168 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "01/06/2026 22:27",
+      "regime": "NEUTRO",
+      "n_entrati": 20,
+      "n_usciti": 24,
+      "entrati": [
+        {
+          "ticker": "AIAA.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "BLTH.MI",
+          "source": "tematici/crypto"
+        },
+        {
+          "ticker": "BTC.MI",
+          "source": "tematici/crypto"
+        },
+        {
+          "ticker": "BUG.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "CHIP.MI",
+          "source": "tematici/semiconduttori"
+        },
+        {
+          "ticker": "COPR.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "COPX.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "CURE.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "EBUY.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "ECOM.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "EDOC.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "ELCR.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "FAMMAI.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "FAMTEL.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "ICBR.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "ISPY.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "LOCK.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "STPX.MI",
+          "source": "settoriali/europa"
+        },
+        {
+          "ticker": "WCBR.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "XNNV.MI",
+          "source": "tematici/salute"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "ARMI.MI"
+        },
+        {
+          "ticker": "ARMR.MI"
+        },
+        {
+          "ticker": "DFND.MI"
+        },
+        {
+          "ticker": "DFSV.DE"
+        },
+        {
+          "ticker": "DOCT.MI"
+        },
+        {
+          "ticker": "ESPY.MI"
+        },
+        {
+          "ticker": "GLUX.MI"
+        },
+        {
+          "ticker": "IVDF.DE"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "SCITY.MI"
+        },
+        {
+          "ticker": "SOLR.MI"
+        },
+        {
+          "ticker": "STTX.MI"
+        },
+        {
+          "ticker": "VPN.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WDEF.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XG12.MI"
+        },
+        {
+          "ticker": "XGEN.MI"
+        },
+        {
+          "ticker": "XS8R.MI"
+        }
+      ]
+    },
+    {
       "data": "29/05/2026 21:30",
       "regime": "NEUTRO",
       "n_entrati": 27,
