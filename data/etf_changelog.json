@@ -4,6 +4,150 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "02/06/2026 22:14",
+      "regime": "NEUTRO",
+      "n_entrati": 23,
+      "n_usciti": 14,
+      "entrati": [
+        {
+          "ticker": "BATT.MI",
+          "source": "tematici/mobilita"
+        },
+        {
+          "ticker": "BKCH.MI",
+          "source": "tematici/crypto"
+        },
+        {
+          "ticker": "CIT.MI",
+          "source": "tematici/infrastrutture"
+        },
+        {
+          "ticker": "COPM.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "DRVE.MI",
+          "source": "tematici/mobilita"
+        },
+        {
+          "ticker": "EMOVE.MI",
+          "source": "tematici/mobilita"
+        },
+        {
+          "ticker": "ESPY.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "FAMMWS.MI",
+          "source": "tematici/semiconduttori"
+        },
+        {
+          "ticker": "FCHP.DE",
+          "source": "tematici/semiconduttori"
+        },
+        {
+          "ticker": "HERU.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "HNSC.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "MCHT.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "METL.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "PAVE.MI",
+          "source": "tematici/infrastrutture"
+        },
+        {
+          "ticker": "REMX.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "SEME.MI",
+          "source": "tematici/semiconduttori"
+        },
+        {
+          "ticker": "SOLR.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "STRX.MI",
+          "source": "settoriali/europa"
+        },
+        {
+          "ticker": "USTEC.MI",
+          "source": "tematici/semiconduttori"
+        },
+        {
+          "ticker": "VPN.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "WBLK.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "WEB3.MI",
+          "source": "tematici/crypto"
+        },
+        {
+          "ticker": "XDG7.MI",
+          "source": "tematici/digitale"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "AIAA.MI"
+        },
+        {
+          "ticker": "BTECH.MI"
+        },
+        {
+          "ticker": "CURE.MI"
+        },
+        {
+          "ticker": "ECAR.MI"
+        },
+        {
+          "ticker": "FINX.MI"
+        },
+        {
+          "ticker": "GNOM.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        }
+      ]
+    },
+    {
       "data": "01/06/2026 22:27",
       "regime": "NEUTRO",
       "n_entrati": 20,
