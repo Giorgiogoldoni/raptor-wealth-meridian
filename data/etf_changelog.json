@@ -4,6 +4,122 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "03/06/2026 22:20",
+      "regime": "NEUTRO",
+      "n_entrati": 4,
+      "n_usciti": 30,
+      "entrati": [
+        {
+          "ticker": "AI4UJ.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "BOTZ.MI",
+          "source": "tematici/acqua"
+        },
+        {
+          "ticker": "GNOM.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "GOAI.MI",
+          "source": "tematici/ai_tech"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "BATT.MI"
+        },
+        {
+          "ticker": "BKCH.MI"
+        },
+        {
+          "ticker": "BLTH.MI"
+        },
+        {
+          "ticker": "CIT.MI"
+        },
+        {
+          "ticker": "DGTL.MI"
+        },
+        {
+          "ticker": "DRVE.MI"
+        },
+        {
+          "ticker": "EBUY.MI"
+        },
+        {
+          "ticker": "ECOM.MI"
+        },
+        {
+          "ticker": "EMOVE.MI"
+        },
+        {
+          "ticker": "HNSC.MI"
+        },
+        {
+          "ticker": "MCHT.MI"
+        },
+        {
+          "ticker": "METL.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "QNTM.MI"
+        },
+        {
+          "ticker": "REMX.MI"
+        },
+        {
+          "ticker": "RNRG.MI"
+        },
+        {
+          "ticker": "SMH.MI"
+        },
+        {
+          "ticker": "SOLR.MI"
+        },
+        {
+          "ticker": "STRX.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WEB3.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XDG7.MI"
+        },
+        {
+          "ticker": "XG11.MI"
+        },
+        {
+          "ticker": "XNNV.MI"
+        }
+      ]
+    },
+    {
       "data": "02/06/2026 22:14",
       "regime": "NEUTRO",
       "n_entrati": 23,
