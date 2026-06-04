@@ -4,6 +4,153 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "04/06/2026 21:20",
+      "regime": "NEUTRO",
+      "n_entrati": 8,
+      "n_usciti": 35,
+      "entrati": [
+        {
+          "ticker": "BTECH.MI",
+          "source": "tematici/crypto"
+        },
+        {
+          "ticker": "CROP.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "CURE.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "DOCT.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "ECOM.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "HEAL.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "WDNA.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "XGEN.MI",
+          "source": "tematici/salute"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "AIAI.MI"
+        },
+        {
+          "ticker": "AIQE.MI"
+        },
+        {
+          "ticker": "BOTZ.MI"
+        },
+        {
+          "ticker": "BTC.MI"
+        },
+        {
+          "ticker": "BUG.MI"
+        },
+        {
+          "ticker": "CHIP.MI"
+        },
+        {
+          "ticker": "COPM.MI"
+        },
+        {
+          "ticker": "COPX.MI"
+        },
+        {
+          "ticker": "ELCR.MI"
+        },
+        {
+          "ticker": "ESPY.MI"
+        },
+        {
+          "ticker": "FAMMAI.MI"
+        },
+        {
+          "ticker": "FAMMWS.MI"
+        },
+        {
+          "ticker": "FCHP.DE"
+        },
+        {
+          "ticker": "ISPY.MI"
+        },
+        {
+          "ticker": "IVAI.MI"
+        },
+        {
+          "ticker": "LOCK.MI"
+        },
+        {
+          "ticker": "METE.MI"
+        },
+        {
+          "ticker": "MTVS.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "SEME.MI"
+        },
+        {
+          "ticker": "SMH.MI"
+        },
+        {
+          "ticker": "STPX.MI"
+        },
+        {
+          "ticker": "USTEC.MI"
+        },
+        {
+          "ticker": "VPN.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WBLK.MI"
+        },
+        {
+          "ticker": "WCBR.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XFNT.MI"
+        },
+        {
+          "ticker": "XNGI.MI"
+        }
+      ]
+    },
+    {
       "data": "03/06/2026 22:20",
       "regime": "NEUTRO",
       "n_entrati": 4,
