@@ -4,6 +4,96 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "05/06/2026 21:13",
+      "regime": "RALLENTAMENTO",
+      "n_entrati": 0,
+      "n_usciti": 27,
+      "entrati": [],
+      "usciti": [
+        {
+          "ticker": "AI4UJ.MI"
+        },
+        {
+          "ticker": "AINF.MI"
+        },
+        {
+          "ticker": "BTECH.MI"
+        },
+        {
+          "ticker": "COPR.MI"
+        },
+        {
+          "ticker": "CROP.MI"
+        },
+        {
+          "ticker": "DOCT.MI"
+        },
+        {
+          "ticker": "ECOM.MI"
+        },
+        {
+          "ticker": "EMOVJ.MI"
+        },
+        {
+          "ticker": "FAMTEL.MI"
+        },
+        {
+          "ticker": "GNOM.MI"
+        },
+        {
+          "ticker": "GOAI.MI"
+        },
+        {
+          "ticker": "HEAL.MI"
+        },
+        {
+          "ticker": "ICBR.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "STKX.MI"
+        },
+        {
+          "ticker": "SXLK.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WDNA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WTAI.MI"
+        },
+        {
+          "ticker": "WTEC.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XGEN.MI"
+        }
+      ]
+    },
+    {
       "data": "04/06/2026 21:20",
       "regime": "NEUTRO",
       "n_entrati": 8,
