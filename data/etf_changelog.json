@@ -4,6 +4,98 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "15/06/2026 22:07",
+      "regime": "NEUTRO",
+      "n_entrati": 13,
+      "n_usciti": 10,
+      "entrati": [
+        {
+          "ticker": "AQWA.MI",
+          "source": "tematici/acqua"
+        },
+        {
+          "ticker": "DPAY.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "FAMMWF.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "FOFD.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "GLUG.MI",
+          "source": "tematici/acqua"
+        },
+        {
+          "ticker": "GLUX.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "PAVE.MI",
+          "source": "tematici/infrastrutture"
+        },
+        {
+          "ticker": "REUS.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "STRX.MI",
+          "source": "settoriali/europa"
+        },
+        {
+          "ticker": "SXLB.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "SXLI.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "WATC.MI",
+          "source": "tematici/acqua"
+        },
+        {
+          "ticker": "XSGI.MI",
+          "source": "tematici/ai_tech"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "SXLP.MI"
+        },
+        {
+          "ticker": "VEGI.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        }
+      ]
+    },
+    {
       "data": "12/06/2026 21:25",
       "regime": "NEUTRO",
       "n_entrati": 4,
