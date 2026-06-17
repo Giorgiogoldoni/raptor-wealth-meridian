@@ -4,6 +4,80 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "17/06/2026 21:49",
+      "regime": "NEUTRO",
+      "n_entrati": 7,
+      "n_usciti": 12,
+      "entrati": [
+        {
+          "ticker": "AGED.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "BIOT.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "GNOM.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "STZX.MI",
+          "source": "settoriali/europa"
+        },
+        {
+          "ticker": "WDNA.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "XDG6.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "XLPE.MI",
+          "source": "tematici/infrastrutture"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "FOFD.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "PAVE.MI"
+        },
+        {
+          "ticker": "SXLI.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XSGI.MI"
+        }
+      ]
+    },
+    {
       "data": "16/06/2026 22:03",
       "regime": "NEUTRO",
       "n_entrati": 1,
