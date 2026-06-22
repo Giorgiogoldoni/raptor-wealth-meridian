@@ -4,6 +4,82 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "22/06/2026 21:53",
+      "regime": "NEUTRO",
+      "n_entrati": 9,
+      "n_usciti": 10,
+      "entrati": [
+        {
+          "ticker": "CHIP.MI",
+          "source": "tematici/semiconduttori"
+        },
+        {
+          "ticker": "EMOVJ.MI",
+          "source": "tematici/mobilita"
+        },
+        {
+          "ticker": "GNOM.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "PAVE.MI",
+          "source": "tematici/infrastrutture"
+        },
+        {
+          "ticker": "SXLF.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "SXLI.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "SXLU.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "WDNA.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "WIND.MI",
+          "source": "settoriali/mondo"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "FINX.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "SMH.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        }
+      ]
+    },
+    {
       "data": "19/06/2026 20:58",
       "regime": "NEUTRO",
       "n_entrati": 4,
