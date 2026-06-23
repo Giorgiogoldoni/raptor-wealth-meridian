@@ -4,6 +4,74 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "23/06/2026 21:21",
+      "regime": "RALLENTAMENTO",
+      "n_entrati": 4,
+      "n_usciti": 14,
+      "entrati": [
+        {
+          "ticker": "AGED.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "BTECJ.MI",
+          "source": "tematici/crypto"
+        },
+        {
+          "ticker": "FAMWCS.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "XGEN.MI",
+          "source": "tematici/salute"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "CHIP.MI"
+        },
+        {
+          "ticker": "FCHP.DE"
+        },
+        {
+          "ticker": "HNSC.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "PAVE.MI"
+        },
+        {
+          "ticker": "SEME.MI"
+        },
+        {
+          "ticker": "SMH.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        }
+      ]
+    },
+    {
       "data": "22/06/2026 21:53",
       "regime": "NEUTRO",
       "n_entrati": 9,
