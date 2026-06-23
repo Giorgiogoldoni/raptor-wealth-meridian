@@ -1623,6 +1623,64 @@
           }
         }
       }
+    },
+    {
+      "data": "2026-06-23",
+      "globale": {
+        "signal": "RALLENTAMENTO",
+        "score": 35.4,
+        "livello_suggerito": 3
+      },
+      "usa": {
+        "signal": "RALLENTAMENTO",
+        "score": 27.6,
+        "vix": 19.49,
+        "momentum_sp500_20d": -1.45,
+        "curve_us_2y10y": 0.803
+      },
+      "eu": {
+        "signal": "RALLENTAMENTO",
+        "score": 38.0,
+        "vol_stoxx50_20d": null,
+        "momentum_stoxx50_20d": null,
+        "spread_btp_bund_proxy": 2.07
+      },
+      "asia": {
+        "signal": "NEUTRO",
+        "score": 49.7,
+        "vol_nikkei_20d": 30.85,
+        "momentum_nikkei_20d": 11.04,
+        "momentum_hsi_20d": -6.37
+      },
+      "em": {
+        "signal": "RALLENTAMENTO",
+        "score": 30.4,
+        "momentum_em_20d": 2.49,
+        "vol_em_20d": 42.63
+      },
+      "bond": {
+        "curve_us_2y10y": 0.803,
+        "curve_us_signal": "normale",
+        "spread_hy": 1.825,
+        "spread_hy_signal": "restringimento",
+        "spread_em": 0.556,
+        "spread_em_signal": "positivo",
+        "usd_momentum": 2.19,
+        "usd_signal": "forte",
+        "raccomandazione": {
+          "duration": "media",
+          "credito": "IG_e_HY",
+          "valuta": "hedged",
+          "em_bond": "mantieni",
+          "allocation_bond": {
+            "monetario": 10,
+            "gov_breve": 10,
+            "gov_lungo": 15,
+            "hy": 10,
+            "em_bond": 5
+          }
+        }
+      }
     }
   ],
   "value_histories": {
@@ -1656,7 +1714,8 @@
       18.44,
       16.4,
       16.78,
-      17.28
+      17.28,
+      19.49
     ],
     "sp_mom_h": [
       5.9989,
@@ -1688,7 +1747,8 @@
       0.9042,
       0.9096,
       0.9096,
-      0.3636
+      0.3636,
+      -1.4452
     ],
     "crv_h": [
       0.881,
@@ -1719,7 +1779,8 @@
       0.816,
       0.793,
       0.869,
-      0.829
+      0.829,
+      0.803
     ],
     "eu_vol_h": [
       19.2324,
@@ -1815,7 +1876,8 @@
       33.618,
       32.4874,
       31.8566,
-      30.7564
+      30.7564,
+      30.8539
     ],
     "as_momn_h": [
       10.0659,
@@ -1847,7 +1909,8 @@
       14.6223,
       16.8848,
       15.1892,
-      12.4899
+      12.4899,
+      11.0435
     ],
     "em_mom_h": [
       8.0547,
@@ -1879,7 +1942,8 @@
       7.2461,
       8.7045,
       8.7045,
-      8.4055
+      8.4055,
+      2.4881
     ],
     "em_vol_h": [
       26.6425,
@@ -1911,7 +1975,8 @@
       37.4793,
       38.8593,
       38.8593,
-      38.7941
+      38.7941,
+      42.6314
     ],
     "hy_spr_h": [
       0.9672,
@@ -1943,7 +2008,8 @@
       0.4499,
       0.7245,
       1.1712,
-      1.9616
+      1.9616,
+      1.8254
     ],
     "em_spr_h": [
       -0.3006,
@@ -1975,7 +2041,8 @@
       1.0501,
       1.4298,
       1.1081,
-      1.0262
+      1.0262,
+      0.5561
     ],
     "usd_mom_h": [
       0.803,
@@ -2007,10 +2074,11 @@
       0.8775,
       1.3962,
       1.2551,
-      1.8348
+      1.8348,
+      2.1878
     ]
   },
-  "current_regime": "NEUTRO",
-  "days_in_current_regime": 22,
-  "updated": "2026-06-22T21:53:09.697579+00:00"
+  "current_regime": "RALLENTAMENTO",
+  "days_in_current_regime": 6,
+  "updated": "2026-06-23T21:21:14.254696+00:00"
 }
