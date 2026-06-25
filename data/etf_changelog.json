@@ -4,6 +4,107 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "25/06/2026 21:19",
+      "regime": "RALLENTAMENTO",
+      "n_entrati": 16,
+      "n_usciti": 9,
+      "entrati": [
+        {
+          "ticker": "AQWA.MI",
+          "source": "tematici/acqua"
+        },
+        {
+          "ticker": "BRIJ.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "BTECH.MI",
+          "source": "tematici/crypto"
+        },
+        {
+          "ticker": "CYBO.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "DOCT.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "DPAY.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "EDOC.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "EEA.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "EPRE.MI",
+          "source": "tematici/infrastrutture"
+        },
+        {
+          "ticker": "GENDEE.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "GLUG.MI",
+          "source": "tematici/acqua"
+        },
+        {
+          "ticker": "HEAL.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "SXLF.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "WATC.MI",
+          "source": "tematici/acqua"
+        },
+        {
+          "ticker": "WUTI.MI",
+          "source": "settoriali/mondo"
+        },
+        {
+          "ticker": "XDER.MI",
+          "source": "tematici/ai_tech"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "FAMWCS.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        }
+      ]
+    },
+    {
       "data": "24/06/2026 21:14",
       "regime": "RALLENTAMENTO",
       "n_entrati": 3,
