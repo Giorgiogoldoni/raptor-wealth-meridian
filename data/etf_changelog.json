@@ -4,6 +4,83 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "26/06/2026 21:10",
+      "regime": "RALLENTAMENTO",
+      "n_entrati": 4,
+      "n_usciti": 17,
+      "entrati": [
+        {
+          "ticker": "CROP.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "REUS.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "SXLV.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "WHEA.MI",
+          "source": "settoriali/mondo"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "AQWA.MI"
+        },
+        {
+          "ticker": "BRIJ.MI"
+        },
+        {
+          "ticker": "GLUG.MI"
+        },
+        {
+          "ticker": "INQQ.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "PAVE.MI"
+        },
+        {
+          "ticker": "SXLF.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WATC.MI"
+        },
+        {
+          "ticker": "WFIN.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XDG6.MI"
+        }
+      ]
+    },
+    {
       "data": "25/06/2026 21:19",
       "regime": "RALLENTAMENTO",
       "n_entrati": 16,
