@@ -4,6 +4,87 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "29/06/2026 21:14",
+      "regime": "RALLENTAMENTO",
+      "n_entrati": 5,
+      "n_usciti": 17,
+      "entrati": [
+        {
+          "ticker": "BUG.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "ISPY.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "STSX.MI",
+          "source": "settoriali/europa"
+        },
+        {
+          "ticker": "STWX.MI",
+          "source": "settoriali/europa"
+        },
+        {
+          "ticker": "WCBR.MI",
+          "source": "tematici/difesa"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "AGED.MI"
+        },
+        {
+          "ticker": "CROP.MI"
+        },
+        {
+          "ticker": "EPRE.MI"
+        },
+        {
+          "ticker": "FOFD.MI"
+        },
+        {
+          "ticker": "GENDEE.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "REUS.MI"
+        },
+        {
+          "ticker": "SXLI.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WIND.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XDER.MI"
+        }
+      ]
+    },
+    {
       "data": "26/06/2026 21:10",
       "regime": "RALLENTAMENTO",
       "n_entrati": 4,
