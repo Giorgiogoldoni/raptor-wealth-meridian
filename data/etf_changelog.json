@@ -4,6 +4,84 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "03/07/2026 20:49",
+      "regime": "NEUTRO",
+      "n_entrati": 5,
+      "n_usciti": 16,
+      "entrati": [
+        {
+          "ticker": "EEA.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "GENDEE.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "NCLR.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "SXLF.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "WFIN.MI",
+          "source": "settoriali/mondo"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "DGTL.MI"
+        },
+        {
+          "ticker": "EPRE.MI"
+        },
+        {
+          "ticker": "ESPO.MI"
+        },
+        {
+          "ticker": "ISAG.MI"
+        },
+        {
+          "ticker": "ISPY.MI"
+        },
+        {
+          "ticker": "LOCK.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WHEA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XDG6.MI"
+        }
+      ]
+    },
+    {
       "data": "02/07/2026 20:51",
       "regime": "NEUTRO",
       "n_entrati": 6,
