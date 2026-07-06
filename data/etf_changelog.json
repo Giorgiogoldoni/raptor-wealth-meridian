@@ -4,6 +4,121 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "06/07/2026 21:16",
+      "regime": "NEUTRO",
+      "n_entrati": 15,
+      "n_usciti": 15,
+      "entrati": [
+        {
+          "ticker": "AIAA.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "ARMI.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "ARMR.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "BTECJ.MI",
+          "source": "tematici/crypto"
+        },
+        {
+          "ticker": "CYBO.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "DGTL.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "FAMMWF.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "HYGN.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "ISPY.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "LOCK.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "REUS.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "ROE.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "STZX.MI",
+          "source": "settoriali/europa"
+        },
+        {
+          "ticker": "WDEF.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "XFNT.MI",
+          "source": "tematici/digitale"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "EEA.MI"
+        },
+        {
+          "ticker": "GNOM.MI"
+        },
+        {
+          "ticker": "MILL.MI"
+        },
+        {
+          "ticker": "NCLR.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "STWX.MI"
+        },
+        {
+          "ticker": "SXLV.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XDG3.MI"
+        }
+      ]
+    },
+    {
       "data": "03/07/2026 20:49",
       "regime": "NEUTRO",
       "n_entrati": 5,
