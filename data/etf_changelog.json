@@ -4,6 +4,100 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "07/07/2026 21:11",
+      "regime": "NEUTRO",
+      "n_entrati": 3,
+      "n_usciti": 24,
+      "entrati": [
+        {
+          "ticker": "SXLV.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "WHEA.MI",
+          "source": "settoriali/mondo"
+        },
+        {
+          "ticker": "XDG6.MI",
+          "source": "tematici/digitale"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "ARMI.MI"
+        },
+        {
+          "ticker": "ARMR.MI"
+        },
+        {
+          "ticker": "BTECH.MI"
+        },
+        {
+          "ticker": "CROP.MI"
+        },
+        {
+          "ticker": "DFND.MI"
+        },
+        {
+          "ticker": "DFNS.MI"
+        },
+        {
+          "ticker": "DOCT.MI"
+        },
+        {
+          "ticker": "EDOC.MI"
+        },
+        {
+          "ticker": "FAMMAI.MI"
+        },
+        {
+          "ticker": "FAMMWF.MI"
+        },
+        {
+          "ticker": "HYGN.MI"
+        },
+        {
+          "ticker": "ISPY.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "U3O8.MI"
+        },
+        {
+          "ticker": "URNJ.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WDEF.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XFNT.MI"
+        }
+      ]
+    },
+    {
       "data": "06/07/2026 21:16",
       "regime": "NEUTRO",
       "n_entrati": 15,
