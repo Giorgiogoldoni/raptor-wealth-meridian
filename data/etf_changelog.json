@@ -4,6 +4,108 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "08/07/2026 20:51",
+      "regime": "NEUTRO",
+      "n_entrati": 0,
+      "n_usciti": 31,
+      "entrati": [],
+      "usciti": [
+        {
+          "ticker": "AGED.MI"
+        },
+        {
+          "ticker": "AIAA.MI"
+        },
+        {
+          "ticker": "BUG.MI"
+        },
+        {
+          "ticker": "CLOU.MI"
+        },
+        {
+          "ticker": "CURE.MI"
+        },
+        {
+          "ticker": "CYBO.MI"
+        },
+        {
+          "ticker": "DGTL.MI"
+        },
+        {
+          "ticker": "DPAY.MI"
+        },
+        {
+          "ticker": "ECOM.MI"
+        },
+        {
+          "ticker": "GENDEE.MI"
+        },
+        {
+          "ticker": "HEAL.MI"
+        },
+        {
+          "ticker": "ICBR.MI"
+        },
+        {
+          "ticker": "LOCK.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "REUS.MI"
+        },
+        {
+          "ticker": "STZX.MI"
+        },
+        {
+          "ticker": "SXLF.MI"
+        },
+        {
+          "ticker": "VEGI.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WCBR.MI"
+        },
+        {
+          "ticker": "WDNA.MI"
+        },
+        {
+          "ticker": "WFIN.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XDG6.MI"
+        },
+        {
+          "ticker": "XGEN.MI"
+        },
+        {
+          "ticker": "XNNV.MI"
+        }
+      ]
+    },
+    {
       "data": "07/07/2026 21:11",
       "regime": "NEUTRO",
       "n_entrati": 3,
