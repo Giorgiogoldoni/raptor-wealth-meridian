@@ -4,6 +4,109 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "27/07/2026 20:57",
+      "regime": "NEUTRO",
+      "n_entrati": 12,
+      "n_usciti": 15,
+      "entrati": [
+        {
+          "ticker": "ARMI.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "DFND.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "DFSV.DE",
+          "source": "settoriali/europa"
+        },
+        {
+          "ticker": "EPRE.MI",
+          "source": "tematici/infrastrutture"
+        },
+        {
+          "ticker": "FAMMWF.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "GENDEE.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "SXLF.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "WCOD.MI",
+          "source": "settoriali/mondo"
+        },
+        {
+          "ticker": "WDEF.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "WFIN.MI",
+          "source": "settoriali/mondo"
+        },
+        {
+          "ticker": "XDER.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "XLPE.MI",
+          "source": "tematici/infrastrutture"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "DFNS.MI"
+        },
+        {
+          "ticker": "INFR.MI"
+        },
+        {
+          "ticker": "MLPS.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "RAYZ.MI"
+        },
+        {
+          "ticker": "STNX.MI"
+        },
+        {
+          "ticker": "SXLE.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WNRG.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        }
+      ]
+    },
+    {
       "data": "24/07/2026 20:52",
       "regime": "NEUTRO",
       "n_entrati": 3,
