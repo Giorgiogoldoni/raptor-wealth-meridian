@@ -4,6 +4,94 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "28/07/2026 20:54",
+      "regime": "NEUTRO",
+      "n_entrati": 12,
+      "n_usciti": 10,
+      "entrati": [
+        {
+          "ticker": "AGED.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "CROP.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "FAMWCS.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "FOFD.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "HEAL.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "ISAG.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "STWX.MI",
+          "source": "settoriali/europa"
+        },
+        {
+          "ticker": "SXLP.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "SXLV.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "WCOS.MI",
+          "source": "settoriali/mondo"
+        },
+        {
+          "ticker": "WHEA.MI",
+          "source": "settoriali/mondo"
+        },
+        {
+          "ticker": "XDG3.MI",
+          "source": "tematici/digitale"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "FAMMWF.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WCOD.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        }
+      ]
+    },
+    {
       "data": "27/07/2026 20:57",
       "regime": "NEUTRO",
       "n_entrati": 12,
