@@ -4,6 +4,83 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "29/07/2026 20:40",
+      "regime": "RALLENTAMENTO",
+      "n_entrati": 4,
+      "n_usciti": 17,
+      "entrati": [
+        {
+          "ticker": "HERU.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "STNX.MI",
+          "source": "settoriali/europa"
+        },
+        {
+          "ticker": "SXLE.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "WNRG.MI",
+          "source": "settoriali/mondo"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "AGED.MI"
+        },
+        {
+          "ticker": "ARMR.MI"
+        },
+        {
+          "ticker": "DFND.MI"
+        },
+        {
+          "ticker": "EPRE.MI"
+        },
+        {
+          "ticker": "ISAG.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "SXLF.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WCOS.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XDER.MI"
+        },
+        {
+          "ticker": "XLPE.MI"
+        }
+      ]
+    },
+    {
       "data": "28/07/2026 20:54",
       "regime": "NEUTRO",
       "n_entrati": 12,
