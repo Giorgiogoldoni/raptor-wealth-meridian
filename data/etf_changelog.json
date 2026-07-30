@@ -4,6 +4,87 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "30/07/2026 20:52",
+      "regime": "NEUTRO",
+      "n_entrati": 2,
+      "n_usciti": 21,
+      "entrati": [
+        {
+          "ticker": "BRIJ.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "REUS.MI",
+          "source": "tematici/energia"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "CROP.MI"
+        },
+        {
+          "ticker": "FAMWCS.MI"
+        },
+        {
+          "ticker": "FOFD.MI"
+        },
+        {
+          "ticker": "HEAL.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "STNX.MI"
+        },
+        {
+          "ticker": "STWX.MI"
+        },
+        {
+          "ticker": "SXLE.MI"
+        },
+        {
+          "ticker": "SXLP.MI"
+        },
+        {
+          "ticker": "SXLV.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WFIN.MI"
+        },
+        {
+          "ticker": "WHEA.MI"
+        },
+        {
+          "ticker": "WNRG.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XDG3.MI"
+        }
+      ]
+    },
+    {
       "data": "29/07/2026 20:40",
       "regime": "RALLENTAMENTO",
       "n_entrati": 4,
