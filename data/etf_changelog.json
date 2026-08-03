@@ -4,6 +4,93 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "03/08/2026 20:50",
+      "regime": "NEUTRO",
+      "n_entrati": 11,
+      "n_usciti": 11,
+      "entrati": [
+        {
+          "ticker": "ARMI.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "BRIJ.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "DMAT.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "FAMAMW.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "GCLE.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "IVAI.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "SNSR.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "STQX.MI",
+          "source": "settoriali/europa"
+        },
+        {
+          "ticker": "WDEF.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "WNDY.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "XLPE.MI",
+          "source": "tematici/infrastrutture"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "CAUT.MI"
+        },
+        {
+          "ticker": "GENDEE.MI"
+        },
+        {
+          "ticker": "HERU.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        }
+      ]
+    },
+    {
       "data": "31/07/2026 20:49",
       "regime": "NEUTRO",
       "n_entrati": 2,
