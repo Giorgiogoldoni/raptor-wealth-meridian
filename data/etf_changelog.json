@@ -4,6 +4,131 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "07/08/2026 20:25",
+      "regime": "NEUTRO",
+      "n_entrati": 13,
+      "n_usciti": 21,
+      "entrati": [
+        {
+          "ticker": "BUG.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "EBUY.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "ESPO.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "GNOM.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "METE.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "REMX.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "U3O8.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "URNJ.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "USTEC.MI",
+          "source": "tematici/semiconduttori"
+        },
+        {
+          "ticker": "WGRO.MI",
+          "source": "tematici/acqua"
+        },
+        {
+          "ticker": "XCTE.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "XFNT.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "XGEN.MI",
+          "source": "tematici/salute"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "AQWA.MI"
+        },
+        {
+          "ticker": "CITE.MI"
+        },
+        {
+          "ticker": "DFND.MI"
+        },
+        {
+          "ticker": "DFNS.MI"
+        },
+        {
+          "ticker": "FAMMWF.MI"
+        },
+        {
+          "ticker": "FINX.MI"
+        },
+        {
+          "ticker": "GLUG.MI"
+        },
+        {
+          "ticker": "GOAI.MI"
+        },
+        {
+          "ticker": "INQQ.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "ROBO.MI"
+        },
+        {
+          "ticker": "STZX.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WATC.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XLPE.MI"
+        }
+      ]
+    },
+    {
       "data": "07/08/2026 00:49",
       "regime": "NEUTRO",
       "n_entrati": 25,
