@@ -1,55 +1,55 @@
 {
   "meta": {
-    "updated": "2026-08-05T20:52:35.475335+00:00",
-    "updated_it": "05/08/2026 20:52",
+    "updated": "2026-08-07T00:49:12.149839+00:00",
+    "updated_it": "07/08/2026 00:49",
     "source": "yfinance autonomo — RWM v2",
     "n_layer1": 85,
-    "n_layer2": 101,
-    "n_etf_total": 186,
-    "n_etf_ok": 160,
+    "n_layer2": 124,
+    "n_etf_total": 209,
+    "n_etf_ok": 183,
     "n_etf_error": 26
   },
   "regime": {
     "globale": {
       "signal": "NEUTRO",
-      "score": 55.8,
+      "score": 56.8,
       "livello_suggerito": 5
     },
     "usa": {
       "signal": "ESPANSIONE",
-      "score": 61.0,
-      "vix": 15.81,
-      "momentum_sp500_20d": 3.22,
-      "curve_us_2y10y": 0.892
+      "score": 62.7,
+      "vix": 15.15,
+      "momentum_sp500_20d": 2.2,
+      "curve_us_2y10y": 0.938
     },
     "eu": {
       "signal": "ESPANSIONE",
-      "score": 61.7,
+      "score": 61.3,
       "vol_stoxx50_20d": 11.84,
       "momentum_stoxx50_20d": 4.38,
       "spread_btp_bund_proxy": -1.308
     },
     "asia": {
-      "signal": "RALLENTAMENTO",
-      "score": 38.4,
-      "vol_nikkei_20d": 34.76,
-      "momentum_nikkei_20d": -8.29,
-      "momentum_hsi_20d": 10.03
+      "signal": "NEUTRO",
+      "score": 42.0,
+      "vol_nikkei_20d": 36.6,
+      "momentum_nikkei_20d": -2.11,
+      "momentum_hsi_20d": 7.09
     },
     "em": {
       "signal": "NEUTRO",
-      "score": 52.1,
-      "momentum_em_20d": -0.77,
-      "vol_em_20d": 30.01
+      "score": 49.1,
+      "momentum_em_20d": -2.64,
+      "vol_em_20d": 30.2
     },
     "bond": {
-      "curve_us_2y10y": 0.892,
+      "curve_us_2y10y": 0.938,
       "curve_us_signal": "normale",
       "spread_hy": -0.993,
       "spread_hy_signal": "allargamento",
       "spread_em": -0.026,
       "spread_em_signal": "neutro",
-      "usd_momentum": -1.31,
+      "usd_momentum": -0.78,
       "usd_signal": "debole",
       "raccomandazione": {
         "duration": "media",
@@ -79,7 +79,7 @@
         "C6"
       ],
       "source": "levels",
-      "ts": "2026-08-05T20:52:35.475335+00:00"
+      "ts": "2026-08-07T00:49:12.149839+00:00"
     },
     "2LVE.MI": {
       "ok": false,
@@ -93,7 +93,7 @@
         "A9"
       ],
       "source": "levels",
-      "ts": "2026-08-05T20:52:35.475335+00:00"
+      "ts": "2026-08-07T00:49:12.149839+00:00"
     },
     "2NVD.MI": {
       "ok": false,
@@ -107,7 +107,7 @@
         "A9"
       ],
       "source": "levels",
-      "ts": "2026-08-05T20:52:35.475335+00:00"
+      "ts": "2026-08-07T00:49:12.149839+00:00"
     },
     "3EUL.MI": {
       "ok": true,
@@ -121,16 +121,16 @@
         "A9"
       ],
       "source": "levels",
-      "price": 32.19,
-      "chg_1w": 9.34,
-      "chg_1m": 3.5,
-      "chg_3m": -94.76,
-      "chg_6m": -95.03,
-      "chg_ytd": -94.73,
-      "chg_1y": -92.93,
-      "total_return_1y": -92.93,
+      "price": 32.02,
+      "chg_1w": 11.45,
+      "chg_1m": 6.63,
+      "chg_3m": 30.4,
+      "chg_6m": -94.92,
+      "chg_ytd": -94.76,
+      "chg_1y": -93.0,
+      "total_return_1y": -93.0,
       "volatility_1y": 326.92,
-      "var_95_1y": 554.68,
+      "var_95_1y": 554.74,
       "sharpe_1y": -0.83,
       "max_dd_1y": -96.69,
       "div_yield": null,
@@ -148,7 +148,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "3NVD.MI": {
       "ok": true,
@@ -168,11 +168,11 @@
       "chg_3m": -15.58,
       "chg_6m": 49.64,
       "chg_ytd": 11.48,
-      "chg_1y": 9.78,
-      "total_return_1y": 9.78,
-      "volatility_1y": 107.14,
-      "var_95_1y": 175.66,
-      "sharpe_1y": 0.06,
+      "chg_1y": 8.0,
+      "total_return_1y": 8.0,
+      "volatility_1y": 107.35,
+      "var_95_1y": 176.09,
+      "sharpe_1y": 0.04,
       "max_dd_1y": -58.0,
       "div_yield": null,
       "dividends_ttm": null,
@@ -185,7 +185,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "3USL.MI": {
       "ok": true,
@@ -205,11 +205,11 @@
       "chg_3m": 12.27,
       "chg_6m": 39.26,
       "chg_ytd": 35.13,
-      "chg_1y": 62.7,
-      "total_return_1y": 62.7,
-      "volatility_1y": 41.06,
-      "var_95_1y": 64.47,
-      "sharpe_1y": 1.1,
+      "chg_1y": 60.32,
+      "total_return_1y": 60.32,
+      "volatility_1y": 41.13,
+      "var_95_1y": 64.66,
+      "sharpe_1y": 1.07,
       "max_dd_1y": -31.35,
       "div_yield": null,
       "dividends_ttm": null,
@@ -226,7 +226,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "AGGH.MI": {
       "ok": true,
@@ -258,11 +258,11 @@
       "chg_3m": -0.02,
       "chg_6m": -0.52,
       "chg_ytd": -0.22,
-      "chg_1y": 0.12,
-      "total_return_1y": 0.12,
-      "volatility_1y": 3.51,
+      "chg_1y": 0.22,
+      "total_return_1y": 0.22,
+      "volatility_1y": 3.52,
       "var_95_1y": 5.77,
-      "sharpe_1y": -0.96,
+      "sharpe_1y": -0.93,
       "max_dd_1y": -2.65,
       "div_yield": null,
       "dividends_ttm": null,
@@ -287,7 +287,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "AIGA.MI": {
       "ok": true,
@@ -311,11 +311,11 @@
       "chg_3m": 0.57,
       "chg_6m": 12.29,
       "chg_ytd": 12.86,
-      "chg_1y": 12.7,
-      "total_return_1y": 12.7,
-      "volatility_1y": 15.17,
-      "var_95_1y": 24.19,
-      "sharpe_1y": 0.56,
+      "chg_1y": 14.26,
+      "total_return_1y": 14.26,
+      "volatility_1y": 15.13,
+      "var_95_1y": 24.03,
+      "sharpe_1y": 0.66,
       "max_dd_1y": -9.85,
       "div_yield": null,
       "dividends_ttm": null,
@@ -336,7 +336,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "CMOD.MI": {
       "ok": true,
@@ -355,11 +355,11 @@
       "chg_3m": -5.56,
       "chg_6m": 14.85,
       "chg_ytd": 22.66,
-      "chg_1y": 34.0,
-      "total_return_1y": 34.0,
-      "volatility_1y": 28.93,
-      "var_95_1y": 45.75,
-      "sharpe_1y": 0.89,
+      "chg_1y": 34.33,
+      "total_return_1y": 34.33,
+      "volatility_1y": 28.99,
+      "var_95_1y": 45.81,
+      "sharpe_1y": 0.91,
       "max_dd_1y": -15.17,
       "div_yield": null,
       "dividends_ttm": null,
@@ -376,7 +376,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "COPA.MI": {
       "ok": true,
@@ -401,11 +401,11 @@
       "chg_3m": 4.94,
       "chg_6m": 15.62,
       "chg_ytd": 17.9,
-      "chg_1y": 48.62,
-      "total_return_1y": 48.62,
-      "volatility_1y": 23.2,
-      "var_95_1y": 35.65,
-      "sharpe_1y": 1.57,
+      "chg_1y": 48.71,
+      "total_return_1y": 48.71,
+      "volatility_1y": 23.25,
+      "var_95_1y": 35.71,
+      "sharpe_1y": 1.58,
       "max_dd_1y": -10.66,
       "div_yield": null,
       "dividends_ttm": null,
@@ -426,7 +426,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "CSPX.MI": {
       "ok": false,
@@ -443,7 +443,7 @@
         "A9"
       ],
       "source": "levels",
-      "ts": "2026-08-05T20:52:35.475335+00:00"
+      "ts": "2026-08-07T00:49:12.149839+00:00"
     },
     "DFNS.MI": {
       "ok": true,
@@ -467,19 +467,19 @@
       "chg_3m": 4.76,
       "chg_6m": -2.08,
       "chg_ytd": 5.81,
-      "chg_1y": 9.99,
-      "total_return_1y": 9.99,
-      "volatility_1y": 26.49,
-      "var_95_1y": 42.98,
-      "sharpe_1y": 0.23,
+      "chg_1y": 9.8,
+      "total_return_1y": 9.8,
+      "volatility_1y": 26.55,
+      "var_95_1y": 43.07,
+      "sharpe_1y": 0.22,
       "max_dd_1y": -23.79,
       "div_yield": null,
       "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {},
-      "raptor_score": 43.9,
+      "raptor_score": 45.2,
       "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "DHS.MI": {
       "ok": true,
@@ -501,11 +501,11 @@
       "chg_3m": 10.82,
       "chg_6m": 9.44,
       "chg_ytd": 16.66,
-      "chg_1y": 25.94,
-      "total_return_1y": 29.09,
-      "volatility_1y": 10.87,
-      "var_95_1y": 16.41,
-      "sharpe_1y": 1.82,
+      "chg_1y": 26.14,
+      "total_return_1y": 29.29,
+      "volatility_1y": 10.89,
+      "var_95_1y": 16.43,
+      "sharpe_1y": 1.84,
       "max_dd_1y": -5.91,
       "div_yield": 3.15,
       "dividends_ttm": 0.8459,
@@ -522,7 +522,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "DHYA.MI": {
       "ok": false,
@@ -540,7 +540,7 @@
         "A8"
       ],
       "source": "levels",
-      "ts": "2026-08-05T20:52:35.475335+00:00"
+      "ts": "2026-08-07T00:49:12.149839+00:00"
     },
     "EMBE.MI": {
       "ok": true,
@@ -563,10 +563,10 @@
       "chg_3m": 0.01,
       "chg_6m": 0.46,
       "chg_ytd": 0.79,
-      "chg_1y": 5.44,
-      "total_return_1y": 11.53,
-      "volatility_1y": 5.87,
-      "var_95_1y": 9.32,
+      "chg_1y": 5.41,
+      "total_return_1y": 11.5,
+      "volatility_1y": 5.88,
+      "var_95_1y": 9.34,
       "sharpe_1y": 0.31,
       "max_dd_1y": -4.64,
       "div_yield": 6.09,
@@ -592,7 +592,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "EMDV.MI": {
       "ok": true,
@@ -614,11 +614,11 @@
       "chg_3m": 3.57,
       "chg_6m": 6.46,
       "chg_ytd": 11.87,
-      "chg_1y": 11.58,
-      "total_return_1y": 18.18,
-      "volatility_1y": 11.07,
-      "var_95_1y": 17.52,
-      "sharpe_1y": 0.68,
+      "chg_1y": 11.8,
+      "total_return_1y": 18.4,
+      "volatility_1y": 11.09,
+      "var_95_1y": 17.54,
+      "sharpe_1y": 0.7,
       "max_dd_1y": -8.24,
       "div_yield": 6.6,
       "dividends_ttm": 0.9991,
@@ -635,7 +635,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "EQQQ.MI": {
       "ok": true,
@@ -655,11 +655,11 @@
       "chg_3m": 3.48,
       "chg_6m": 22.94,
       "chg_ytd": 19.91,
-      "chg_1y": 29.52,
-      "total_return_1y": 29.82,
-      "volatility_1y": 17.28,
-      "var_95_1y": 26.78,
-      "sharpe_1y": 1.31,
+      "chg_1y": 29.21,
+      "total_return_1y": 29.51,
+      "volatility_1y": 17.31,
+      "var_95_1y": 26.84,
+      "sharpe_1y": 1.3,
       "max_dd_1y": -9.98,
       "div_yield": 0.3,
       "dividends_ttm": 1.8764,
@@ -680,7 +680,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "ERNX.MI": {
       "ok": false,
@@ -697,7 +697,7 @@
         "A3"
       ],
       "source": "levels",
-      "ts": "2026-08-05T20:52:35.475335+00:00"
+      "ts": "2026-08-07T00:49:12.149839+00:00"
     },
     "ESGE.MI": {
       "ok": true,
@@ -723,11 +723,11 @@
       "chg_3m": 7.45,
       "chg_6m": 10.54,
       "chg_ytd": 13.19,
-      "chg_1y": 25.42,
-      "total_return_1y": 25.42,
-      "volatility_1y": 13.67,
+      "chg_1y": 25.96,
+      "total_return_1y": 25.96,
+      "volatility_1y": 13.68,
       "var_95_1y": 21.04,
-      "sharpe_1y": 1.41,
+      "sharpe_1y": 1.45,
       "max_dd_1y": -10.36,
       "div_yield": null,
       "dividends_ttm": null,
@@ -744,7 +744,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "EUDV.MI": {
       "ok": true,
@@ -767,10 +767,10 @@
       "chg_3m": 7.64,
       "chg_6m": 9.9,
       "chg_ytd": 13.55,
-      "chg_1y": 18.55,
-      "total_return_1y": 22.64,
-      "volatility_1y": 10.63,
-      "var_95_1y": 16.4,
+      "chg_1y": 18.51,
+      "total_return_1y": 22.6,
+      "volatility_1y": 10.65,
+      "var_95_1y": 16.44,
       "sharpe_1y": 1.28,
       "max_dd_1y": -8.02,
       "div_yield": 4.09,
@@ -788,7 +788,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "EUHA.MI": {
       "ok": true,
@@ -830,7 +830,7 @@
       "scenari": {},
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "EUHI.MI": {
       "ok": true,
@@ -854,9 +854,9 @@
       "chg_ytd": 1.82,
       "chg_1y": 3.31,
       "total_return_1y": 8.0,
-      "volatility_1y": 2.85,
+      "volatility_1y": 2.86,
       "var_95_1y": 4.49,
-      "sharpe_1y": -0.08,
+      "sharpe_1y": -0.07,
       "max_dd_1y": -2.77,
       "div_yield": 4.69,
       "dividends_ttm": 0.4379,
@@ -881,7 +881,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "EUNH.MI": {
       "ok": false,
@@ -898,7 +898,7 @@
         "C7"
       ],
       "source": "levels",
-      "ts": "2026-08-05T20:52:35.475335+00:00"
+      "ts": "2026-08-07T00:49:12.149839+00:00"
     },
     "EXV1.DE": {
       "ok": true,
@@ -920,11 +920,11 @@
       "chg_3m": 20.2,
       "chg_6m": 18.92,
       "chg_ytd": 23.43,
-      "chg_1y": 53.93,
-      "total_return_1y": 59.39,
-      "volatility_1y": 22.06,
-      "var_95_1y": 33.58,
-      "sharpe_1y": 1.8,
+      "chg_1y": 52.18,
+      "total_return_1y": 57.64,
+      "volatility_1y": 22.09,
+      "var_95_1y": 33.68,
+      "sharpe_1y": 1.75,
       "max_dd_1y": -16.03,
       "div_yield": 5.46,
       "dividends_ttm": 2.3251,
@@ -945,7 +945,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "EXX5.DE": {
       "ok": true,
@@ -969,11 +969,11 @@
       "chg_3m": 8.93,
       "chg_6m": 8.85,
       "chg_ytd": 16.71,
-      "chg_1y": 22.45,
-      "total_return_1y": 25.39,
-      "volatility_1y": 24.98,
-      "var_95_1y": 39.81,
-      "sharpe_1y": 0.67,
+      "chg_1y": 22.56,
+      "total_return_1y": 25.5,
+      "volatility_1y": 25.02,
+      "var_95_1y": 39.88,
+      "sharpe_1y": 0.68,
       "max_dd_1y": -15.97,
       "div_yield": 2.94,
       "dividends_ttm": 2.9225,
@@ -994,7 +994,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "EXXW.DE": {
       "ok": true,
@@ -1014,11 +1014,11 @@
       "chg_3m": 3.49,
       "chg_6m": 8.09,
       "chg_ytd": 18.95,
-      "chg_1y": 33.17,
-      "total_return_1y": 38.55,
-      "volatility_1y": 12.6,
-      "var_95_1y": 18.92,
-      "sharpe_1y": 2.0,
+      "chg_1y": 33.35,
+      "total_return_1y": 38.73,
+      "volatility_1y": 12.62,
+      "var_95_1y": 18.94,
+      "sharpe_1y": 2.01,
       "max_dd_1y": -6.34,
       "div_yield": 5.38,
       "dividends_ttm": 1.7449,
@@ -1039,7 +1039,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "FGEQ.MI": {
       "ok": false,
@@ -1057,7 +1057,7 @@
         "C8"
       ],
       "source": "levels",
-      "ts": "2026-08-05T20:52:35.475335+00:00"
+      "ts": "2026-08-07T00:49:12.149839+00:00"
     },
     "GOM.MI": {
       "ok": true,
@@ -1081,11 +1081,11 @@
       "chg_3m": -12.19,
       "chg_6m": -9.01,
       "chg_ytd": -0.15,
-      "chg_1y": 55.66,
-      "total_return_1y": 56.35,
-      "volatility_1y": 49.23,
-      "var_95_1y": 78.17,
-      "sharpe_1y": 0.83,
+      "chg_1y": 52.79,
+      "total_return_1y": 53.48,
+      "volatility_1y": 49.3,
+      "var_95_1y": 78.39,
+      "sharpe_1y": 0.8,
       "max_dd_1y": -37.24,
       "div_yield": 0.69,
       "dividends_ttm": 0.2963,
@@ -1101,7 +1101,7 @@
       "scenari": {},
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "HYLD.MI": {
       "ok": true,
@@ -1126,11 +1126,11 @@
       "chg_3m": 1.86,
       "chg_6m": 2.47,
       "chg_ytd": 2.64,
-      "chg_1y": 4.47,
-      "total_return_1y": 11.51,
-      "volatility_1y": 3.72,
-      "var_95_1y": 5.85,
-      "sharpe_1y": 0.24,
+      "chg_1y": 4.68,
+      "total_return_1y": 11.72,
+      "volatility_1y": 3.73,
+      "var_95_1y": 5.84,
+      "sharpe_1y": 0.3,
       "max_dd_1y": -2.15,
       "div_yield": 7.04,
       "dividends_ttm": 5.4307,
@@ -1155,7 +1155,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "IBTE.MI": {
       "ok": false,
@@ -1169,7 +1169,7 @@
         "A2"
       ],
       "source": "levels",
-      "ts": "2026-08-05T20:52:35.475335+00:00"
+      "ts": "2026-08-07T00:49:12.149839+00:00"
     },
     "IBTM.MI": {
       "ok": true,
@@ -1193,11 +1193,11 @@
       "chg_3m": 1.39,
       "chg_6m": 1.32,
       "chg_ytd": 1.05,
-      "chg_1y": 1.57,
-      "total_return_1y": 5.88,
-      "volatility_1y": 5.48,
-      "var_95_1y": 8.91,
-      "sharpe_1y": -0.35,
+      "chg_1y": 2.27,
+      "total_return_1y": 6.58,
+      "volatility_1y": 5.44,
+      "var_95_1y": 8.81,
+      "sharpe_1y": -0.23,
       "max_dd_1y": -4.37,
       "div_yield": 4.31,
       "dividends_ttm": 6.3398,
@@ -1226,7 +1226,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "IDVY.MI": {
       "ok": true,
@@ -1250,11 +1250,11 @@
       "chg_3m": 9.18,
       "chg_6m": 13.71,
       "chg_ytd": 15.27,
-      "chg_1y": 27.54,
-      "total_return_1y": 31.8,
-      "volatility_1y": 11.7,
-      "var_95_1y": 17.7,
-      "sharpe_1y": 1.8,
+      "chg_1y": 26.91,
+      "total_return_1y": 31.17,
+      "volatility_1y": 11.71,
+      "var_95_1y": 17.75,
+      "sharpe_1y": 1.76,
       "max_dd_1y": -7.71,
       "div_yield": 4.26,
       "dividends_ttm": 1.1476,
@@ -1275,7 +1275,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "IEAC.MI": {
       "ok": true,
@@ -1299,11 +1299,11 @@
       "chg_3m": 0.78,
       "chg_6m": 0.03,
       "chg_ytd": 1.01,
-      "chg_1y": 1.33,
-      "total_return_1y": 6.35,
-      "volatility_1y": 3.12,
+      "chg_1y": 1.36,
+      "total_return_1y": 6.38,
+      "volatility_1y": 3.13,
       "var_95_1y": 5.06,
-      "sharpe_1y": -0.69,
+      "sharpe_1y": -0.68,
       "max_dd_1y": -2.67,
       "div_yield": 5.02,
       "dividends_ttm": 5.9266,
@@ -1328,7 +1328,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "IEAG.MI": {
       "ok": true,
@@ -1349,11 +1349,11 @@
       "chg_3m": 0.37,
       "chg_6m": -0.35,
       "chg_ytd": 0.57,
-      "chg_1y": 0.25,
-      "total_return_1y": 4.04,
+      "chg_1y": 0.36,
+      "total_return_1y": 4.15,
       "volatility_1y": 3.73,
       "var_95_1y": 6.11,
-      "sharpe_1y": -0.87,
+      "sharpe_1y": -0.84,
       "max_dd_1y": -3.13,
       "div_yield": 3.79,
       "dividends_ttm": 4.0313,
@@ -1378,7 +1378,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "IFFF.MI": {
       "ok": true,
@@ -1402,11 +1402,11 @@
       "chg_3m": 0.45,
       "chg_6m": 0.59,
       "chg_ytd": 0.59,
-      "chg_1y": 12.64,
-      "total_return_1y": 14.06,
-      "volatility_1y": 10.19,
-      "var_95_1y": 16.0,
-      "sharpe_1y": 0.84,
+      "chg_1y": 13.39,
+      "total_return_1y": 14.81,
+      "volatility_1y": 10.16,
+      "var_95_1y": 15.92,
+      "sharpe_1y": 0.91,
       "max_dd_1y": -7.02,
       "div_yield": 1.42,
       "dividends_ttm": 0.8725,
@@ -1427,7 +1427,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "IGLO.MI": {
       "ok": false,
@@ -1446,7 +1446,7 @@
         "A6"
       ],
       "source": "levels",
-      "ts": "2026-08-05T20:52:35.475335+00:00"
+      "ts": "2026-08-07T00:49:12.149839+00:00"
     },
     "IHYU.MI": {
       "ok": true,
@@ -1469,11 +1469,11 @@
       "chg_3m": 2.9,
       "chg_6m": 3.78,
       "chg_ytd": 3.83,
-      "chg_1y": 6.1,
-      "total_return_1y": 12.23,
+      "chg_1y": 6.47,
+      "total_return_1y": 12.6,
       "volatility_1y": 5.31,
-      "var_95_1y": 8.36,
-      "sharpe_1y": 0.46,
+      "var_95_1y": 8.33,
+      "sharpe_1y": 0.54,
       "max_dd_1y": -3.05,
       "div_yield": 6.13,
       "dividends_ttm": 5.0456,
@@ -1498,7 +1498,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "IPRP.MI": {
       "ok": true,
@@ -1521,11 +1521,11 @@
       "chg_3m": 2.37,
       "chg_6m": 2.38,
       "chg_ytd": 2.38,
-      "chg_1y": 1.99,
-      "total_return_1y": 4.8,
-      "volatility_1y": 6.85,
-      "var_95_1y": 11.14,
-      "sharpe_1y": -0.22,
+      "chg_1y": 0.73,
+      "total_return_1y": 3.54,
+      "volatility_1y": 6.73,
+      "var_95_1y": 11.03,
+      "sharpe_1y": -0.41,
       "max_dd_1y": -5.89,
       "div_yield": 2.81,
       "dividends_ttm": 0.8657,
@@ -1546,7 +1546,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "IS3N.MI": {
       "ok": false,
@@ -1564,7 +1564,7 @@
         "A9"
       ],
       "source": "levels",
-      "ts": "2026-08-05T20:52:35.475335+00:00"
+      "ts": "2026-08-07T00:49:12.149839+00:00"
     },
     "ISPA.DE": {
       "ok": true,
@@ -1583,11 +1583,11 @@
       "chg_3m": 8.41,
       "chg_6m": 12.86,
       "chg_ytd": 20.3,
-      "chg_1y": 34.0,
-      "total_return_1y": 39.27,
-      "volatility_1y": 8.45,
-      "var_95_1y": 12.07,
-      "sharpe_1y": 3.03,
+      "chg_1y": 33.53,
+      "total_return_1y": 38.8,
+      "volatility_1y": 8.47,
+      "var_95_1y": 12.11,
+      "sharpe_1y": 3.0,
       "max_dd_1y": -3.63,
       "div_yield": 5.27,
       "dividends_ttm": 2.0996,
@@ -1604,7 +1604,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "IU0E.MI": {
       "ok": true,
@@ -1627,11 +1627,11 @@
       "chg_3m": 0.2,
       "chg_6m": 0.28,
       "chg_ytd": 0.5,
-      "chg_1y": 1.8,
-      "total_return_1y": 1.8,
+      "chg_1y": 1.72,
+      "total_return_1y": 1.72,
       "volatility_1y": 1.49,
-      "var_95_1y": 2.33,
-      "sharpe_1y": -1.15,
+      "var_95_1y": 2.34,
+      "sharpe_1y": -1.19,
       "max_dd_1y": -0.65,
       "div_yield": null,
       "dividends_ttm": null,
@@ -1652,7 +1652,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "IUIT.MI": {
       "ok": false,
@@ -1666,7 +1666,7 @@
         "A9"
       ],
       "source": "levels",
-      "ts": "2026-08-05T20:52:35.475335+00:00"
+      "ts": "2026-08-07T00:49:12.149839+00:00"
     },
     "IUSA.MI": {
       "ok": true,
@@ -1690,11 +1690,11 @@
       "chg_3m": 6.76,
       "chg_6m": 16.4,
       "chg_ytd": 15.67,
-      "chg_1y": 24.5,
-      "total_return_1y": 25.34,
-      "volatility_1y": 11.44,
-      "var_95_1y": 17.42,
-      "sharpe_1y": 1.63,
+      "chg_1y": 24.3,
+      "total_return_1y": 25.14,
+      "volatility_1y": 11.46,
+      "var_95_1y": 17.47,
+      "sharpe_1y": 1.62,
       "max_dd_1y": -7.16,
       "div_yield": 0.84,
       "dividends_ttm": 0.5605,
@@ -1715,7 +1715,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "IWDP.MI": {
       "ok": true,
@@ -1738,11 +1738,11 @@
       "chg_3m": 3.6,
       "chg_6m": 9.22,
       "chg_ytd": 13.7,
-      "chg_1y": 14.62,
-      "total_return_1y": 17.5,
-      "volatility_1y": 11.06,
-      "var_95_1y": 17.32,
-      "sharpe_1y": 0.93,
+      "chg_1y": 14.48,
+      "total_return_1y": 17.36,
+      "volatility_1y": 11.08,
+      "var_95_1y": 17.36,
+      "sharpe_1y": 0.92,
       "max_dd_1y": -7.49,
       "div_yield": 2.88,
       "dividends_ttm": 0.6584,
@@ -1763,7 +1763,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "JNHD.MI": {
       "ok": false,
@@ -1777,7 +1777,7 @@
         "A7"
       ],
       "source": "levels",
-      "ts": "2026-08-05T20:52:35.475335+00:00"
+      "ts": "2026-08-07T00:49:12.149839+00:00"
     },
     "JPNH.MI": {
       "ok": true,
@@ -1801,8 +1801,8 @@
       "chg_ytd": 19.31,
       "chg_1y": 41.45,
       "total_return_1y": 43.19,
-      "volatility_1y": 19.66,
-      "var_95_1y": 30.14,
+      "volatility_1y": 19.7,
+      "var_95_1y": 30.19,
       "sharpe_1y": 1.6,
       "max_dd_1y": -9.68,
       "div_yield": 1.74,
@@ -1820,7 +1820,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "L2SP.MI": {
       "ok": false,
@@ -1834,7 +1834,7 @@
         "A9"
       ],
       "source": "levels",
-      "ts": "2026-08-05T20:52:35.475335+00:00"
+      "ts": "2026-08-07T00:49:12.149839+00:00"
     },
     "MEUD.MI": {
       "ok": true,
@@ -1860,8 +1860,8 @@
       "chg_ytd": 12.55,
       "chg_1y": 24.82,
       "total_return_1y": 24.82,
-      "volatility_1y": 12.81,
-      "var_95_1y": 19.66,
+      "volatility_1y": 12.83,
+      "var_95_1y": 19.69,
       "sharpe_1y": 1.48,
       "max_dd_1y": -9.42,
       "div_yield": null,
@@ -1870,7 +1870,7 @@
       "scenari": {},
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "NTSG.MI": {
       "ok": true,
@@ -1887,25 +1887,25 @@
         "A9"
       ],
       "source": "geografia/new_area",
-      "price": 29.925,
-      "chg_1w": 2.33,
-      "chg_1m": 2.01,
-      "chg_3m": 9.08,
-      "chg_6m": 14.59,
-      "chg_ytd": 14.81,
-      "chg_1y": 23.33,
-      "total_return_1y": 23.33,
-      "volatility_1y": 10.74,
-      "var_95_1y": 16.33,
-      "sharpe_1y": 1.65,
+      "price": 29.605,
+      "chg_1w": 1.67,
+      "chg_1m": 0.73,
+      "chg_3m": 7.25,
+      "chg_6m": 14.77,
+      "chg_ytd": 13.58,
+      "chg_1y": 22.41,
+      "total_return_1y": 22.41,
+      "volatility_1y": 10.79,
+      "var_95_1y": 16.47,
+      "sharpe_1y": 1.57,
       "max_dd_1y": -6.36,
       "div_yield": null,
       "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {},
-      "raptor_score": 31.7,
+      "raptor_score": 39.2,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "NTSX.MI": {
       "ok": true,
@@ -1928,19 +1928,19 @@
       "chg_3m": 7.15,
       "chg_6m": 15.92,
       "chg_ytd": 13.68,
-      "chg_1y": 20.56,
-      "total_return_1y": 20.56,
-      "volatility_1y": 12.14,
-      "var_95_1y": 18.79,
-      "sharpe_1y": 1.26,
+      "chg_1y": 20.68,
+      "total_return_1y": 20.68,
+      "volatility_1y": 12.16,
+      "var_95_1y": 18.81,
+      "sharpe_1y": 1.28,
       "max_dd_1y": -7.2,
       "div_yield": null,
       "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {},
-      "raptor_score": 44.2,
+      "raptor_score": 57.9,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "NTSZ.MI": {
       "ok": true,
@@ -1974,7 +1974,7 @@
       "scenari": {},
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "PHAU.MI": {
       "ok": false,
@@ -1998,7 +1998,7 @@
         "A9"
       ],
       "source": "levels",
-      "ts": "2026-08-05T20:52:35.475335+00:00"
+      "ts": "2026-08-07T00:49:12.149839+00:00"
     },
     "QNTM.MI": {
       "ok": true,
@@ -2020,11 +2020,11 @@
       "chg_3m": -1.63,
       "chg_6m": 22.96,
       "chg_ytd": 17.78,
-      "chg_1y": 37.38,
-      "total_return_1y": 37.38,
-      "volatility_1y": 31.39,
-      "var_95_1y": 49.62,
-      "sharpe_1y": 0.91,
+      "chg_1y": 38.17,
+      "total_return_1y": 38.17,
+      "volatility_1y": 31.45,
+      "var_95_1y": 49.67,
+      "sharpe_1y": 0.93,
       "max_dd_1y": -23.27,
       "div_yield": null,
       "dividends_ttm": null,
@@ -2032,7 +2032,7 @@
       "scenari": {},
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "QQQ3.MI": {
       "ok": true,
@@ -2052,11 +2052,11 @@
       "chg_3m": -1.32,
       "chg_6m": 55.29,
       "chg_ytd": 42.62,
-      "chg_1y": 70.38,
-      "total_return_1y": 70.38,
-      "volatility_1y": 56.33,
-      "var_95_1y": 89.3,
-      "sharpe_1y": 0.89,
+      "chg_1y": 67.56,
+      "total_return_1y": 67.56,
+      "volatility_1y": 56.43,
+      "var_95_1y": 89.55,
+      "sharpe_1y": 0.86,
       "max_dd_1y": -38.63,
       "div_yield": null,
       "dividends_ttm": null,
@@ -2073,7 +2073,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "RARE.MI": {
       "ok": true,
@@ -2088,17 +2088,17 @@
         "A8"
       ],
       "source": "levels",
-      "price": 45.575,
-      "chg_1w": 6.48,
-      "chg_1m": -4.5,
-      "chg_3m": -20.86,
-      "chg_6m": -12.31,
-      "chg_ytd": 1.84,
-      "chg_1y": 56.08,
-      "total_return_1y": 56.08,
-      "volatility_1y": 45.02,
-      "var_95_1y": 71.23,
-      "sharpe_1y": 0.92,
+      "price": 47.44,
+      "chg_1w": 12.6,
+      "chg_1m": 2.93,
+      "chg_3m": -19.96,
+      "chg_6m": -4.23,
+      "chg_ytd": 6.01,
+      "chg_1y": 60.98,
+      "total_return_1y": 60.98,
+      "volatility_1y": 45.18,
+      "var_95_1y": 71.3,
+      "sharpe_1y": 0.98,
       "max_dd_1y": -28.92,
       "div_yield": null,
       "dividends_ttm": null,
@@ -2106,7 +2106,7 @@
       "scenari": {},
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "REET.MI": {
       "ok": false,
@@ -2121,7 +2121,7 @@
         "A6"
       ],
       "source": "levels",
-      "ts": "2026-08-05T20:52:35.475335+00:00"
+      "ts": "2026-08-07T00:49:12.149839+00:00"
     },
     "SEMB.MI": {
       "ok": false,
@@ -2135,7 +2135,7 @@
         "C7"
       ],
       "source": "levels",
-      "ts": "2026-08-05T20:52:35.475335+00:00"
+      "ts": "2026-08-07T00:49:12.149839+00:00"
     },
     "SILVER.MI": {
       "ok": false,
@@ -2151,7 +2151,7 @@
         "A9"
       ],
       "source": "levels",
-      "ts": "2026-08-05T20:52:35.475335+00:00"
+      "ts": "2026-08-07T00:49:12.149839+00:00"
     },
     "SMART.MI": {
       "ok": true,
@@ -2173,11 +2173,11 @@
       "chg_3m": 0.57,
       "chg_6m": 1.16,
       "chg_ytd": 1.37,
-      "chg_1y": 2.4,
-      "total_return_1y": 2.4,
+      "chg_1y": 2.39,
+      "total_return_1y": 2.39,
       "volatility_1y": 0.3,
       "var_95_1y": 0.35,
-      "sharpe_1y": -3.65,
+      "sharpe_1y": -3.64,
       "max_dd_1y": -0.08,
       "div_yield": null,
       "dividends_ttm": null,
@@ -2193,7 +2193,7 @@
       "scenari": {},
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "SMH.MI": {
       "ok": true,
@@ -2217,11 +2217,11 @@
       "chg_3m": 4.8,
       "chg_6m": 63.26,
       "chg_ytd": 70.73,
-      "chg_1y": 127.57,
-      "total_return_1y": 127.57,
-      "volatility_1y": 38.1,
-      "var_95_1y": 57.45,
-      "sharpe_1y": 2.08,
+      "chg_1y": 130.51,
+      "total_return_1y": 130.51,
+      "volatility_1y": 38.14,
+      "var_95_1y": 57.41,
+      "sharpe_1y": 2.12,
       "max_dd_1y": -23.3,
       "div_yield": null,
       "dividends_ttm": null,
@@ -2234,7 +2234,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "STHE.MI": {
       "ok": true,
@@ -2256,11 +2256,11 @@
       "chg_3m": 0.38,
       "chg_6m": 0.96,
       "chg_ytd": 0.82,
-      "chg_1y": 3.49,
-      "total_return_1y": 11.05,
+      "chg_1y": 3.35,
+      "total_return_1y": 10.91,
       "volatility_1y": 3.29,
-      "var_95_1y": 5.19,
-      "sharpe_1y": -0.01,
+      "var_95_1y": 5.21,
+      "sharpe_1y": -0.05,
       "max_dd_1y": -2.13,
       "div_yield": 7.56,
       "dividends_ttm": 5.4082,
@@ -2285,7 +2285,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "SWDA.MI": {
       "ok": true,
@@ -2317,11 +2317,11 @@
       "chg_3m": 6.94,
       "chg_6m": 15.01,
       "chg_ytd": 15.19,
-      "chg_1y": 24.79,
-      "total_return_1y": 24.79,
-      "volatility_1y": 10.92,
-      "var_95_1y": 16.55,
-      "sharpe_1y": 1.72,
+      "chg_1y": 24.48,
+      "total_return_1y": 24.48,
+      "volatility_1y": 10.94,
+      "var_95_1y": 16.6,
+      "sharpe_1y": 1.71,
       "max_dd_1y": -6.48,
       "div_yield": null,
       "dividends_ttm": null,
@@ -2338,7 +2338,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "SXRM.MI": {
       "ok": false,
@@ -2354,7 +2354,7 @@
         "C5"
       ],
       "source": "levels",
-      "ts": "2026-08-05T20:52:35.475335+00:00"
+      "ts": "2026-08-07T00:49:12.149839+00:00"
     },
     "SXRV.MI": {
       "ok": false,
@@ -2373,7 +2373,7 @@
         "A5"
       ],
       "source": "levels",
-      "ts": "2026-08-05T20:52:35.475335+00:00"
+      "ts": "2026-08-07T00:49:12.149839+00:00"
     },
     "TDIV.MI": {
       "ok": true,
@@ -2397,11 +2397,11 @@
       "chg_3m": 7.04,
       "chg_6m": 9.95,
       "chg_ytd": 15.92,
-      "chg_1y": 31.88,
-      "total_return_1y": 36.53,
-      "volatility_1y": 9.01,
-      "var_95_1y": 13.07,
-      "sharpe_1y": 2.71,
+      "chg_1y": 31.45,
+      "total_return_1y": 36.1,
+      "volatility_1y": 9.03,
+      "var_95_1y": 13.11,
+      "sharpe_1y": 2.68,
       "max_dd_1y": -3.6,
       "div_yield": 4.65,
       "dividends_ttm": 2.55,
@@ -2418,7 +2418,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "UC44.MI": {
       "ok": false,
@@ -2432,7 +2432,7 @@
         "A9"
       ],
       "source": "levels",
-      "ts": "2026-08-05T20:52:35.475335+00:00"
+      "ts": "2026-08-07T00:49:12.149839+00:00"
     },
     "VAGE.MI": {
       "ok": false,
@@ -2453,7 +2453,7 @@
         "A7"
       ],
       "source": "levels",
-      "ts": "2026-08-05T20:52:35.475335+00:00"
+      "ts": "2026-08-07T00:49:12.149839+00:00"
     },
     "VAPX.MI": {
       "ok": true,
@@ -2477,11 +2477,11 @@
       "chg_3m": -3.17,
       "chg_6m": 24.52,
       "chg_ytd": 38.05,
-      "chg_1y": 58.62,
-      "total_return_1y": 61.11,
-      "volatility_1y": 26.44,
-      "var_95_1y": 40.56,
-      "sharpe_1y": 1.63,
+      "chg_1y": 58.9,
+      "total_return_1y": 61.39,
+      "volatility_1y": 26.49,
+      "var_95_1y": 40.62,
+      "sharpe_1y": 1.64,
       "max_dd_1y": -18.86,
       "div_yield": 2.49,
       "dividends_ttm": 0.9571,
@@ -2498,7 +2498,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "VHYL.MI": {
       "ok": true,
@@ -2523,11 +2523,11 @@
       "chg_3m": 8.14,
       "chg_6m": 11.55,
       "chg_ytd": 17.79,
-      "chg_1y": 29.44,
-      "total_return_1y": 32.83,
-      "volatility_1y": 8.8,
-      "var_95_1y": 12.84,
-      "sharpe_1y": 2.56,
+      "chg_1y": 29.26,
+      "total_return_1y": 32.65,
+      "volatility_1y": 8.82,
+      "var_95_1y": 12.88,
+      "sharpe_1y": 2.55,
       "max_dd_1y": -5.88,
       "div_yield": 3.39,
       "dividends_ttm": 2.7497,
@@ -2544,7 +2544,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "VUSA.MI": {
       "ok": true,
@@ -2567,11 +2567,11 @@
       "chg_3m": 6.61,
       "chg_6m": 16.36,
       "chg_ytd": 15.58,
-      "chg_1y": 24.42,
-      "total_return_1y": 25.48,
-      "volatility_1y": 11.51,
-      "var_95_1y": 17.54,
-      "sharpe_1y": 1.61,
+      "chg_1y": 24.27,
+      "total_return_1y": 25.33,
+      "volatility_1y": 11.53,
+      "var_95_1y": 17.58,
+      "sharpe_1y": 1.6,
       "max_dd_1y": -7.15,
       "div_yield": 1.06,
       "dividends_ttm": 1.3516,
@@ -2586,9 +2586,9 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 46.2,
+      "raptor_score": 57.0,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "VWCE.DE": {
       "ok": true,
@@ -2615,11 +2615,11 @@
       "chg_3m": 5.94,
       "chg_6m": 14.7,
       "chg_ytd": 15.78,
-      "chg_1y": 26.14,
-      "total_return_1y": 26.14,
-      "volatility_1y": 11.47,
-      "var_95_1y": 17.4,
-      "sharpe_1y": 1.73,
+      "chg_1y": 25.91,
+      "total_return_1y": 25.91,
+      "volatility_1y": 11.49,
+      "var_95_1y": 17.44,
+      "sharpe_1y": 1.72,
       "max_dd_1y": -6.55,
       "div_yield": null,
       "dividends_ttm": null,
@@ -2636,7 +2636,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "WENT.MI": {
       "ok": false,
@@ -2652,7 +2652,7 @@
         "C8"
       ],
       "source": "levels",
-      "ts": "2026-08-05T20:52:35.475335+00:00"
+      "ts": "2026-08-07T00:49:12.149839+00:00"
     },
     "WHCS.MI": {
       "ok": true,
@@ -2674,11 +2674,11 @@
       "chg_3m": 12.58,
       "chg_6m": 3.89,
       "chg_ytd": 4.95,
-      "chg_1y": 19.55,
-      "total_return_1y": 20.8,
-      "volatility_1y": 14.77,
-      "var_95_1y": 23.16,
-      "sharpe_1y": 0.98,
+      "chg_1y": 21.64,
+      "total_return_1y": 22.89,
+      "volatility_1y": 14.68,
+      "var_95_1y": 22.91,
+      "sharpe_1y": 1.11,
       "max_dd_1y": -10.84,
       "div_yield": 1.25,
       "dividends_ttm": 0.0866,
@@ -2686,7 +2686,7 @@
       "scenari": {},
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "WRTY.MI": {
       "ok": true,
@@ -2707,19 +2707,19 @@
       "chg_3m": 6.85,
       "chg_6m": 18.94,
       "chg_ytd": 23.57,
-      "chg_1y": 38.02,
-      "total_return_1y": 38.02,
-      "volatility_1y": 29.01,
-      "var_95_1y": 45.68,
-      "sharpe_1y": 0.99,
+      "chg_1y": 38.25,
+      "total_return_1y": 38.25,
+      "volatility_1y": 29.06,
+      "var_95_1y": 45.75,
+      "sharpe_1y": 1.0,
       "max_dd_1y": -19.56,
       "div_yield": null,
       "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {},
-      "raptor_score": 29.3,
+      "raptor_score": 43.8,
       "raptor_signal": "SELL",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "WS5X.MI": {
       "ok": true,
@@ -2738,11 +2738,11 @@
       "chg_3m": 10.33,
       "chg_6m": 9.84,
       "chg_ytd": 12.76,
-      "chg_1y": 25.89,
-      "total_return_1y": 25.89,
-      "volatility_1y": 15.79,
-      "var_95_1y": 24.53,
-      "sharpe_1y": 1.24,
+      "chg_1y": 25.64,
+      "total_return_1y": 25.64,
+      "volatility_1y": 15.82,
+      "var_95_1y": 24.58,
+      "sharpe_1y": 1.23,
       "max_dd_1y": -10.77,
       "div_yield": null,
       "dividends_ttm": null,
@@ -2753,9 +2753,9 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 64.7,
+      "raptor_score": 67.1,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "WSPE.MI": {
       "ok": true,
@@ -2786,9 +2786,9 @@
       "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {},
-      "raptor_score": 57.1,
+      "raptor_score": 66.6,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "WSPX.MI": {
       "ok": true,
@@ -2809,11 +2809,11 @@
       "chg_3m": 6.65,
       "chg_6m": 16.39,
       "chg_ytd": 15.59,
-      "chg_1y": 24.29,
-      "total_return_1y": 24.29,
-      "volatility_1y": 24.2,
-      "var_95_1y": 38.43,
-      "sharpe_1y": 0.76,
+      "chg_1y": 24.12,
+      "total_return_1y": 24.12,
+      "volatility_1y": 24.25,
+      "var_95_1y": 38.51,
+      "sharpe_1y": 0.75,
       "max_dd_1y": -17.74,
       "div_yield": null,
       "dividends_ttm": null,
@@ -2824,9 +2824,9 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 46.7,
+      "raptor_score": 57.4,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "WWRD.MI": {
       "ok": true,
@@ -2856,9 +2856,9 @@
       "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {},
-      "raptor_score": 46.9,
+      "raptor_score": 48.0,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "XAIX.MI": {
       "ok": true,
@@ -2881,11 +2881,11 @@
       "chg_3m": 7.28,
       "chg_6m": 37.36,
       "chg_ytd": 33.07,
-      "chg_1y": 47.81,
-      "total_return_1y": 47.81,
-      "volatility_1y": 23.4,
-      "var_95_1y": 36.01,
-      "sharpe_1y": 1.53,
+      "chg_1y": 47.16,
+      "total_return_1y": 47.16,
+      "volatility_1y": 23.45,
+      "var_95_1y": 36.1,
+      "sharpe_1y": 1.52,
       "max_dd_1y": -13.98,
       "div_yield": null,
       "dividends_ttm": null,
@@ -2898,7 +2898,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "XDWT.MI": {
       "ok": true,
@@ -2921,11 +2921,11 @@
       "chg_3m": 8.12,
       "chg_6m": 33.19,
       "chg_ytd": 25.26,
-      "chg_1y": 36.61,
-      "total_return_1y": 36.61,
-      "volatility_1y": 22.32,
-      "var_95_1y": 34.73,
-      "sharpe_1y": 1.25,
+      "chg_1y": 35.96,
+      "total_return_1y": 35.96,
+      "volatility_1y": 22.36,
+      "var_95_1y": 34.82,
+      "sharpe_1y": 1.23,
       "max_dd_1y": -15.5,
       "div_yield": null,
       "dividends_ttm": null,
@@ -2942,7 +2942,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "XEOD.MI": {
       "ok": false,
@@ -2958,7 +2958,7 @@
         "A2"
       ],
       "source": "levels",
-      "ts": "2026-08-05T20:52:35.475335+00:00"
+      "ts": "2026-08-07T00:49:12.149839+00:00"
     },
     "XEON.MI": {
       "ok": true,
@@ -2988,11 +2988,11 @@
       "chg_3m": 0.49,
       "chg_6m": 1.01,
       "chg_ytd": 1.16,
-      "chg_1y": 2.0,
-      "total_return_1y": 2.0,
+      "chg_1y": 1.99,
+      "total_return_1y": 1.99,
       "volatility_1y": 0.14,
       "var_95_1y": 0.1,
-      "sharpe_1y": -10.86,
+      "sharpe_1y": -10.83,
       "max_dd_1y": -0.02,
       "div_yield": null,
       "dividends_ttm": null,
@@ -3021,7 +3021,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "XREA.MI": {
       "ok": false,
@@ -3036,7 +3036,7 @@
         "A6"
       ],
       "source": "levels",
-      "ts": "2026-08-05T20:52:35.475335+00:00"
+      "ts": "2026-08-07T00:49:12.149839+00:00"
     },
     "XUCS.MI": {
       "ok": false,
@@ -3049,7 +3049,7 @@
         "A6"
       ],
       "source": "levels",
-      "ts": "2026-08-05T20:52:35.475335+00:00"
+      "ts": "2026-08-07T00:49:12.149839+00:00"
     },
     "XUTC.MI": {
       "ok": true,
@@ -3070,11 +3070,11 @@
       "chg_3m": 7.6,
       "chg_6m": 33.85,
       "chg_ytd": 24.89,
-      "chg_1y": 35.8,
-      "total_return_1y": 36.2,
-      "volatility_1y": 22.54,
-      "var_95_1y": 35.14,
-      "sharpe_1y": 1.21,
+      "chg_1y": 35.24,
+      "total_return_1y": 35.64,
+      "volatility_1y": 22.59,
+      "var_95_1y": 35.23,
+      "sharpe_1y": 1.2,
       "max_dd_1y": -16.39,
       "div_yield": 0.4,
       "dividends_ttm": 0.6008,
@@ -3095,7 +3095,7 @@
       },
       "raptor_score": null,
       "raptor_signal": null,
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "EXS1.DE": {
       "ok": true,
@@ -3112,11 +3112,11 @@
       "chg_3m": 7.24,
       "chg_6m": 5.23,
       "chg_ytd": 6.0,
-      "chg_1y": 9.05,
-      "total_return_1y": 9.05,
-      "volatility_1y": 16.0,
-      "var_95_1y": 25.77,
-      "sharpe_1y": 0.32,
+      "chg_1y": 8.66,
+      "total_return_1y": 8.66,
+      "volatility_1y": 16.03,
+      "var_95_1y": 25.84,
+      "sharpe_1y": 0.3,
       "max_dd_1y": -12.35,
       "div_yield": null,
       "dividends_ttm": null,
@@ -3135,119 +3135,47 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 71.5,
-      "raptor_signal": "BUY2",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "raptor_score": 67.7,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
-    "IS3U.DE": {
+    "SPXE.MI": {
       "ok": true,
-      "ticker": "IS3U.DE",
+      "ticker": "SPXE.MI",
       "layer": 2,
       "categoria": "azionario",
       "distribuzione": "Acc",
       "geo": "",
       "livelli": [],
       "source": "geografia/paesi",
-      "price": 68.48,
-      "chg_1w": 3.13,
-      "chg_1m": 2.82,
-      "chg_3m": 8.92,
-      "chg_6m": 7.72,
-      "chg_ytd": 9.36,
-      "chg_1y": 17.85,
-      "total_return_1y": 17.85,
-      "volatility_1y": 14.02,
-      "var_95_1y": 22.03,
-      "sharpe_1y": 0.92,
-      "max_dd_1y": -10.86,
+      "price": 18.762,
+      "chg_1w": 5.03,
+      "chg_1m": 3.3,
+      "chg_3m": 4.16,
+      "chg_6m": 12.82,
+      "chg_ytd": 12.17,
+      "chg_1y": 20.66,
+      "total_return_1y": 20.66,
+      "volatility_1y": 12.43,
+      "var_95_1y": 19.25,
+      "sharpe_1y": 1.25,
+      "max_dd_1y": -8.79,
       "div_yield": null,
       "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {
         "covid": {
-          "drawdown_pct": -33.8,
+          "drawdown_pct": -29.72,
           "label": "Covid 2020"
         },
         "inflazione": {
-          "drawdown_pct": -17.37,
+          "drawdown_pct": -25.64,
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 67.8,
+      "raptor_score": 66.9,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "UKE.MI": {
-      "ok": true,
-      "ticker": "UKE.MI",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/paesi",
-      "price": 22.565,
-      "chg_1w": 0.22,
-      "chg_1m": 2.59,
-      "chg_3m": 6.87,
-      "chg_6m": 6.92,
-      "chg_ytd": 11.16,
-      "chg_1y": 20.81,
-      "total_return_1y": 20.81,
-      "volatility_1y": 12.32,
-      "var_95_1y": 19.06,
-      "sharpe_1y": 1.27,
-      "max_dd_1y": -9.35,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {
-        "inflazione": {
-          "drawdown_pct": -3.02,
-          "label": "Inflazione 2022"
-        }
-      },
-      "raptor_score": 63.7,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "SAUS.MI": {
-      "ok": true,
-      "ticker": "SAUS.MI",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/paesi",
-      "price": 56.69,
-      "chg_1w": 1.78,
-      "chg_1m": 5.84,
-      "chg_3m": 5.02,
-      "chg_6m": 11.27,
-      "chg_ytd": 17.87,
-      "chg_1y": 18.09,
-      "total_return_1y": 18.09,
-      "volatility_1y": 13.81,
-      "var_95_1y": 21.67,
-      "sharpe_1y": 0.96,
-      "max_dd_1y": -7.42,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {
-        "covid": {
-          "drawdown_pct": -39.48,
-          "label": "Covid 2020"
-        },
-        "inflazione": {
-          "drawdown_pct": -4.65,
-          "label": "Inflazione 2022"
-        }
-      },
-      "raptor_score": 63.2,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "SRSA.MI": {
       "ok": true,
@@ -3264,11 +3192,11 @@
       "chg_3m": -2.88,
       "chg_6m": -2.13,
       "chg_ytd": 1.38,
-      "chg_1y": 32.2,
-      "total_return_1y": 32.2,
-      "volatility_1y": 30.07,
-      "var_95_1y": 47.7,
-      "sharpe_1y": 0.82,
+      "chg_1y": 31.1,
+      "total_return_1y": 31.1,
+      "volatility_1y": 30.13,
+      "var_95_1y": 47.83,
+      "sharpe_1y": 0.79,
       "max_dd_1y": -21.39,
       "div_yield": null,
       "dividends_ttm": null,
@@ -3283,9 +3211,47 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 63.0,
+      "raptor_score": 66.2,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "IS3U.DE": {
+      "ok": true,
+      "ticker": "IS3U.DE",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/paesi",
+      "price": 68.48,
+      "chg_1w": 3.13,
+      "chg_1m": 2.82,
+      "chg_3m": 8.92,
+      "chg_6m": 7.72,
+      "chg_ytd": 9.36,
+      "chg_1y": 17.52,
+      "total_return_1y": 17.52,
+      "volatility_1y": 14.04,
+      "var_95_1y": 22.09,
+      "sharpe_1y": 0.9,
+      "max_dd_1y": -10.86,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "covid": {
+          "drawdown_pct": -33.8,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": -17.37,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 64.7,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "EST.MI": {
       "ok": true,
@@ -3302,11 +3268,11 @@
       "chg_3m": 11.24,
       "chg_6m": 18.46,
       "chg_ytd": 24.72,
-      "chg_1y": 46.89,
-      "total_return_1y": 46.89,
-      "volatility_1y": 20.49,
-      "var_95_1y": 31.27,
-      "sharpe_1y": 1.72,
+      "chg_1y": 44.29,
+      "total_return_1y": 44.29,
+      "volatility_1y": 20.47,
+      "var_95_1y": 31.33,
+      "sharpe_1y": 1.64,
       "max_dd_1y": -9.35,
       "div_yield": null,
       "dividends_ttm": null,
@@ -3321,9 +3287,9 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 62.3,
+      "raptor_score": 64.1,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "C40.PA": {
       "ok": true,
@@ -3342,8 +3308,8 @@
       "chg_ytd": 6.22,
       "chg_1y": 14.32,
       "total_return_1y": 14.32,
-      "volatility_1y": 15.53,
-      "var_95_1y": 24.72,
+      "volatility_1y": 15.56,
+      "var_95_1y": 24.77,
       "sharpe_1y": 0.63,
       "max_dd_1y": -12.87,
       "div_yield": null,
@@ -3363,9 +3329,161 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 61.7,
+      "raptor_score": 63.0,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "LEER.DE": {
+      "ok": true,
+      "ticker": "LEER.DE",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/paesi",
+      "price": 47.19,
+      "chg_1w": 3.75,
+      "chg_1m": 7.47,
+      "chg_3m": 11.09,
+      "chg_6m": 18.02,
+      "chg_ytd": 24.48,
+      "chg_1y": 43.76,
+      "total_return_1y": 43.76,
+      "volatility_1y": 20.97,
+      "var_95_1y": 32.18,
+      "sharpe_1y": 1.58,
+      "max_dd_1y": -9.92,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "covid": {
+          "drawdown_pct": -36.36,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": -39.35,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 62.2,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "LCCN.MI": {
+      "ok": true,
+      "ticker": "LCCN.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/paesi",
+      "price": 18.626,
+      "chg_1w": 0.29,
+      "chg_1m": 7.21,
+      "chg_3m": -2.27,
+      "chg_6m": -4.83,
+      "chg_ytd": -7.54,
+      "chg_1y": 0.24,
+      "total_return_1y": 0.24,
+      "volatility_1y": 19.42,
+      "var_95_1y": 31.92,
+      "sharpe_1y": -0.17,
+      "max_dd_1y": -20.78,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "covid": {
+          "drawdown_pct": -17.08,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": -23.9,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 61.4,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "SAUS.MI": {
+      "ok": true,
+      "ticker": "SAUS.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/paesi",
+      "price": 56.69,
+      "chg_1w": 1.78,
+      "chg_1m": 5.84,
+      "chg_3m": 5.02,
+      "chg_6m": 11.27,
+      "chg_ytd": 17.87,
+      "chg_1y": 17.49,
+      "total_return_1y": 17.49,
+      "volatility_1y": 13.83,
+      "var_95_1y": 21.73,
+      "sharpe_1y": 0.93,
+      "max_dd_1y": -7.42,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "covid": {
+          "drawdown_pct": -39.48,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": -4.65,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 61.3,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "XESD.DE": {
+      "ok": true,
+      "ticker": "XESD.DE",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/paesi",
+      "price": 47.345,
+      "chg_1w": 3.6,
+      "chg_1m": 2.63,
+      "chg_3m": 14.3,
+      "chg_6m": 15.01,
+      "chg_ytd": 18.43,
+      "chg_1y": 45.17,
+      "total_return_1y": 48.42,
+      "volatility_1y": 17.24,
+      "var_95_1y": 26.01,
+      "sharpe_1y": 1.96,
+      "max_dd_1y": -10.27,
+      "div_yield": 3.25,
+      "dividends_ttm": 1.5389,
+      "bond_profile": null,
+      "scenari": {
+        "covid": {
+          "drawdown_pct": -36.39,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": -15.04,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 61.2,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "AUHEUA.MI": {
       "ok": true,
@@ -3384,8 +3502,8 @@
       "chg_ytd": 8.89,
       "chg_1y": 7.03,
       "total_return_1y": 7.03,
-      "volatility_1y": 12.03,
-      "var_95_1y": 19.36,
+      "volatility_1y": 12.05,
+      "var_95_1y": 19.4,
       "sharpe_1y": 0.28,
       "max_dd_1y": -7.75,
       "div_yield": null,
@@ -3401,119 +3519,9 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 61.2,
+      "raptor_score": 59.2,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "LEER.DE": {
-      "ok": true,
-      "ticker": "LEER.DE",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/paesi",
-      "price": 47.19,
-      "chg_1w": 3.75,
-      "chg_1m": 7.47,
-      "chg_3m": 11.09,
-      "chg_6m": 18.02,
-      "chg_ytd": 24.48,
-      "chg_1y": 46.17,
-      "total_return_1y": 46.17,
-      "volatility_1y": 20.98,
-      "var_95_1y": 32.11,
-      "sharpe_1y": 1.65,
-      "max_dd_1y": -9.92,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {
-        "covid": {
-          "drawdown_pct": -36.36,
-          "label": "Covid 2020"
-        },
-        "inflazione": {
-          "drawdown_pct": -39.35,
-          "label": "Inflazione 2022"
-        }
-      },
-      "raptor_score": 61.0,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "HSTE.MI": {
-      "ok": true,
-      "ticker": "HSTE.MI",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/paesi",
-      "price": 5.907,
-      "chg_1w": -0.08,
-      "chg_1m": 7.81,
-      "chg_3m": -3.1,
-      "chg_6m": -6.53,
-      "chg_ytd": -13.75,
-      "chg_1y": -10.55,
-      "total_return_1y": -10.55,
-      "volatility_1y": 27.43,
-      "var_95_1y": 45.83,
-      "sharpe_1y": -0.54,
-      "max_dd_1y": -33.59,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {
-        "inflazione": {
-          "drawdown_pct": -33.86,
-          "label": "Inflazione 2022"
-        }
-      },
-      "raptor_score": 60.5,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "XESD.DE": {
-      "ok": true,
-      "ticker": "XESD.DE",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/paesi",
-      "price": 47.345,
-      "chg_1w": 3.6,
-      "chg_1m": 2.63,
-      "chg_3m": 14.3,
-      "chg_6m": 15.01,
-      "chg_ytd": 18.43,
-      "chg_1y": 46.5,
-      "total_return_1y": 49.75,
-      "volatility_1y": 17.22,
-      "var_95_1y": 25.94,
-      "sharpe_1y": 2.01,
-      "max_dd_1y": -10.27,
-      "div_yield": 3.25,
-      "dividends_ttm": 1.5389,
-      "bond_profile": null,
-      "scenari": {
-        "covid": {
-          "drawdown_pct": -36.39,
-          "label": "Covid 2020"
-        },
-        "inflazione": {
-          "drawdown_pct": -15.04,
-          "label": "Inflazione 2022"
-        }
-      },
-      "raptor_score": 59.8,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "IAEX.AS": {
       "ok": true,
@@ -3530,11 +3538,11 @@
       "chg_3m": 10.24,
       "chg_6m": 13.29,
       "chg_ytd": 16.44,
-      "chg_1y": 27.95,
-      "total_return_1y": 29.83,
-      "volatility_1y": 13.17,
-      "var_95_1y": 20.12,
-      "sharpe_1y": 1.59,
+      "chg_1y": 28.4,
+      "total_return_1y": 30.28,
+      "volatility_1y": 13.19,
+      "var_95_1y": 20.13,
+      "sharpe_1y": 1.62,
       "max_dd_1y": -6.78,
       "div_yield": 1.88,
       "dividends_ttm": 2.0876,
@@ -3553,47 +3561,47 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 59.0,
+      "raptor_score": 57.4,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
-    "SPXE.MI": {
+    "FMI.MI": {
       "ok": true,
-      "ticker": "SPXE.MI",
+      "ticker": "FMI.MI",
       "layer": 2,
       "categoria": "azionario",
       "distribuzione": "Acc",
       "geo": "",
       "livelli": [],
       "source": "geografia/paesi",
-      "price": 18.762,
-      "chg_1w": 5.03,
-      "chg_1m": 3.3,
-      "chg_3m": 4.16,
-      "chg_6m": 12.82,
-      "chg_ytd": 12.17,
-      "chg_1y": 21.39,
-      "total_return_1y": 21.39,
-      "volatility_1y": 12.42,
-      "var_95_1y": 19.2,
-      "sharpe_1y": 1.29,
-      "max_dd_1y": -8.79,
+      "price": 131.9,
+      "chg_1w": 4.17,
+      "chg_1m": 1.03,
+      "chg_3m": 9.41,
+      "chg_6m": 20.17,
+      "chg_ytd": 20.77,
+      "chg_1y": 34.83,
+      "total_return_1y": 34.83,
+      "volatility_1y": 16.97,
+      "var_95_1y": 26.03,
+      "sharpe_1y": 1.56,
+      "max_dd_1y": -10.84,
       "div_yield": null,
       "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {
         "covid": {
-          "drawdown_pct": -29.72,
+          "drawdown_pct": -37.96,
           "label": "Covid 2020"
         },
         "inflazione": {
-          "drawdown_pct": -25.64,
+          "drawdown_pct": -24.21,
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 58.0,
+      "raptor_score": 56.9,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "WMIB.MI": {
       "ok": true,
@@ -3610,11 +3618,11 @@
       "chg_3m": 9.22,
       "chg_6m": 18.75,
       "chg_ytd": 20.38,
-      "chg_1y": 35.19,
-      "total_return_1y": 35.19,
-      "volatility_1y": 15.9,
-      "var_95_1y": 24.25,
-      "sharpe_1y": 1.68,
+      "chg_1y": 34.27,
+      "total_return_1y": 34.27,
+      "volatility_1y": 15.92,
+      "var_95_1y": 24.32,
+      "sharpe_1y": 1.64,
       "max_dd_1y": -9.53,
       "div_yield": null,
       "dividends_ttm": null,
@@ -3625,89 +3633,9 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 57.5,
+      "raptor_score": 56.6,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "CN1.PA": {
-      "ok": true,
-      "ticker": "CN1.PA",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/paesi",
-      "price": 716.0,
-      "chg_1w": 0.53,
-      "chg_1m": 0.9,
-      "chg_3m": 3.77,
-      "chg_6m": 5.39,
-      "chg_ytd": 9.2,
-      "chg_1y": 22.31,
-      "total_return_1y": 22.31,
-      "volatility_1y": 14.86,
-      "var_95_1y": 23.19,
-      "sharpe_1y": 1.1,
-      "max_dd_1y": -9.33,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {
-        "2008": {
-          "drawdown_pct": -37.86,
-          "label": "Crisi 2008"
-        },
-        "covid": {
-          "drawdown_pct": -29.31,
-          "label": "Covid 2020"
-        },
-        "inflazione": {
-          "drawdown_pct": -21.43,
-          "label": "Inflazione 2022"
-        }
-      },
-      "raptor_score": 57.4,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "LCCN.MI": {
-      "ok": true,
-      "ticker": "LCCN.MI",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/paesi",
-      "price": 18.626,
-      "chg_1w": 0.29,
-      "chg_1m": 7.21,
-      "chg_3m": -2.27,
-      "chg_6m": -4.83,
-      "chg_ytd": -7.54,
-      "chg_1y": -0.49,
-      "total_return_1y": -0.49,
-      "volatility_1y": 19.39,
-      "var_95_1y": 31.93,
-      "sharpe_1y": -0.21,
-      "max_dd_1y": -20.78,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {
-        "covid": {
-          "drawdown_pct": -17.08,
-          "label": "Covid 2020"
-        },
-        "inflazione": {
-          "drawdown_pct": -23.9,
-          "label": "Inflazione 2022"
-        }
-      },
-      "raptor_score": 57.3,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "CSMIB.MI": {
       "ok": true,
@@ -3724,11 +3652,11 @@
       "chg_3m": 9.58,
       "chg_6m": 19.49,
       "chg_ytd": 19.84,
-      "chg_1y": 36.66,
-      "total_return_1y": 36.66,
-      "volatility_1y": 16.04,
-      "var_95_1y": 24.37,
-      "sharpe_1y": 1.78,
+      "chg_1y": 35.77,
+      "total_return_1y": 35.77,
+      "volatility_1y": 16.06,
+      "var_95_1y": 24.44,
+      "sharpe_1y": 1.74,
       "max_dd_1y": -9.72,
       "div_yield": null,
       "dividends_ttm": null,
@@ -3743,9 +3671,118 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 55.1,
+      "raptor_score": 56.2,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "DJE.PA": {
+      "ok": true,
+      "ticker": "DJE.PA",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/paesi",
+      "price": 478.65,
+      "chg_1w": 3.54,
+      "chg_1m": 2.13,
+      "chg_3m": 12.25,
+      "chg_6m": 12.65,
+      "chg_ytd": 15.7,
+      "chg_1y": 25.49,
+      "total_return_1y": 27.18,
+      "volatility_1y": 11.52,
+      "var_95_1y": 17.53,
+      "sharpe_1y": 1.65,
+      "max_dd_1y": -7.34,
+      "div_yield": 1.69,
+      "dividends_ttm": 8.1,
+      "bond_profile": null,
+      "scenari": {
+        "2008": {
+          "drawdown_pct": -21.97,
+          "label": "Crisi 2008"
+        },
+        "covid": {
+          "drawdown_pct": -31.29,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": -4.89,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 55.7,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "FLXI.MI": {
+      "ok": true,
+      "ticker": "FLXI.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/paesi",
+      "price": 36.535,
+      "chg_1w": 0.8,
+      "chg_1m": 0.77,
+      "chg_3m": 5.75,
+      "chg_6m": -2.56,
+      "chg_ytd": -5.7,
+      "chg_1y": -1.92,
+      "total_return_1y": -1.92,
+      "volatility_1y": 15.04,
+      "var_95_1y": 24.86,
+      "sharpe_1y": -0.36,
+      "max_dd_1y": -16.91,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "covid": {
+          "drawdown_pct": -32.62,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": 2.83,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 54.4,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "XFVT.DE": {
+      "ok": true,
+      "ticker": "XFVT.DE",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/paesi",
+      "price": 34.8,
+      "chg_1w": 1.56,
+      "chg_1m": -4.15,
+      "chg_3m": -6.1,
+      "chg_6m": 6.02,
+      "chg_ytd": -3.33,
+      "chg_1y": 14.66,
+      "total_return_1y": 14.66,
+      "volatility_1y": 27.78,
+      "var_95_1y": 44.84,
+      "sharpe_1y": 0.36,
+      "max_dd_1y": -17.76,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {},
+      "raptor_score": 54.1,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "IMIB.MI": {
       "ok": true,
@@ -3785,152 +3822,9 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 54.7,
+      "raptor_score": 53.9,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "XFVT.DE": {
-      "ok": true,
-      "ticker": "XFVT.DE",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/paesi",
-      "price": 34.64,
-      "chg_1w": 3.73,
-      "chg_1m": -4.49,
-      "chg_3m": -6.45,
-      "chg_6m": 4.94,
-      "chg_ytd": -3.78,
-      "chg_1y": 16.01,
-      "total_return_1y": 16.01,
-      "volatility_1y": 27.82,
-      "var_95_1y": 44.84,
-      "sharpe_1y": 0.41,
-      "max_dd_1y": -17.76,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {},
-      "raptor_score": 54.1,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "FMI.MI": {
-      "ok": true,
-      "ticker": "FMI.MI",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/paesi",
-      "price": 131.9,
-      "chg_1w": 4.17,
-      "chg_1m": 1.03,
-      "chg_3m": 9.41,
-      "chg_6m": 20.17,
-      "chg_ytd": 20.77,
-      "chg_1y": 35.71,
-      "total_return_1y": 35.71,
-      "volatility_1y": 16.95,
-      "var_95_1y": 25.96,
-      "sharpe_1y": 1.6,
-      "max_dd_1y": -10.84,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {
-        "covid": {
-          "drawdown_pct": -37.96,
-          "label": "Covid 2020"
-        },
-        "inflazione": {
-          "drawdown_pct": -24.21,
-          "label": "Inflazione 2022"
-        }
-      },
-      "raptor_score": 53.0,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "FLXI.MI": {
-      "ok": true,
-      "ticker": "FLXI.MI",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/paesi",
-      "price": 36.535,
-      "chg_1w": 0.8,
-      "chg_1m": 0.77,
-      "chg_3m": 5.75,
-      "chg_6m": -2.56,
-      "chg_ytd": -5.7,
-      "chg_1y": -2.87,
-      "total_return_1y": -2.87,
-      "volatility_1y": 15.04,
-      "var_95_1y": 24.93,
-      "sharpe_1y": -0.43,
-      "max_dd_1y": -16.91,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {
-        "covid": {
-          "drawdown_pct": -32.62,
-          "label": "Covid 2020"
-        },
-        "inflazione": {
-          "drawdown_pct": 2.83,
-          "label": "Inflazione 2022"
-        }
-      },
-      "raptor_score": 51.6,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "XCS3.DE": {
-      "ok": true,
-      "ticker": "XCS3.DE",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/paesi",
-      "price": 12.938,
-      "chg_1w": 1.16,
-      "chg_1m": 3.64,
-      "chg_3m": -0.9,
-      "chg_6m": 2.65,
-      "chg_ytd": 8.63,
-      "chg_1y": 23.88,
-      "total_return_1y": 23.88,
-      "volatility_1y": 14.03,
-      "var_95_1y": 21.73,
-      "sharpe_1y": 1.28,
-      "max_dd_1y": -7.85,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {
-        "covid": {
-          "drawdown_pct": -22.49,
-          "label": "Covid 2020"
-        },
-        "inflazione": {
-          "drawdown_pct": -4.97,
-          "label": "Inflazione 2022"
-        }
-      },
-      "raptor_score": 49.4,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "WRD.PA": {
       "ok": true,
@@ -3947,10 +3841,10 @@
       "chg_3m": 6.87,
       "chg_6m": 14.91,
       "chg_ytd": 15.11,
-      "chg_1y": 24.63,
-      "total_return_1y": 25.78,
-      "volatility_1y": 23.74,
-      "var_95_1y": 37.68,
+      "chg_1y": 24.43,
+      "total_return_1y": 25.58,
+      "volatility_1y": 23.79,
+      "var_95_1y": 37.76,
       "sharpe_1y": 0.77,
       "max_dd_1y": -16.34,
       "div_yield": 1.15,
@@ -3966,161 +3860,81 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 49.3,
+      "raptor_score": 52.7,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
-    "DJE.PA": {
+    "XCS3.DE": {
       "ok": true,
-      "ticker": "DJE.PA",
+      "ticker": "XCS3.DE",
       "layer": 2,
       "categoria": "azionario",
       "distribuzione": "Acc",
       "geo": "",
       "livelli": [],
       "source": "geografia/paesi",
-      "price": 478.65,
-      "chg_1w": 3.54,
-      "chg_1m": 2.13,
-      "chg_3m": 12.25,
-      "chg_6m": 12.65,
-      "chg_ytd": 15.7,
-      "chg_1y": 25.42,
-      "total_return_1y": 27.11,
-      "volatility_1y": 11.5,
-      "var_95_1y": 17.5,
-      "sharpe_1y": 1.64,
-      "max_dd_1y": -7.34,
-      "div_yield": 1.69,
-      "dividends_ttm": 8.1,
-      "bond_profile": null,
-      "scenari": {
-        "2008": {
-          "drawdown_pct": -21.97,
-          "label": "Crisi 2008"
-        },
-        "covid": {
-          "drawdown_pct": -31.29,
-          "label": "Covid 2020"
-        },
-        "inflazione": {
-          "drawdown_pct": -4.89,
-          "label": "Inflazione 2022"
-        }
-      },
-      "raptor_score": 48.1,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "SPY5.MI": {
-      "ok": true,
-      "ticker": "SPY5.MI",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/paesi",
-      "price": 670.1,
-      "chg_1w": 3.6,
-      "chg_1m": 2.39,
-      "chg_3m": 6.7,
-      "chg_6m": 16.5,
-      "chg_ytd": 15.72,
-      "chg_1y": 24.52,
-      "total_return_1y": 25.62,
-      "volatility_1y": 11.53,
-      "var_95_1y": 17.58,
-      "sharpe_1y": 1.61,
-      "max_dd_1y": -7.17,
-      "div_yield": 1.1,
-      "dividends_ttm": 7.3728,
+      "price": 12.938,
+      "chg_1w": 1.16,
+      "chg_1m": 3.64,
+      "chg_3m": -0.9,
+      "chg_6m": 2.65,
+      "chg_ytd": 8.63,
+      "chg_1y": 23.71,
+      "total_return_1y": 23.71,
+      "volatility_1y": 14.06,
+      "var_95_1y": 21.78,
+      "sharpe_1y": 1.28,
+      "max_dd_1y": -7.85,
+      "div_yield": null,
+      "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {
         "covid": {
-          "drawdown_pct": -29.52,
+          "drawdown_pct": -22.49,
           "label": "Covid 2020"
         },
         "inflazione": {
-          "drawdown_pct": -11.58,
+          "drawdown_pct": -4.97,
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 42.6,
+      "raptor_score": 49.5,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
-    "SPXJ.MI": {
+    "MCHN.MI": {
       "ok": true,
-      "ticker": "SPXJ.MI",
+      "ticker": "MCHN.MI",
       "layer": 2,
       "categoria": "azionario",
       "distribuzione": "Acc",
       "geo": "",
       "livelli": [],
       "source": "geografia/paesi",
-      "price": 50.13,
-      "chg_1w": 0.45,
-      "chg_1m": 5.68,
-      "chg_3m": 5.41,
-      "chg_6m": 10.11,
-      "chg_ytd": 15.68,
-      "chg_1y": 19.04,
-      "total_return_1y": 22.13,
-      "volatility_1y": 11.96,
-      "var_95_1y": 18.56,
-      "sharpe_1y": 1.18,
-      "max_dd_1y": -5.9,
-      "div_yield": 3.09,
-      "dividends_ttm": 1.551,
-      "bond_profile": null,
-      "scenari": {
-        "covid": {
-          "drawdown_pct": -32.62,
-          "label": "Covid 2020"
-        },
-        "inflazione": {
-          "drawdown_pct": -5.49,
-          "label": "Inflazione 2022"
-        }
-      },
-      "raptor_score": 40.7,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "SVE.MI": {
-      "ok": true,
-      "ticker": "SVE.MI",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/paesi",
-      "price": 20.93,
+      "price": 26.725,
       "chg_1w": 0.7,
-      "chg_1m": 1.41,
-      "chg_3m": 11.26,
-      "chg_6m": 11.11,
-      "chg_ytd": 13.22,
-      "chg_1y": 27.28,
-      "total_return_1y": 27.28,
-      "volatility_1y": 12.07,
-      "var_95_1y": 18.32,
-      "sharpe_1y": 1.73,
-      "max_dd_1y": -10.9,
+      "chg_1m": 3.11,
+      "chg_3m": -3.14,
+      "chg_6m": -1.62,
+      "chg_ytd": -2.78,
+      "chg_1y": 7.63,
+      "total_return_1y": 7.63,
+      "volatility_1y": 17.25,
+      "var_95_1y": 27.9,
+      "sharpe_1y": 0.23,
+      "max_dd_1y": -11.35,
       "div_yield": null,
       "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {
         "inflazione": {
-          "drawdown_pct": -21.1,
+          "drawdown_pct": -21.8,
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 40.2,
+      "raptor_score": 49.2,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "CSNDX.MI": {
       "ok": true,
@@ -4137,11 +3951,11 @@
       "chg_3m": 3.48,
       "chg_6m": 22.96,
       "chg_ytd": 18.43,
-      "chg_1y": 29.7,
-      "total_return_1y": 29.7,
-      "volatility_1y": 17.4,
-      "var_95_1y": 26.94,
-      "sharpe_1y": 1.33,
+      "chg_1y": 29.27,
+      "total_return_1y": 29.27,
+      "volatility_1y": 17.43,
+      "var_95_1y": 27.01,
+      "sharpe_1y": 1.31,
       "max_dd_1y": -9.95,
       "div_yield": null,
       "dividends_ttm": null,
@@ -4156,76 +3970,47 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 38.1,
+      "raptor_score": 48.5,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
-    "WNAS.MI": {
+    "SPY5.MI": {
       "ok": true,
-      "ticker": "WNAS.MI",
+      "ticker": "SPY5.MI",
       "layer": 2,
       "categoria": "azionario",
       "distribuzione": "Acc",
       "geo": "",
       "livelli": [],
       "source": "geografia/paesi",
-      "price": 37.61,
-      "chg_1w": 6.42,
-      "chg_1m": 1.02,
-      "chg_3m": 3.25,
-      "chg_6m": 22.67,
-      "chg_ytd": 19.74,
-      "chg_1y": 28.93,
-      "total_return_1y": 28.93,
-      "volatility_1y": 27.52,
-      "var_95_1y": 43.66,
-      "sharpe_1y": 0.8,
-      "max_dd_1y": -20.23,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {},
-      "raptor_score": 37.4,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "XPQP.DE": {
-      "ok": true,
-      "ticker": "XPQP.DE",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/paesi",
-      "price": 1.3936,
-      "chg_1w": 0.3,
-      "chg_1m": 2.47,
-      "chg_3m": 8.71,
-      "chg_6m": 2.32,
-      "chg_ytd": 6.4,
-      "chg_1y": 1.95,
-      "total_return_1y": 1.95,
-      "volatility_1y": 29.39,
-      "var_95_1y": 48.23,
-      "sharpe_1y": -0.05,
-      "max_dd_1y": -19.19,
-      "div_yield": null,
-      "dividends_ttm": null,
+      "price": 670.1,
+      "chg_1w": 3.6,
+      "chg_1m": 2.39,
+      "chg_3m": 6.7,
+      "chg_6m": 16.5,
+      "chg_ytd": 15.72,
+      "chg_1y": 24.38,
+      "total_return_1y": 25.48,
+      "volatility_1y": 11.56,
+      "var_95_1y": 17.62,
+      "sharpe_1y": 1.61,
+      "max_dd_1y": -7.17,
+      "div_yield": 1.1,
+      "dividends_ttm": 7.3728,
       "bond_profile": null,
       "scenari": {
         "covid": {
-          "drawdown_pct": -35.77,
+          "drawdown_pct": -29.52,
           "label": "Covid 2020"
         },
         "inflazione": {
-          "drawdown_pct": -16.6,
+          "drawdown_pct": -11.58,
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 37.3,
+      "raptor_score": 48.3,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "LGUS.MI": {
       "ok": true,
@@ -4242,11 +4027,11 @@
       "chg_3m": 6.77,
       "chg_6m": 16.74,
       "chg_ytd": 15.38,
-      "chg_1y": 24.06,
-      "total_return_1y": 24.06,
-      "volatility_1y": 11.86,
-      "var_95_1y": 18.14,
-      "sharpe_1y": 1.54,
+      "chg_1y": 23.94,
+      "total_return_1y": 23.94,
+      "volatility_1y": 11.89,
+      "var_95_1y": 18.18,
+      "sharpe_1y": 1.53,
       "max_dd_1y": -7.48,
       "div_yield": null,
       "dividends_ttm": null,
@@ -4261,9 +4046,350 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 37.2,
+      "raptor_score": 47.9,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "WNAS.MI": {
+      "ok": true,
+      "ticker": "WNAS.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/paesi",
+      "price": 37.61,
+      "chg_1w": 6.42,
+      "chg_1m": 1.02,
+      "chg_3m": 3.25,
+      "chg_6m": 22.67,
+      "chg_ytd": 19.74,
+      "chg_1y": 28.47,
+      "total_return_1y": 28.47,
+      "volatility_1y": 27.57,
+      "var_95_1y": 43.76,
+      "sharpe_1y": 0.79,
+      "max_dd_1y": -20.23,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {},
+      "raptor_score": 47.5,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "QTOP.MI": {
+      "ok": true,
+      "ticker": "QTOP.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/paesi",
+      "price": 6.076,
+      "chg_1w": 8.13,
+      "chg_1m": 1.35,
+      "chg_3m": 1.52,
+      "chg_6m": 23.73,
+      "chg_ytd": 20.01,
+      "chg_1y": 30.32,
+      "total_return_1y": 30.32,
+      "volatility_1y": 18.84,
+      "var_95_1y": 29.31,
+      "sharpe_1y": 1.24,
+      "max_dd_1y": -11.16,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {},
+      "raptor_score": 47.0,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "XPQP.DE": {
+      "ok": true,
+      "ticker": "XPQP.DE",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/paesi",
+      "price": 1.3936,
+      "chg_1w": 0.3,
+      "chg_1m": 2.47,
+      "chg_3m": 8.71,
+      "chg_6m": 2.32,
+      "chg_ytd": 6.4,
+      "chg_1y": 1.5,
+      "total_return_1y": 1.5,
+      "volatility_1y": 29.45,
+      "var_95_1y": 48.35,
+      "sharpe_1y": -0.07,
+      "max_dd_1y": -19.19,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "covid": {
+          "drawdown_pct": -35.77,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": -16.6,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 44.2,
+      "raptor_signal": "SELL",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "HSTE.MI": {
+      "ok": true,
+      "ticker": "HSTE.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/paesi",
+      "price": 5.907,
+      "chg_1w": -0.08,
+      "chg_1m": 7.81,
+      "chg_3m": -3.1,
+      "chg_6m": -6.53,
+      "chg_ytd": -13.75,
+      "chg_1y": -9.86,
+      "total_return_1y": -9.86,
+      "volatility_1y": 27.48,
+      "var_95_1y": 45.86,
+      "sharpe_1y": -0.51,
+      "max_dd_1y": -33.59,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "inflazione": {
+          "drawdown_pct": -33.86,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 44.1,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "INDO.PA": {
+      "ok": true,
+      "ticker": "INDO.PA",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/paesi",
+      "price": 73.1,
+      "chg_1w": 3.39,
+      "chg_1m": 3.35,
+      "chg_3m": -9.23,
+      "chg_6m": -28.54,
+      "chg_ytd": -33.31,
+      "chg_1y": -31.98,
+      "total_return_1y": -31.98,
+      "volatility_1y": 28.33,
+      "var_95_1y": 49.01,
+      "sharpe_1y": -1.47,
+      "max_dd_1y": -47.36,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "covid": {
+          "drawdown_pct": -44.42,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": 19.04,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 41.2,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "SP1E.MI": {
+      "ok": true,
+      "ticker": "SP1E.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/paesi",
+      "price": 10.552,
+      "chg_1w": 0.23,
+      "chg_1m": 0.67,
+      "chg_3m": 8.77,
+      "chg_6m": 13.11,
+      "chg_ytd": 15.08,
+      "chg_1y": 21.11,
+      "total_return_1y": 21.11,
+      "volatility_1y": 10.5,
+      "var_95_1y": 16.06,
+      "sharpe_1y": 1.51,
+      "max_dd_1y": -5.33,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {},
+      "raptor_score": 40.7,
+      "raptor_signal": "SELL",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "SVE.MI": {
+      "ok": true,
+      "ticker": "SVE.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/paesi",
+      "price": 20.93,
+      "chg_1w": 0.7,
+      "chg_1m": 1.41,
+      "chg_3m": 11.26,
+      "chg_6m": 11.11,
+      "chg_ytd": 13.22,
+      "chg_1y": 28.23,
+      "total_return_1y": 28.23,
+      "volatility_1y": 12.06,
+      "var_95_1y": 18.25,
+      "sharpe_1y": 1.8,
+      "max_dd_1y": -10.9,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "inflazione": {
+          "drawdown_pct": -21.1,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 38.8,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "UKE.MI": {
+      "ok": true,
+      "ticker": "UKE.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/paesi",
+      "price": 22.565,
+      "chg_1w": 0.04,
+      "chg_1m": 2.17,
+      "chg_3m": 6.87,
+      "chg_6m": 6.94,
+      "chg_ytd": 11.16,
+      "chg_1y": 20.44,
+      "total_return_1y": 20.44,
+      "volatility_1y": 12.32,
+      "var_95_1y": 19.08,
+      "sharpe_1y": 1.24,
+      "max_dd_1y": -9.35,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "inflazione": {
+          "drawdown_pct": -3.02,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 38.7,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "FLXU.MI": {
+      "ok": true,
+      "ticker": "FLXU.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/paesi",
+      "price": 67.8,
+      "chg_1w": 3.8,
+      "chg_1m": 2.36,
+      "chg_3m": 6.42,
+      "chg_6m": 14.06,
+      "chg_ytd": 16.86,
+      "chg_1y": 24.56,
+      "total_return_1y": 24.56,
+      "volatility_1y": 11.55,
+      "var_95_1y": 17.61,
+      "sharpe_1y": 1.62,
+      "max_dd_1y": -6.01,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "covid": {
+          "drawdown_pct": -25.65,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": -3.4,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 38.2,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "SPXJ.MI": {
+      "ok": true,
+      "ticker": "SPXJ.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/paesi",
+      "price": 50.13,
+      "chg_1w": 0.45,
+      "chg_1m": 5.68,
+      "chg_3m": 5.41,
+      "chg_6m": 10.11,
+      "chg_ytd": 15.68,
+      "chg_1y": 18.18,
+      "total_return_1y": 21.27,
+      "volatility_1y": 11.96,
+      "var_95_1y": 18.61,
+      "sharpe_1y": 1.12,
+      "max_dd_1y": -5.9,
+      "div_yield": 3.09,
+      "dividends_ttm": 1.551,
+      "bond_profile": null,
+      "scenari": {
+        "covid": {
+          "drawdown_pct": -32.62,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": -5.49,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 36.7,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "XSMI.MI": {
       "ok": true,
@@ -4280,11 +4406,11 @@
       "chg_3m": 8.81,
       "chg_6m": 8.08,
       "chg_ytd": 10.88,
-      "chg_1y": 25.49,
-      "total_return_1y": 28.13,
-      "volatility_1y": 13.36,
-      "var_95_1y": 20.53,
-      "sharpe_1y": 1.45,
+      "chg_1y": 27.15,
+      "total_return_1y": 29.79,
+      "volatility_1y": 13.31,
+      "var_95_1y": 20.36,
+      "sharpe_1y": 1.56,
       "max_dd_1y": -11.92,
       "div_yield": 2.64,
       "dividends_ttm": 4.2989,
@@ -4303,186 +4429,9 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 34.6,
+      "raptor_score": 35.1,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "FLXU.MI": {
-      "ok": true,
-      "ticker": "FLXU.MI",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/paesi",
-      "price": 67.8,
-      "chg_1w": 3.8,
-      "chg_1m": 2.36,
-      "chg_3m": 6.42,
-      "chg_6m": 14.06,
-      "chg_ytd": 16.86,
-      "chg_1y": 25.02,
-      "total_return_1y": 25.02,
-      "volatility_1y": 11.53,
-      "var_95_1y": 17.56,
-      "sharpe_1y": 1.65,
-      "max_dd_1y": -6.01,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {
-        "covid": {
-          "drawdown_pct": -25.65,
-          "label": "Covid 2020"
-        },
-        "inflazione": {
-          "drawdown_pct": -3.4,
-          "label": "Inflazione 2022"
-        }
-      },
-      "raptor_score": 34.3,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "INDO.PA": {
-      "ok": true,
-      "ticker": "INDO.PA",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/paesi",
-      "price": 73.1,
-      "chg_1w": 3.39,
-      "chg_1m": 3.35,
-      "chg_3m": -9.23,
-      "chg_6m": -28.54,
-      "chg_ytd": -33.31,
-      "chg_1y": -32.77,
-      "total_return_1y": -32.77,
-      "volatility_1y": 28.29,
-      "var_95_1y": 49.01,
-      "sharpe_1y": -1.51,
-      "max_dd_1y": -47.36,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {
-        "covid": {
-          "drawdown_pct": -44.42,
-          "label": "Covid 2020"
-        },
-        "inflazione": {
-          "drawdown_pct": 19.04,
-          "label": "Inflazione 2022"
-        }
-      },
-      "raptor_score": 33.7,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "MCHN.MI": {
-      "ok": true,
-      "ticker": "MCHN.MI",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/paesi",
-      "price": 26.725,
-      "chg_1w": 0.7,
-      "chg_1m": 3.11,
-      "chg_3m": -3.14,
-      "chg_6m": -1.62,
-      "chg_ytd": -2.78,
-      "chg_1y": 7.37,
-      "total_return_1y": 7.37,
-      "volatility_1y": 17.21,
-      "var_95_1y": 27.87,
-      "sharpe_1y": 0.21,
-      "max_dd_1y": -11.35,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {
-        "inflazione": {
-          "drawdown_pct": -21.8,
-          "label": "Inflazione 2022"
-        }
-      },
-      "raptor_score": 33.2,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "D5BI.DE": {
-      "ok": true,
-      "ticker": "D5BI.DE",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/paesi",
-      "price": 8.069,
-      "chg_1w": 1.61,
-      "chg_1m": 2.2,
-      "chg_3m": -0.98,
-      "chg_6m": 4.71,
-      "chg_ytd": 14.57,
-      "chg_1y": 36.55,
-      "total_return_1y": 36.55,
-      "volatility_1y": 28.57,
-      "var_95_1y": 45.04,
-      "sharpe_1y": 0.97,
-      "max_dd_1y": -12.97,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {
-        "covid": {
-          "drawdown_pct": -40.23,
-          "label": "Covid 2020"
-        },
-        "inflazione": {
-          "drawdown_pct": 5.03,
-          "label": "Inflazione 2022"
-        }
-      },
-      "raptor_score": 32.5,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "QTOP.MI": {
-      "ok": true,
-      "ticker": "QTOP.MI",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/paesi",
-      "price": 6.076,
-      "chg_1w": 8.13,
-      "chg_1m": 1.35,
-      "chg_3m": 1.52,
-      "chg_6m": 23.73,
-      "chg_ytd": 20.01,
-      "chg_1y": 30.99,
-      "total_return_1y": 30.99,
-      "volatility_1y": 18.81,
-      "var_95_1y": 29.23,
-      "sharpe_1y": 1.26,
-      "max_dd_1y": -11.16,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {},
-      "raptor_score": 31.4,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "SAUDI.MI": {
       "ok": true,
@@ -4499,86 +4448,61 @@
       "chg_3m": 0.35,
       "chg_6m": -0.07,
       "chg_ytd": 6.82,
-      "chg_1y": 3.79,
-      "total_return_1y": 3.79,
-      "volatility_1y": 13.96,
-      "var_95_1y": 22.74,
-      "sharpe_1y": 0.02,
+      "chg_1y": 4.12,
+      "total_return_1y": 4.12,
+      "volatility_1y": 13.99,
+      "var_95_1y": 22.75,
+      "sharpe_1y": 0.04,
       "max_dd_1y": -12.31,
       "div_yield": null,
       "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {},
-      "raptor_score": 30.8,
+      "raptor_score": 34.8,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
-    "XCS4.DE": {
+    "CN1.PA": {
       "ok": true,
-      "ticker": "XCS4.DE",
+      "ticker": "CN1.PA",
       "layer": 2,
       "categoria": "azionario",
       "distribuzione": "Acc",
       "geo": "",
       "livelli": [],
       "source": "geografia/paesi",
-      "price": 25.205,
-      "chg_1w": 1.18,
-      "chg_1m": -1.12,
-      "chg_3m": 3.79,
-      "chg_6m": 18.78,
-      "chg_ytd": 26.25,
-      "chg_1y": 33.93,
-      "total_return_1y": 33.93,
-      "volatility_1y": 20.89,
-      "var_95_1y": 32.52,
-      "sharpe_1y": 1.24,
-      "max_dd_1y": -10.32,
+      "price": 716.0,
+      "chg_1w": 0.53,
+      "chg_1m": 0.9,
+      "chg_3m": 3.77,
+      "chg_6m": 5.39,
+      "chg_ytd": 9.2,
+      "chg_1y": 22.88,
+      "total_return_1y": 22.88,
+      "volatility_1y": 14.88,
+      "var_95_1y": 23.19,
+      "sharpe_1y": 1.14,
+      "max_dd_1y": -9.33,
       "div_yield": null,
       "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {
+        "2008": {
+          "drawdown_pct": -37.86,
+          "label": "Crisi 2008"
+        },
         "covid": {
-          "drawdown_pct": -28.42,
+          "drawdown_pct": -29.31,
           "label": "Covid 2020"
         },
         "inflazione": {
-          "drawdown_pct": 1.51,
+          "drawdown_pct": -21.43,
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 30.0,
-      "raptor_signal": "SELL",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "SP1E.MI": {
-      "ok": true,
-      "ticker": "SP1E.MI",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/paesi",
-      "price": 10.552,
-      "chg_1w": -0.36,
-      "chg_1m": 0.73,
-      "chg_3m": 9.09,
-      "chg_6m": 12.71,
-      "chg_ytd": 15.08,
-      "chg_1y": 21.11,
-      "total_return_1y": 21.11,
-      "volatility_1y": 10.5,
-      "var_95_1y": 16.06,
-      "sharpe_1y": 1.51,
-      "max_dd_1y": -5.33,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {},
-      "raptor_score": 29.6,
-      "raptor_signal": "SELL",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "raptor_score": 34.6,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "FLXT.MI": {
       "ok": true,
@@ -4597,9 +4521,9 @@
       "chg_ytd": 59.28,
       "chg_1y": 88.06,
       "total_return_1y": 88.06,
-      "volatility_1y": 28.07,
-      "var_95_1y": 42.16,
-      "sharpe_1y": 2.14,
+      "volatility_1y": 28.12,
+      "var_95_1y": 42.23,
+      "sharpe_1y": 2.15,
       "max_dd_1y": -20.32,
       "div_yield": null,
       "dividends_ttm": null,
@@ -4610,38 +4534,47 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 27.0,
+      "raptor_score": 34.5,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
-    "XBAS.DE": {
+    "D5BI.DE": {
       "ok": true,
-      "ticker": "XBAS.DE",
+      "ticker": "D5BI.DE",
       "layer": 2,
       "categoria": "azionario",
       "distribuzione": "Acc",
       "geo": "",
       "livelli": [],
       "source": "geografia/paesi",
-      "price": 2.341,
-      "chg_1w": -1.66,
-      "chg_1m": 4.11,
-      "chg_3m": 14.59,
-      "chg_6m": 15.26,
-      "chg_ytd": 18.38,
-      "chg_1y": 25.86,
-      "total_return_1y": 25.86,
-      "volatility_1y": 13.76,
-      "var_95_1y": 21.18,
-      "sharpe_1y": 1.42,
-      "max_dd_1y": -7.08,
+      "price": 8.069,
+      "chg_1w": 1.61,
+      "chg_1m": 2.2,
+      "chg_3m": -0.98,
+      "chg_6m": 4.71,
+      "chg_ytd": 14.57,
+      "chg_1y": 35.3,
+      "total_return_1y": 35.3,
+      "volatility_1y": 28.62,
+      "var_95_1y": 45.16,
+      "sharpe_1y": 0.94,
+      "max_dd_1y": -12.97,
       "div_yield": null,
       "dividends_ttm": null,
       "bond_profile": null,
-      "scenari": {},
-      "raptor_score": 26.1,
+      "scenari": {
+        "covid": {
+          "drawdown_pct": -40.23,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": 5.03,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 31.4,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "VJPE.MI": {
       "ok": true,
@@ -4660,8 +4593,8 @@
       "chg_ytd": 19.31,
       "chg_1y": 42.33,
       "total_return_1y": 42.33,
-      "volatility_1y": 19.86,
-      "var_95_1y": 30.43,
+      "volatility_1y": 19.9,
+      "var_95_1y": 30.49,
       "sharpe_1y": 1.62,
       "max_dd_1y": -9.67,
       "div_yield": null,
@@ -4673,9 +4606,76 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 23.7,
+      "raptor_score": 31.2,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "XBAS.DE": {
+      "ok": true,
+      "ticker": "XBAS.DE",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/paesi",
+      "price": 2.341,
+      "chg_1w": -1.66,
+      "chg_1m": 4.11,
+      "chg_3m": 14.59,
+      "chg_6m": 15.26,
+      "chg_ytd": 18.38,
+      "chg_1y": 25.98,
+      "total_return_1y": 25.98,
+      "volatility_1y": 13.79,
+      "var_95_1y": 21.21,
+      "sharpe_1y": 1.43,
+      "max_dd_1y": -7.08,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {},
+      "raptor_score": 29.6,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "XCS4.DE": {
+      "ok": true,
+      "ticker": "XCS4.DE",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/paesi",
+      "price": 25.205,
+      "chg_1w": 1.18,
+      "chg_1m": -1.12,
+      "chg_3m": 3.79,
+      "chg_6m": 18.78,
+      "chg_ytd": 26.25,
+      "chg_1y": 33.37,
+      "total_return_1y": 33.37,
+      "volatility_1y": 20.93,
+      "var_95_1y": 32.6,
+      "sharpe_1y": 1.22,
+      "max_dd_1y": -10.32,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "covid": {
+          "drawdown_pct": -28.42,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": 1.51,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 28.8,
       "raptor_signal": "SELL",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "IBZL.MI": {
       "ok": true,
@@ -4692,11 +4692,11 @@
       "chg_3m": -2.48,
       "chg_6m": 0.93,
       "chg_ytd": 17.03,
-      "chg_1y": 40.59,
-      "total_return_1y": 44.23,
-      "volatility_1y": 21.85,
-      "var_95_1y": 33.77,
-      "sharpe_1y": 1.41,
+      "chg_1y": 38.9,
+      "total_return_1y": 42.54,
+      "volatility_1y": 21.86,
+      "var_95_1y": 33.87,
+      "sharpe_1y": 1.36,
       "max_dd_1y": -18.36,
       "div_yield": 3.64,
       "dividends_ttm": 0.928,
@@ -4715,9 +4715,9 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 21.6,
-      "raptor_signal": "SELL",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "raptor_score": 27.5,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "XCHA.DE": {
       "ok": true,
@@ -4734,11 +4734,11 @@
       "chg_3m": -2.25,
       "chg_6m": 8.45,
       "chg_ytd": 8.65,
-      "chg_1y": 28.05,
-      "total_return_1y": 28.05,
-      "volatility_1y": 27.9,
-      "var_95_1y": 44.33,
-      "sharpe_1y": 0.76,
+      "chg_1y": 28.55,
+      "total_return_1y": 28.55,
+      "volatility_1y": 27.95,
+      "var_95_1y": 44.38,
+      "sharpe_1y": 0.78,
       "max_dd_1y": -16.43,
       "div_yield": null,
       "dividends_ttm": null,
@@ -4753,9 +4753,9 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 8.4,
+      "raptor_score": 10.2,
       "raptor_signal": "SELL",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "TUR.PA": {
       "ok": true,
@@ -4772,11 +4772,11 @@
       "chg_3m": -8.52,
       "chg_6m": -0.1,
       "chg_ytd": 16.65,
-      "chg_1y": 16.59,
-      "total_return_1y": 16.59,
-      "volatility_1y": 26.38,
-      "var_95_1y": 42.45,
-      "sharpe_1y": 0.44,
+      "chg_1y": 16.86,
+      "total_return_1y": 16.86,
+      "volatility_1y": 26.43,
+      "var_95_1y": 42.51,
+      "sharpe_1y": 0.45,
       "max_dd_1y": -13.51,
       "div_yield": null,
       "dividends_ttm": null,
@@ -4795,43 +4795,9 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 3.9,
+      "raptor_score": 9.1,
       "raptor_signal": "SELL",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "XDEE.DE": {
-      "ok": true,
-      "ticker": "XDEE.DE",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/new_area",
-      "price": 12.434,
-      "chg_1w": 1.14,
-      "chg_1m": 1.87,
-      "chg_3m": 7.67,
-      "chg_6m": 8.5,
-      "chg_ytd": 13.37,
-      "chg_1y": 18.87,
-      "total_return_1y": 18.87,
-      "volatility_1y": 10.62,
-      "var_95_1y": 16.38,
-      "sharpe_1y": 1.29,
-      "max_dd_1y": -7.2,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {
-        "inflazione": {
-          "drawdown_pct": -21.42,
-          "label": "Inflazione 2022"
-        }
-      },
-      "raptor_score": 63.6,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "IUSE.MI": {
       "ok": true,
@@ -4848,11 +4814,11 @@
       "chg_3m": 4.19,
       "chg_6m": 12.59,
       "chg_ytd": 12.07,
-      "chg_1y": 21.27,
-      "total_return_1y": 21.27,
+      "chg_1y": 20.34,
+      "total_return_1y": 20.34,
       "volatility_1y": 12.4,
-      "var_95_1y": 19.17,
-      "sharpe_1y": 1.29,
+      "var_95_1y": 19.22,
+      "sharpe_1y": 1.23,
       "max_dd_1y": -8.71,
       "div_yield": null,
       "dividends_ttm": null,
@@ -4867,43 +4833,9 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 63.2,
+      "raptor_score": 67.3,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "JRGE.MI": {
-      "ok": true,
-      "ticker": "JRGE.MI",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/new_area",
-      "price": 57.21,
-      "chg_1w": 4.17,
-      "chg_1m": 3.06,
-      "chg_3m": 5.32,
-      "chg_6m": 11.85,
-      "chg_ytd": 12.55,
-      "chg_1y": 22.87,
-      "total_return_1y": 22.87,
-      "volatility_1y": 11.5,
-      "var_95_1y": 17.6,
-      "sharpe_1y": 1.5,
-      "max_dd_1y": -7.91,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {
-        "inflazione": {
-          "drawdown_pct": -19.42,
-          "label": "Inflazione 2022"
-        }
-      },
-      "raptor_score": 58.7,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "IWDE.MI": {
       "ok": true,
@@ -4920,11 +4852,11 @@
       "chg_3m": 5.03,
       "chg_6m": 12.04,
       "chg_ytd": 12.28,
-      "chg_1y": 22.37,
-      "total_return_1y": 22.37,
+      "chg_1y": 21.55,
+      "total_return_1y": 21.55,
       "volatility_1y": 11.87,
-      "var_95_1y": 18.24,
-      "sharpe_1y": 1.42,
+      "var_95_1y": 18.29,
+      "sharpe_1y": 1.37,
       "max_dd_1y": -7.77,
       "div_yield": null,
       "dividends_ttm": null,
@@ -4939,9 +4871,9 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 57.8,
+      "raptor_score": 64.4,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "LAFRI.MI": {
       "ok": true,
@@ -4958,11 +4890,11 @@
       "chg_3m": -3.4,
       "chg_6m": -3.83,
       "chg_ytd": 1.55,
-      "chg_1y": 29.9,
-      "total_return_1y": 29.9,
-      "volatility_1y": 28.43,
-      "var_95_1y": 45.12,
-      "sharpe_1y": 0.8,
+      "chg_1y": 28.75,
+      "total_return_1y": 28.75,
+      "volatility_1y": 28.47,
+      "var_95_1y": 45.24,
+      "sharpe_1y": 0.77,
       "max_dd_1y": -20.41,
       "div_yield": null,
       "dividends_ttm": null,
@@ -4981,9 +4913,77 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 57.8,
+      "raptor_score": 64.4,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "XDEE.DE": {
+      "ok": true,
+      "ticker": "XDEE.DE",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/new_area",
+      "price": 12.434,
+      "chg_1w": 1.14,
+      "chg_1m": 1.87,
+      "chg_3m": 7.67,
+      "chg_6m": 8.5,
+      "chg_ytd": 13.37,
+      "chg_1y": 18.55,
+      "total_return_1y": 18.55,
+      "volatility_1y": 10.64,
+      "var_95_1y": 16.43,
+      "sharpe_1y": 1.27,
+      "max_dd_1y": -7.2,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "inflazione": {
+          "drawdown_pct": -21.42,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 62.0,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "JRGE.MI": {
+      "ok": true,
+      "ticker": "JRGE.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/new_area",
+      "price": 57.21,
+      "chg_1w": 4.17,
+      "chg_1m": 3.06,
+      "chg_3m": 5.32,
+      "chg_6m": 11.85,
+      "chg_ytd": 12.55,
+      "chg_1y": 22.28,
+      "total_return_1y": 22.28,
+      "volatility_1y": 11.51,
+      "var_95_1y": 17.66,
+      "sharpe_1y": 1.46,
+      "max_dd_1y": -7.91,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "inflazione": {
+          "drawdown_pct": -19.42,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 60.2,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "NTSZ.DE": {
       "ok": true,
@@ -5010,9 +5010,219 @@
       "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {},
-      "raptor_score": 57.3,
+      "raptor_score": 58.9,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "MEUD.PA": {
+      "ok": true,
+      "ticker": "MEUD.PA",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/new_area",
+      "price": 323.3,
+      "chg_1w": 1.89,
+      "chg_1m": 1.75,
+      "chg_3m": 7.93,
+      "chg_6m": 8.69,
+      "chg_ytd": 12.52,
+      "chg_1y": 24.82,
+      "total_return_1y": 24.82,
+      "volatility_1y": 12.74,
+      "var_95_1y": 19.56,
+      "sharpe_1y": 1.45,
+      "max_dd_1y": -9.35,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {},
+      "raptor_score": 56.0,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "SXRU.DE": {
+      "ok": true,
+      "ticker": "SXRU.DE",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/new_area",
+      "price": 574.4,
+      "chg_1w": 3.5,
+      "chg_1m": 2.15,
+      "chg_3m": 12.3,
+      "chg_6m": 13.95,
+      "chg_ytd": 15.56,
+      "chg_1y": 25.44,
+      "total_return_1y": 25.44,
+      "volatility_1y": 11.76,
+      "var_95_1y": 17.9,
+      "sharpe_1y": 1.65,
+      "max_dd_1y": -7.3,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "covid": {
+          "drawdown_pct": -31.4,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": -4.91,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 55.5,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "NQSE.DE": {
+      "ok": true,
+      "ticker": "NQSE.DE",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/new_area",
+      "price": 17.224,
+      "chg_1w": 8.29,
+      "chg_1m": 2.09,
+      "chg_3m": 0.96,
+      "chg_6m": 17.67,
+      "chg_ytd": 16.21,
+      "chg_1y": 25.07,
+      "total_return_1y": 25.07,
+      "volatility_1y": 18.14,
+      "var_95_1y": 28.43,
+      "sharpe_1y": 1.04,
+      "max_dd_1y": -11.87,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "covid": {
+          "drawdown_pct": -25.93,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": -35.46,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 52.0,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "CAHEUA.MI": {
+      "ok": true,
+      "ticker": "CAHEUA.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/new_area",
+      "price": 41.94,
+      "chg_1w": 2.12,
+      "chg_1m": 3.48,
+      "chg_3m": 7.57,
+      "chg_6m": 15.35,
+      "chg_ytd": 15.76,
+      "chg_1y": 31.58,
+      "total_return_1y": 31.58,
+      "volatility_1y": 12.0,
+      "var_95_1y": 18.0,
+      "sharpe_1y": 2.02,
+      "max_dd_1y": -7.41,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "covid": {
+          "drawdown_pct": -30.06,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": -15.09,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 49.0,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "ISAC.MI": {
+      "ok": true,
+      "ticker": "ISAC.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/new_area",
+      "price": 107.73,
+      "chg_1w": 3.49,
+      "chg_1m": 2.03,
+      "chg_3m": 6.08,
+      "chg_6m": 15.05,
+      "chg_ytd": 15.94,
+      "chg_1y": 26.16,
+      "total_return_1y": 26.16,
+      "volatility_1y": 11.51,
+      "var_95_1y": 17.46,
+      "sharpe_1y": 1.74,
+      "max_dd_1y": -6.46,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {},
+      "raptor_score": 48.3,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "SJPA.MI": {
+      "ok": true,
+      "ticker": "SJPA.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/new_area",
+      "price": 71.34,
+      "chg_1w": 4.93,
+      "chg_1m": 1.28,
+      "chg_3m": 5.91,
+      "chg_6m": 12.97,
+      "chg_ytd": 20.67,
+      "chg_1y": 31.65,
+      "total_return_1y": 31.65,
+      "volatility_1y": 18.61,
+      "var_95_1y": 28.87,
+      "sharpe_1y": 1.31,
+      "max_dd_1y": -9.58,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "covid": {
+          "drawdown_pct": -20.19,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": -13.18,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 46.2,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "IQQ9.DE": {
       "ok": true,
@@ -5029,11 +5239,11 @@
       "chg_3m": -0.29,
       "chg_6m": -4.67,
       "chg_ytd": -7.08,
-      "chg_1y": -1.74,
-      "total_return_1y": -0.21,
-      "volatility_1y": 19.63,
-      "var_95_1y": 32.4,
-      "sharpe_1y": -0.27,
+      "chg_1y": -1.14,
+      "total_return_1y": 0.39,
+      "volatility_1y": 19.66,
+      "var_95_1y": 32.41,
+      "sharpe_1y": -0.24,
       "max_dd_1y": -24.2,
       "div_yield": 1.53,
       "dividends_ttm": 0.3189,
@@ -5052,219 +5262,47 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 56.9,
+      "raptor_score": 45.9,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
-    "MEUD.PA": {
+    "SEMA.MI": {
       "ok": true,
-      "ticker": "MEUD.PA",
+      "ticker": "SEMA.MI",
       "layer": 2,
       "categoria": "azionario",
       "distribuzione": "Acc",
       "geo": "",
       "livelli": [],
       "source": "geografia/new_area",
-      "price": 323.3,
-      "chg_1w": 1.89,
-      "chg_1m": 1.75,
-      "chg_3m": 7.93,
-      "chg_6m": 8.69,
-      "chg_ytd": 12.52,
-      "chg_1y": 24.79,
-      "total_return_1y": 24.79,
-      "volatility_1y": 12.71,
-      "var_95_1y": 19.53,
-      "sharpe_1y": 1.45,
-      "max_dd_1y": -9.35,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {},
-      "raptor_score": 54.2,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "SXRU.DE": {
-      "ok": true,
-      "ticker": "SXRU.DE",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/new_area",
-      "price": 574.4,
-      "chg_1w": 3.5,
-      "chg_1m": 2.15,
-      "chg_3m": 12.3,
-      "chg_6m": 13.95,
-      "chg_ytd": 15.56,
-      "chg_1y": 25.52,
-      "total_return_1y": 25.52,
-      "volatility_1y": 11.73,
-      "var_95_1y": 17.86,
-      "sharpe_1y": 1.65,
-      "max_dd_1y": -7.3,
+      "price": 55.03,
+      "chg_1w": 6.44,
+      "chg_1m": 0.09,
+      "chg_3m": -0.43,
+      "chg_6m": 15.56,
+      "chg_ytd": 20.98,
+      "chg_1y": 39.23,
+      "total_return_1y": 39.23,
+      "volatility_1y": 20.93,
+      "var_95_1y": 32.31,
+      "sharpe_1y": 1.43,
+      "max_dd_1y": -13.44,
       "div_yield": null,
       "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {
         "covid": {
-          "drawdown_pct": -31.4,
+          "drawdown_pct": -27.33,
           "label": "Covid 2020"
         },
         "inflazione": {
-          "drawdown_pct": -4.91,
+          "drawdown_pct": -16.91,
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 48.0,
+      "raptor_score": 35.9,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "ISAC.MI": {
-      "ok": true,
-      "ticker": "ISAC.MI",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/new_area",
-      "price": 107.73,
-      "chg_1w": 3.49,
-      "chg_1m": 2.03,
-      "chg_3m": 6.08,
-      "chg_6m": 15.05,
-      "chg_ytd": 15.94,
-      "chg_1y": 26.3,
-      "total_return_1y": 26.3,
-      "volatility_1y": 11.49,
-      "var_95_1y": 17.42,
-      "sharpe_1y": 1.74,
-      "max_dd_1y": -6.46,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {},
-      "raptor_score": 42.7,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "CAHEUA.MI": {
-      "ok": true,
-      "ticker": "CAHEUA.MI",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/new_area",
-      "price": 41.94,
-      "chg_1w": 2.12,
-      "chg_1m": 3.48,
-      "chg_3m": 7.57,
-      "chg_6m": 15.35,
-      "chg_ytd": 15.76,
-      "chg_1y": 33.93,
-      "total_return_1y": 33.93,
-      "volatility_1y": 12.09,
-      "var_95_1y": 18.04,
-      "sharpe_1y": 2.15,
-      "max_dd_1y": -7.41,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {
-        "covid": {
-          "drawdown_pct": -30.06,
-          "label": "Covid 2020"
-        },
-        "inflazione": {
-          "drawdown_pct": -15.09,
-          "label": "Inflazione 2022"
-        }
-      },
-      "raptor_score": 42.3,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "NQSE.DE": {
-      "ok": true,
-      "ticker": "NQSE.DE",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/new_area",
-      "price": 17.224,
-      "chg_1w": 8.29,
-      "chg_1m": 2.09,
-      "chg_3m": 0.96,
-      "chg_6m": 17.67,
-      "chg_ytd": 16.21,
-      "chg_1y": 26.15,
-      "total_return_1y": 26.15,
-      "volatility_1y": 18.12,
-      "var_95_1y": 28.35,
-      "sharpe_1y": 1.08,
-      "max_dd_1y": -11.87,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {
-        "covid": {
-          "drawdown_pct": -25.93,
-          "label": "Covid 2020"
-        },
-        "inflazione": {
-          "drawdown_pct": -35.46,
-          "label": "Inflazione 2022"
-        }
-      },
-      "raptor_score": 41.3,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "SJPA.MI": {
-      "ok": true,
-      "ticker": "SJPA.MI",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/new_area",
-      "price": 71.34,
-      "chg_1w": 4.93,
-      "chg_1m": 1.28,
-      "chg_3m": 5.91,
-      "chg_6m": 12.97,
-      "chg_ytd": 20.67,
-      "chg_1y": 32.55,
-      "total_return_1y": 32.55,
-      "volatility_1y": 18.59,
-      "var_95_1y": 28.78,
-      "sharpe_1y": 1.34,
-      "max_dd_1y": -9.58,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {
-        "covid": {
-          "drawdown_pct": -20.19,
-          "label": "Covid 2020"
-        },
-        "inflazione": {
-          "drawdown_pct": -13.18,
-          "label": "Inflazione 2022"
-        }
-      },
-      "raptor_score": 39.7,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "CSPXJ.MI": {
       "ok": true,
@@ -5281,11 +5319,11 @@
       "chg_3m": 5.71,
       "chg_6m": 10.43,
       "chg_ytd": 16.57,
-      "chg_1y": 19.45,
-      "total_return_1y": 19.45,
-      "volatility_1y": 11.93,
-      "var_95_1y": 18.5,
-      "sharpe_1y": 1.21,
+      "chg_1y": 19.28,
+      "total_return_1y": 19.28,
+      "volatility_1y": 11.96,
+      "var_95_1y": 18.54,
+      "sharpe_1y": 1.2,
       "max_dd_1y": -6.16,
       "div_yield": null,
       "dividends_ttm": null,
@@ -5300,47 +5338,47 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 38.1,
+      "raptor_score": 34.6,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
-    "CSCA.MI": {
+    "CSEMAS.MI": {
       "ok": true,
-      "ticker": "CSCA.MI",
+      "ticker": "CSEMAS.MI",
       "layer": 2,
       "categoria": "azionario",
       "distribuzione": "Acc",
       "geo": "",
       "livelli": [],
       "source": "geografia/new_area",
-      "price": 273.57,
-      "chg_1w": 1.18,
-      "chg_1m": 3.66,
-      "chg_3m": 7.01,
-      "chg_6m": 14.89,
-      "chg_ytd": 15.2,
-      "chg_1y": 32.28,
-      "total_return_1y": 32.28,
-      "volatility_1y": 11.75,
-      "var_95_1y": 17.55,
-      "sharpe_1y": 2.1,
-      "max_dd_1y": -6.35,
+      "price": 255.71,
+      "chg_1w": 7.32,
+      "chg_1m": -0.43,
+      "chg_3m": -0.59,
+      "chg_6m": 18.86,
+      "chg_ytd": 22.78,
+      "chg_1y": 42.27,
+      "total_return_1y": 42.27,
+      "volatility_1y": 23.17,
+      "var_95_1y": 35.86,
+      "sharpe_1y": 1.39,
+      "max_dd_1y": -15.89,
       "div_yield": null,
       "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {
         "covid": {
-          "drawdown_pct": -36.01,
+          "drawdown_pct": -23.08,
           "label": "Covid 2020"
         },
         "inflazione": {
-          "drawdown_pct": -6.8,
+          "drawdown_pct": -20.43,
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 34.8,
+      "raptor_score": 34.4,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "ALAT.MI": {
       "ok": true,
@@ -5357,11 +5395,11 @@
       "chg_3m": 0.05,
       "chg_6m": 2.94,
       "chg_ytd": 17.35,
-      "chg_1y": 44.25,
-      "total_return_1y": 44.25,
-      "volatility_1y": 18.63,
-      "var_95_1y": 28.32,
-      "sharpe_1y": 1.79,
+      "chg_1y": 42.74,
+      "total_return_1y": 42.74,
+      "volatility_1y": 18.65,
+      "var_95_1y": 28.4,
+      "sharpe_1y": 1.74,
       "max_dd_1y": -12.74,
       "div_yield": null,
       "dividends_ttm": null,
@@ -5376,9 +5414,85 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 34.3,
+      "raptor_score": 32.2,
       "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "CSCA.MI": {
+      "ok": true,
+      "ticker": "CSCA.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/new_area",
+      "price": 273.57,
+      "chg_1w": 1.18,
+      "chg_1m": 3.66,
+      "chg_3m": 7.01,
+      "chg_6m": 14.89,
+      "chg_ytd": 15.2,
+      "chg_1y": 30.2,
+      "total_return_1y": 30.2,
+      "volatility_1y": 11.68,
+      "var_95_1y": 17.53,
+      "sharpe_1y": 1.99,
+      "max_dd_1y": -6.35,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "covid": {
+          "drawdown_pct": -36.01,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": -6.8,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 32.0,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "IJPE.MI": {
+      "ok": true,
+      "ticker": "IJPE.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/new_area",
+      "price": 141.79,
+      "chg_1w": 2.46,
+      "chg_1m": -0.13,
+      "chg_3m": 4.34,
+      "chg_6m": 11.7,
+      "chg_ytd": 19.44,
+      "chg_1y": 41.37,
+      "total_return_1y": 41.37,
+      "volatility_1y": 20.95,
+      "var_95_1y": 32.25,
+      "sharpe_1y": 1.51,
+      "max_dd_1y": -9.7,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "covid": {
+          "drawdown_pct": -19.7,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": -6.37,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 31.7,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "IAPD.MI": {
       "ok": true,
@@ -5395,11 +5509,11 @@
       "chg_3m": 3.68,
       "chg_6m": 8.98,
       "chg_ytd": 19.35,
-      "chg_1y": 33.16,
-      "total_return_1y": 37.15,
-      "volatility_1y": 11.32,
-      "var_95_1y": 16.8,
-      "sharpe_1y": 2.24,
+      "chg_1y": 33.28,
+      "total_return_1y": 37.27,
+      "volatility_1y": 11.34,
+      "var_95_1y": 16.82,
+      "sharpe_1y": 2.26,
       "max_dd_1y": -6.15,
       "div_yield": 3.99,
       "dividends_ttm": 1.1143,
@@ -5418,165 +5532,9 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 31.5,
+      "raptor_score": 28.3,
       "raptor_signal": "SELL",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "LTAM.MI": {
-      "ok": true,
-      "ticker": "LTAM.MI",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/new_area",
-      "price": 18.492,
-      "chg_1w": 1.07,
-      "chg_1m": 4.04,
-      "chg_3m": -0.13,
-      "chg_6m": 2.73,
-      "chg_ytd": 17.44,
-      "chg_1y": 43.74,
-      "total_return_1y": 47.05,
-      "volatility_1y": 18.51,
-      "var_95_1y": 28.14,
-      "sharpe_1y": 1.79,
-      "max_dd_1y": -13.31,
-      "div_yield": 3.31,
-      "dividends_ttm": 0.6117,
-      "bond_profile": null,
-      "scenari": {
-        "2008": {
-          "drawdown_pct": -47.42,
-          "label": "Crisi 2008"
-        },
-        "covid": {
-          "drawdown_pct": -43.35,
-          "label": "Covid 2020"
-        },
-        "inflazione": {
-          "drawdown_pct": 26.61,
-          "label": "Inflazione 2022"
-        }
-      },
-      "raptor_score": 31.4,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "CSEMAS.MI": {
-      "ok": true,
-      "ticker": "CSEMAS.MI",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/new_area",
-      "price": 255.71,
-      "chg_1w": 7.32,
-      "chg_1m": -0.43,
-      "chg_3m": -0.59,
-      "chg_6m": 18.86,
-      "chg_ytd": 22.78,
-      "chg_1y": 41.2,
-      "total_return_1y": 41.2,
-      "volatility_1y": 23.14,
-      "var_95_1y": 35.87,
-      "sharpe_1y": 1.35,
-      "max_dd_1y": -15.89,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {
-        "covid": {
-          "drawdown_pct": -23.08,
-          "label": "Covid 2020"
-        },
-        "inflazione": {
-          "drawdown_pct": -20.43,
-          "label": "Inflazione 2022"
-        }
-      },
-      "raptor_score": 25.2,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "SEMA.MI": {
-      "ok": true,
-      "ticker": "SEMA.MI",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/new_area",
-      "price": 55.03,
-      "chg_1w": 6.44,
-      "chg_1m": 0.09,
-      "chg_3m": -0.43,
-      "chg_6m": 15.56,
-      "chg_ytd": 20.98,
-      "chg_1y": 38.63,
-      "total_return_1y": 38.63,
-      "volatility_1y": 20.89,
-      "var_95_1y": 32.29,
-      "sharpe_1y": 1.41,
-      "max_dd_1y": -13.44,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {
-        "covid": {
-          "drawdown_pct": -27.33,
-          "label": "Covid 2020"
-        },
-        "inflazione": {
-          "drawdown_pct": -16.91,
-          "label": "Inflazione 2022"
-        }
-      },
-      "raptor_score": 24.9,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
-    },
-    "IJPE.MI": {
-      "ok": true,
-      "ticker": "IJPE.MI",
-      "layer": 2,
-      "categoria": "azionario",
-      "distribuzione": "Acc",
-      "geo": "",
-      "livelli": [],
-      "source": "geografia/new_area",
-      "price": 141.79,
-      "chg_1w": 2.46,
-      "chg_1m": -0.13,
-      "chg_3m": 4.34,
-      "chg_6m": 11.7,
-      "chg_ytd": 19.44,
-      "chg_1y": 43.16,
-      "total_return_1y": 43.16,
-      "volatility_1y": 20.94,
-      "var_95_1y": 32.16,
-      "sharpe_1y": 1.56,
-      "max_dd_1y": -9.7,
-      "div_yield": null,
-      "dividends_ttm": null,
-      "bond_profile": null,
-      "scenari": {
-        "covid": {
-          "drawdown_pct": -19.7,
-          "label": "Covid 2020"
-        },
-        "inflazione": {
-          "drawdown_pct": -6.37,
-          "label": "Inflazione 2022"
-        }
-      },
-      "raptor_score": 24.1,
-      "raptor_signal": "WATCH",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "IQQF.DE": {
       "ok": true,
@@ -5593,11 +5551,11 @@
       "chg_3m": -1.58,
       "chg_6m": 21.41,
       "chg_ytd": 27.47,
-      "chg_1y": 48.2,
-      "total_return_1y": 49.28,
-      "volatility_1y": 23.8,
+      "chg_1y": 49.17,
+      "total_return_1y": 50.25,
+      "volatility_1y": 23.84,
       "var_95_1y": 36.67,
-      "sharpe_1y": 1.51,
+      "sharpe_1y": 1.54,
       "max_dd_1y": -16.15,
       "div_yield": 1.08,
       "dividends_ttm": 0.8725,
@@ -5616,9 +5574,51 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 17.7,
+      "raptor_score": 27.9,
       "raptor_signal": "SELL",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "LTAM.MI": {
+      "ok": true,
+      "ticker": "LTAM.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "geografia/new_area",
+      "price": 18.492,
+      "chg_1w": 1.07,
+      "chg_1m": 4.04,
+      "chg_3m": -0.13,
+      "chg_6m": 2.73,
+      "chg_ytd": 17.44,
+      "chg_1y": 42.2,
+      "total_return_1y": 45.51,
+      "volatility_1y": 18.52,
+      "var_95_1y": 28.22,
+      "sharpe_1y": 1.73,
+      "max_dd_1y": -13.31,
+      "div_yield": 3.31,
+      "dividends_ttm": 0.6117,
+      "bond_profile": null,
+      "scenari": {
+        "2008": {
+          "drawdown_pct": -47.42,
+          "label": "Crisi 2008"
+        },
+        "covid": {
+          "drawdown_pct": -43.35,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": 26.61,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 24.9,
+      "raptor_signal": "WATCH",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "DFSV.DE": {
       "ok": true,
@@ -5635,19 +5635,19 @@
       "chg_3m": 15.86,
       "chg_6m": 4.13,
       "chg_ytd": 9.87,
-      "chg_1y": 11.99,
-      "total_return_1y": 11.99,
-      "volatility_1y": 28.65,
-      "var_95_1y": 46.42,
-      "sharpe_1y": 0.27,
+      "chg_1y": 10.92,
+      "total_return_1y": 10.92,
+      "volatility_1y": 28.69,
+      "var_95_1y": 46.55,
+      "sharpe_1y": 0.24,
       "max_dd_1y": -20.63,
       "div_yield": null,
       "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {},
-      "raptor_score": 127.8,
-      "raptor_signal": "BUY2",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "raptor_score": 119.0,
+      "raptor_signal": "BUY3",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "STPX.MI": {
       "ok": true,
@@ -5664,11 +5664,11 @@
       "chg_3m": 3.93,
       "chg_6m": 11.5,
       "chg_ytd": 19.16,
-      "chg_1y": 32.49,
-      "total_return_1y": 32.49,
-      "volatility_1y": 17.85,
-      "var_95_1y": 27.57,
-      "sharpe_1y": 1.39,
+      "chg_1y": 32.97,
+      "total_return_1y": 32.97,
+      "volatility_1y": 17.88,
+      "var_95_1y": 27.59,
+      "sharpe_1y": 1.42,
       "max_dd_1y": -11.93,
       "div_yield": null,
       "dividends_ttm": null,
@@ -5683,9 +5683,9 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 70.5,
+      "raptor_score": 69.8,
       "raptor_signal": "BUY2",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "STQX.MI": {
       "ok": true,
@@ -5702,11 +5702,11 @@
       "chg_3m": 6.48,
       "chg_6m": 9.36,
       "chg_ytd": 13.92,
-      "chg_1y": 22.11,
-      "total_return_1y": 22.11,
-      "volatility_1y": 19.93,
-      "var_95_1y": 31.51,
-      "sharpe_1y": 0.83,
+      "chg_1y": 22.27,
+      "total_return_1y": 22.27,
+      "volatility_1y": 19.97,
+      "var_95_1y": 31.57,
+      "sharpe_1y": 0.84,
       "max_dd_1y": -13.28,
       "div_yield": null,
       "dividends_ttm": null,
@@ -5721,9 +5721,85 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 92.5,
+      "raptor_score": 79.5,
       "raptor_signal": "BUY2",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "STZX.MI": {
+      "ok": true,
+      "ticker": "STZX.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "settoriali/europa",
+      "price": 162.44,
+      "chg_1w": 3.12,
+      "chg_1m": 3.76,
+      "chg_3m": 16.56,
+      "chg_6m": 17.98,
+      "chg_ytd": 18.26,
+      "chg_1y": 34.96,
+      "total_return_1y": 34.96,
+      "volatility_1y": 17.58,
+      "var_95_1y": 27.01,
+      "sharpe_1y": 1.53,
+      "max_dd_1y": -12.13,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "covid": {
+          "drawdown_pct": -41.24,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": -17.71,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 55.9,
+      "raptor_signal": "BUY1",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "SXLY.MI": {
+      "ok": true,
+      "ticker": "SXLY.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "settoriali/usa",
+      "price": 64.52,
+      "chg_1w": 6.33,
+      "chg_1m": 0.89,
+      "chg_3m": 1.77,
+      "chg_6m": 5.93,
+      "chg_ytd": 5.06,
+      "chg_1y": 12.58,
+      "total_return_1y": 12.58,
+      "volatility_1y": 19.57,
+      "var_95_1y": 31.43,
+      "sharpe_1y": 0.43,
+      "max_dd_1y": -13.9,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "covid": {
+          "drawdown_pct": -32.01,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": -20.18,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 63.9,
+      "raptor_signal": "BUY1",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "AI4UJ.MI": {
       "ok": true,
@@ -5742,17 +5818,89 @@
       "chg_ytd": -3.8,
       "chg_1y": -0.6,
       "total_return_1y": -0.6,
-      "volatility_1y": 27.81,
-      "var_95_1y": 45.79,
+      "volatility_1y": 27.87,
+      "var_95_1y": 45.88,
       "sharpe_1y": -0.15,
       "max_dd_1y": -25.14,
       "div_yield": null,
       "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {},
-      "raptor_score": 40.2,
+      "raptor_score": 38.2,
       "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "GOAI.MI": {
+      "ok": true,
+      "ticker": "GOAI.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "tematici/ai_tech",
+      "price": 145.15,
+      "chg_1w": 9.38,
+      "chg_1m": 4.61,
+      "chg_3m": 12.08,
+      "chg_6m": 36.5,
+      "chg_ytd": 29.77,
+      "chg_1y": 37.35,
+      "total_return_1y": 37.35,
+      "volatility_1y": 21.61,
+      "var_95_1y": 33.53,
+      "sharpe_1y": 1.32,
+      "max_dd_1y": -14.6,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "covid": {
+          "drawdown_pct": -30.97,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": -22.08,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 42.4,
+      "raptor_signal": "BUY1",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "JEDI.MI": {
+      "ok": true,
+      "ticker": "JEDI.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "tematici/ai_tech",
+      "price": 74.71,
+      "chg_1w": 12.7,
+      "chg_1m": -8.17,
+      "chg_3m": -20.97,
+      "chg_6m": 13.63,
+      "chg_ytd": 26.73,
+      "chg_1y": 71.37,
+      "total_return_1y": 71.37,
+      "volatility_1y": 47.33,
+      "var_95_1y": 74.42,
+      "sharpe_1y": 1.08,
+      "max_dd_1y": -43.93,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "inflazione": {
+          "drawdown_pct": -1.77,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 42.0,
+      "raptor_signal": "BUY1",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "GDIG.MI": {
       "ok": true,
@@ -5769,11 +5917,11 @@
       "chg_3m": -7.7,
       "chg_6m": 1.85,
       "chg_ytd": 13.71,
-      "chg_1y": 65.34,
-      "total_return_1y": 65.34,
-      "volatility_1y": 36.66,
-      "var_95_1y": 57.12,
-      "sharpe_1y": 1.29,
+      "chg_1y": 64.5,
+      "total_return_1y": 64.5,
+      "volatility_1y": 36.74,
+      "var_95_1y": 57.26,
+      "sharpe_1y": 1.28,
       "max_dd_1y": -24.82,
       "div_yield": null,
       "dividends_ttm": null,
@@ -5788,9 +5936,81 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 40.7,
+      "raptor_score": 49.4,
+      "raptor_signal": "BUY2",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "DGTL.MI": {
+      "ok": true,
+      "ticker": "DGTL.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "tematici/ai_tech",
+      "price": 10.328,
+      "chg_1w": 3.05,
+      "chg_1m": 4.09,
+      "chg_3m": 16.29,
+      "chg_6m": 22.2,
+      "chg_ytd": 11.87,
+      "chg_1y": 4.9,
+      "total_return_1y": 4.9,
+      "volatility_1y": 17.97,
+      "var_95_1y": 29.26,
+      "sharpe_1y": 0.07,
+      "max_dd_1y": -22.07,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "covid": {
+          "drawdown_pct": -33.23,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": -29.28,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 39.3,
       "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "CLOU.MI": {
+      "ok": true,
+      "ticker": "CLOU.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "tematici/ai_tech",
+      "price": 11.47,
+      "chg_1w": 7.48,
+      "chg_1m": 10.52,
+      "chg_3m": 21.88,
+      "chg_6m": 42.24,
+      "chg_ytd": 23.31,
+      "chg_1y": 19.33,
+      "total_return_1y": 19.33,
+      "volatility_1y": 33.1,
+      "var_95_1y": 53.32,
+      "sharpe_1y": 0.43,
+      "max_dd_1y": -27.48,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "inflazione": {
+          "drawdown_pct": -33.51,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 50.6,
+      "raptor_signal": "BUY2",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "ARMI.MI": {
       "ok": true,
@@ -5807,19 +6027,19 @@
       "chg_3m": 13.94,
       "chg_6m": 6.14,
       "chg_ytd": 12.71,
-      "chg_1y": 13.7,
-      "total_return_1y": 13.7,
-      "volatility_1y": 28.72,
-      "var_95_1y": 46.43,
-      "sharpe_1y": 0.33,
+      "chg_1y": 13.1,
+      "total_return_1y": 13.1,
+      "volatility_1y": 28.78,
+      "var_95_1y": 46.55,
+      "sharpe_1y": 0.31,
       "max_dd_1y": -19.94,
       "div_yield": null,
       "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {},
-      "raptor_score": 51.5,
+      "raptor_score": 49.2,
       "raptor_signal": "BUY2",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "ARMR.MI": {
       "ok": true,
@@ -5836,19 +6056,19 @@
       "chg_3m": 6.4,
       "chg_6m": -3.44,
       "chg_ytd": 4.06,
-      "chg_1y": 8.07,
-      "total_return_1y": 8.07,
-      "volatility_1y": 22.99,
-      "var_95_1y": 37.33,
-      "sharpe_1y": 0.19,
+      "chg_1y": 7.8,
+      "total_return_1y": 7.8,
+      "volatility_1y": 23.04,
+      "var_95_1y": 37.42,
+      "sharpe_1y": 0.18,
       "max_dd_1y": -23.7,
       "div_yield": null,
       "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {},
-      "raptor_score": 44.1,
+      "raptor_score": 41.5,
       "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "DFND.MI": {
       "ok": true,
@@ -5865,19 +6085,19 @@
       "chg_3m": 12.91,
       "chg_6m": 6.53,
       "chg_ytd": 15.08,
-      "chg_1y": 23.63,
-      "total_return_1y": 23.63,
-      "volatility_1y": 20.17,
-      "var_95_1y": 31.79,
-      "sharpe_1y": 0.92,
+      "chg_1y": 22.83,
+      "total_return_1y": 22.83,
+      "volatility_1y": 20.2,
+      "var_95_1y": 31.89,
+      "sharpe_1y": 0.89,
       "max_dd_1y": -13.42,
       "div_yield": null,
       "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {},
-      "raptor_score": 41.9,
+      "raptor_score": 37.3,
       "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "WDEF.MI": {
       "ok": true,
@@ -5894,19 +6114,19 @@
       "chg_3m": 14.71,
       "chg_6m": 6.45,
       "chg_ytd": 10.67,
-      "chg_1y": 12.29,
-      "total_return_1y": 12.29,
-      "volatility_1y": 29.12,
-      "var_95_1y": 47.16,
-      "sharpe_1y": 0.28,
+      "chg_1y": 11.15,
+      "total_return_1y": 11.15,
+      "volatility_1y": 29.16,
+      "var_95_1y": 47.3,
+      "sharpe_1y": 0.25,
       "max_dd_1y": -19.53,
       "div_yield": null,
       "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {},
-      "raptor_score": 51.8,
+      "raptor_score": 48.5,
       "raptor_signal": "BUY2",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "LOCK.MI": {
       "ok": true,
@@ -5923,11 +6143,11 @@
       "chg_3m": 14.54,
       "chg_6m": 35.25,
       "chg_ytd": 27.83,
-      "chg_1y": 30.82,
-      "total_return_1y": 30.82,
-      "volatility_1y": 21.71,
-      "var_95_1y": 34.01,
-      "sharpe_1y": 1.09,
+      "chg_1y": 30.4,
+      "total_return_1y": 30.4,
+      "volatility_1y": 21.76,
+      "var_95_1y": 34.1,
+      "sharpe_1y": 1.07,
       "max_dd_1y": -12.56,
       "div_yield": null,
       "dividends_ttm": null,
@@ -5942,9 +6162,72 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 50.0,
+      "raptor_score": 50.6,
+      "raptor_signal": "BUY2",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "WCBR.MI": {
+      "ok": true,
+      "ticker": "WCBR.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "tematici/difesa",
+      "price": 34.315,
+      "chg_1w": 10.78,
+      "chg_1m": 3.48,
+      "chg_3m": 41.04,
+      "chg_6m": 65.97,
+      "chg_ytd": 48.68,
+      "chg_1y": 33.44,
+      "total_return_1y": 33.44,
+      "volatility_1y": 42.34,
+      "var_95_1y": 67.82,
+      "sharpe_1y": 0.6,
+      "max_dd_1y": -40.3,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "inflazione": {
+          "drawdown_pct": -28.29,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 41.1,
       "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "ICBR.MI": {
+      "ok": true,
+      "ticker": "ICBR.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "tematici/difesa",
+      "price": 6.837,
+      "chg_1w": 7.5,
+      "chg_1m": 1.42,
+      "chg_3m": 32.5,
+      "chg_6m": 48.81,
+      "chg_ytd": 38.95,
+      "chg_1y": 31.58,
+      "total_return_1y": 31.58,
+      "volatility_1y": 27.03,
+      "var_95_1y": 42.72,
+      "sharpe_1y": 0.9,
+      "max_dd_1y": -24.98,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {},
+      "raptor_score": 40.8,
+      "raptor_signal": "BUY1",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "FAMMAI.MI": {
       "ok": true,
@@ -5961,11 +6244,11 @@
       "chg_3m": 22.42,
       "chg_6m": 43.34,
       "chg_ytd": 34.9,
-      "chg_1y": 30.53,
-      "total_return_1y": 30.53,
-      "volatility_1y": 24.94,
-      "var_95_1y": 39.35,
-      "sharpe_1y": 0.93,
+      "chg_1y": 30.06,
+      "total_return_1y": 30.06,
+      "volatility_1y": 24.99,
+      "var_95_1y": 39.45,
+      "sharpe_1y": 0.92,
       "max_dd_1y": -19.32,
       "div_yield": null,
       "dividends_ttm": null,
@@ -5976,9 +6259,9 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 39.6,
+      "raptor_score": 43.9,
       "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "ISPY.MI": {
       "ok": true,
@@ -5995,11 +6278,11 @@
       "chg_3m": 36.45,
       "chg_6m": 72.08,
       "chg_ytd": 57.83,
-      "chg_1y": 54.25,
-      "total_return_1y": 54.25,
-      "volatility_1y": 28.45,
-      "var_95_1y": 44.04,
-      "sharpe_1y": 1.41,
+      "chg_1y": 55.25,
+      "total_return_1y": 55.25,
+      "volatility_1y": 28.49,
+      "var_95_1y": 44.07,
+      "sharpe_1y": 1.44,
       "max_dd_1y": -19.65,
       "div_yield": null,
       "dividends_ttm": null,
@@ -6014,9 +6297,38 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 39.7,
-      "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "raptor_score": 48.2,
+      "raptor_signal": "BUY2",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "REUS.MI": {
+      "ok": true,
+      "ticker": "REUS.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "tematici/energia",
+      "price": 25.345,
+      "chg_1w": 0.38,
+      "chg_1m": 1.93,
+      "chg_3m": 5.34,
+      "chg_6m": 6.09,
+      "chg_ytd": 12.72,
+      "chg_1y": 14.97,
+      "total_return_1y": 14.97,
+      "volatility_1y": 12.84,
+      "var_95_1y": 20.24,
+      "sharpe_1y": 0.83,
+      "max_dd_1y": -8.97,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {},
+      "raptor_score": 22.6,
+      "raptor_signal": "EXIT2",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "WNDY.MI": {
       "ok": true,
@@ -6030,7 +6342,7 @@
       "price": 10.054,
       "chg_1w": 1.57,
       "chg_1m": -5.13,
-      "chg_3m": -16.88,
+      "chg_3m": -18.03,
       "chg_6m": -6.28,
       "chg_ytd": 3.05,
       "chg_1y": 17.14,
@@ -6048,9 +6360,38 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 23.5,
+      "raptor_score": 23.2,
       "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "CURE.MI": {
+      "ok": true,
+      "ticker": "CURE.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "tematici/salute",
+      "price": 19.968,
+      "chg_1w": 1.64,
+      "chg_1m": -5.03,
+      "chg_3m": 17.39,
+      "chg_6m": 8.6,
+      "chg_ytd": 4.35,
+      "chg_1y": 14.71,
+      "total_return_1y": 14.71,
+      "volatility_1y": 20.11,
+      "var_95_1y": 32.21,
+      "sharpe_1y": 0.52,
+      "max_dd_1y": -19.03,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {},
+      "raptor_score": 26.4,
+      "raptor_signal": "BUY1",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "DOCT.MI": {
       "ok": true,
@@ -6067,11 +6408,11 @@
       "chg_3m": 20.83,
       "chg_6m": 13.82,
       "chg_ytd": 13.96,
-      "chg_1y": 40.53,
-      "total_return_1y": 40.53,
-      "volatility_1y": 21.03,
-      "var_95_1y": 32.43,
-      "sharpe_1y": 1.46,
+      "chg_1y": 42.99,
+      "total_return_1y": 42.99,
+      "volatility_1y": 20.98,
+      "var_95_1y": 32.24,
+      "sharpe_1y": 1.56,
       "max_dd_1y": -15.44,
       "div_yield": null,
       "dividends_ttm": null,
@@ -6086,9 +6427,47 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 39.0,
+      "raptor_score": 33.6,
       "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "AGED.MI": {
+      "ok": true,
+      "ticker": "AGED.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "tematici/salute",
+      "price": 9.432,
+      "chg_1w": 0.23,
+      "chg_1m": 0.34,
+      "chg_3m": 12.61,
+      "chg_6m": 14.24,
+      "chg_ytd": 15.76,
+      "chg_1y": 28.38,
+      "total_return_1y": 28.38,
+      "volatility_1y": 12.58,
+      "var_95_1y": 19.1,
+      "sharpe_1y": 1.73,
+      "max_dd_1y": -6.86,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "covid": {
+          "drawdown_pct": -34.67,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": -9.57,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 24.9,
+      "raptor_signal": "BUY1",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "XNNV.MI": {
       "ok": true,
@@ -6107,9 +6486,9 @@
       "chg_ytd": 10.22,
       "chg_1y": 17.4,
       "total_return_1y": 17.4,
-      "volatility_1y": 15.77,
-      "var_95_1y": 24.92,
-      "sharpe_1y": 0.8,
+      "volatility_1y": 15.8,
+      "var_95_1y": 24.97,
+      "sharpe_1y": 0.81,
       "max_dd_1y": -14.19,
       "div_yield": null,
       "dividends_ttm": null,
@@ -6120,9 +6499,67 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 38.9,
+      "raptor_score": 41.9,
       "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "LABL.MI": {
+      "ok": true,
+      "ticker": "LABL.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "tematici/salute",
+      "price": 15.896,
+      "chg_1w": 4.07,
+      "chg_1m": 2.03,
+      "chg_3m": 3.68,
+      "chg_6m": 11.21,
+      "chg_ytd": 10.17,
+      "chg_1y": 20.83,
+      "total_return_1y": 20.83,
+      "volatility_1y": 13.92,
+      "var_95_1y": 21.7,
+      "sharpe_1y": 1.12,
+      "max_dd_1y": -9.42,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {},
+      "raptor_score": 41.7,
+      "raptor_signal": "BUY1",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "WEB3.MI": {
+      "ok": true,
+      "ticker": "WEB3.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "tematici/crypto",
+      "price": 9.586,
+      "chg_1w": 7.3,
+      "chg_1m": 1.99,
+      "chg_3m": 0.0,
+      "chg_6m": 0.0,
+      "chg_ytd": -6.86,
+      "chg_1y": -6.86,
+      "total_return_1y": -6.86,
+      "volatility_1y": 40.23,
+      "var_95_1y": 68.39,
+      "sharpe_1y": -0.96,
+      "max_dd_1y": -19.71,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {},
+      "raptor_score": 37.8,
+      "raptor_signal": "EXIT2",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "AUCO.MI": {
       "ok": true,
@@ -6139,11 +6576,11 @@
       "chg_3m": -12.47,
       "chg_6m": -8.99,
       "chg_ytd": 2.32,
-      "chg_1y": 52.06,
-      "total_return_1y": 52.06,
-      "volatility_1y": 48.21,
-      "var_95_1y": 76.65,
-      "sharpe_1y": 0.8,
+      "chg_1y": 49.83,
+      "total_return_1y": 49.83,
+      "volatility_1y": 48.29,
+      "var_95_1y": 76.87,
+      "sharpe_1y": 0.77,
       "max_dd_1y": -36.58,
       "div_yield": null,
       "dividends_ttm": null,
@@ -6162,9 +6599,81 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 38.7,
-      "raptor_signal": "EXIT2",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "raptor_score": 46.5,
+      "raptor_signal": "BUY2",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "CITY.MI": {
+      "ok": true,
+      "ticker": "CITY.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "tematici/infrastrutture",
+      "price": 9.26,
+      "chg_1w": 4.63,
+      "chg_1m": 1.93,
+      "chg_3m": 0.16,
+      "chg_6m": 13.84,
+      "chg_ytd": 17.36,
+      "chg_1y": 22.32,
+      "total_return_1y": 22.32,
+      "volatility_1y": 26.77,
+      "var_95_1y": 42.75,
+      "sharpe_1y": 0.63,
+      "max_dd_1y": -19.38,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "covid": {
+          "drawdown_pct": -26.9,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": -18.84,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 37.0,
+      "raptor_signal": "BUY1",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "CITE.MI": {
+      "ok": true,
+      "ticker": "CITE.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "tematici/infrastrutture",
+      "price": 5.97,
+      "chg_1w": 2.47,
+      "chg_1m": 5.05,
+      "chg_3m": -7.71,
+      "chg_6m": -7.6,
+      "chg_ytd": -13.05,
+      "chg_1y": -9.44,
+      "total_return_1y": -9.44,
+      "volatility_1y": 30.41,
+      "var_95_1y": 50.65,
+      "sharpe_1y": -0.44,
+      "max_dd_1y": -31.28,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "inflazione": {
+          "drawdown_pct": -42.92,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 38.2,
+      "raptor_signal": "BUY1",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "XLPE.MI": {
       "ok": true,
@@ -6181,11 +6690,11 @@
       "chg_3m": 6.67,
       "chg_6m": 3.88,
       "chg_ytd": -7.56,
-      "chg_1y": -11.85,
-      "total_return_1y": -11.85,
-      "volatility_1y": 20.92,
-      "var_95_1y": 35.22,
-      "sharpe_1y": -0.77,
+      "chg_1y": -12.66,
+      "total_return_1y": -12.66,
+      "volatility_1y": 20.94,
+      "var_95_1y": 35.31,
+      "sharpe_1y": -0.82,
       "max_dd_1y": -25.75,
       "div_yield": null,
       "dividends_ttm": null,
@@ -6204,9 +6713,9 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 50.9,
+      "raptor_score": 44.4,
       "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "COPM.MI": {
       "ok": true,
@@ -6223,19 +6732,48 @@
       "chg_3m": 1.1,
       "chg_6m": 11.65,
       "chg_ytd": 25.6,
-      "chg_1y": 94.68,
-      "total_return_1y": 94.68,
-      "volatility_1y": 37.95,
-      "var_95_1y": 58.2,
+      "chg_1y": 94.56,
+      "total_return_1y": 94.56,
+      "volatility_1y": 38.02,
+      "var_95_1y": 58.31,
       "sharpe_1y": 1.68,
       "max_dd_1y": -23.2,
       "div_yield": null,
       "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {},
-      "raptor_score": 45.2,
-      "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "raptor_score": 47.3,
+      "raptor_signal": "BUY2",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "COPR.MI": {
+      "ok": true,
+      "ticker": "COPR.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "tematici/risorse",
+      "price": 20.365,
+      "chg_1w": 9.82,
+      "chg_1m": 12.58,
+      "chg_3m": 2.25,
+      "chg_6m": 6.52,
+      "chg_ytd": 16.53,
+      "chg_1y": 103.2,
+      "total_return_1y": 103.2,
+      "volatility_1y": 41.82,
+      "var_95_1y": 64.27,
+      "sharpe_1y": 1.63,
+      "max_dd_1y": -27.12,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {},
+      "raptor_score": 48.3,
+      "raptor_signal": "BUY2",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "COPX.MI": {
       "ok": true,
@@ -6252,10 +6790,10 @@
       "chg_3m": 0.29,
       "chg_6m": 7.8,
       "chg_ytd": 22.23,
-      "chg_1y": 103.28,
-      "total_return_1y": 103.28,
-      "volatility_1y": 42.78,
-      "var_95_1y": 65.87,
+      "chg_1y": 103.1,
+      "total_return_1y": 103.1,
+      "volatility_1y": 42.86,
+      "var_95_1y": 65.99,
       "sharpe_1y": 1.59,
       "max_dd_1y": -26.12,
       "div_yield": null,
@@ -6267,9 +6805,9 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 44.7,
-      "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "raptor_score": 49.8,
+      "raptor_signal": "BUY2",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "GDX.MI": {
       "ok": true,
@@ -6286,11 +6824,11 @@
       "chg_3m": -12.13,
       "chg_6m": -8.35,
       "chg_ytd": 2.53,
-      "chg_1y": 51.64,
-      "total_return_1y": 51.64,
-      "volatility_1y": 47.23,
-      "var_95_1y": 75.04,
-      "sharpe_1y": 0.81,
+      "chg_1y": 49.65,
+      "total_return_1y": 49.65,
+      "volatility_1y": 47.31,
+      "var_95_1y": 75.25,
+      "sharpe_1y": 0.79,
       "max_dd_1y": -36.0,
       "div_yield": null,
       "dividends_ttm": null,
@@ -6305,9 +6843,47 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 36.5,
+      "raptor_score": 46.6,
+      "raptor_signal": "BUY2",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "GDXJ.MI": {
+      "ok": true,
+      "ticker": "GDXJ.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "tematici/risorse",
+      "price": 87.67,
+      "chg_1w": 14.54,
+      "chg_1m": 8.74,
+      "chg_3m": -13.44,
+      "chg_6m": -8.77,
+      "chg_ytd": 1.14,
+      "chg_1y": 60.66,
+      "total_return_1y": 60.66,
+      "volatility_1y": 52.49,
+      "var_95_1y": 83.32,
+      "sharpe_1y": 0.85,
+      "max_dd_1y": -38.18,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "covid": {
+          "drawdown_pct": -38.57,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": -17.28,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 49.4,
       "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "METL.MI": {
       "ok": true,
@@ -6326,17 +6902,51 @@
       "chg_ytd": 13.25,
       "chg_1y": 83.6,
       "total_return_1y": 83.6,
-      "volatility_1y": 44.17,
-      "var_95_1y": 68.82,
+      "volatility_1y": 44.26,
+      "var_95_1y": 68.95,
       "sharpe_1y": 1.3,
       "max_dd_1y": -23.55,
       "div_yield": null,
       "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {},
-      "raptor_score": 39.6,
+      "raptor_score": 48.6,
+      "raptor_signal": "BUY2",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "SILV.MI": {
+      "ok": true,
+      "ticker": "SILV.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "tematici/risorse",
+      "price": 34.955,
+      "chg_1w": 15.9,
+      "chg_1m": 8.71,
+      "chg_3m": -15.16,
+      "chg_6m": -8.17,
+      "chg_ytd": 5.13,
+      "chg_1y": 71.18,
+      "total_return_1y": 71.18,
+      "volatility_1y": 55.34,
+      "var_95_1y": 87.6,
+      "sharpe_1y": 0.92,
+      "max_dd_1y": -37.46,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "inflazione": {
+          "drawdown_pct": -10.45,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 46.4,
       "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "GSM.MI": {
       "ok": true,
@@ -6355,17 +6965,17 @@
       "chg_ytd": 0.36,
       "chg_1y": 57.25,
       "total_return_1y": 57.25,
-      "volatility_1y": 55.42,
-      "var_95_1y": 88.3,
+      "volatility_1y": 55.53,
+      "var_95_1y": 88.47,
       "sharpe_1y": 0.76,
       "max_dd_1y": -38.89,
       "div_yield": null,
       "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {},
-      "raptor_score": 35.7,
+      "raptor_score": 47.7,
       "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "FAMAMW.MI": {
       "ok": true,
@@ -6382,11 +6992,11 @@
       "chg_3m": -3.74,
       "chg_6m": 6.04,
       "chg_ytd": 20.07,
-      "chg_1y": 65.56,
-      "total_return_1y": 65.56,
-      "volatility_1y": 32.93,
-      "var_95_1y": 50.99,
-      "sharpe_1y": 1.42,
+      "chg_1y": 64.13,
+      "total_return_1y": 64.13,
+      "volatility_1y": 32.99,
+      "var_95_1y": 51.13,
+      "sharpe_1y": 1.4,
       "max_dd_1y": -19.76,
       "div_yield": null,
       "dividends_ttm": null,
@@ -6397,38 +7007,72 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 42.5,
-      "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "raptor_score": 47.6,
+      "raptor_signal": "BUY2",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
-    "EBUY.MI": {
+    "FINX.MI": {
       "ok": true,
-      "ticker": "EBUY.MI",
+      "ticker": "FINX.MI",
       "layer": 2,
       "categoria": "azionario",
       "distribuzione": "Acc",
       "geo": "",
       "livelli": [],
       "source": "tematici/digitale",
-      "price": 21.27,
-      "chg_1w": 7.79,
-      "chg_1m": 6.19,
-      "chg_3m": 10.3,
-      "chg_6m": 33.87,
-      "chg_ytd": 23.95,
-      "chg_1y": 30.36,
-      "total_return_1y": 30.36,
-      "volatility_1y": 20.66,
-      "var_95_1y": 32.3,
-      "sharpe_1y": 1.12,
-      "max_dd_1y": -19.99,
+      "price": 7.246,
+      "chg_1w": 1.67,
+      "chg_1m": 1.86,
+      "chg_3m": 5.14,
+      "chg_6m": 12.8,
+      "chg_ytd": -8.27,
+      "chg_1y": -18.43,
+      "total_return_1y": -18.43,
+      "volatility_1y": 29.18,
+      "var_95_1y": 49.3,
+      "sharpe_1y": -0.83,
+      "max_dd_1y": -36.0,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "inflazione": {
+          "drawdown_pct": -41.8,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 31.8,
+      "raptor_signal": "BUY1",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "INQQ.MI": {
+      "ok": true,
+      "ticker": "INQQ.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "tematici/digitale",
+      "price": 7.669,
+      "chg_1w": 7.74,
+      "chg_1m": 5.72,
+      "chg_3m": 12.1,
+      "chg_6m": 5.37,
+      "chg_ytd": -4.7,
+      "chg_1y": -8.59,
+      "total_return_1y": -8.59,
+      "volatility_1y": 18.43,
+      "var_95_1y": 30.88,
+      "sharpe_1y": -0.68,
+      "max_dd_1y": -29.84,
       "div_yield": null,
       "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {},
-      "raptor_score": 46.5,
+      "raptor_score": 43.8,
       "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "SNSR.MI": {
       "ok": true,
@@ -6440,9 +7084,9 @@
       "livelli": [],
       "source": "tematici/digitale",
       "price": 15.82,
-      "chg_1w": 3.41,
+      "chg_1w": 4.42,
       "chg_1m": -5.86,
-      "chg_3m": 1.91,
+      "chg_3m": 0.58,
       "chg_6m": 26.5,
       "chg_ytd": 28.01,
       "chg_1y": 30.51,
@@ -6460,9 +7104,43 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 15.9,
+      "raptor_score": 20.2,
       "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "FAMMWF.MI": {
+      "ok": true,
+      "ticker": "FAMMWF.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "tematici/digitale",
+      "price": 198.42,
+      "chg_1w": 1.0,
+      "chg_1m": 3.19,
+      "chg_3m": 14.16,
+      "chg_6m": 14.91,
+      "chg_ytd": 15.64,
+      "chg_1y": 29.07,
+      "total_return_1y": 29.07,
+      "volatility_1y": 11.97,
+      "var_95_1y": 18.08,
+      "sharpe_1y": 1.85,
+      "max_dd_1y": -7.67,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "inflazione": {
+          "drawdown_pct": -7.23,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 25.3,
+      "raptor_signal": "BUY1",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "ESGO.MI": {
       "ok": true,
@@ -6479,10 +7157,10 @@
       "chg_3m": -12.71,
       "chg_6m": -9.2,
       "chg_ytd": 1.83,
-      "chg_1y": 43.09,
-      "total_return_1y": 43.09,
-      "volatility_1y": 45.65,
-      "var_95_1y": 72.82,
+      "chg_1y": 42.57,
+      "total_return_1y": 42.57,
+      "volatility_1y": 45.74,
+      "var_95_1y": 72.99,
       "sharpe_1y": 0.71,
       "max_dd_1y": -35.78,
       "div_yield": null,
@@ -6494,38 +7172,43 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 43.1,
-      "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "raptor_score": 50.5,
+      "raptor_signal": "BUY2",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
-    "BRIJ.MI": {
+    "AQWA.MI": {
       "ok": true,
-      "ticker": "BRIJ.MI",
+      "ticker": "AQWA.MI",
       "layer": 2,
       "categoria": "azionario",
       "distribuzione": "Acc",
       "geo": "",
       "livelli": [],
-      "source": "tematici/media",
-      "price": 20.265,
-      "chg_1w": 2.3,
-      "chg_1m": -0.61,
-      "chg_3m": -0.47,
-      "chg_6m": 3.53,
-      "chg_ytd": 6.96,
-      "chg_1y": 11.49,
-      "total_return_1y": 11.49,
-      "volatility_1y": 15.54,
-      "var_95_1y": 24.87,
-      "sharpe_1y": 0.48,
-      "max_dd_1y": -9.27,
+      "source": "tematici/acqua",
+      "price": 28.84,
+      "chg_1w": 1.05,
+      "chg_1m": 1.26,
+      "chg_3m": 5.56,
+      "chg_6m": 0.84,
+      "chg_ytd": 6.95,
+      "chg_1y": 4.64,
+      "total_return_1y": 4.64,
+      "volatility_1y": 15.17,
+      "var_95_1y": 24.67,
+      "sharpe_1y": 0.07,
+      "max_dd_1y": -10.23,
       "div_yield": null,
       "dividends_ttm": null,
       "bond_profile": null,
-      "scenari": {},
-      "raptor_score": 32.5,
+      "scenari": {
+        "inflazione": {
+          "drawdown_pct": -1.63,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 36.5,
       "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "WATC.MI": {
       "ok": true,
@@ -6542,11 +7225,11 @@
       "chg_3m": 6.63,
       "chg_6m": 2.04,
       "chg_ytd": 8.26,
-      "chg_1y": 4.62,
-      "total_return_1y": 4.62,
-      "volatility_1y": 13.01,
-      "var_95_1y": 21.11,
-      "sharpe_1y": 0.08,
+      "chg_1y": 4.43,
+      "total_return_1y": 4.43,
+      "volatility_1y": 13.03,
+      "var_95_1y": 21.16,
+      "sharpe_1y": 0.07,
       "max_dd_1y": -10.25,
       "div_yield": null,
       "dividends_ttm": null,
@@ -6557,9 +7240,9 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 29.1,
+      "raptor_score": 29.2,
       "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "GLUG.MI": {
       "ok": true,
@@ -6576,11 +7259,11 @@
       "chg_3m": 7.41,
       "chg_6m": 4.04,
       "chg_ytd": 11.08,
-      "chg_1y": 11.37,
-      "total_return_1y": 11.37,
-      "volatility_1y": 15.08,
-      "var_95_1y": 24.13,
-      "sharpe_1y": 0.49,
+      "chg_1y": 11.23,
+      "total_return_1y": 11.23,
+      "volatility_1y": 15.11,
+      "var_95_1y": 24.19,
+      "sharpe_1y": 0.48,
       "max_dd_1y": -10.96,
       "div_yield": null,
       "dividends_ttm": null,
@@ -6595,9 +7278,47 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 36.8,
+      "raptor_score": 33.3,
       "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "ROBO.MI": {
+      "ok": true,
+      "ticker": "ROBO.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "tematici/acqua",
+      "price": 29.645,
+      "chg_1w": 9.53,
+      "chg_1m": 2.37,
+      "chg_3m": -0.59,
+      "chg_6m": 19.68,
+      "chg_ytd": 22.58,
+      "chg_1y": 36.74,
+      "total_return_1y": 36.74,
+      "volatility_1y": 24.66,
+      "var_95_1y": 38.58,
+      "sharpe_1y": 1.14,
+      "max_dd_1y": -13.72,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "covid": {
+          "drawdown_pct": -29.78,
+          "label": "Covid 2020"
+        },
+        "inflazione": {
+          "drawdown_pct": -31.84,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 38.0,
+      "raptor_signal": "BUY1",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "BOTZ.MI": {
       "ok": true,
@@ -6614,11 +7335,11 @@
       "chg_3m": -6.59,
       "chg_6m": 6.9,
       "chg_ytd": 4.98,
-      "chg_1y": 12.41,
-      "total_return_1y": 12.41,
-      "volatility_1y": 24.73,
-      "var_95_1y": 39.94,
-      "sharpe_1y": 0.34,
+      "chg_1y": 13.49,
+      "total_return_1y": 13.49,
+      "volatility_1y": 24.76,
+      "var_95_1y": 39.93,
+      "sharpe_1y": 0.38,
       "max_dd_1y": -15.78,
       "div_yield": null,
       "dividends_ttm": null,
@@ -6629,9 +7350,9 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 43.7,
-      "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "raptor_score": 47.5,
+      "raptor_signal": "BUY2",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "DMAT.MI": {
       "ok": true,
@@ -6648,11 +7369,11 @@
       "chg_3m": -13.7,
       "chg_6m": -2.05,
       "chg_ytd": 6.77,
-      "chg_1y": 62.74,
-      "total_return_1y": 62.74,
-      "volatility_1y": 37.54,
-      "var_95_1y": 58.66,
-      "sharpe_1y": 1.21,
+      "chg_1y": 61.89,
+      "total_return_1y": 61.89,
+      "volatility_1y": 37.61,
+      "var_95_1y": 58.8,
+      "sharpe_1y": 1.2,
       "max_dd_1y": -26.43,
       "div_yield": null,
       "dividends_ttm": null,
@@ -6663,9 +7384,72 @@
           "label": "Inflazione 2022"
         }
       },
-      "raptor_score": 31.7,
+      "raptor_score": 38.0,
       "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "ROE.MI": {
+      "ok": true,
+      "ticker": "ROE.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "tematici/altro",
+      "price": 10.26,
+      "chg_1w": 0.27,
+      "chg_1m": -0.41,
+      "chg_3m": 1.77,
+      "chg_6m": 6.22,
+      "chg_ytd": 7.76,
+      "chg_1y": 14.16,
+      "total_return_1y": 14.16,
+      "volatility_1y": 7.75,
+      "var_95_1y": 11.91,
+      "sharpe_1y": 1.28,
+      "max_dd_1y": -5.26,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {
+        "inflazione": {
+          "drawdown_pct": -29.05,
+          "label": "Inflazione 2022"
+        }
+      },
+      "raptor_score": 26.4,
+      "raptor_signal": "BUY1",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
+    },
+    "MILL.MI": {
+      "ok": true,
+      "ticker": "MILL.MI",
+      "layer": 2,
+      "categoria": "azionario",
+      "distribuzione": "Acc",
+      "geo": "",
+      "livelli": [],
+      "source": "tematici/altro",
+      "price": 16.386,
+      "chg_1w": 1.04,
+      "chg_1m": 1.93,
+      "chg_3m": 7.49,
+      "chg_6m": 10.22,
+      "chg_ytd": 5.29,
+      "chg_1y": 5.55,
+      "total_return_1y": 5.55,
+      "volatility_1y": 12.64,
+      "var_95_1y": 20.44,
+      "sharpe_1y": 0.16,
+      "max_dd_1y": -13.23,
+      "div_yield": null,
+      "dividends_ttm": null,
+      "bond_profile": null,
+      "scenari": {},
+      "raptor_score": 38.3,
+      "raptor_signal": "BUY1",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "IVAI.MI": {
       "ok": true,
@@ -6682,19 +7466,19 @@
       "chg_3m": 5.14,
       "chg_6m": 41.16,
       "chg_ytd": 33.18,
-      "chg_1y": 59.28,
-      "total_return_1y": 59.28,
-      "volatility_1y": 28.95,
-      "var_95_1y": 44.66,
-      "sharpe_1y": 1.5,
+      "chg_1y": 60.15,
+      "total_return_1y": 60.15,
+      "volatility_1y": 29.0,
+      "var_95_1y": 44.7,
+      "sharpe_1y": 1.52,
       "max_dd_1y": -17.54,
       "div_yield": null,
       "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {},
-      "raptor_score": 39.9,
-      "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "raptor_score": 45.8,
+      "raptor_signal": "BUY2",
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     },
     "IVDF.DE": {
       "ok": true,
@@ -6711,19 +7495,19 @@
       "chg_3m": 5.34,
       "chg_6m": 18.54,
       "chg_ytd": 27.05,
-      "chg_1y": 46.65,
-      "total_return_1y": 46.65,
-      "volatility_1y": 34.34,
-      "var_95_1y": 54.08,
-      "sharpe_1y": 1.01,
+      "chg_1y": 45.09,
+      "total_return_1y": 45.09,
+      "volatility_1y": 34.4,
+      "var_95_1y": 54.23,
+      "sharpe_1y": 0.98,
       "max_dd_1y": -22.0,
       "div_yield": null,
       "dividends_ttm": null,
       "bond_profile": null,
       "scenari": {},
-      "raptor_score": 35.8,
+      "raptor_score": 41.8,
       "raptor_signal": "BUY1",
-      "ts": "2026-08-05T20:52:37.044655+00:00"
+      "ts": "2026-08-07T00:49:13.579280+00:00"
     }
   }
 }
