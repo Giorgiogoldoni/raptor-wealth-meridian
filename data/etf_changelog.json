@@ -4,6 +4,149 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "07/08/2026 00:49",
+      "regime": "NEUTRO",
+      "n_entrati": 25,
+      "n_usciti": 11,
+      "entrati": [
+        {
+          "ticker": "AGED.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "AQWA.MI",
+          "source": "tematici/acqua"
+        },
+        {
+          "ticker": "CITE.MI",
+          "source": "tematici/infrastrutture"
+        },
+        {
+          "ticker": "CITY.MI",
+          "source": "tematici/infrastrutture"
+        },
+        {
+          "ticker": "CLOU.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "COPR.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "CURE.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "DGTL.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "FAMMWF.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "FINX.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "GDXJ.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "GOAI.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "ICBR.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "INQQ.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "JEDI.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "LABL.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "MILL.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "REUS.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "ROBO.MI",
+          "source": "tematici/acqua"
+        },
+        {
+          "ticker": "ROE.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "SILV.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "STZX.MI",
+          "source": "settoriali/europa"
+        },
+        {
+          "ticker": "SXLY.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "WCBR.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "WEB3.MI",
+          "source": "tematici/crypto"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "BRIJ.MI"
+        },
+        {
+          "ticker": "DFNS.MI"
+        },
+        {
+          "ticker": "EBUY.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        }
+      ]
+    },
+    {
       "data": "05/08/2026 20:52",
       "regime": "NEUTRO",
       "n_entrati": 13,
