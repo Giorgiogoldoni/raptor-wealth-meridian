@@ -4,6 +4,160 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "10/08/2026 20:27",
+      "regime": "NEUTRO",
+      "n_entrati": 15,
+      "n_usciti": 28,
+      "entrati": [
+        {
+          "ticker": "AIAA.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "AIAI.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "EDOC.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "FAMTEL.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "GOAI.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "HEAL.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "HERU.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "NCLR.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "QUAD.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "SXLK.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "WDNA.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "WMAT.MI",
+          "source": "settoriali/mondo"
+        },
+        {
+          "ticker": "WSLV.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "WTEC.MI",
+          "source": "settoriali/mondo"
+        },
+        {
+          "ticker": "XG12.MI",
+          "source": "tematici/media"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "AGED.MI"
+        },
+        {
+          "ticker": "BUG.MI"
+        },
+        {
+          "ticker": "CITY.MI"
+        },
+        {
+          "ticker": "DFNS.MI"
+        },
+        {
+          "ticker": "DGTL.MI"
+        },
+        {
+          "ticker": "ICBR.MI"
+        },
+        {
+          "ticker": "JEDI.MI"
+        },
+        {
+          "ticker": "METE.MI"
+        },
+        {
+          "ticker": "MILL.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "REMX.MI"
+        },
+        {
+          "ticker": "REUS.MI"
+        },
+        {
+          "ticker": "ROE.MI"
+        },
+        {
+          "ticker": "STQX.MI"
+        },
+        {
+          "ticker": "SXLY.MI"
+        },
+        {
+          "ticker": "U3O8.MI"
+        },
+        {
+          "ticker": "URNJ.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WEB3.MI"
+        },
+        {
+          "ticker": "WNDY.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XCTE.MI"
+        },
+        {
+          "ticker": "XFNT.MI"
+        }
+      ]
+    },
+    {
       "data": "07/08/2026 20:25",
       "regime": "NEUTRO",
       "n_entrati": 13,
