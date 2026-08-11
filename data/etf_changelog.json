@@ -4,6 +4,106 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "11/08/2026 20:30",
+      "regime": "NEUTRO",
+      "n_entrati": 9,
+      "n_usciti": 18,
+      "entrati": [
+        {
+          "ticker": "BUG.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "EMOVE.MI",
+          "source": "tematici/mobilita"
+        },
+        {
+          "ticker": "ESPY.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "NUCL.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "OIH.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "SDG9.MI",
+          "source": "tematici/acqua"
+        },
+        {
+          "ticker": "STKX.MI",
+          "source": "settoriali/europa"
+        },
+        {
+          "ticker": "U3O8.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "URNJ.MI",
+          "source": "tematici/energia"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "AIAA.MI"
+        },
+        {
+          "ticker": "ARMR.MI"
+        },
+        {
+          "ticker": "DFNS.MI"
+        },
+        {
+          "ticker": "DFSV.DE"
+        },
+        {
+          "ticker": "ESPO.MI"
+        },
+        {
+          "ticker": "LABL.MI"
+        },
+        {
+          "ticker": "NCLR.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "RARE.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WDEF.MI"
+        },
+        {
+          "ticker": "WDNA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        }
+      ]
+    },
+    {
       "data": "10/08/2026 20:27",
       "regime": "NEUTRO",
       "n_entrati": 15,
