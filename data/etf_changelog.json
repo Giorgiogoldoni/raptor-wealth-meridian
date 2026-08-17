@@ -4,6 +4,151 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "17/08/2026 20:11",
+      "regime": "ESPANSIONE",
+      "n_entrati": 9,
+      "n_usciti": 33,
+      "entrati": [
+        {
+          "ticker": "BIOT.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "EDOC.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "HYDE.MI",
+          "source": "tematici/acqua"
+        },
+        {
+          "ticker": "REMX.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "SCITY.MI",
+          "source": "tematici/infrastrutture"
+        },
+        {
+          "ticker": "SXLK.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "U3O8.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "URNJ.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "WNDY.MI",
+          "source": "tematici/energia"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "AIQE.MI"
+        },
+        {
+          "ticker": "ARMI.MI"
+        },
+        {
+          "ticker": "ARMR.MI"
+        },
+        {
+          "ticker": "BOTZ.MI"
+        },
+        {
+          "ticker": "BUG.MI"
+        },
+        {
+          "ticker": "CLOU.MI"
+        },
+        {
+          "ticker": "DFNS.MI"
+        },
+        {
+          "ticker": "ELCR.MI"
+        },
+        {
+          "ticker": "ESPY.MI"
+        },
+        {
+          "ticker": "GENDEE.MI"
+        },
+        {
+          "ticker": "ISPY.MI"
+        },
+        {
+          "ticker": "IVDF.DE"
+        },
+        {
+          "ticker": "JEDI.MI"
+        },
+        {
+          "ticker": "METAA.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "NUCL.MI"
+        },
+        {
+          "ticker": "QUAD.MI"
+        },
+        {
+          "ticker": "RARE.MI"
+        },
+        {
+          "ticker": "RNRG.MI"
+        },
+        {
+          "ticker": "SILV.MI"
+        },
+        {
+          "ticker": "SNSR.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WCBR.MI"
+        },
+        {
+          "ticker": "WIND.MI"
+        },
+        {
+          "ticker": "WMGT.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSLV.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XS8R.MI"
+        }
+      ]
+    },
+    {
       "data": "14/08/2026 20:18",
       "regime": "ESPANSIONE",
       "n_entrati": 11,
