@@ -4,6 +4,131 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "18/08/2026 20:08",
+      "regime": "NEUTRO",
+      "n_entrati": 7,
+      "n_usciti": 29,
+      "entrati": [
+        {
+          "ticker": "QUAD.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "SXLE.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "SXLV.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "WCOD.MI",
+          "source": "settoriali/mondo"
+        },
+        {
+          "ticker": "WDNA.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "WMAT.MI",
+          "source": "settoriali/mondo"
+        },
+        {
+          "ticker": "XDG3.MI",
+          "source": "tematici/digitale"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "AUCO.MI"
+        },
+        {
+          "ticker": "BTECJ.MI"
+        },
+        {
+          "ticker": "DFSV.DE"
+        },
+        {
+          "ticker": "ESGO.MI"
+        },
+        {
+          "ticker": "GDX.MI"
+        },
+        {
+          "ticker": "GDXJ.MI"
+        },
+        {
+          "ticker": "GSM.MI"
+        },
+        {
+          "ticker": "HYDE.MI"
+        },
+        {
+          "ticker": "LITM.MI"
+        },
+        {
+          "ticker": "MTVS.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "RARE.MI"
+        },
+        {
+          "ticker": "REMX.MI"
+        },
+        {
+          "ticker": "SCITY.MI"
+        },
+        {
+          "ticker": "STKX.MI"
+        },
+        {
+          "ticker": "SXLK.MI"
+        },
+        {
+          "ticker": "U3O8.MI"
+        },
+        {
+          "ticker": "URNJ.MI"
+        },
+        {
+          "ticker": "VPN.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WNDY.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WTEC.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XG12.MI"
+        }
+      ]
+    },
+    {
       "data": "17/08/2026 20:11",
       "regime": "ESPANSIONE",
       "n_entrati": 9,
