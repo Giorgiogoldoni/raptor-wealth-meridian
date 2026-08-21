@@ -4,6 +4,70 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "21/08/2026 20:10",
+      "regime": "ESPANSIONE",
+      "n_entrati": 6,
+      "n_usciti": 10,
+      "entrati": [
+        {
+          "ticker": "CURE.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "DMAT.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "GDIG.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "WMAT.MI",
+          "source": "settoriali/mondo"
+        },
+        {
+          "ticker": "WSLV.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "XFVT.DE",
+          "source": "geografia/paesi"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "DOCT.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XNNV.MI"
+        }
+      ]
+    },
+    {
       "data": "20/08/2026 20:14",
       "regime": "NEUTRO",
       "n_entrati": 6,
