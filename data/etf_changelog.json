@@ -4,6 +4,107 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "24/08/2026 20:14",
+      "regime": "ESPANSIONE",
+      "n_entrati": 7,
+      "n_usciti": 21,
+      "entrati": [
+        {
+          "ticker": "BKCH.MI",
+          "source": "tematici/crypto"
+        },
+        {
+          "ticker": "BLTH.MI",
+          "source": "tematici/crypto"
+        },
+        {
+          "ticker": "BTC.MI",
+          "source": "tematici/crypto"
+        },
+        {
+          "ticker": "CROP.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "DAPP.MI",
+          "source": "tematici/crypto"
+        },
+        {
+          "ticker": "URNJ.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "XNNV.MI",
+          "source": "tematici/salute"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "BIOT.MI"
+        },
+        {
+          "ticker": "CURE.MI"
+        },
+        {
+          "ticker": "DMAT.MI"
+        },
+        {
+          "ticker": "HEAL.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "STNX.MI"
+        },
+        {
+          "ticker": "SXLE.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WDNA.MI"
+        },
+        {
+          "ticker": "WHEA.MI"
+        },
+        {
+          "ticker": "WMAT.MI"
+        },
+        {
+          "ticker": "WNDY.MI"
+        },
+        {
+          "ticker": "WNRG.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSLV.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XGEN.MI"
+        }
+      ]
+    },
+    {
       "data": "21/08/2026 20:10",
       "regime": "ESPANSIONE",
       "n_entrati": 6,
