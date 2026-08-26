@@ -4,6 +4,77 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "26/08/2026 22:32",
+      "regime": "ESPANSIONE",
+      "n_entrati": 4,
+      "n_usciti": 15,
+      "entrati": [
+        {
+          "ticker": "COPX.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "CROP.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "DMAT.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "WBLK.MI",
+          "source": "tematici/altro"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "BLTH.MI"
+        },
+        {
+          "ticker": "GSM.MI"
+        },
+        {
+          "ticker": "INQQ.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WHEA.MI"
+        },
+        {
+          "ticker": "WMAT.MI"
+        },
+        {
+          "ticker": "WNDY.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XDG3.MI"
+        }
+      ]
+    },
+    {
       "data": "25/08/2026 20:13",
       "regime": "ESPANSIONE",
       "n_entrati": 11,
