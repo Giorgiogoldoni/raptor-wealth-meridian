@@ -4,6 +4,96 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "28/08/2026 03:52",
+      "regime": "ESPANSIONE",
+      "n_entrati": 0,
+      "n_usciti": 27,
+      "entrati": [],
+      "usciti": [
+        {
+          "ticker": "AUCO.MI"
+        },
+        {
+          "ticker": "COPX.MI"
+        },
+        {
+          "ticker": "CROP.MI"
+        },
+        {
+          "ticker": "DMAT.MI"
+        },
+        {
+          "ticker": "DOCT.MI"
+        },
+        {
+          "ticker": "ESGO.MI"
+        },
+        {
+          "ticker": "FAMAMW.MI"
+        },
+        {
+          "ticker": "GDIG.MI"
+        },
+        {
+          "ticker": "GDX.MI"
+        },
+        {
+          "ticker": "GDXJ.MI"
+        },
+        {
+          "ticker": "GNOM.MI"
+        },
+        {
+          "ticker": "HEAL.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "SILV.MI"
+        },
+        {
+          "ticker": "STTX.MI"
+        },
+        {
+          "ticker": "SXLV.MI"
+        },
+        {
+          "ticker": "U3O8.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WCOD.MI"
+        },
+        {
+          "ticker": "WDNA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XGEN.MI"
+        }
+      ]
+    },
+    {
       "data": "26/08/2026 22:32",
       "regime": "ESPANSIONE",
       "n_entrati": 4,
