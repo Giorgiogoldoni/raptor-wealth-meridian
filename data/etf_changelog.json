@@ -4,6 +4,119 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "29/08/2026 02:29",
+      "regime": "ESPANSIONE",
+      "n_entrati": 16,
+      "n_usciti": 13,
+      "entrati": [
+        {
+          "ticker": "AUCO.MI",
+          "source": "tematici/mobilita"
+        },
+        {
+          "ticker": "CLOU.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "COPM.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "COPR.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "COPX.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "DMAT.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "ESGO.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "FAMAMW.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "GDIG.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "GDX.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "GDXJ.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "GSM.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "METL.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "SILV.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "STPX.MI",
+          "source": "settoriali/europa"
+        },
+        {
+          "ticker": "WMAT.MI",
+          "source": "settoriali/mondo"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "BKCH.MI"
+        },
+        {
+          "ticker": "BTC.MI"
+        },
+        {
+          "ticker": "CURE.MI"
+        },
+        {
+          "ticker": "DAPP.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "URNJ.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        }
+      ]
+    },
+    {
       "data": "28/08/2026 03:52",
       "regime": "ESPANSIONE",
       "n_entrati": 0,
