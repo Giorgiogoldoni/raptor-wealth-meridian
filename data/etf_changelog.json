@@ -4,6 +4,94 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "07/09/2026 22:19",
+      "regime": "NEUTRO",
+      "n_entrati": 9,
+      "n_usciti": 14,
+      "entrati": [
+        {
+          "ticker": "AINF.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "HNSC.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "HYDE.MI",
+          "source": "tematici/acqua"
+        },
+        {
+          "ticker": "HYGN.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "RNRG.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "SEME.MI",
+          "source": "tematici/semiconduttori"
+        },
+        {
+          "ticker": "SXLK.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "USTEC.MI",
+          "source": "tematici/semiconduttori"
+        },
+        {
+          "ticker": "WTEC.MI",
+          "source": "settoriali/mondo"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "BTC.MI"
+        },
+        {
+          "ticker": "CROP.MI"
+        },
+        {
+          "ticker": "FAMMWF.MI"
+        },
+        {
+          "ticker": "ISAG.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "STPX.MI"
+        },
+        {
+          "ticker": "STZX.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        }
+      ]
+    },
+    {
       "data": "04/09/2026 21:53",
       "regime": "NEUTRO",
       "n_entrati": 5,
