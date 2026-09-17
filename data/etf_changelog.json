@@ -4,6 +4,83 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "17/09/2026 22:28",
+      "regime": "NEUTRO",
+      "n_entrati": 10,
+      "n_usciti": 9,
+      "entrati": [
+        {
+          "ticker": "AI4UJ.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "AIAI.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "BTECJ.MI",
+          "source": "tematici/crypto"
+        },
+        {
+          "ticker": "EBUY.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "GLUX.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "LOCK.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "METAA.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "MTVS.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "WCBR.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "WNDY.MI",
+          "source": "tematici/energia"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "STNX.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        }
+      ]
+    },
+    {
       "data": "16/09/2026 22:25",
       "regime": "NEUTRO",
       "n_entrati": 5,
