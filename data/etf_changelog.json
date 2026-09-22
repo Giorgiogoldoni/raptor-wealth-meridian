@@ -4,6 +4,77 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "22/09/2026 22:27",
+      "regime": "NEUTRO",
+      "n_entrati": 7,
+      "n_usciti": 11,
+      "entrati": [
+        {
+          "ticker": "FAMTEL.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "INQQ.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "METE.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "SXLK.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "WCBR.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "WDNA.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "WTEC.MI",
+          "source": "settoriali/mondo"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "EBUY.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "SNSR.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XNNV.MI"
+        }
+      ]
+    },
+    {
       "data": "21/09/2026 22:52",
       "regime": "NEUTRO",
       "n_entrati": 7,
