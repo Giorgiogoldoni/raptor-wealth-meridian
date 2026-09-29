@@ -4,6 +4,86 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "29/09/2026 23:14",
+      "regime": "NEUTRO",
+      "n_entrati": 10,
+      "n_usciti": 10,
+      "entrati": [
+        {
+          "ticker": "AIAI.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "AINF.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "CHIP.MI",
+          "source": "tematici/semiconduttori"
+        },
+        {
+          "ticker": "FAMMWS.MI",
+          "source": "tematici/semiconduttori"
+        },
+        {
+          "ticker": "FCHP.DE",
+          "source": "tematici/semiconduttori"
+        },
+        {
+          "ticker": "HNSC.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "MTVS.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "SEME.MI",
+          "source": "tematici/semiconduttori"
+        },
+        {
+          "ticker": "SNSR.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "WTAI.MI",
+          "source": "tematici/ai_tech"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WGRO.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XNNV.MI"
+        }
+      ]
+    },
+    {
       "data": "28/09/2026 23:59",
       "regime": "NEUTRO",
       "n_entrati": 2,
