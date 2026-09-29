@@ -4,6 +4,99 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "28/09/2026 23:59",
+      "regime": "NEUTRO",
+      "n_entrati": 2,
+      "n_usciti": 25,
+      "entrati": [
+        {
+          "ticker": "ECAR.MI",
+          "source": "tematici/mobilita"
+        },
+        {
+          "ticker": "STKX.MI",
+          "source": "settoriali/europa"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "AIAI.MI"
+        },
+        {
+          "ticker": "AINF.MI"
+        },
+        {
+          "ticker": "AIQE.MI"
+        },
+        {
+          "ticker": "CLOU.MI"
+        },
+        {
+          "ticker": "EDOC.MI"
+        },
+        {
+          "ticker": "ESPY.MI"
+        },
+        {
+          "ticker": "HEAL.MI"
+        },
+        {
+          "ticker": "IVAI.MI"
+        },
+        {
+          "ticker": "LOCK.MI"
+        },
+        {
+          "ticker": "MTVS.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "QNTM.MI"
+        },
+        {
+          "ticker": "ROBO.MI"
+        },
+        {
+          "ticker": "SCITY.MI"
+        },
+        {
+          "ticker": "SNSR.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WDNA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WTAI.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XNGI.MI"
+        }
+      ]
+    },
+    {
       "data": "25/09/2026 22:51",
       "regime": "NEUTRO",
       "n_entrati": 10,
