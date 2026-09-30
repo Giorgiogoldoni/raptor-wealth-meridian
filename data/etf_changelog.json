@@ -4,6 +4,86 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "30/09/2026 23:14",
+      "regime": "NEUTRO",
+      "n_entrati": 7,
+      "n_usciti": 14,
+      "entrati": [
+        {
+          "ticker": "BOTZ.MI",
+          "source": "tematici/acqua"
+        },
+        {
+          "ticker": "ROBO.MI",
+          "source": "tematici/acqua"
+        },
+        {
+          "ticker": "SCITY.MI",
+          "source": "tematici/infrastrutture"
+        },
+        {
+          "ticker": "WDNA.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "WGRO.MI",
+          "source": "tematici/acqua"
+        },
+        {
+          "ticker": "XG12.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "XNNV.MI",
+          "source": "tematici/salute"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "ECAR.MI"
+        },
+        {
+          "ticker": "GOAI.MI"
+        },
+        {
+          "ticker": "MTVS.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "SMH.MI"
+        },
+        {
+          "ticker": "SNSR.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WTAI.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        }
+      ]
+    },
+    {
       "data": "29/09/2026 23:14",
       "regime": "NEUTRO",
       "n_entrati": 10,
