@@ -4,6 +4,73 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "06/10/2026 23:23",
+      "regime": "NEUTRO",
+      "n_entrati": 6,
+      "n_usciti": 11,
+      "entrati": [
+        {
+          "ticker": "DGTL.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "EBIZ.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "ESPY.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "MTVS.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "XG12.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "XNGI.MI",
+          "source": "tematici/energia"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "HERU.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "SEME.MI"
+        },
+        {
+          "ticker": "SMH.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        }
+      ]
+    },
+    {
       "data": "06/10/2026 00:59",
       "regime": "NEUTRO",
       "n_entrati": 11,
