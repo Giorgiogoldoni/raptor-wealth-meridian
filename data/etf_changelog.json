@@ -4,6 +4,140 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "07/10/2026 23:53",
+      "regime": "NEUTRO",
+      "n_entrati": 4,
+      "n_usciti": 36,
+      "entrati": [
+        {
+          "ticker": "GOAI.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "NCLR.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "U3O8.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "URNJ.MI",
+          "source": "tematici/energia"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "AIAI.MI"
+        },
+        {
+          "ticker": "AINF.MI"
+        },
+        {
+          "ticker": "AIQE.MI"
+        },
+        {
+          "ticker": "BOTZ.MI"
+        },
+        {
+          "ticker": "CHIP.MI"
+        },
+        {
+          "ticker": "CITY.MI"
+        },
+        {
+          "ticker": "CLOU.MI"
+        },
+        {
+          "ticker": "EBUY.MI"
+        },
+        {
+          "ticker": "ESPY.MI"
+        },
+        {
+          "ticker": "FAMMWS.MI"
+        },
+        {
+          "ticker": "FAMTEL.MI"
+        },
+        {
+          "ticker": "FCHP.DE"
+        },
+        {
+          "ticker": "GLUG.MI"
+        },
+        {
+          "ticker": "HNSC.MI"
+        },
+        {
+          "ticker": "IVAI.MI"
+        },
+        {
+          "ticker": "LOCK.MI"
+        },
+        {
+          "ticker": "METAA.MI"
+        },
+        {
+          "ticker": "MTVS.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "PAVE.MI"
+        },
+        {
+          "ticker": "ROBO.MI"
+        },
+        {
+          "ticker": "SCITY.MI"
+        },
+        {
+          "ticker": "SMH.MI"
+        },
+        {
+          "ticker": "STKX.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WATC.MI"
+        },
+        {
+          "ticker": "WMGT.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WTAI.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XG12.MI"
+        },
+        {
+          "ticker": "XNGI.MI"
+        }
+      ]
+    },
+    {
       "data": "06/10/2026 23:23",
       "regime": "NEUTRO",
       "n_entrati": 6,
