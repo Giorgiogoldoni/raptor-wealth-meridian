@@ -4,6 +4,100 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "09/10/2026 23:37",
+      "regime": "NEUTRO",
+      "n_entrati": 12,
+      "n_usciti": 12,
+      "entrati": [
+        {
+          "ticker": "CITY.MI",
+          "source": "tematici/infrastrutture"
+        },
+        {
+          "ticker": "CYBO.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "DGTL.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "DPAY.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "EBUY.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "ECOM.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "INFR.MI",
+          "source": "tematici/infrastrutture"
+        },
+        {
+          "ticker": "ROE.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "SNSR.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "SXLE.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "WATC.MI",
+          "source": "tematici/acqua"
+        },
+        {
+          "ticker": "XSGI.MI",
+          "source": "tematici/ai_tech"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "EBIZ.MI"
+        },
+        {
+          "ticker": "GOAI.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WGRO.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WTEC.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        }
+      ]
+    },
+    {
       "data": "09/10/2026 00:00",
       "regime": "NEUTRO",
       "n_entrati": 0,
