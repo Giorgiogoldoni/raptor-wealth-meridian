@@ -4,6 +4,116 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "13/10/2026 01:40",
+      "regime": "NEUTRO",
+      "n_entrati": 13,
+      "n_usciti": 16,
+      "entrati": [
+        {
+          "ticker": "AI4UJ.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "AIAA.MI",
+          "source": "tematici/ai_tech"
+        },
+        {
+          "ticker": "BUG.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "CAUT.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "ELCR.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "FAMWCS.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "ICBR.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "ISPY.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "LOCK.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "METAA.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "SXLU.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "WCBR.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "WNRG.MI",
+          "source": "settoriali/mondo"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "CITY.MI"
+        },
+        {
+          "ticker": "CYBO.MI"
+        },
+        {
+          "ticker": "EBUY.MI"
+        },
+        {
+          "ticker": "ECOM.MI"
+        },
+        {
+          "ticker": "METAJ.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "SNSR.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XS8R.MI"
+        },
+        {
+          "ticker": "XSGI.MI"
+        }
+      ]
+    },
+    {
       "data": "09/10/2026 23:37",
       "regime": "NEUTRO",
       "n_entrati": 12,
