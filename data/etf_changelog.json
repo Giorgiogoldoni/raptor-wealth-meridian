@@ -4,6 +4,82 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "14/10/2026 22:44",
+      "regime": "NEUTRO",
+      "n_entrati": 6,
+      "n_usciti": 14,
+      "entrati": [
+        {
+          "ticker": "HYDE.MI",
+          "source": "tematici/acqua"
+        },
+        {
+          "ticker": "STSX.MI",
+          "source": "settoriali/europa"
+        },
+        {
+          "ticker": "SXLP.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "WCOS.MI",
+          "source": "settoriali/mondo"
+        },
+        {
+          "ticker": "WNDE.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "XFNT.MI",
+          "source": "tematici/digitale"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "BUG.MI"
+        },
+        {
+          "ticker": "CLOU.MI"
+        },
+        {
+          "ticker": "CYBO.MI"
+        },
+        {
+          "ticker": "DGTL.MI"
+        },
+        {
+          "ticker": "ICBR.MI"
+        },
+        {
+          "ticker": "LOCK.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        }
+      ]
+    },
+    {
       "data": "13/10/2026 23:28",
       "regime": "NEUTRO",
       "n_entrati": 6,
