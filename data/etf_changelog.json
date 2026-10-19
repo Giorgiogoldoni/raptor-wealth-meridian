@@ -4,6 +4,112 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "19/10/2026 23:09",
+      "regime": "NEUTRO",
+      "n_entrati": 6,
+      "n_usciti": 24,
+      "entrati": [
+        {
+          "ticker": "FOFD.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "GENDEE.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "STRX.MI",
+          "source": "settoriali/europa"
+        },
+        {
+          "ticker": "STWX.MI",
+          "source": "settoriali/europa"
+        },
+        {
+          "ticker": "VEGI.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "WCOD.MI",
+          "source": "settoriali/mondo"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "AIAA.MI"
+        },
+        {
+          "ticker": "CYBO.MI"
+        },
+        {
+          "ticker": "ECOM.MI"
+        },
+        {
+          "ticker": "EPRA.MI"
+        },
+        {
+          "ticker": "EPRE.MI"
+        },
+        {
+          "ticker": "GLUX.MI"
+        },
+        {
+          "ticker": "INFR.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "ROE.MI"
+        },
+        {
+          "ticker": "STUX.MI"
+        },
+        {
+          "ticker": "SXLF.MI"
+        },
+        {
+          "ticker": "SXLU.MI"
+        },
+        {
+          "ticker": "SXLV.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WATC.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WUTI.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XDER.MI"
+        },
+        {
+          "ticker": "XRES.MI"
+        }
+      ]
+    },
+    {
       "data": "16/10/2026 22:15",
       "regime": "RALLENTAMENTO",
       "n_entrati": 7,
