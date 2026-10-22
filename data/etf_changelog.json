@@ -4,6 +4,110 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "22/10/2026 22:48",
+      "regime": "RALLENTAMENTO",
+      "n_entrati": 16,
+      "n_usciti": 10,
+      "entrati": [
+        {
+          "ticker": "AQWA.MI",
+          "source": "tematici/acqua"
+        },
+        {
+          "ticker": "ARMR.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "BIOT.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "BTECH.MI",
+          "source": "tematici/crypto"
+        },
+        {
+          "ticker": "CYBO.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "DOCT.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "ECOM.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "EPRA.MI",
+          "source": "tematici/infrastrutture"
+        },
+        {
+          "ticker": "EPRE.MI",
+          "source": "tematici/infrastrutture"
+        },
+        {
+          "ticker": "FAMMWF.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "SXLU.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "SXLV.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "WFIN.MI",
+          "source": "settoriali/mondo"
+        },
+        {
+          "ticker": "WHEA.MI",
+          "source": "settoriali/mondo"
+        },
+        {
+          "ticker": "XDG3.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "XRES.MI",
+          "source": "tematici/infrastrutture"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "SXLE.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WNRG.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        }
+      ]
+    },
+    {
       "data": "21/10/2026 22:49",
       "regime": "NEUTRO",
       "n_entrati": 4,
