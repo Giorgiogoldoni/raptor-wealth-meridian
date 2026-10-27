@@ -4,6 +4,90 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "27/10/2026 23:16",
+      "regime": "RALLENTAMENTO",
+      "n_entrati": 5,
+      "n_usciti": 18,
+      "entrati": [
+        {
+          "ticker": "IVDF.DE",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "REMX.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "SXLU.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "USTEC.MI",
+          "source": "tematici/semiconduttori"
+        },
+        {
+          "ticker": "XLPE.MI",
+          "source": "tematici/infrastrutture"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "BTECH.MI"
+        },
+        {
+          "ticker": "EPRA.MI"
+        },
+        {
+          "ticker": "EPRE.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "STNX.MI"
+        },
+        {
+          "ticker": "STSX.MI"
+        },
+        {
+          "ticker": "SXLP.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WCOD.MI"
+        },
+        {
+          "ticker": "WCOS.MI"
+        },
+        {
+          "ticker": "WHEA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XDER.MI"
+        }
+      ]
+    },
+    {
       "data": "26/10/2026 23:24",
       "regime": "RALLENTAMENTO",
       "n_entrati": 4,
