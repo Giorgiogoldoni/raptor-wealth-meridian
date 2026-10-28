@@ -4,6 +4,83 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "28/10/2026 23:40",
+      "regime": "NEUTRO",
+      "n_entrati": 7,
+      "n_usciti": 13,
+      "entrati": [
+        {
+          "ticker": "BIOT.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "BTECH.MI",
+          "source": "tematici/crypto"
+        },
+        {
+          "ticker": "CYBO.MI",
+          "source": "tematici/difesa"
+        },
+        {
+          "ticker": "FAMMWF.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "HEAL.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "SXLF.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "WFIN.MI",
+          "source": "settoriali/mondo"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "ARMR.MI"
+        },
+        {
+          "ticker": "DFNS.MI"
+        },
+        {
+          "ticker": "ECOM.MI"
+        },
+        {
+          "ticker": "IVDF.DE"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "REMX.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        }
+      ]
+    },
+    {
       "data": "27/10/2026 23:16",
       "regime": "RALLENTAMENTO",
       "n_entrati": 5,
