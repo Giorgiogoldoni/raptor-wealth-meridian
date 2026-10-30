@@ -4,6 +4,111 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "30/10/2026 23:19",
+      "regime": "RALLENTAMENTO",
+      "n_entrati": 5,
+      "n_usciti": 25,
+      "entrati": [
+        {
+          "ticker": "STWX.MI",
+          "source": "settoriali/europa"
+        },
+        {
+          "ticker": "SXLP.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "SXLV.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "WDNA.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "WHEA.MI",
+          "source": "settoriali/mondo"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "ARMR.MI"
+        },
+        {
+          "ticker": "BIOT.MI"
+        },
+        {
+          "ticker": "BRIJ.MI"
+        },
+        {
+          "ticker": "BTECH.MI"
+        },
+        {
+          "ticker": "BTECJ.MI"
+        },
+        {
+          "ticker": "CITY.MI"
+        },
+        {
+          "ticker": "CYBO.MI"
+        },
+        {
+          "ticker": "DFNS.MI"
+        },
+        {
+          "ticker": "DOCT.MI"
+        },
+        {
+          "ticker": "EDOC.MI"
+        },
+        {
+          "ticker": "FOFD.MI"
+        },
+        {
+          "ticker": "HEAL.MI"
+        },
+        {
+          "ticker": "IVDF.DE"
+        },
+        {
+          "ticker": "JEDI.MI"
+        },
+        {
+          "ticker": "MLPS.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "OIH.MI"
+        },
+        {
+          "ticker": "PAVE.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        }
+      ]
+    },
+    {
       "data": "29/10/2026 23:39",
       "regime": "RALLENTAMENTO",
       "n_entrati": 8,
