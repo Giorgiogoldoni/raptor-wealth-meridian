@@ -4,6 +4,115 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "05/11/2026 00:33",
+      "regime": "RALLENTAMENTO",
+      "n_entrati": 18,
+      "n_usciti": 9,
+      "entrati": [
+        {
+          "ticker": "BRIJ.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "FAMWCS.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "GLUX.MI",
+          "source": "tematici/media"
+        },
+        {
+          "ticker": "INQQ.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "MILL.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "RAYZ.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "REUS.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "STRX.MI",
+          "source": "settoriali/europa"
+        },
+        {
+          "ticker": "STSX.MI",
+          "source": "settoriali/europa"
+        },
+        {
+          "ticker": "STTX.MI",
+          "source": "settoriali/europa"
+        },
+        {
+          "ticker": "SXLB.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "SXLP.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "SXLV.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "WCOS.MI",
+          "source": "settoriali/mondo"
+        },
+        {
+          "ticker": "WNDY.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "XDG3.MI",
+          "source": "tematici/digitale"
+        },
+        {
+          "ticker": "XLPE.MI",
+          "source": "tematici/infrastrutture"
+        },
+        {
+          "ticker": "XRES.MI",
+          "source": "tematici/infrastrutture"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "SXLU.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        }
+      ]
+    },
+    {
       "data": "04/11/2026 00:13",
       "regime": "RALLENTAMENTO",
       "n_entrati": 4,
