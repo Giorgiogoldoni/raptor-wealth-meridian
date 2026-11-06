@@ -4,6 +4,100 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "06/11/2026 00:34",
+      "regime": "RALLENTAMENTO",
+      "n_entrati": 6,
+      "n_usciti": 20,
+      "entrati": [
+        {
+          "ticker": "CAUT.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "CITE.MI",
+          "source": "tematici/infrastrutture"
+        },
+        {
+          "ticker": "CROP.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "GENDEE.MI",
+          "source": "tematici/salute"
+        },
+        {
+          "ticker": "KWBE.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "STUX.MI",
+          "source": "settoriali/europa"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "AQWA.MI"
+        },
+        {
+          "ticker": "EBIZ.MI"
+        },
+        {
+          "ticker": "FAMWCS.MI"
+        },
+        {
+          "ticker": "GLUX.MI"
+        },
+        {
+          "ticker": "MILL.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "SXLB.MI"
+        },
+        {
+          "ticker": "SXLF.MI"
+        },
+        {
+          "ticker": "SXLV.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WIND.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XDG3.MI"
+        },
+        {
+          "ticker": "XLPE.MI"
+        },
+        {
+          "ticker": "XRES.MI"
+        }
+      ]
+    },
+    {
       "data": "05/11/2026 00:33",
       "regime": "RALLENTAMENTO",
       "n_entrati": 18,
