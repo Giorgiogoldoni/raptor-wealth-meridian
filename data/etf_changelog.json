@@ -4,6 +4,84 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "10/11/2026 02:26",
+      "regime": "RALLENTAMENTO",
+      "n_entrati": 8,
+      "n_usciti": 12,
+      "entrati": [
+        {
+          "ticker": "AUCO.MI",
+          "source": "tematici/mobilita"
+        },
+        {
+          "ticker": "CROP.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "GDX.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "GDXJ.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "GSM.MI",
+          "source": "tematici/risorse"
+        },
+        {
+          "ticker": "MILL.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "SXLU.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "WMAT.MI",
+          "source": "settoriali/mondo"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "CAUT.MI"
+        },
+        {
+          "ticker": "GENDEE.MI"
+        },
+        {
+          "ticker": "KWBE.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "RAYZ.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        }
+      ]
+    },
+    {
       "data": "06/11/2026 23:50",
       "regime": "RALLENTAMENTO",
       "n_entrati": 1,
