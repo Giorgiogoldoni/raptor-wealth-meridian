@@ -4,6 +4,94 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "11/11/2026 00:16",
+      "regime": "RALLENTAMENTO",
+      "n_entrati": 6,
+      "n_usciti": 18,
+      "entrati": [
+        {
+          "ticker": "AQWA.MI",
+          "source": "tematici/acqua"
+        },
+        {
+          "ticker": "HERU.MI",
+          "source": "tematici/altro"
+        },
+        {
+          "ticker": "SXLF.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "SXLP.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "WFIN.MI",
+          "source": "settoriali/mondo"
+        },
+        {
+          "ticker": "XDG6.MI",
+          "source": "tematici/digitale"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "AUCO.MI"
+        },
+        {
+          "ticker": "CROP.MI"
+        },
+        {
+          "ticker": "EEA.MI"
+        },
+        {
+          "ticker": "GDX.MI"
+        },
+        {
+          "ticker": "GDXJ.MI"
+        },
+        {
+          "ticker": "GSM.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "STUX.MI"
+        },
+        {
+          "ticker": "SXLU.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WMAT.MI"
+        },
+        {
+          "ticker": "WNDY.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        }
+      ]
+    },
+    {
       "data": "10/11/2026 02:26",
       "regime": "RALLENTAMENTO",
       "n_entrati": 8,
