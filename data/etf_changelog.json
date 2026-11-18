@@ -4,6 +4,65 @@
   "note": "Storico movimenti Layer 2 — aggiornato ogni sera da fetch_rwm.py",
   "entries": [
     {
+      "data": "18/11/2026 01:54",
+      "regime": "RALLENTAMENTO",
+      "n_entrati": 4,
+      "n_usciti": 11,
+      "entrati": [
+        {
+          "ticker": "EEA.MI",
+          "source": "tematici/energia"
+        },
+        {
+          "ticker": "SXLP.MI",
+          "source": "settoriali/usa"
+        },
+        {
+          "ticker": "WCOD.MI",
+          "source": "settoriali/mondo"
+        },
+        {
+          "ticker": "WCOS.MI",
+          "source": "settoriali/mondo"
+        }
+      ],
+      "usciti": [
+        {
+          "ticker": "AQWA.MI"
+        },
+        {
+          "ticker": "NTSG.MI"
+        },
+        {
+          "ticker": "NTSX.MI"
+        },
+        {
+          "ticker": "ROE.MI"
+        },
+        {
+          "ticker": "VUSA.MI"
+        },
+        {
+          "ticker": "WRTY.MI"
+        },
+        {
+          "ticker": "WS5X.MI"
+        },
+        {
+          "ticker": "WSPE.MI"
+        },
+        {
+          "ticker": "WSPX.MI"
+        },
+        {
+          "ticker": "WWRD.MI"
+        },
+        {
+          "ticker": "XDG6.MI"
+        }
+      ]
+    },
+    {
       "data": "17/11/2026 02:39",
       "regime": "RALLENTAMENTO",
       "n_entrati": 1,
